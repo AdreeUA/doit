@@ -1,0 +1,70 @@
+.new {
+    padding-top: rem(25);
+    padding-bottom: rem(25);
+
+    &__info {
+        margin-bottom: rem(20);
+
+        line-height: 0;
+    }
+
+    &__author {
+        display: inline-block;
+        padding-right: rem(15);
+
+        color: #000;
+        vertical-align: middle;
+        text-decoration: none;
+
+        + .new__date {
+            padding-left: rem(15);
+        }
+    }
+
+    &__author-name {
+        font-size: rem(13);
+        line-height: 16/13+em;
+        vertical-align: middle;
+    }
+
+    &__photo-wrapper {
+        display: inline-block;
+        width: rem(40);
+        height: rem(40);
+        margin-right: rem(10);
+
+        vertical-align: middle;
+
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__photo {
+        max-width: 100%;
+    }
+
+    &__date {
+        display: inline-block;
+
+        color: rgba(0, 0, 0, .63);
+        font-size: rem(11);
+        line-height: 1;
+        vertical-align: middle;
+    }
+
+    &__media {
+        width: 100%;
+        margin-bottom: rem(25);
+    }
+
+    &__stats {
+        margin-bottom: rem(25);
+    }
+
+    &_mark {
+        .new__author {
+            background-color: $color-3;
+            border-radius: rem(100);
+        }
+    }
+}

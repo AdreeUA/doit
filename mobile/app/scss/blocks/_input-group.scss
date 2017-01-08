@@ -1,0 +1,7 @@
+.input-group {
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+}

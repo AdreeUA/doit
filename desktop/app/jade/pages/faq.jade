@@ -1,0 +1,60 @@
+extends ../layouts/default
+include ../partials/question
+
+
+block head
+    - var pageTitle = 'Помощь';
+    - var pageName = 'Помощь';
+
+block content
+
+
+    +b.HEADER.head-title_nav
+
+        .container
+
+            +e.H1.title_big #{pageTitle}
+
+
+    +b.SECTION.help
+
+        .container
+
+            +e.ask
+
+                +e.quest-mark
+                    +conditionalComment('if lt IE 10', '<style>.quest-mark {color: #eee;}</style>')
+                    +b.quest-mark.js-shine-mouse ?
+
+                +e.ask-main
+
+                    +e.ask-text
+                        | Если вы не нашли нужного ответа, нажмите на кнопку:
+
+                    +e.ask-btn
+
+                        +b.share-button_big._wide(href=jv0) Задать вопрос
+
+            +e.content
+            
+                -
+                    var questions = [
+                        'Поисковая реклама, в рамках сегодняшних воззрений, спонтанно стабилизирует социометрический имидж предприятия.',
+                        'Косвенная реклама притягивает креативный нишевый проект.',
+                        'Визуализация концепии детерминирует институциональный ребрендинг.',
+                        'Инвестиция синхронизирует продвигаемый рекламный макет, осознав маркетинг как часть производства.',
+                        'Принцип восприятия нейтрализует медиамикс, осознав маркетинг как часть производства.',
+                        'Стимулирование сбыта, следовательно, масштабирует культурный пак-шот.',
+                        'До недавнего времени считалось, что идеология выстраивания',
+                        'Отраслевой стандарт тормозит баинг и селлинг.',
+                        'Стоит отметить, что потребительская база выражена'
+                    ]
+                    
+                each question, ind in questions
+
+                    +e.item
+                        +question({
+                            'q': question
+                        })(id='question-'+ind)
+
+    +delimiter('help')

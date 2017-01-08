@@ -1,0 +1,19 @@
+mixin project-preview(data)
+
+   +b.project(class!=(data.mod ? data.mod : ''))
+
+      +e.inner
+
+         +e.img-wrapper
+            +e.IMG.img(src=data.src srcset=(data.srcset + ' 2x') alt='')
+
+         +e.sponsor-wrapper
+            +e.IMG.sponsor(src='http://loremflickr.com/67/35/business' srcset='http://loremflickr.com/134/70/business 2x')
+
+         +e.A.descr(href=jv0)
+            +e.DIV.descr-text-wrap
+               +e.descr-text  Проект:
+               +e.descr-text= data.projectname
+
+      +e.main
+         +e.A.title(href=jv0)= data.text

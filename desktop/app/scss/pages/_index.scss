@@ -1,0 +1,24 @@
+.index-page {
+
+    &__sections-group {
+        position: relative;
+    }
+
+    &__aside-col {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        height: 100%;
+        width: 120px;
+    }
+
+    &__sections-col {
+
+        .container {
+            padding-right: 150px;
+        }
+
+
+    }
+}

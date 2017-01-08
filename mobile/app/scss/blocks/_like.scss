@@ -1,0 +1,30 @@
+.like {
+    display: inline-block;
+
+    text-decoration: none;
+    vertical-align: middle;
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+
+        fill: transparent;
+        stroke-width: 2px;
+        stroke: #fff;
+
+        transition: fill .4s ease, stroke .4s ease;
+    }
+
+    &_dark {
+        .like__icon {
+            stroke: #000;
+        }
+    }
+
+    &_active {
+        .like__icon {
+            fill: #ff6d6d;
+            stroke: #ff6d6d;
+        }
+    }
+}

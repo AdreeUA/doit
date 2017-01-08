@@ -1,0 +1,14 @@
+.logo {
+    margin: 0;
+
+    font-size: rem(23);
+    font-weight: 900;
+    line-height: 27/23+em;
+    font-family: $headingFont;
+    text-decoration: none;
+
+    &__text {
+        color: inherit;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,50 @@
+.announcement {
+    display: table;
+    width: 100%;
+
+    &__content-wrapper {
+        padding-left: rem(100);
+    }
+
+    &__img-wrapper {
+        position: relative;
+
+        float: left;
+        width: rem(80);
+        height: rem(80);
+
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__img {
+        @include center();
+    }
+
+    &__date {
+        display: block;
+        margin-bottom: rem(10);
+
+        font-weight: 300;
+        font-size: rem(15);
+        line-height: 18/15+em;
+        font-family: $headingFont;
+        color: rgba(0, 0, 0, .4);
+    }
+
+    &__content {
+        margin-bottom: rem(15);
+
+        p {
+            margin: 0;
+
+            font-weight: 300;
+            font-size: rem(15);
+            line-height: 18/15+em;
+
+            + p {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.acts-sec {
+    padding-top: rem(25);
+    padding-bottom: rem(29);
+
+    color: #fff;
+    background-color: #818d9b;
+
+    &_in {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        color: #000;
+
+        background-color: transparent;
+    }
+
+    &__main {
+        padding-top: rem(25);
+        padding-bottom: rem(40);
+    }
+
+    &__header {
+        margin-bottom: rem(25);
+    }
+
+    &__question {
+        display: inline-block;
+        margin-top: rem(25);
+
+        font-family: $headingFont;
+        font-size: rem(14);
+        font-weight: 300;
+        line-height: 17/14+em;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__slider {
+        position: relative;
+        margin: -10px -13px;
+
+        .slick-arrow {
+            position: absolute;
+            top: auto;
+            bottom: 100%;
+
+            margin-bottom: rem(55);
+        }
+
+        .slick-prev {
+            left: auto;
+            right: rem(51);
+        }
+
+        .slick-next {
+            right: rem(13);
+        }
+
+        .slick-dots {
+            bottom: rem(10);
+        }
+    }
+
+    &__list {
+        margin: -10px -13px;
+
+        .acts-sec__item {
+            &:not(:last-of-type) {
+                margin-bottom: rem(30);
+            }
+        }
+
+        &_low-gap {
+            .acts-sec__item {
+                &:not(:last-of-type) {
+                    margin-bottom: rem(10);
+                }
+            }
+        }
+    }
+
+    &__item {
+        padding: 10px 13px;
+    }
+
+    &__all {
+        font-size: rem(15);
+        line-height: 18/15+em;
+        color: inherit;
+    }
+
+    &__all-link {
+        color: #fff;
+        font-family: $headingFont;
+        font-size: rem(22);
+        font-weight: 300;
+        line-height: 26/22+em;
+        text-decoration: underline;
+
+    }
+
+    &__content {
+        margin-bottom: rem(30);
+
+        p {
+            margin: 0;
+
+            color: #252525;
+            font-size: rem(13);
+            font-weight: 300;
+            line-height: 19/13+em;
+
+            + p {
+                margin-top: em(1);
+            }
+        }
+    }
+
+    &__tabs {
+        margin-bottom: rem(30);
+    }
+
+    &__preloader {
+        margin-top: rem(30);
+        margin-bottom: rem(30);
+    }
+
+    &__search {
+        margin-top: rem(12);
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+
+    .act {
+        margin-bottom: rem(13);
+    }
+
+}

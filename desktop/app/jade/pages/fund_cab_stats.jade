@@ -1,0 +1,50 @@
+extends ../layouts/default
+include ../partials/nav
+include ../partials/act
+
+
+block head
+    - var pageTitle = 'Статистика';
+    - var pageName = 'Статистика';
+
+block content
+
+    +b.SECTION.cabinet_user
+
+        +e.HEADER.header
+
+            .container
+            
+                include ../partials/cabinet-sidebar2
+                
+                +e.content-wrapper
+
+                    .columns.columns_align_justify.columns_va_middle
+
+                        .columns__col
+                            +e.H2.title #{pageName}
+
+                        .columns__col
+                            +e.FORM.stats-filter(name='activist-stat-filter' method='get' action='')
+                                +b.datepicker
+                                    +e.SPAN.placeholder Даты
+                                    +e.INPUT.input._width100p._big-size(id='occasions-date' name='occasions-date' type='date')
+                                    +e.LABEL.calendar._right-position(for='occasions-date')
+                                        +e.SVG.calendar-icon
+                                            use(xlink:href='i/icons.svg#icon-calendar')
+
+        +e.main
+
+            .container
+
+                +e.content-wrapper
+                    
+                    .stat-wrapper
+                        .chart-box(id="chart-container")
+                        .counters-stat
+                            .counters-stat__col.counters-stat__col_left
+                                .counters-stat__col-number 14 458 135
+                                .counters-stat__col-label Собрано денег
+                            .counters-stat__col.counters-stat__col_right
+                                .counters-stat__col-number 867
+                                .counters-stat__col-label Поступков

@@ -1,0 +1,160 @@
+extends ../layouts/default
+include ../blocks/custom-input
+
+block head
+    - var pageTitle = 'Пожертвовать';
+
+block content
+
+    +b.SECTION.donation
+
+        .container
+
+            +e.H2.title Спасибо за желание пожертвовать!
+
+            +e.FORM.form.form(name='donation' novalidate method='post' action='')
+
+                +e.main
+
+                    +e.H3.step-name Размер пожертвования
+                    +e.FIELDSET.step-body
+
+                        .form__row
+                            +b.label Выберите тип пожертвования
+                            +b.tiling-inputs_items_2
+
+                                - var types = ['Ежемесячное', 'Разовое']
+
+                                each type, ind in types
+
+                                    +customInput('tiling tiling-inputs__item', 'radio', 'donation-type-' + ind, 'type', ind, ind === 0 ? true : false)(required='')
+                                        .custom-input__content
+                                            |#{type}
+
+                        .form__row
+                            +b.label Выберите сумму пожертвования
+                            +b.tiling-inputs_items_3
+
+                                - var amounts = ['300', '500', '1 000', '2 500', '5 000']
+
+                                each sum, ind in amounts
+
+                                    +customInput('tiling tiling-inputs__item', 'radio', 'donation-amount-' + ind, 'donation-amount', ind, ind === 0 ? true : false)(required='')
+                                        .custom-input__content
+                                            |#{sum}
+                                            svg.custom-input__ruble
+                                                use(xlink:href='i/icons.svg#icon-ruble')
+
+                                +b.custom-input_tiling._user-val.tiling-inputs__item
+                                    +e.INPUT.label.js-masked-input(id='donation-amount-5' name='amount' val='default' data-mask='9?99 999 999 999 999' data-mask-placeholder=' ' placeholder='Другая сумма')
+
+                        .form__row
+                            +b.label Вы очень щедры! Загрузите ваш логотип:
+                            +b.add-photo.donation__logo
+                                +e.list
+                                    +e.item-wrapper
+                                      +e.LABEL.item.add-photo__upload_logo
+                                          +e.INPUT.upload-input(name="post" type="file" required)
+                                          +e.SPAN.upload-text Загрузить
+
+                        .form__row
+                            +b.LABEL.label(for='donation-comment') Напишите ваш комментарий (если хотите):
+                            +b.TEXTAREA.input_textarea.donation__comment(id='donation-comment' name='comment')
+
+
+                    +e.H3.step-name Выбор способа оплаты
+                    +e.FIELDSET.step-body
+
+                        .form__row
+                            +b.label Выберите способ оплаты
+                            +b.tiling-inputs_items_2
+
+                                - var methods = ['Пластиковая карта', 'Qiwi Wallet', 'WebMoney', 'Яндекс Деньги'];
+
+                                each method, ind in methods
+
+                                    +customInput('tiling tiling-inputs__item donation__payment', 'radio', 'donation-payment-' + ind, 'donation-payment', ind, ind === 0 ? true : false)
+                                        .custom-input__content
+                                            .custom-input__img-wrapper.donation__payment-img
+                                                img.custom-input__img(src='i/payments-#{ind+1}.jpg' alt='')
+                                            | #{method}
+
+                        .form__row
+                            +b.LABEL.label_low-gap(for='donation-name') Введите ваше Имя
+                            +b.INPUT.input(id='donation-name' name='name' required)
+
+                        .form__row
+                            +b.LABEL.label_low-gap(for='donation-surname') Введите вашу Фамилию
+                            +b.INPUT.input(id='donation-surname' name='surname' required)
+
+                        .form__row
+                            +b.LABEL.label_low-gap(for='donation-mail') Введите ваш e-mail
+                            +b.INPUT.input(id='donation-mail' name='mail' type='email' required)
+
+                        .form__row
+                            +customInput('checkbox label', 'checkbox', 'donation-anonym', 'anonym', 0, false)
+                                | Не показывать мои Имя и Фамилию на сайте
+
+                    +e.H3.step-name Оплата
+                    +e.FIELDSET.step-body
+
+                        .form__row_low-gap
+                            +b.label Введите данные, пожалуйста:
+
+                        +b.credit-card
+
+                            .form__row_md-gap
+                                +b.LABEL.label_low-gap(for='donation-card-num-0') Номер карты:
+                                +e.columns_number.columns
+
+                                    each num in [0, 1, 2, 3]
+
+                                        +e.col.columns__col_3
+                                            +b.INPUT.input.js-masked-input(id='donation-card-num-#{num}' name='card-num-#{num}' data-mask=(num === 3 ? '9999?99' : '9999') required)
+
+                            .form__row
+                                +e.columns.columns
+
+                                    +e.col.columns__col_8
+                                        +b.LABEL.label_low-gap Срок действия:
+                                        .columns
+                                            .columns__col.columns__col_6
+                                                +b.SELECT.select(name='card-month' required)
+                                                    - var i = 1;
+                                                    while i <= 12
+                                                        option(val='#{i}')= (i < 10) ? '0' + i : i
+                                                        -i++
+
+                                            .columns__col.columns__col_6
+                                                +b.SELECT.select(name='card-year' required)
+                                                    each year in [2016, 2017, 2018, 2019, 2020]
+                                                        option(val='#{year}')= year
+
+                                    +e.col.columns__col_4
+                                        +b.LABEL.label_low-gap(for='donation-card-code') CVC:
+                                        +b.INPUT.input.js-masked-input(id='donation-card-code' name='card-code' data-mask='999' required)
+
+                            .form__row
+                                +e.columns.columns
+
+                                    +e.col.columns__col_8
+                                        +b.LABEL.label_low-gap(for='donation-card-name') Имя держателя карты:
+                                        +b.INPUT.input_number(id='donation-card-name' name='card-name' required)
+
+                +delimiter('donation__main')
+
+            +e.finish
+
+                +e.complete-wrapper
+                    +e.IMG.complete(src='i/complete.png' srcset='i/retina/complete.png' alt='Сделано')
+
+                +e.thanks
+                    | Спасибо за пожертвование
+
+                +b.P.label_no-gap
+                    | Таргетирование усиливает показ баннера. VIP-мероприятие транслирует SWOT-анализ.
+                    |  Разработка медиаплана, вопреки мнению П.Друкера, отражает потребительский рынок.
+                    |  Потребление, суммируя приведенные примеры, амбивалентно. Привлечение аудитории,
+                    |  согласно Ф.Котлеру, нетривиально. Стимулирование сбыта, следовательно,
+                    |  реально масштабирует креатив.
+

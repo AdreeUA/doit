@@ -1,0 +1,23 @@
+mixin fund(data)
+
+    +b.fund(class!=(data.mod ? data.mod : ''))
+
+        +e.sponsor-wrap
+
+            +e.A.sponsor-link(href=jv0)
+
+                +e.sponsor-img(src='http://loremflickr.com/120/50/business', srcset='http://www.loremflickr.com/240/80/business 2x')
+
+        +e.medal
+
+            +e.IMG.medal(src='i/ruble-#{data.medal}.svg' alt='')
+
+        +e.body
+
+            +e.title(href=jv0)= data.title
+
+            +e.descr= data.descr
+
+            +e.text
+                span= data.text
+                    +e.switch(href=jv0) • • •

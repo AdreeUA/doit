@@ -1,0 +1,46 @@
+extends ../layouts/default
+include ../partials/nav
+include ../partials/act
+include ../partials/funds-projects
+
+block head
+    - var pageTitle = 'Проекты фонда';
+    - var pageName = 'Проекты';
+
+block content
+
+    +b.SECTION.cabinet_user
+
+        .container
+            include ../partials/cabinet-sidebar3
+
+        +e.HEADER.header
+
+            .container
+
+                +e.header-inner
+
+                    +b.columns_align_justify._va_middle
+
+                        +e.col
+
+                            H2.cabinet__title Ваши проекты
+
+                        +e.col
+
+                            +b.A.btn_light(href=jv0) Создать проект
+
+        .container
+            +e.main
+                +b.your-projects
+                    - for(var i = 0; i < 2; i++)
+                        +funds-projects-item
+
+
+                +b.finished-projects
+                    +e.H2.title Ваши прошедшие проекты:
+
+                    +funds-finished-project
+
+
+

@@ -1,0 +1,42 @@
+include ../blocks/custom-input
+
++b.popup(data-remodal-id='complain-popup')
+    +e.inner
+
+        +e.HEADER.header
+            .container
+                .columns.columns_justify.columns_middle
+                    .columns__col
+                        +e.title Пожаловаться
+
+                    .columns__col
+                        +e.BUTTON.close(data-remodal-action='close')
+
+        +e.section
+            .container
+                form.form.complain-form(name='complain' method='post' action='')
+                    .form__row
+                        +e.label_big._gap_l
+                            | Пожалуйста, сообщите нам причину, по которой этот поступок должен быть заблокирован:
+                        +b.input-group
+                            -
+                                var reasons = [
+                                    'Мероприятие не состоится',
+                                    'Мероприятие состоится',
+                                    'Мероприятие состоится, но мы будем расстроены',
+                                    'Мероприятие не состоится и мы не будем расстроены'
+                                ];
+
+                            each reason, ind in reasons
+
+                                - checked = (ind === 0 ? true : false)
+
+                                +customInput('radio input-group__item', 'radio', 'complain-reason-' + ind, 'reason', ind, checked)(required='')
+                                    | #{reason}
+
+                    .form__row
+                        +e.label_big(for='complain-message') Ваш комментарий
+                        +b.TEXTAREA.input_textarea.complain-form__textarea(id='complain-message' required='')
+
+                    .form__row.form__row_align_right
+                        +b.BUTTON.btn_low(type='submit') Отправить

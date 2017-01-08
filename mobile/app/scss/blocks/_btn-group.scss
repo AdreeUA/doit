@@ -1,0 +1,44 @@
+.btn-group {
+    position: relative;
+
+    display: inline-block;
+
+    font-weight: 300;
+    font-size: 0;
+    line-height: 1;
+    font-family: $headingFont;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #000;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+
+    transition: color .4s ease, background-color .4s ease;
+
+    &__icon {
+        display: inline-block;
+        width: rem(40);
+
+        font-size: rem(25);
+        line-height: rem(38);
+        color: #fff;
+        vertical-align: middle;
+        text-align: center;
+
+        background-color: #000;
+
+        transition: color .4s ease, background-color .4s ease;
+    }
+
+    &__text {
+        display: inline-block;
+        padding-left: rem(18);
+        padding-right: rem(18);
+
+        font-size: 1rem;
+        line-height: 1em;
+        vertical-align: middle;
+    }
+}

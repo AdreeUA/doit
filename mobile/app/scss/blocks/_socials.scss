@@ -1,0 +1,149 @@
+.socials {
+    margin: rem(-5);
+    padding: 0;
+
+    font-size: 0;
+    list-style: none;
+
+    &__item {
+        display: inline-block;
+        padding: rem(5);
+
+        vertical-align: middle;
+    }
+
+    &__link {
+        display: block;
+        width: rem(28);
+        height: rem(28);
+
+        &_in {
+            color: #76553c;
+
+            .socials__num {
+                background-color: #76553c;
+            }
+        }
+
+        &_fb {
+            color: #0853a5;
+
+            .socials__num {
+                background-color: #0853a5;
+            }
+        }
+
+        &_gplus {
+            width: rem(38);
+            height: rem(24);
+
+            color: #e71d1d;
+        }
+
+        &_vk {
+            color: #40778d;
+
+            .socials__num {
+                background-color: #40778d;
+            }
+        }
+    }
+
+    &__icon {
+        height: 100%;
+        width: 100%;
+
+        fill: currentColor;
+        stroke: transparent;
+        stroke-width: rem(2);
+        stroke: transparent;
+    }
+
+    &__num {
+        display: inline-block;
+        margin-left: rem(-3);
+        padding-left: rem(3);
+
+        font-size: rem(14);
+        font-weight: 500;
+        line-height: rem(30);
+        vertical-align: middle;
+
+        padding: 0 rem(5);
+        border-radius: 0 3px 3px 0;
+
+        color: #fff;
+    }
+
+    &_share {
+        margin-left: rem(-3);
+        margin-right: rem(-3);
+
+        .socials__item {
+            padding-left: rem(3);
+            padding-right: rem(3);
+        }
+
+        .socials__link {
+            position: relative;
+            width: auto;
+            height: auto;
+
+            &_gplus {
+                padding-left: rem(5);
+
+                color: #fff;
+
+                background-color: #e71d1d;
+                border-radius: 3px;
+            }
+
+        }
+
+        .socials__icon {
+            position: relative;
+            width: rem(30);
+            height: rem(30);
+
+            vertical-align: middle;
+        }
+    }
+
+    &_big {
+        .socials__link {
+            width: rem(45);
+            height: rem(45);
+        }
+    }
+}
+
+.form__row_socials {
+    .socials {
+        padding: 0;
+        margin: 0;
+
+        &__item {
+            display: inline-block;
+            padding: 0;
+            margin-right: 10px;
+        }
+        &__item::before {
+            display: none;
+        }
+        &__item:first-of-type {
+            .socials__icon {
+                fill: #0853a6;
+            }
+        }
+        &__item:last-of-type {
+            .socials__icon {
+                fill: #40768e;
+            }
+        }
+    }
+
+    .donation__label {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}

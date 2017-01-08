@@ -1,0 +1,511 @@
+extends ../layouts/default
+include ../partials/act
+include ../partials/funds-projects
+
+
+block head
+    - var pageTitle = 'Фонд «Наше будущее»';
+    - var pageName = 'Фонд «Наше будущее»';
+
+block content
+
+    +b.HEADER.head-title_trans._high
+
+        .container
+
+            +e.back-link(href=jv0) назад
+
+            +e.H2.title #{pageTitle}
+
+            //+e.IMG.medal(src='i/ruble-gold.svg' alt='')
+
+    +b.tabs
+
+        +e.header_head
+
+            .container
+
+                +e.UL.nav
+
+                    +e.LI.__nav-item_active
+
+                        +e.nav-link(href='#fund-info') Общая информация
+
+                    +e.LI.__nav-item
+
+                        +e.nav-link(href='#fund-projects') Проекты
+
+                    +e.LI.__nav-item
+
+                        +e.nav-link(href='#fund-gallery') Фотогалерея
+
+                    +e.LI.__nav-item
+
+                        +e.nav-link(href='#fund-live') Жизнь фонда
+
+                    +e.LI.__nav-item
+
+                        +e.nav-link(href='#fund-reports') Отчеты
+
+                    +e.LI.__nav-item
+
+                        +e.nav-link(href='#fund-documents') Документы
+
+        +e.panel_active#fund-info
+
+            +b.SECTION.fund-info
+
+                .container
+
+                    +e.logo
+
+                        +e.logo-img(src='http://loremflickr.com/254/85/city', srcset='http://www.loremflickr.com/308/170/city 2x')
+
+                    +e.nav
+
+                        +e.acts-num 867
+
+                        +e.acts-word Поступков
+
+                        +e.donations-btn
+
+                            +b.BUTTON.btn_light._font-bigger Пожертвовать
+
+                        +e.donations-link
+
+                            +b.link-base_nav(href=jv0) Создать поступок с этим фондом
+
+                        +e.donations-link
+
+                            +b.link-base_nav(href=jv0) Жертвовать регулярно
+
+                    +e.text
+
+                        +e.descr
+
+                            +e.P.paragraph
+
+                                | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации.
+
+                            +e.P.paragraph
+
+                                | Согласно предыдущему, сегмент рынка сбалансирован. Тактика выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована. Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами.
+
+                        +e.UL.staff
+
+                            +e.LI.staff-item
+
+                                +b.member
+
+                                    +e.photo-wrapper
+
+                                        +e.photo(src="http://www.placecage.com/c/129/129" srcset="http://www.placecage.com/c/258/258" + ' 2x')
+
+                                    +e.text
+
+                                        +e.post Директор
+
+                                        +e.name Катерина Земская-Владимирова
+
+                                        +e.descr
+
+                                            | Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован.
+
+                +delimiter('fund-info')
+
+            +b.tabs_dotdotdot
+
+                +e.header_base
+
+                    .container
+
+                        +e.UL.nav
+
+                            +e.LI.__nav-item_active
+
+                                +e.nav-link(href='#fund-current-acts') Актуальные поступки фонда
+
+                            +e.LI.__nav-item
+
+                                +e.nav-link(href='#fund-past-acts') Прошедшие поступки
+
+                +e.panel_active#fund-current-acts
+
+                    +b.SECTION.acts-sec_in._margin-mini
+
+                        +e.content
+
+                            .container.acts-in-cont
+
+                                +e.item
+                                    +act_in({
+                                        'mod': '_power',
+                                        'src': 'http://loremflickr.com/390/235/animals',
+                                        'srcset': 'http://loremflickr.com/800/1100/animals',
+                                        'text': 'Обливание холодной водой'
+                                    })
+
+                                +e.item
+                                    +act_in({
+                                        'src': 'http://loremflickr.com/390/235/city',
+                                        'srcset': 'http://loremflickr.com/780/470/city',
+                                        'text': 'Бежишь и приносишь пользу обществу',
+                                        'occasion': true
+                                    })
+
+                    +delimiter('acts-sec')
+
+                +e.panel#fund-past-acts
+
+                    +b.SECTION.acts-sec_in._margin-mini
+
+                        +e.content
+
+                            .container.acts-in-cont
+
+                                +e.item
+                                    +act_in({
+                                        'mod': '_power _past',
+                                        'src': 'http://loremflickr.com/390/235/animals',
+                                        'srcset': 'http://loremflickr.com/800/1100/animals',
+                                        'text': 'Обливание холодной водой'
+                                    })
+
+                                +e.item
+                                    +act_in({
+                                        'mod': '_past',
+                                        'src': 'http://loremflickr.com/390/235/city',
+                                        'srcset': 'http://loremflickr.com/780/470/city',
+                                        'text': 'Бежишь и приносишь пользу обществу',
+                                        'occasion': true
+                                    })
+
+                    +delimiter('acts-sec')
+
+        +e.panel#fund-projects
+
+            +b.SECTION.funds-projects-wrap
+
+                .container
+
+                    +b.your-projects
+                        - for(var i = 0; i < 3; i++)
+                            +funds-img-project
+
+                    +b.finished-projects
+                        +e.H2.title Прошедшие проекты
+                        +funds-finished-img-project
+
+                    +e.loading-button
+                        +b.A.filled-btn_sea(href=jv0)
+                            +e.SPAN.text Показать еще
+
+
+        +e.panel#fund-gallery
+
+            +b.cabinet_funds-one
+
+                .container
+
+                    +b.gallery.cabinet__photos-wrapper
+
+                        -
+                            var photos = [
+                                { width: 600, height: 300 },
+                                { width: 500, height: 450 },
+                                { width: 700, height: 600 },
+                                { width: 550, height: 550 },
+                                { width: 650, height: 550 },
+                                { width: 600, height: 750 },
+                                { width: 700, height: 650 },
+                                { width: 800, height: 600 }
+                            ]
+
+                        each photo in photos
+
+                            +e.item
+                                +e.IMG.img(src='http://loremflickr.com/' + photo.width + '/' + photo.height + '/',
+                                srcset='http://loremflickr.com/' + photo.width * 2 + '/' + photo.height * 2 + '/ 2x')
+
+        +e.panel#fund-live
+
+            .container
+
+                +b.SECTION.live-sec
+
+                    +b.post_dark-border
+
+                        +e.head_left
+
+                            +e.date 22.01.2015, 18:35
+
+                        +e.body
+
+                            +e.lead_dash-item._right
+                                | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации.
+
+                    +b.post_dark-border
+
+                        +e.head_left
+
+                            +e.date 22.01.2015, 18:35
+
+                        +e.body
+
+                            +e.IMG.photo(src='http://loremflickr.com/760/385/sports' srcset='http://loremflickr.com/1520/770/sports 2x')
+
+                            +e.P.paragraph
+                                | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована. Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами.
+
+                    +b.post_dark-border
+
+                        +e.head_left
+
+                            +e.date 22.01.2015, 18:35
+
+                        +e.body
+
+                            +e.collected
+
+                                +e.collected-val 14&nbsp;458&nbsp;135
+
+                                +e.collected-word Собрано денег
+
+                            +e.P.paragraph
+                                | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована. Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами.
+
+                    +b.post_dark-border
+
+                        +e.head_left
+
+                            +e.date 22.01.2015, 18:35
+
+                        +e.body
+
+                            +e.P.paragraph
+                                | Мы добавили 6 новых фотографий.
+
+                                +b.link-base_nav._inline(href=jv0) Посмотрите в фотогалерее!
+
+
+                    +e.loading
+
+                        +b.loading
+
+                            +e.SPAN.text Идет загрузка...
+
+                +delimiter('live-sec')
+
+        +e.panel#fund-reports
+
+            +b.SECTION.docs-sec
+
+                +e.descr_border-none
+
+                    .container
+
+                        +e.P.descr-par
+
+                            | Благотворительный фонд «Галчонок» и его подопечные от всего сердца благодарят всех, кто перечисляет деньги на лечение, реабилитацию и другую помощь детям с органическими поражениями ЦНС. На этой странице публикуются отчеты о поступивших и потраченных средствах.
+
+                        +e.P.descr-par
+
+                            | Вместе с вами мы оплачиваем курсы реабилитации и лечения, закупаем технические средства реабилитации, покупаем специализированное питание и расходные материалы для семей наших подопечных. Вместе радуемся маленьким и большим победам: первые шаги, улыбки, слова! Вместе с вами оказываем юридическую и психологическую помощь, и главное — добиваемся результата!
+
+                        +e.P.descr-par
+
+                            | Мы помогаем проекту по инклюзивному образованию: благодаря вашей помощи уже 7 детей с диагнозом аутизм учатся в классе общеобразовательной школы.
+
+                        +e.P.descr-par
+
+                            | Мы начали помогать Дому-интернату «ЦССВ «Вера. Надежда. Любовь» в Орехово-Борисово и надеемся, что в ближайшее время трое наших подопечных-сирот обретут семьи.
+
+                        +e.P.descr-par
+
+                            | Если у вас возникли вопросы, связанные с отчётностью фонда, пожалуйста, направляйте их по адресу fin@bf-galchonok.ru.
+
+                        +e.P.descr-par
+
+                            | Вместе помогать просто. Спасибо, что вы с нами.
+
+                +e.reports
+
+                    .container
+
+                        +e.UL.reports-list
+
+                            +e.LI.reports-item
+
+                                +b.report-block
+
+                                    +e.year 2015
+
+                                    +e.UL.months-list
+
+                                        -
+                                            var months = [
+                                                'Октябрь',
+                                                'Сентябрь',
+                                                'Август',
+                                                'Июль',
+                                                'Июнь',
+                                                'Май',
+                                                'Апрель',
+                                                'Март',
+                                                'Февраль',
+                                                'Январь'
+                                            ];
+
+                                        each month in months
+
+                                            +e.LI.months-item
+
+                                                +b.link-file(href=jv0)
+                                                    +e.SVG.icon
+                                                        use(xlink:href='i/icons.svg#icon-doc-min')
+                                                    | #{month} 2015
+
+                                    +e.year-report
+
+                                        +b.year-report(href=jv0)
+
+                                            +e.img-wrapper
+
+                                                +e.img(src='http://loremflickr.com/114/73/city' srcset='http://loremflickr.com/228/146/city 2x')
+
+                                            +e.text
+
+                                                +e.title Годовой отчёт за 2015 год
+
+                                                +e.weight 615 КБ
+
+                            +e.LI.reports-item
+
+                                +b.report-block
+
+                                    +e.year 2014
+
+                                    +e.UL.months-list
+
+                                        +e.LI.months-item
+
+                                            +b.link-file(href=jv0)
+                                                +e.SVG.icon
+                                                    use(xlink:href='i/icons.svg#icon-doc-min')
+                                                | Октябрь 2014
+
+                                        +e.LI.months-item
+
+                                            +b.link-file(href=jv0)
+                                                +e.SVG.icon
+                                                    use(xlink:href='i/icons.svg#icon-doc-min')
+                                                | Сентябрь 2014
+
+                                        +e.LI.months-item
+
+                                            +b.link-file(href=jv0)
+                                                +e.SVG.icon
+                                                    use(xlink:href='i/icons.svg#icon-doc-min')
+                                                | Август 2014
+
+        +e.panel#fund-documents
+
+            +b.SECTION.docs-sec
+
+                +e.descr
+
+                    .container
+
+                        +e.P.descr-par
+
+                            | Благотворительный фонд «Добро24.ру» (далее – Фонд) является не имеющей членства некоммерческой организацией, учрежденной гражданином Российской Федерации на основе добровольного имущественного взноса, преследующей благотворительные и иные общественно полезные цели.
+
+                        +e.P.descr-par
+
+                            | Учредителем Фонда является гражданин Российской Федерации: Шахова Надежна Александровна, паспорт: серия 0408 номер 676337, выдан 13.12. 2008 Отделением УФМС России по Красноярскому краю в Емельяновском районе, код подразделения 240-024, проживающая по адресу: 660133, Красноярский край, г. Красноярск, ул. 1-я Смоленская, д. 1, кв. 6.
+
+                        +e.P.descr-par
+
+                            | Полное официальное наименование Фонда: Благотворительный фонд «Добро24.ру». Сокращенное официальное наименование Фонда: БФ «Добро24.ру». Официальное наименование Фонда на английском языке: Charitable foundation «Dobro24.ru».
+
+                        +e.P.descr-par
+
+                            | Место нахождения Фонда: 660014, Красноярский край, г. Красноярск, ул. Юности, д.39, кв. 40
+
+                +e.doc-block
+
+                    .container
+
+                        +e.H3.title Согласно действующему законодательству, учредительными документами некоммерческих организаций являются:
+
+                        +e.UL.doc-list
+
+                            +e.LI.doc-item
+
+                                +e.doc-load
+
+                                    +b.doc-load(href=jv0)
+                                        +e.SVG.icon_pdf
+                                            use(xlink:href='i/svg-images.svg#img-pdf')
+                                        | Скачать
+
+
+                                +e.doc-name
+
+                                    | Устав, утвержденный участниками и учредителями НКО (для фонда, общественной организации, некоммерческого партнерства, автономной некоммерческой организации и частного учреждения).
+
+                            +e.LI.doc-item
+
+                                +e.doc-load
+
+                                    +b.doc-load(href=jv0)
+                                        +e.SVG.icon_pdf
+                                            use(xlink:href='i/svg-images.svg#img-pdf')
+                                        | Скачать
+
+
+                                +e.doc-name
+
+                                    | Учредительный договор, заключенный между членами, и Устав (для союза и ассоциации).
+
+                            +e.LI.doc-item
+
+                                +e.doc-load
+
+                                    +b.doc-load(href=jv0)
+                                        +e.SVG.icon_pdf
+                                            use(xlink:href='i/svg-images.svg#img-pdf')
+                                        | Скачать
+
+
+                                +e.doc-name
+
+                                    | Устав и решение о создании учреждения, утвержденные собственником (для учреждения)
+
+                        +e.note
+
+                            | В отдельных случаях НКО может функционировать на основании общего положения об организациях данного вида.
+
+                +e.require
+
+                    .container
+
+                        +e.H3.title В учредительных документах НКО должны содержаться:
+
+                        +e.UL.require-list
+
+                            +e.LI.require-item Порядок управления деятельностью
+
+                            +e.LI.require-item Права и обязанности участников
+
+                            +e.LI.require-item Сведения о филиалах и представительствах организации
+
+                            +e.LI.require-item Условия приема и порядок выхода участников из НКО
+
+                            +e.LI.require-item Порядок внесения изменений в учредительные документы
+
+                            +e.LI.require-item Источники формирования имущества и порядок его использования
+
+                            +e.LI.require-item Иные предусмотренные законодательством положения.
+
+            +delimiter('docs-sec')

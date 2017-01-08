@@ -1,0 +1,69 @@
+extends ../layouts/default
+
+
+block head
+    - var pageTitle = 'Задать вопрос';
+    - var pageName = 'Задать вопрос';
+
+block content
+
+    +b.HEADER.head-title
+
+        .container
+
+            +e.back-link(href=jv0) назад
+
+            +e.H1.title_big #{pageTitle}
+
+    +b.SECTION.feedback
+
+        .container
+
+            +e.content
+
+                +e.ask
+
+                    +e.quest-mark
+                        <!--[if lt IE 10]><style>.quest-mark {color: #eee;}</style><!--<![endif]-->
+                        +b.quest-mark_xxl.js-shine-mouse ?
+
+                +e.form
+
+
+                    +b.FORM.form
+
+                        +e.row_size_full._feedback
+
+                            +e.col_size_xs._feedback
+                                +b.LABEL.label(for='act-name') Имя
+
+                            +e.col_size_full
+                                +b.INPUT.input(id='act-name' name='act-name' required)
+
+                        +e.row_size_full._feedback
+
+                            +e.col_size_xs._feedback
+                                +b.LABEL.label(for='act-mail') E-mail
+
+                            +e.col_size_full
+                                +b.INPUT.input(id='act-mail' name='act-mail' required)
+
+
+                        +e.row_size_full._feedback
+
+                            +e.col_size_xs._feedback
+                                +b.LABEL.label(for='act-quest') Ваш вопрос
+
+                            +e.col_size_full
+                                +b.TEXTAREA.input_textarea._high(id='act-quest' name='act-quest' required)
+
+                        +e.row_size_full._feedback
+
+                            +e.col_size_xs._feedback
+
+                            +e.col_size_full._feedback-btn
+
+                                +b.btn_high._light(type='submit') Отправить вопрос
+
+
+    +delimiter('feedback')

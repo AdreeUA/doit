@@ -1,0 +1,19 @@
+mixin acts-slider(data)
+
+    +b.acts-slider
+
+        +e.list.slider
+
+            - for (var i = 0; i < 5; i++)
+
+                +e.item
+
+                    +e.img-wrap
+                        +e.IMG.img(src='http://loremflickr.com/300/150?random', srcset='http://www.loremflickr.com/600/300?random 2x')
+
+                        +e.project
+                            +e.SPAN.project-title Проект:
+                            +e.SPAN.project-name Все любят ежиков
+
+                    +e.disc
+                        | Помогите родителям помочь </br> своим детям с аутизмом

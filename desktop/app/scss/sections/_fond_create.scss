@@ -1,0 +1,105 @@
+.found-create {
+
+    &__header {
+        @extend .cabinet__header;
+    }
+
+    &__title {
+        @extend .cabinet__title;
+    }
+
+    &__main {
+        padding-top: rem(60);
+        width: calc(100% - 16.8rem); // 268px
+        float: right;
+    }
+
+    &__content {
+        padding: rem(30) rem(30) rem(40) rem(40);
+
+        box-shadow: 0 1px 10px rgba(77, 77, 77, 0.22);
+    }
+
+    &__datepicker {
+        width: rem(220);
+        display: inline-block;
+        vertical-align: top;
+        margin-right: rem(33);
+
+        .datepicker__placeholder {
+            color: #9b9b9b;
+            font-weight: 300;
+
+            &_active {
+                color: #000;
+                font-weight: normal;
+            }
+        }
+
+    }
+
+    &__custom-checkbox {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: rem(10);
+
+        font-size: rem(15);
+        color: #4a4a4a;
+    }
+
+    .input,
+    &__datepicker {
+        border: 1px solid #cfcfcf;
+
+        border-radius: 5px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .label_xs {
+        font-size: rem(15);
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn {
+        padding: rem(19) rem(33);
+
+        font-weight: normal;
+
+        &_back {
+            position: relative;
+
+            border: 1px solid;
+            width: rem(200);
+
+            color: #9b9b9b;
+
+            background-color: transparent;
+
+            transition: opacity .4s ease, box-shadow .4s ease;
+
+            &::after {
+                content: '';
+
+                position: absolute;
+                top: 50%;
+                left: rem(15);
+
+                width: rem(17);
+                height: rem(17);
+                border-right: rem(1) solid #9b9b9b;
+                border-bottom: rem(1) solid #9b9b9b;
+                //padding-left: rem(50);
+
+                text-align: left;
+
+                transform: translateY(-50%) rotate(128deg) skewX(-15deg);
+
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+extends ../layouts/default
+include ../partials/nav
+include ../partials/act
+
+
+block head
+    - var pageTitle = 'Добавить запись';
+    - var pageName = 'Новости';
+
+block content
+
+    +b.SECTION.cabinet_user
+
+        +e.HEADER.header
+
+            .container
+            
+                include ../partials/cabinet-sidebar2
+                
+                +e.content-wrapper
+
+                    +e.H2.title Добавить запись
+
+        +e.main
+
+            .container
+
+                +e.content-wrapper
+                    
+                    .cabinet__add-post-sec
+                        
+                        +b.FORM.form(name='add-post' method='post' action='')
+              
+                            +e.row_size_full
+
+                                +e.col
+                                    +b.LABEL.label(for='larger-text') Крупный текст:
+
+                                +e.col_size_full
+                                    .input-limiter-wrapper
+                                        +b.TEXTAREA.input_textarea.cabinet__textarea-height129px.js-limiter-characters(id='larger-text' name='larger-text'  maxlength = "120" required)
+                                        .status-line-wrapper
+                                            .status-line
+                                                .status-line__completed
+                                            .status-text <span class="quantity-characters"></span>/<span class="max-quantity-characters"></span> символов
+      
+                            +e.row_size_full
+
+                                +e.col
+                                    +b.LABEL.label(for='plain-text') Обычный текст:
+
+                                +e.col_size_full
+                                    +b.TEXTAREA.input_textarea.cabinet__textarea-height184px(id='plain-text' name='plain-text' required)
+                                    
+                            +e.row_size_full
+
+                                +e.col
+                                    +b.LABEL.label(for='numeral') Крупная цифра<br>
+                                    +b.note необязательно
+
+                                +e.col_size_full
+                                    .inputs-main-wrapper
+                                        .input-wraper.input-wraper_width55p
+                                            +b.INPUT.input(id='numeral' name='numeral' type='text')
+                                        .input-wraper.input-wraper_width55p
+                                            +b.INPUT.input(name='numera-signaturel' type='text' placeholder="Подпись под цифрой")
+                                            
+                            +e.row_size_full
+
+                                +e.col
+                                    +b.LABEL.label Загрузите изображение<br>
+                                    +b.note необязательно
+
+                                +e.col_size_full
+
+                                    +b.add-photo
+
+                                        +e.UL.list
+
+                                            +e.LI.item-wrapper
+                                                +b.user-photo.add-photo__item
+                                                    +e.img-wrapper
+                                                        +e.IMG.img.add-photo__img(src='http://loremflickr.com/150/150', srcset='http://loremflickr.com/300/300 2x')
+                                                    +e.BUTTON.remove(title='Удалить фотографию') Удалить фотографию
+
+                                            +e.LI.item-wrapper
+                                                +e.LABEL.item.add-photo__upload
+                                                    +e.INPUT.upload-input(name='post' type='file' multiple)
+                                                    +e.SPAN.upload-text Загрузить
+                                                    
+                            +e.row_size_full
+
+                                +e.col
+                                    +b.LABEL.label(for='video') Вставьте видео:<br>
+                                    +b.note Просто укажите ссылку на видео-ролик<br>с youtube или vimeo
+
+                                +e.col_size_full
+                                    .inputs-main-wrapper
+                                        .input-wraper.input-wraper_width55p
+                                            +b.INPUT.input(id='video' name='video' type='url')
+
+                            .form__footer
+                                
+                                button.btn.btn_high.cabinet__add-post-btn Сохранить
+                                    
+                    
+            
+
+

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Пожертвовать</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="js/modernizr.min.js"></script>
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div id="main-menu" class="menu header__menu">
+          <!--+b.FORM.search.menu__search(method='get' action='')-->
+          <!--    +e.inner-->
+          <!--        +e.BUTTON.icon-wrapper(type='submit')-->
+          <!--            +e.SVG.icon_search-->
+          <!--                use(xlink:href='i/icons.svg#icon-search')-->
+          <!--        +e.INPUT.input(id='menu-search' name='search' type='search' placeholder='Поиск')-->
+          <nav class="menu__nav">
+            <h2 class="hidden-text">Навигация по сайту</h2>
+            <ul class="menu__nav-list">
+              <li class="menu__nav-item"><a href="javascript:void(0)" class="menu__nav-link">фонды</a>
+              </li>
+              <li class="menu__nav-item"><a href="javascript:void(0)" class="menu__nav-link">поступки</a>
+              </li>
+              <li class="menu__nav-item"><a href="javascript:void(0)" class="menu__nav-link">как это работает</a>
+              </li>
+            </ul>
+            <div class="menu__nav-btn"><a href="javascript:void(0)" class="border-btn">Пожертвовать</a>
+            </div>
+            <div class="menu__nav-btn"><a href="javascript:void(0)" class="border-btn">Сделать поступок</a>
+            </div>
+          </nav>
+          <div class="auth auth_authorized menu__auth"><a href="javascript:void(0)" class="auth__item"><span class="auth__avatar-wrapper"><img src="http://stevensegallery.com/30/30" srcset="http://stevensegallery.com/60/60 2x" class="auth__avatar" alt="" role="presentation"/></span><span class="auth__text">Джайна Праудмур</span></a><a href="javascript:void(0)" class="auth__item"><span class="auth__text">Выход</span></a>
+          </div>
+        </div>
+        <div class="container header__container">
+          <button class="burger-btn header__burger"><span class="burger-btn__line">Открыть меню</span>
+          </button>
+          <h2 class="logo header__logo"><a href="/" class="logo__text">Сделай!</a>
+          </h2>
+          <div class="search menu__search">
+            <div class="search__inner">
+              <button class="search__icon-wrapper js-search-btn">
+                <svg class="search__icon search__icon search__icon_search">
+                  <use xlink:href="i/icons.svg#icon-search"></use>
+                </svg><input id="menu-search" name="query" type="search" placeholder="Поиск" class="search__input"/>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+<!--~~~~~~~~~~~~~~~ HEADER end ~~~~~~~~~~~~~~~~~-->
+
+      <main class="main">
+        <section class="donation">
+          <div class="container">
+            <h2 class="donation__title">Спасибо за желание пожертвовать!
+            </h2>
+            <form name="donation" novalidate="novalidate" method="post" action="" class="donation__form form">
+              <div class="donation__main">
+                <h3 class="donation__step-name">Размер пожертвования
+                </h3>
+                <fieldset class="donation__step-body">
+                  <div class="form__row">
+                    <div class="label">Выберите тип пожертвования
+                    </div>
+                    <div class="tiling-inputs tiling-inputs_items_2">
+                      <div class="custom-input custom-input_tiling tiling-inputs__item">
+                        <input id="donation-type-0" name="type" type="radio" value="0" checked="checked" class="custom-input__hidden" required=""/>
+                        <label for="donation-type-0" class="custom-input__label">
+                          <div class="custom-input__content">Ежемесячное</div>
+                        </label>
+                      </div>
+                      <div class="custom-input custom-input_tiling tiling-inputs__item">
+                        <input id="donation-type-1" name="type" type="radio" value="1" class="custom-input__hidden" required=""/>
+                        <label for="donation-type-1" class="custom-input__label">
+                          <div class="custom-input__content">Разовое</div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="label">Выберите сумму пожертвования
+                    </div>
+                    <div class="tiling-inputs tiling-inputs_items_3">
+                      <div class="custom-input custom-input_tiling tiling-inputs__item">
+                        <input id="donation-amount-0" name="donation-amount" type="radio" value="0" checked="checked" class="custom-input__hidden" required=""/>
+                        <label for="donation-amount-0" class="custom-input__label">
+                          <div class="custom-input__content">300
+                            <svg class="custom-input__ruble">
+                              <use xlink:href="i/icons.svg#icon-ruble"></use>
+                            </svg>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-input custom-input_tiling tiling-inputs__item">
+                        <input id="donation-amount-1" name="donation-amount" type="radio" value="1" class="custom-input__hidden" required=""/>
+                        <label for="donation-amount-1" class="custom-input__label">
+                          <div class="custom-input__content">500
+                            <svg class="custom-input__ruble">
+                              <use xlink:href="i/icons.svg#icon-ruble"></use>
+                            </svg>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-input custom-input_tiling tiling-inputs__item">
+                        <input id="donation-amount-2" name="donation-amount" type="radio" value="2" class="custom-input__hidden" required=""/>
+                        <label for="donation-amount-2" class="custom-input__label">
+                          <div class="custom-input__content">1 000
+                            <svg class="custom-input__ruble">
+                              <use xlink:href="i/icons.svg#icon-ruble"></use>
+                            </svg>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-input custom-input_tiling tiling-inputs__item">
+                        <input id="donation-amount-3" name="donation-amount" type="radio" value="3" class="custom-input__hidden" required=""/>
+                        <label for="donation-amount-3" class="custom-input__label">
+                          <div class="custom-input__content">2 500
+                            <svg class="custom-input__ruble">
+                              <use xlink:href="i/icons.svg#icon-ruble"></use>
+                            </svg>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-input custom-input_tiling tiling-inputs__item">
+                        <input id="donation-amount-4" name="donation-amount" type="radio" value="4" class="custom-input__hidden" required=""/>
+                        <label for="donation-amount-4" class="custom-input__label">
+                          <div class="custom-input__content">5 000
+                            <svg class="custom-input__ruble">
+                              <use xlink:href="i/icons.svg#icon-ruble"></use>
+                            </svg>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-input custom-input_tiling custom-input_user-val tiling-inputs__item"><input id="donation-amount-5" name="amount" val="default" data-mask="9?99 999 999 999 999" data-mask-placeholder=" " placeholder="Другая сумма" class="custom-input__label js-masked-input" type="text"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="label">Вы очень щедры! Загрузите ваш логотип:
+                    </div>
+                    <div class="add-photo donation__logo">
+                      <div class="add-photo__list">
+                        <div class="add-photo__item-wrapper">
+                          <label class="add-photo__item add-photo__upload add-photo__upload_logo"><input name="post" type="file" required="required" class="add-photo__upload-input"/><span class="add-photo__upload-text">Загрузить</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <label for="donation-comment" class="label">Напишите ваш комментарий (если хотите):
+                    </label><textarea id="donation-comment" name="comment" class="input input_textarea donation__comment"></textarea>
+                  </div>
+                </fieldset>
+                <h3 class="donation__step-name">Выбор способа оплаты
+                </h3>
+                <fieldset class="donation__step-body">
+                  <div class="form__row">
+                    <div class="label">Выберите способ оплаты
+                    </div>
+                    <div class="tiling-inputs tiling-inputs_items_2">
+                      <div class="custom-input custom-input_tiling tiling-inputs__item donation__payment">
+                        <input id="donation-payment-0" name="donation-payment" type="radio" value="0" checked="checked" class="custom-input__hidden"/>
+                        <label for="donation-payment-0" class="custom-input__label">
+                          <div class="custom-input__content">
+                            <div class="custom-input__img-wrapper donation__payment-img"><img src="i/payments-1.jpg" alt="" class="custom-input__img"></div>Пластиковая карта
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-input custom-input_tiling tiling-inputs__item donation__payment">
+                        <input id="donation-payment-1" name="donation-payment" type="radio" value="1" class="custom-input__hidden"/>
+                        <label for="donation-payment-1" class="custom-input__label">
+                          <div class="custom-input__content">
+                            <div class="custom-input__img-wrapper donation__payment-img"><img src="i/payments-2.jpg" alt="" class="custom-input__img"></div>Qiwi Wallet
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-input custom-input_tiling tiling-inputs__item donation__payment">
+                        <input id="donation-payment-2" name="donation-payment" type="radio" value="2" class="custom-input__hidden"/>
+                        <label for="donation-payment-2" class="custom-input__label">
+                          <div class="custom-input__content">
+                            <div class="custom-input__img-wrapper donation__payment-img"><img src="i/payments-3.jpg" alt="" class="custom-input__img"></div>WebMoney
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-input custom-input_tiling tiling-inputs__item donation__payment">
+                        <input id="donation-payment-3" name="donation-payment" type="radio" value="3" class="custom-input__hidden"/>
+                        <label for="donation-payment-3" class="custom-input__label">
+                          <div class="custom-input__content">
+                            <div class="custom-input__img-wrapper donation__payment-img"><img src="i/payments-4.jpg" alt="" class="custom-input__img"></div>Яндекс Деньги
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <label for="donation-name" class="label label_low-gap">Введите ваше Имя
+                    </label><input id="donation-name" name="name" required="required" class="input" type="text"/>
+                  </div>
+                  <div class="form__row">
+                    <label for="donation-surname" class="label label_low-gap">Введите вашу Фамилию
+                    </label><input id="donation-surname" name="surname" required="required" class="input" type="text"/>
+                  </div>
+                  <div class="form__row">
+                    <label for="donation-mail" class="label label_low-gap">Введите ваш e-mail
+                    </label><input id="donation-mail" name="mail" type="email" required="required" class="input"/>
+                  </div>
+                  <div class="form__row">
+                    <div class="custom-input custom-input_checkbox label">
+                      <input id="donation-anonym" name="anonym" type="checkbox" value="0" class="custom-input__hidden"/>
+                      <label for="donation-anonym" class="custom-input__label">Не показывать мои Имя и Фамилию на сайте
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+                <h3 class="donation__step-name">Оплата
+                </h3>
+                <fieldset class="donation__step-body">
+                  <div class="form__row_low-gap">
+                    <div class="label">Введите данные, пожалуйста:
+                    </div>
+                  </div>
+                  <div class="credit-card">
+                    <div class="form__row_md-gap">
+                      <label for="donation-card-num-0" class="label label_low-gap">Номер карты:
+                      </label>
+                      <div class="credit-card__columns credit-card__columns_number columns">
+                        <div class="credit-card__col columns__col columns__col_3"><input id="donation-card-num-0" name="card-num-0" data-mask="9999" required="required" class="input js-masked-input" type="text"/>
+                        </div>
+                        <div class="credit-card__col columns__col columns__col_3"><input id="donation-card-num-1" name="card-num-1" data-mask="9999" required="required" class="input js-masked-input" type="text"/>
+                        </div>
+                        <div class="credit-card__col columns__col columns__col_3"><input id="donation-card-num-2" name="card-num-2" data-mask="9999" required="required" class="input js-masked-input" type="text"/>
+                        </div>
+                        <div class="credit-card__col columns__col columns__col_3"><input id="donation-card-num-3" name="card-num-3" data-mask="9999?99" required="required" class="input js-masked-input" type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="credit-card__columns columns">
+                        <div class="credit-card__col columns__col columns__col_8">
+                          <label class="label label_low-gap">Срок действия:
+                          </label>
+                          <div class="columns">
+                            <div class="columns__col columns__col_6">
+                              <select name="card-month" required="required" class="select">
+                                <option val="1">01</option>
+                                <option val="2">02</option>
+                                <option val="3">03</option>
+                                <option val="4">04</option>
+                                <option val="5">05</option>
+                                <option val="6">06</option>
+                                <option val="7">07</option>
+                                <option val="8">08</option>
+                                <option val="9">09</option>
+                                <option val="10">10</option>
+                                <option val="11">11</option>
+                                <option val="12">12</option>
+                              </select>
+                            </div>
+                            <div class="columns__col columns__col_6">
+                              <select name="card-year" required="required" class="select">
+                                <option val="2016">2016</option>
+                                <option val="2017">2017</option>
+                                <option val="2018">2018</option>
+                                <option val="2019">2019</option>
+                                <option val="2020">2020</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="credit-card__col columns__col columns__col_4">
+                          <label for="donation-card-code" class="label label_low-gap">CVC:
+                          </label><input id="donation-card-code" name="card-code" data-mask="999" required="required" class="input js-masked-input" type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="credit-card__columns columns">
+                        <div class="credit-card__col columns__col columns__col_8">
+                          <label for="donation-card-name" class="label label_low-gap">Имя держателя карты:
+                          </label><input id="donation-card-name" name="card-name" required="required" class="input input_number" type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+<!--~~~~~~~~~~~~~~~ DONATION__MAIN end ~~~~~~~~~~~~~~~~~-->
+
+            </form>
+            <div class="donation__finish">
+              <div class="donation__complete-wrapper"><img src="i/complete.png" srcset="i/retina/complete.png" alt="Сделано" class="donation__complete" title=""/>
+              </div>
+              <div class="donation__thanks">Спасибо за пожертвование
+              </div>
+              <p class="label label_no-gap">
+                Таргетирование усиливает показ баннера. VIP-мероприятие транслирует SWOT-анализ.
+                 Разработка медиаплана, вопреки мнению П.Друкера, отражает потребительский рынок.
+                 Потребление, суммируя приведенные примеры, амбивалентно. Привлечение аудитории,
+                 согласно Ф.Котлеру, нетривиально. Стимулирование сбыта, следовательно,
+                 реально масштабирует креатив.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container">
+            <div class="footer__top-columns">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col"><a href="/" class="logo footer__logo"><span class="logo__text">© Сделай!</span></a>
+                </div>
+                <div class="columns__col">
+                  <div class="age-limit">18+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="nav footer__nav">
+              <h2 class="hidden-text">Навигация по сайту
+              </h2>
+              <ul class="nav__menu">
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">поводы</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">поступки</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">фонды</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">активисты</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">оферта</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">партнеры</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">помощь</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">новости</a> <span class="count nav__count">6</span>
+                </li>
+              </ul>
+            </nav><a href="javascript:void(0)" class="footer__desktop-link">полная версия</a>
+          </div>
+        </div>
+        <div class="footer__middle">
+          <div class="container">
+            <div class="footer__middle-columns columns">
+              <div class="footer__middle-col columns__col">
+                <div class="footer__title">Мы в соц. сетях:
+                </div>
+                <ul class="socials">
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_fb">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-fb"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_in">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-in"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_gplus">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-gplus"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_vk">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-vk"></use>
+                    </svg></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__middle-col columns__col">
+                <div class="footer__title">Мы принимаем:
+                </div>
+                <ul class="list footer__payments">
+                  <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-1.jpg" alt="" class="footer__payments-img"/></a></li>
+                  <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-2.jpg" alt="" class="footer__payments-img"/></a></li>
+                  <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-3.jpg" alt="" class="footer__payments-img"/></a></li>
+                  <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-4.jpg" alt="" class="footer__payments-img"/></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container"><a href="http://www.c-tm.ru/" class="footer__made"><span class="footer__made-text">Создание сайтов</span><img src="i/make-by-logo.png" alt="Creative Team" class="footer__made-logo" title=""/><span class="footer__made-year">2016</span></a>
+          </div>
+        </div>
+      </footer>
+
+<!--~~~~~~~~~~~~~~~ FOOTER end ~~~~~~~~~~~~~~~~~-->
+
+      <div data-remodal-id="auth-popup" class="popup">
+        <div class="popup__inner">
+          <header class="popup__header">
+            <div class="container">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col">
+                  <div class="popup__title">Вход на сайт
+                  </div>
+                </div>
+                <div class="columns__col">
+                  <button data-remodal-action="close" class="popup__close">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="popup__main">
+            <div class="popup__section">
+              <div class="container">
+                <div class="popup__label popup__label_gap_md">С помощью социальных сетей
+                </div>
+                <ul class="socials socials_big">
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_fb">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-fb"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_vk">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-vk"></use>
+                    </svg></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="popup__section">
+              <div class="container">
+                <form name="auth" method="post" action="" class="form">
+                  <div class="form__row">
+                    <label for="auth-email" class="popup__label">E-mail
+                    </label><input id="auth-email" name="email" type="email" required="" class="input"/>
+                  </div>
+                  <div class="form__row">
+                    <label for="auth-password" class="popup__label">Пароль:  <a href="javascript:void(0)" class="popup__link">(Забыли пароль?)</a>
+                    </label><input id="auth-password" name="password" type="password" required="" class="input"/>
+                  </div>
+                  <div class="form__row">
+                    <button type="submit" class="btn btn_mini btn_light">Войти
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <footer class="popup__footer">
+            <div class="container"><a href="#reg-popup" class="btn btn_trans btn_mini">Зарегистрироваться</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div data-remodal-id="reg-popup" class="popup">
+        <div class="popup__inner">
+          <header class="popup__header">
+            <div class="container">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col">
+                  <div class="popup__title">Регистрация
+                  </div>
+                </div>
+                <div class="columns__col">
+                  <button data-remodal-action="close" class="popup__close">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="popup__main">
+            <div class="popup__section">
+              <div class="container">
+                <div class="popup__label popup__label_gap_md">С помощью социальных сетей
+                </div>
+                <ul class="socials socials_big">
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_fb">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-fb"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_vk">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-vk"></use>
+                    </svg></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="popup__section">
+              <div class="container">
+                <form name="reg" method="post" action="" class="form">
+                  <div class="form__row">
+                    <label for="reg-name" class="popup__label">Ваше имя:
+                    </label><input id="reg-name" name="name" required="" class="input" type="text"/>
+                  </div>
+                  <div class="form__row">
+                    <label for="reg-email" class="popup__label">E-mail:
+                    </label><input id="reg-email" name="email" type="email" required="" class="input"/>
+                  </div>
+                  <div class="form__row">
+                    <label for="reg-password" class="popup__label">Пароль:
+                    </label><input id="reg-password" name="password" type="password" required="" class="input"/>
+                  </div>
+                  <div class="form__row">
+                    <label for="reg-password-confirm" class="popup__label">Пароль еще раз:
+                    </label><input id="reg-password-confirm" name="password-confirm" type="password" required="" class="input"/>
+                  </div>
+                  <div class="form__row">
+                    <button type="submit" class="btn btn_mini btn_light">Зарегистрироваться
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-remodal-id="message-popup" class="popup popup_message">
+        <div class="popup__inner">
+          <header class="popup__header">
+            <div class="container">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col">
+                  <div class="popup__title">Уведомление
+                  </div>
+                </div>
+                <div class="columns__col">
+                  <button data-remodal-action="close" class="popup__close">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="popup__main">
+            <div class="popup__section">
+              <div class="container">
+                <div class="popup__label popup__label_gap_md">Картинка добавлена
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="popup__footer">
+            <div class="container">
+              <button data-remodal-action="close" class="btn btn_trans btn_mini">ОК
+              </button>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div data-remodal-id="all-acts-popup" class="popup">
+        <div class="popup__inner">
+          <header class="popup__header">
+            <div class="container">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col">
+                  <div class="popup__title">Все поступки
+                  </div>
+                </div>
+                <div class="columns__col">
+                  <button data-remodal-action="close" class="popup__close">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="popup__main">
+            <div class="popup__section">
+              <div class="container">
+                <div class="popup__acts-list">
+                  <div class="popup__acts-item">
+                    <div class="popup__act-date"><span>15.10.2016, 16:13</span>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__bottom-block">
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text">Собрано:
+                        </div>
+                        <div class="popup__block-sum-number">63 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text"> Цель:
+                        </div>
+                        <div class="popup__block-sum-number">230 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__act-date"><span>15.10.2016, 16:13</span>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__bottom-block">
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text">Собрано:
+                        </div>
+                        <div class="popup__block-sum-number">63 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text"> Цель:
+                        </div>
+                        <div class="popup__block-sum-number">230 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__act-date"><span>15.10.2016, 16:13</span>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__bottom-block">
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text">Собрано:
+                        </div>
+                        <div class="popup__block-sum-number">63 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text"> Цель:
+                        </div>
+                        <div class="popup__block-sum-number">230 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__act-date"><span>15.10.2016, 16:13</span>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__bottom-block">
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text">Собрано:
+                        </div>
+                        <div class="popup__block-sum-number">63 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text"> Цель:
+                        </div>
+                        <div class="popup__block-sum-number">230 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__act-date"><span>15.10.2016, 16:13</span>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__bottom-block">
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text">Собрано:
+                        </div>
+                        <div class="popup__block-sum-number">63 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text"> Цель:
+                        </div>
+                        <div class="popup__block-sum-number">230 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-remodal-id="all-donations-popup" class="popup">
+        <div class="popup__inner">
+          <header class="popup__header">
+            <div class="container">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col">
+                  <div class="popup__title">Все пожертвования
+                  </div>
+                </div>
+                <div class="columns__col">
+                  <button data-remodal-action="close" class="popup__close">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="popup__main">
+            <div class="popup__section">
+              <div class="container">
+                <div class="popup__acts-list">
+                  <div class="popup__acts-item">
+                    <div class="popup__top-line">
+                      <div class="popup__act-date popup__act-date_left"><span>15.10.2016, 16:13</span>
+                      </div>
+                      <div class="popup__number">+ 600
+                        <svg class="popup__icon icon icon_small">
+                          <use xlink:href="i/icons.svg#icon-ruble"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name popup__project-name_donation"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__text">Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__top-line">
+                      <div class="popup__act-date popup__act-date_left"><span>15.10.2016, 16:13</span>
+                      </div>
+                      <div class="popup__number">+ 600
+                        <svg class="popup__icon icon icon_small">
+                          <use xlink:href="i/icons.svg#icon-ruble"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name popup__project-name_donation"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__text">Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__top-line">
+                      <div class="popup__act-date popup__act-date_left"><span>15.10.2016, 16:13</span>
+                      </div>
+                      <div class="popup__number">+ 600
+                        <svg class="popup__icon icon icon_small">
+                          <use xlink:href="i/icons.svg#icon-ruble"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name popup__project-name_donation"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__text">Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__top-line">
+                      <div class="popup__act-date popup__act-date_left"><span>15.10.2016, 16:13</span>
+                      </div>
+                      <div class="popup__number">+ 600
+                        <svg class="popup__icon icon icon_small">
+                          <use xlink:href="i/icons.svg#icon-ruble"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name popup__project-name_donation"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__text">Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__top-line">
+                      <div class="popup__act-date popup__act-date_left"><span>15.10.2016, 16:13</span>
+                      </div>
+                      <div class="popup__number">+ 600
+                        <svg class="popup__icon icon icon_small">
+                          <use xlink:href="i/icons.svg#icon-ruble"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name popup__project-name_donation"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__text">Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <script src="js/vendor.min.js"></script>
+      <script src="js/scripts.min.js"></script>
+    </div>
+  </body>
+</html>

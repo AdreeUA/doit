@@ -1,0 +1,84 @@
+extends ../layouts/default
+include ../partials/nav
+
+
+block head
+    - var pageTitle = 'Кабинет активиста: настройки';
+    - var pageName = 'Настройки';
+
+block content
+
+    +b.SECTION.cabinet_user._settings
+
+        +e.HEADER.header
+
+            .container
+
+                include ../partials/cabinet-sidebar
+
+                +e.content-wrapper
+
+                    +e.H2.title #{pageName}
+
+        +e.main
+
+            .container
+
+                +e.content-wrapper
+
+                    +e.content_mini
+
+                        +b.FORM.form
+
+                            +e.inner
+
+                                +e.row_size_full._settings
+
+                                    +e.col_size_xs._feedback
+                                        +b.LABEL.label(for='act-img') Аватар
+
+                                    +e.col_size_md.add-photo
+
+                                        +b.add-photo_userpic._userpic-none
+                                        
+                                            +e.LABEL.item.__upload(for='act-img')
+
+                                                +e.INPUT.upload-input.j-preview-avatar(id='act-img' name='act-img' type='file')
+
+                                                +e.avatar(src='http://www.placecage.com/c/152/152', srcset='http://www.placecage.com/304/304 2x')
+
+                                +e.row_size_full._settings
+
+                                    +e.col_size_xs._feedback
+                                        +b.LABEL.label(for='act-name') Имя
+
+                                    +e.col_size_md
+                                        +b.INPUT.input(id='act-name' name='act-name' required)
+
+                                +e.row_size_full._settings
+
+                                    +e.col_size_xs._feedback
+                                        +b.LABEL.label(for='act-mail') E-mail
+
+                                    +e.col_size_md
+                                        +b.INPUT.input(id='act-mail' name='act-mail' required)
+
+                                +e.row_size_full._settings
+
+                                    +e.col_size_xs._feedback
+                                        +b.LABEL.label(for='act-pass') Пароль
+
+                                    +e.col_size_md
+                                        +b.INPUT.input(id='act-pass' name='act-pass' required)
+
+                                +e.row_size_full._settings
+
+                                    +e.col_size_xs._feedback._settings-repeat
+                                        +b.LABEL.label(for='act-repeat') Пароль еще раз
+
+                                    +e.col_size_md
+                                        +b.INPUT.input(id='act-repeat' name='act-repeat' required)
+
+                            +e.footer_light
+
+                                +b.BUTTON.btn_high.cabinet__add-post-btn(type='submit') Сохранить

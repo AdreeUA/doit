@@ -1,0 +1,46 @@
+extends ../layouts/default
+
+block head
+    - var pageTitle = 'Добавить поступок';
+
+block content
+
+    +b.add-act
+
+        +e.HEADER.header.head-title_nav
+
+            .container
+
+                +e.UL.steps.list
+
+                    - var steps = ['Выбор категории', 'Выбора повода', 'Информация о поступке', 'Выбор фонда'];
+
+                    each step, ind in steps
+
+                        +e.LI.steps-item.list__item(class=(ind === 0 ? 'add-act__steps-item_active' : ''))= step
+
+        +e.FORM.body(name='add-act' method='post' action='')
+
+            .container
+
+                +e.wrapper
+
+                    +e.main
+
+                        +e.screen_active
+
+                            +e.fund-added
+
+                                +e.SVG.fund-added-icon
+                                    use(xlink:href='i/icons.svg#icon-check')
+
+                                +e.fund-added-content
+                                    +e.P.new-fund-text_full
+                                        | Команда проекта Сделай! свяжется с указанным фондом в ближайшее время. Пожалуйста,
+                                        |  обратите внимание, что все фонды-участники проекта Сделай! должны пройти качественный
+                                        |  отбор в соответствии с Регламентом проекта Сделай! и законодательством РФ.
+
+                                    +b.btn_high.add-act__return-btn(href=jv0) Вернуться к выбору фонда
+
+
+

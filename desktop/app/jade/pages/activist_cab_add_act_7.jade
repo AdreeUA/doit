@@ -1,0 +1,130 @@
+extends ../layouts/default
+
+block head
+    - var pageTitle = 'Добавить поступок';
+
+block content
+
+    +b.add-act
+
+        +e.HEADER.header.head-title_nav
+
+            .container
+
+                +e.UL.steps.list
+
+                    - var steps = ['Выбор категории', 'Выбора повода', 'Информация о поступке', 'Выбор фонда'];
+
+                    each step, ind in steps
+
+                        +e.LI.steps-item.list__item(class=(ind === 0 ? 'add-act__steps-item_active' : ''))= step
+
+        +e.FORM.body(name='add-act' method='post' action='')
+
+            .container
+
+                +e.wrapper
+
+                    +e.main
+
+                        +e.screen_active
+
+                            +e.HEADER.funds-header
+
+                                .columns.columns_align_justify.columns_va_middle
+
+                                    .columns__col
+                                        +e.title Выберите фонд
+
+                                    .columns__col
+                                        +b.search_header.add-act__search
+
+                                            +e.LABEL.label Поиск
+
+                                                +e.SVG.icon
+                                                    use(xlink:href='i/icons.svg#icon-search')
+
+                                                +e.INPUT.input_header-in(name='search-funds' type='search')
+
+                            +e.funds-list-wrapper
+
+                                +e.new-fund
+
+                                    +e.SVG.new-fund-icon
+                                        use(xlink:href='i/icons.svg#icon-search')
+
+                                    +e.P.new-fund-text
+                                        | Не нашли свое мероприятие — добавьте его
+
+                                    +b.form
+
+                                        +b.LABEL.label_small(for='new-act-name') Официальное название мероприятия
+                                        +e.row.add-act__new-fund-row
+                                            +e.col_size_xxl
+                                                +b.INPUT.input(id='new-act-name' name='new-act-name' required)
+
+                                        +b.LABEL.label_small Даты проведения
+                                        +e.row.add-act__new-fund-row
+                                            +e.col_size_xs._separate
+                                                +b.datepicker_find-act._no-arrow
+                                                    +e.SPAN.placeholder Выберете дату
+                                                    +e.INPUT.input._width100p._big-size(id='new-act-date' name='new-act-date' type='date')
+                                                    +e.LABEL.calendar._right-position-act(for='new-act-date')
+                                                        .hidden-text выберете даты
+                                                        +e.SVG.calendar-icon
+                                                            use(xlink:href='i/icons.svg#icon-calendar')
+                                            +e.col_size_xs
+                                                +b.datepicker_find-act._no-arrow
+                                                    +e.SPAN.placeholder Выберете дату
+                                                    +e.INPUT.input._width100p._big-size(id='new-act-date2' name='new-act-date2' type='date')
+                                                    +e.LABEL.calendar._right-position-act(for='new-act-date2')
+                                                        .hidden-text выберете даты
+                                                        +e.SVG.calendar-icon
+                                                            use(xlink:href='i/icons.svg#icon-calendar')
+
+                                        +b.LABEL.label_small(for='new-fund-contacts') Краткое описание
+                                        +e.row.add-act__new-fund-row
+                                            +e.col_size_xxl
+                                                +b.TEXTAREA.input_textarea.input_textarea-h110.add-act__new-fund-contacts(id='new-act-disc' name='new-act-disc' required)
+
+                                        +e.row.add-act__new-fund-row
+                                            +e.col_size_xs
+                                                +b.LABEL.label_small(for='new-act-city') Город
+                                                +b.INPUT.input(id='new-act-city' name='new-act-city' required)
+
+                                            +e.col_size_xs
+                                                +b.LABEL.label_small(for='new-act-place') Место проведения
+                                                +b.INPUT.input(id='new-act-place' name='new-act-place' required)
+
+                                        +b.LABEL.label_small(for='new-act-select') Класс мероприятия
+                                        +e.row.add-act__new-fund-row
+                                            +b.SELECT.select(id='new-act-select' name='class-type')
+                                                option(value='default') Выбрать тип мероприятия
+                                                option(value=0) Один мероприятия
+                                                option(value=1) Второй мероприятия
+                                                option(value=2) Третий мероприятия
+
+                                        +b.LABEL.label_small(for='new-act-disc-full') Подробное описание
+                                        +e.row.add-act__new-fund-row
+                                            +e.col_size_xxl
+                                                +b.TEXTAREA.input_textarea.input_textarea-h166(id='new-act-disc-full' name='new-act-disc-full' required)
+
+                                        +b.LABEL.label_small(for='new-act-site') Официальный сайт мероприятия
+                                        +e.row.add-act__new-fund-row
+                                            +e.col_size_xxl
+                                                +b.INPUT.input(id='new-act-site' name='new-act-site' required)
+
+
+                                        +e.row.add-act__new-fund-row
+                                            +b.simple-btn.add-act__new-fund-submit(href=jv0) Создать повод
+
+                    +e.footer
+
+                        +e.nav-btn_prev.btn_high.btn_grey(href=jv0)
+                            | Предыдущий шаг
+
+                        +e.nav-btn_next.btn_high(href=jv0)
+                            | Следующий шаг
+
+
+

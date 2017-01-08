@@ -1,0 +1,17 @@
+{
+  "name": "miro/do-it",
+  "minimum-stability": "stable",
+  "require": {},
+  "scripts": {
+    "post-install-cmd": [
+      "npm i",
+      "bower i",
+      "gulp build clean"
+    ],
+    "post-update-cmd": [
+      "npm i",
+      "bower i",
+      "gulp build clean"
+    ]
+  }
+}

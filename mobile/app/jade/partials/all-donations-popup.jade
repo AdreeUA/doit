@@ -1,0 +1,40 @@
++b.popup(data-remodal-id='all-donations-popup')
+   +e.inner
+
+      +e.HEADER.header
+         .container
+            .columns.columns_justify.columns_middle
+               .columns__col
+                  +e.title Все пожертвования
+
+               .columns__col
+                  +e.BUTTON.close(data-remodal-action='close')
+
+      +e.main
+         +e.section
+            .container
+               +e.acts-list
+                  - for(var i = 0; i < 5; i++)
+                     +e.acts-item
+
+                        +e.top-line
+                           +e.act-date_left
+                              span 15.10.2016, 16:13
+                           +e.number + 600
+                              +e.SVG.icon.icon_small
+                                 use(xlink:href='i/icons.svg#icon-ruble')
+
+                        +e.activist-name
+                           span Сергей Венедиктов
+
+                        +e.project-name_donation
+                           span Помощь домашним любимцам
+
+                        +e.text
+                           | Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+
+
+
+
+
+

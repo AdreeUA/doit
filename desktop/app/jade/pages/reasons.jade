@@ -1,0 +1,104 @@
+extends ../layouts/default
+include ../partials/nav
+include ../partials/act
+include ../partials/occasion
+
+
+block head
+    - var pageTitle = 'Поводы';
+    - var pageName = 'Поводы';
+
+block content
+
+
+    +b.HEADER.head-title_nav
+
+        .container
+
+            +e.H1.title_big #{pageTitle}
+
+            +e.FORM.nav
+
+                +e.search
+
+                    +b.search_header
+
+                        +e.LABEL.label Поиск
+
+                            +e.SVG.icon
+                                use(xlink:href='#icon-search')
+
+                            +e.INPUT.input_header-in
+
+                +e.datepicker
+
+                    +b.datepicker
+                        +e.SPAN.placeholder Даты проведения
+                        +e.INPUT.input._width100p._big-size(id='occasions-date' name='occasions-date' type='date')
+                        +e.LABEL.calendar._right-position(for='occasions-date')
+                            .hidden-text выбрать дату
+                            +e.SVG.calendar-icon
+                                use(xlink:href='#icon-calendar')
+
+                +e.select
+
+                    +b.SELECT.select(name='occasions-type')
+                        option(value='default') выбрать тип повода
+                        option(value=0) Один повод
+                        option(value=1) Второй повод
+                        option(value=2) Третий повод
+
+
+    +b.SECTION.acts-sec_in._acts
+
+        +e.content
+
+            .container.acts-in-cont
+
+                .container
+                    
+                    .occasions-list-wrapper
+                    
+                        +occasionsList([{
+                            src: 'http://loremflickr.com/680/260/sports',
+                            srcset: 'http://loremflickr.com/1360/520/sports',
+                            title: 'Марафон в олимпийском'
+                        }, {
+                            src: 'http://loremflickr.com/680/260/animals',
+                            srcset: 'http://loremflickr.com/1360/520/animals',
+                            title: 'Большое собрание'
+                        }, {
+                            src: 'http://loremflickr.com/680/260/animals',
+                            srcset: 'http://loremflickr.com/1360/520/animals',
+                            title: 'Большое собрание'
+                        }, {
+                            src: 'http://loremflickr.com/680/260/animals',
+                            srcset: 'http://loremflickr.com/1360/520/animals',
+                            title: 'Большое собрание'
+                        }, {
+                            src: 'http://loremflickr.com/680/260/animals',
+                            srcset: 'http://loremflickr.com/1360/520/animals',
+                            title: 'Большое собрание'
+                        }, {
+                            src: 'http://loremflickr.com/680/260/animals',
+                            srcset: 'http://loremflickr.com/1360/520/animals',
+                            title: 'Большое собрание'
+                        }, {
+                            src: 'http://loremflickr.com/680/260/city',
+                            srcset: 'http://loremflickr.com/1360/520/city',
+                            title: 'Просто бегаем'
+                        }, {
+                            src: 'http://loremflickr.com/680/260/food',
+                            srcset: 'http://loremflickr.com/1360/520/food',
+                            title: 'Благотворительный забег в специальных условиях'
+                        }])(list='occasions-sec__list', item='occasions-sec__item')
+
+
+        +e.loading
+
+            +b.loading
+
+                +e.SPAN.text Идет загрузка...
+
+
+                +delimiter('acts')

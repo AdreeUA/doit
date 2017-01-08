@@ -1,0 +1,142 @@
+extends ../layouts/default
+include ../partials/act
+
+
+block head
+    - var pageTitle = 'Похожие поступки';
+    - var pageName = 'Похожие поступки';
+
+block content
+
+    .reasons-slider-wrapper
+
+        a.back-link.reasons-slider-wrapper__back(href='#') назад
+
+        ul.reasons-slider.js-reasons-slider
+            li.reasons-slider__item
+                img.reasons-slider__item-img(src="i/test-img.jpg" alt)                   
+            li.reasons-slider__item
+                img.reasons-slider__item-img(src="i/test-img.jpg" alt)
+            li.reasons-slider__item
+                img.reasons-slider__item-img(src="i/test-img.jpg" alt)  
+
+        .reasons-slider-nav
+            .reasons-slider-nav__prev.js-reasons-slider-nav__prev
+            .reasons-slider-nav__next.js-reasons-slider-nav__next
+
+        .reasons-slider-pager.js-reasons-slider-pager
+
+        .reasons-slider-info
+            h1.reasons-slider-info__title Просто бегаем по набережной
+            .reasons-slider-info__date 18 Ноября
+            
+    .container
+                
+        .reasons-description
+            .reasons-description__right-col
+            
+                +b.soc-wrapper
+                   
+                    +e.share-word Поделиться:
+                    
+                    +b.UL.socials_num
+
+                        +e.LI.item
+                            +e.link_fb(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-fb')
+
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_in(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-in')
+
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_gplus(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-gplus')
+
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_vk(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-vk')
+
+                                +e.num 36
+                                
+                    .like-box
+                    
+                        +e.share-word Понравилось мероприятие? Нажми -
+                        
+                        +b.like.reasons__like(href=jv0)
+                            +e.SVG.icon._color-black
+                                use(xlink:href='i/icons.svg#icon-heart')
+                                
+            .reasons-description__left-col
+                h2.reasons-sub-title Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации.
+                p.reasons-text Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована. Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами.
+        
+        .acts-wrapper 
+            h3.section-title Поступки
+            +b.SECTION.acts-sec_in._acts._similar
+
+                +e.content
+
+                    .container.acts-in-cont
+
+                        +e.item
+                            +act_in({
+                                'mod': 'act_power',
+                                'src': 'http://loremflickr.com/390/235/animals',
+                                'srcset': 'http://loremflickr.com/800/1100/animals',
+                                'text': 'Обливание холодной водой',
+                                'occasion': true
+                            })
+
+                        +e.item
+                            +act_in({
+                                'mod': 'act_power',
+                                'src': 'http://loremflickr.com/390/235/city',
+                                'srcset': 'http://loremflickr.com/780/470/city',
+                                'text': 'Бежишь и приносишь пользу обществу'
+                            })
+
+                        +e.item
+                            +act_in({
+                                'mod': 'act_power',
+                                'src': 'http://loremflickr.com/390/235/nature',
+                                'srcset': 'http://loremflickr.com/780/470/nature',
+                                'text': 'Деньги для набережной'
+                            })
+
+                        +e.item
+                            +act_in({
+                                'mod': 'act_power',
+                                'src': 'http://loremflickr.com/390/235/food',
+                                'srcset': 'http://loremflickr.com/780/470/food',
+                                'text': 'Ешь и толстей'
+                            })
+
+                        +e.item
+                            +act_in({
+                                'mod': 'act_power',
+                                'src': 'http://loremflickr.com/390/235/food',
+                                'srcset': 'http://loremflickr.com/780/470/food',
+                                'tex0t': 'Официальный забег Мэрии Москвы',
+                                'occasion': true
+                            })
+
+                        +e.item
+                            +act_in({
+                                'mod': 'act_power',
+                                'src': 'http://loremflickr.com/390/235/food',
+                                'srcset': 'http://loremflickr.com/780/470/food',
+                                'text': 'Толпа разноцветных людей бежит в сторону Гольяново'
+                            })
+
+            

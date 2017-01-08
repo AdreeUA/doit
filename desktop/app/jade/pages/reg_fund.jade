@@ -1,0 +1,184 @@
+extends ../layouts/default
+include ../partials/reg-doc
+
+
+block head
+    - var pageTitle = 'Регистрация фонда';
+    - var pageName = 'Регистрация фонда';
+
+block content
+
+    +b.SECTION.donation_margin-medium
+
+        +e.HEADER.header_margin-none
+
+            +e.container
+
+                +e.H2.title Регистрация фонда
+
+                +e.UL.steps-list_curve
+
+                    +e.LI.step_active._top Вы заполняете данные о Фонде
+                    +e.LI.step._bottom Мы проверяем ваши данные
+                    +e.LI.step Вы получаете доступ в личный кабинет
+                    
+        +b.FORM.form
+
+            +e.sec_dashed
+
+                +e.row_size_full._margin-medium
+
+                    +e.col_size_full
+                        +b.LABEL.label_xs(for='act-name') Официальное название организации
+
+                        +b.INPUT.input(id='act-name' name='act-name' required)
+
+                +e.row_size_full._margin-medium
+
+                    +e.col_size_full
+                        +b.LABEL.label_xs(for='act-address') Юридический адрес
+
+                        +b.INPUT.input(id='act-address' name='act-address' required)
+
+                +e.row_size_full._margin-medium
+
+                    +e.col_size_full
+                        +b.LABEL.label_xs(for='act-phone') Ваш телефон
+
+                        +b.INPUT.input(id='act-phone' name='act-phone' required)
+
+                    +e.col_size_full
+                        +b.LABEL.label_xs(for='act-email') Ваш e-mail
+
+                        +b.INPUT.input(id='act-email' name='act-email' required)
+
+                +e.row_size_full._margin-medium
+
+                    +e.col_size_full
+                        +b.LABEL.label_xs(for='act-site') Адрес веб-сайта
+
+                        +b.INPUT.input(id='act-site' name='act-site' required)
+
+                +e.row_size_full._margin-medium
+
+                    +e.col_size_full
+                        +b.LABEL.label_xs(for='act-ogrn') ОГРН
+
+                        +b.INPUT.input(id='act-ogrn' name='act-ogrn' required)
+
+                    +e.col_size_full
+                        +b.LABEL.label_xs(for='act-inn') ИНН
+
+                        +b.INPUT.input(id='act-inn' name='act-inn' required)
+
+                    +e.col_size_full
+                        +b.LABEL.label_xs(for='act-kpp') КПП
+
+                        +b.INPUT.input(id='act-kpp' name='act-kpp' required)
+
+                    +e.col_size_full
+                        +b.LABEL.label_xs(for='act-erbor') ЕРБОР
+
+                        +b.INPUT.input(id='act-erbor' name='act-erbor' required)
+
+            +e.sec_dashed
+
+                +e.H3.title_sub Регистрационные документы НКО:
+
+                +e.note
+
+                    +b.note_border._border-yellow
+                        | Сканы всех документов предоставляются в копиях, заверенных подписью единоличного исполнительного органа и печатью Благотворительного фонда
+
+                +e.docs-list
+
+                    +b.reg-docs-list
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'mod': '_active',
+                                'name': 'Свидетельство о государственной регистрации юридического лица;',
+                                'doc_name': 'registracia',
+                                'doc_ext': 'pdf'
+                            })
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'mod': '_active',
+                                'name': 'Свидетельство о присвоении идентификационного номера налогоплательщика (ИНН);',
+                                'doc_name': 'svidetelstvo',
+                                'doc_ext': 'docx'
+                            })
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'name': 'Устав;'
+                            })
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'name': 'Информационное письмо органов статистики о присвоении кодов;'
+                            })
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'name': 'Решение учредителей Благотворительного фонда о назначении высшего коллегиального органа фонда и единоличного исполнительного органа фонда;'
+                            })
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'name': 'Копия паспорта лица, осуществляющего функции единоличного исполнительного органа фонда;'
+                            })
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'name': 'Решение учредителей Благотворительного фонда о назначении попечительского совета;'
+                            })
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'name': 'Выписка из ЕГРЮЛ;'
+                            })
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'name': 'Уведомление о включении некоммерческой организации в реестр некоммерческих организаций, выполняющих функции иностранного агента, либо Письмо-подтверждение о не включении Благотворительного фонда в Реестр некоммерческих организаций, выполняющих функции иностранного агента;'
+                                    })
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'name': 'Благотворительная программа Благотворительного фонда на календарный год, в котором заключено настоящее Соглашение;'
+                            })
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'name': 'Ежегодный отчет Благотворительного фонда об использовании имущества за предшествующий году заключения данного Соглашения календарный год;'
+                            })
+
+                        +e.item-wrapper
+                            +reg-doc({
+                                'name': 'Бухгалтерская отчетность Благотворительного фонда за предшествующий году заключения данного Соглашения календарный год.'
+                            })
+
+            +e.sec_dashed
+                    
+                +b.confirm
+
+                    +e.INPUT.check.js-input-styler(type="checkbox" id="act-confirm" name="act-confirm")
+
+                    +e.text
+
+                        +e.LABEL.label(for="act-confirm") я согласен с условиями
+
+                        +e.link(href=jv0) соглашения о раскрытии информации и подтверждении статуса благотворительного фонда
+
+            +e.sec_dashed
+                    
+                +e.note_reg-fund
+                    | После проверки ваших данных мы пришлем вам автоматически сгенерированный пароль в личный кабинет
+
+            +e.sec_dashed
+                    
+                +e.submit_right
+
+                    +b.btn_light(type='submit') Зарегистрировать фонд

@@ -1,0 +1,214 @@
+extends ../layouts/default
+include ../partials/act
+
+
+block head
+    - var pageTitle = 'Похожие поступки';
+    - var pageName = 'Похожие поступки';
+
+block content
+
+    +b.SECTION.acts-one-info
+
+        .container
+
+            +e.organize
+
+                +e.img-wrapper
+
+                    +e.img(src='http://loremflickr.com/297/165/city', srcset='http://www.loremflickr.com/594/330/city 2x')
+
+                +e.activist-button
+
+                    +b.activist-name_big._wide(href=jv0)
+
+                        +e.photo-wrapper_in
+
+                            +e.IMG.photo(src='http://stevensegallery.com/50/50' srcset='http://stevensegallery.com/100/100 2x')
+
+                        +e.name Сергей Варяжный
+
+                +e.sponsor-label При поддержке фонда:
+
+                +e.A.sponsor-link(href=jv0)
+
+                    +e.sponsor-img(src='http://loremflickr.com/169/76/business', srcset='http://www.loremflickr.com/338/152/business 2x')
+
+
+            +e.nums
+
+                +e.remain-title До начала поступка осталось:
+
+                +e.remain 5 дней
+
+                +b.money-info
+
+                    +e.col_collected
+
+                        +e.title Собрано:
+
+                        +e.value 64&nbsp;200
+                            +e.SVG.icon_ruble
+                                use(xlink:href='i/icons.svg#icon-ruble')
+
+                    +e.col_target
+
+                        +e.title Цель:
+
+                        +e.value 120&nbsp;000
+                            +e.SVG.icon_ruble
+                                use(xlink:href='i/icons.svg#icon-ruble')
+
+                +b.battery_big.__battery
+
+                    +e.charge
+
+                        +e.val 51%
+
+                    +e.SVG.lightning
+                        use(xlink:href='i/icons.svg#icon-lightning')
+
+                +e.donations-num
+
+                    +b.link-dashed(href=jv0) 84 пожертвования
+
+                +e.donations-btn
+
+                    +b.BUTTON.btn_light._font-bigger Пожертвовать
+
+
+            +e.main 
+                
+                +b.title_info
+                    | Бежим марафон Весенний Гром ради помощи детям!
+
+                +e.occasion Повод: Просто бегаем 18 ноября 2015
+
+                +e.descr
+                    | Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект. Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект. 
+
+                +b.soc-wrapper
+
+                    +b.like-button_big._left-col(href=jv0)
+
+                        +e.SVG.icon_like
+                            use(xlink:href='i/icons.svg#icon-thumbs-up')
+
+                    +e.share-word Поделиться:
+                    
+                    +b.UL.socials_num
+
+                        +e.LI.item
+                            +e.link_fb(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-fb')
+
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_in(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-in')
+
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_gplus(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-gplus')
+
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_vk(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-vk')
+
+                                +e.num 36
+
+
+
+
+    +delimiter('act-one-info')
+
+
+    +b.SECTION.acts-similar
+
+        +e.content
+
+            +b.tabs
+
+                +e.header_head
+
+                    .container
+
+                        +e.UL.nav
+
+                            +e.LI.__nav-item_active(data-tab=0)
+
+                                +e.nav-link(href=jv0) Живая лента
+    
+                            +e.LI.__nav-item(data-tab=1)
+
+                                +e.nav-link(href=jv0) Фотогалерея
+    
+                            +e.LI.__nav-item(data-tab=2)
+
+                                +e.nav-link(href=jv0) Похожие поступки
+
+                +e.panel_active(data-tab=0)
+
+                    +b.SECTION.acts-sec_in._acts._similar
+
+                        +e.content
+ 
+                            .container.acts-in-cont
+
+                                +e.item
+                                    +act_in({
+                                        'mod': 'act_power',
+                                        'src': 'http://loremflickr.com/390/235/animals',
+                                        'srcset': 'http://loremflickr.com/800/1100/animals',
+                                        'text': 'Обливание холодной водой',
+                                        'occasion': true
+                                    })
+
+                                +e.item
+                                    +act_in({
+                                        'src': 'http://loremflickr.com/390/235/city',
+                                        'srcset': 'http://loremflickr.com/780/470/city',
+                                        'text': 'Бежишь и приносишь пользу обществу'
+                                    })
+
+                                +e.item
+                                    +act_in({
+                                        'src': 'http://loremflickr.com/390/235/nature',
+                                        'srcset': 'http://loremflickr.com/780/470/nature',
+                                        'text': 'Деньги для набережной'
+                                    })
+
+                                +e.item
+                                    +act_in({
+                                        'mod': 'act_power',
+                                        'src': 'http://loremflickr.com/390/235/food',
+                                        'srcset': 'http://loremflickr.com/780/470/food',
+                                        'text': 'Ешь и толстей'
+                                    })
+
+                                +e.item
+                                    +act_in({
+                                        'src': 'http://loremflickr.com/390/235/food',
+                                        'srcset': 'http://loremflickr.com/780/470/food',
+                                        'tex0t': 'Официальный забег Мэрии Москвы',
+                                        'occasion': true
+                                    })
+
+                                +e.item
+                                    +act_in({
+                                        'src': 'http://loremflickr.com/390/235/food',
+                                        'srcset': 'http://loremflickr.com/780/470/food',
+                                        'text': 'Толпа разноцветных людей бежит в сторону Гольяново'
+                                    })
+
+
+    +delimiter('acts-similar')

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Avocode 0.4.0 - http://avocode.com -->
+<svg height="70" width="229" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229 70">
+    <path fill="#50e3c2" fill-rule="evenodd" d="M 5.94 7.18 C 5.94 6.08 6.83 5.19 7.94 5.19 L 185.43 5.19 C 186.54 5.19 187.44 6.09 187.44 7.18 L 187.44 62.22 C 187.44 63.32 186.55 64.21 185.43 64.21 L 7.94 64.21 C 6.84 64.21 5.94 63.31 5.94 62.22 L 5.94 7.18 Z M 5.94 7.18" />
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="2" stroke="#50e3c2" fill="none" fill-rule="evenodd" d="M 0.16 5.55 C 0.16 2.79 2.39 0.56 5.15 0.56 L 188.23 0.56 C 190.99 0.56 193.22 2.79 193.22 5.55 L 193.22 65.01 C 193.22 67.76 190.99 70 188.23 70 L 5.15 70 C 2.39 70 0.16 67.77 0.16 65.01 L 0.16 5.55 Z M 0.16 5.55" />
+    <path fill="#50e3c2" fill-rule="evenodd" d="M 192.07 14.44 L 197.47 14.44 C 200.23 14.44 202.47 16.69 202.47 19.44 L 202.47 47.65 C 202.47 50.4 200.24 52.64 197.47 52.64 L 192.07 52.64 L 192.07 14.44 Z M 192.07 14.44" />
+    <text font-size="26" font-family="VW Headline OT" fill="#525252" y="40" x="60">
+        <tspan>104%</tspan>
+    </text>
+    <path fill="#f8c41c" fill-rule="evenodd" d="M 223.73 16.76 L 207.1 35.23 L 216.18 35.23 L 211.71 48.39 L 228.48 29.63 L 220.1 29.63 L 223.73 16.76 Z M 223.73 16.76" />
+</svg>

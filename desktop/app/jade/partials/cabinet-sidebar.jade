@@ -1,0 +1,33 @@
++b.ASIDE.sidebar.cabinet__sidebar
+
+    h2.hidden-text Сайдбар
+
+    .cabinet__ava-wrapper
+
+        img.cabinet__ava(src='http://stevensegallery.com/120/120' srcset='http://stevensegallery.com/240/240 2x')
+
+    .cabinet__name
+        | Стивен Красно Солнышко
+
+    +nav({
+        'Ваши поступки': jv0,
+        'Статистика': jv0,
+        'Настройки': jv0,
+        'Новости': jv0
+    })(nav='_vertical sidebar__menu')
+
+    +b.BLOCKQUOTE.quote.cabinet__quote
+
+        +e.P.text
+            | Цитата, объясняющая, что вообще происходит!
+
+        +e.CITE.cite
+
+            +e.photo-wrapper
+
+                +e.IMG.photo(src='http://stevensegallery.com/40/40' srcset='http://stevensegallery.com/80/80 2x')
+
+            +e.author
+                | Бенедикт Камбербэтч
+
++delimiter('sidebar')

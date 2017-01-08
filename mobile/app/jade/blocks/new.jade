@@ -1,0 +1,52 @@
+include custom-input
+
+mixin new(data)
+    +b.ARTICLE.new(class=(data.mod || ''))
+
+        +e.FOOTER.info
+            if data.author
+                +e.author(href=jv0)
+                    +e.photo-wrapper
+                        +e.photo(src='http://stevensegallery.com/40/40' srcset='http://stevensegallery.com/80/80 2x' alt='Фотография автора')
+                    +e.SPAN.author-name Сергей Варяжный
+            +e.TIME.date(datetime='2015-01-15 18:35') 22.01.2015, 18:35
+
+        if data.img
+            +e.IMG.media(src='http://loremflickr.com/330/200?random=8' srcset='http://loremflickr.com/660/400?random=8 2x' alt='')
+
+        if data.video
+            +e.IFRAME.media(height="185" src="https://www.youtube.com/embed/x1fe8-Qli9E" frameborder="0" allowfullscreen)
+
+        if data.stats
+            +b.stats.new__stats
+                +e.item
+                    +e.val 14 458 135
+                    +e.text Собрано денег
+
+        if data.quiz
+            +b.FORM.quiz
+                +e.inner
+                    +e.FIELDSET.main
+
+                        +e.LEGEND.question Что будет, если никто не придёт на мероприятие?
+
+                        -
+                            var answers = [
+                                'Мероприятие не состоится',
+                                'Мероприятие состоится',
+                                'Мероприятие состоится, но мы будем расстроены',
+                                'Мероприятие не состоится и мы не будем расстроены'
+                            ];
+
+                        each answer, ind in answers
+
+                            - checked = (ind === 0 ? true : false)
+
+                            +customInput('radio quiz__answer', 'radio', 'quiz-' + ind, 'answer', ind, checked)
+                                | #{answer}
+
+                    +b.BUTTON.btn.quiz__btn(href=jv0) Ответить
+
+        else
+            +b.content
+                block

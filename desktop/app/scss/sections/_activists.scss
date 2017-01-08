@@ -1,0 +1,47 @@
+//===========================================================================
+// ACTIVISTS
+//===========================================================================
+
+.activists {
+    font-size: 0;
+
+    &__content {
+        padding-top: rem(17);
+
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    &__item {
+        font-size: 1rem;
+        width: 50%;
+        padding: rem(13) rem(11.5);
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &__loading {
+        margin-top: rem(32);
+        margin-bottom: rem(32);
+        
+        &-button {
+            margin-top: rem(32);
+            margin-bottom: rem(32);
+            
+            text-align: center;
+            color: black;
+        }
+    }
+
+    &_dash-item {
+        margin-left: -5px;
+        margin-right: -5px;
+        margin-bottom: rem(40);
+
+        .activists__item {
+            padding: rem(6) rem(5);
+        }
+    }
+}

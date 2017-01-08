@@ -1,0 +1,162 @@
+.add-photo {
+
+    &_create-fund {
+
+        .add-photo__upload {
+            border: 1px dashed;
+
+            color: #9b9b9b;
+
+            background-color: transparent;
+            border-radius: 5px;
+            box-shadow: none;
+
+            &::before {
+                position: absolute;
+                top: rem(26);
+                left: 50%;
+
+                width: rem(40);
+                height: rem(50);
+                margin-left: rem(-20);
+
+                background-image: url(../i/upload-icon.svg);
+                background-size: contain;
+
+                content: '';
+            }
+        }
+
+        .add-photo__list {
+            margin: 0 rem(-18) 0;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .add-photo__upload-text {
+            top: 70%;
+
+            text-align: center;
+        }
+    }
+
+    &__list {
+        margin: rem(-5) rem(-15) rem(30);
+        padding: 0;
+
+        font-size: 0;
+
+        list-style: none;
+    }
+
+    &__item-wrapper {
+        display: inline-block;
+        padding: rem(5) rem(15);
+
+        font-size: 1rem;
+        vertical-align: top;
+    }
+
+    &__item {
+        display: block;
+
+        width: rem(150);
+        height: rem(150);
+    }
+
+    &__btn {
+        width: rem(150);
+        padding: rem(25) rem(5);
+
+        font-size: rem(17);
+        line-height: 1.1764705882; //20/17
+    }
+
+    &__upload {
+        position: relative;
+
+        background-color: #ececec;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .35);
+        cursor: pointer;
+
+        &_logo {
+            height: rem(38);
+
+            border-radius: 5px;
+        }
+    }
+
+    &__upload-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+
+        pointer-events: none;
+    }
+
+    &__upload-text {
+        @include center();
+
+        font-weight: 300;
+        font-size: rem(17);
+        line-height: 1;
+        font-family: $headingFont;
+    }
+
+    &_avatar {
+        .add-photo__item {
+            width: rem(152);
+            height: rem(152);
+
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .add-photo__avatar {
+            display: none;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .add-photo__upload {
+            background-color: #f2f2f2;
+            background-image: url('../i/user.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: none;
+        }
+
+        &.add-photo_uploaded {
+
+            .add-photo__upload {
+                background-image: none;
+            }
+
+            .add-photo__avatar {
+                display: block;
+            }
+        }
+    }
+}
+
+.no-objectfit {
+
+    .add-photo {
+
+        &_avatar {
+
+            .add-photo__avatar {
+                @include center();
+                height: auto;
+            }
+        }
+    }
+}

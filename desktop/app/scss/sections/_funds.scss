@@ -1,0 +1,36 @@
+//===========================================================================
+// FUNDS-SEC
+//===========================================================================
+
+.funds-sec {
+    padding-top: rem(40);
+    padding: rem(50) rem(155) 0;
+
+    &__content {
+
+    }
+
+    &__item {
+        margin: rem(12) 0;
+    }
+
+    &__reg-fund {
+        margin-top: rem(28);
+        margin-bottom: rem(30);
+        text-align: center;
+    }
+    
+    &_padding-none{
+        padding: 0;
+    }
+    
+    &__loading {
+        margin-top: rem(20);
+        margin-bottom: rem(45);
+
+        &-button {
+            text-align: center;
+            color: black;
+        }
+    }
+}

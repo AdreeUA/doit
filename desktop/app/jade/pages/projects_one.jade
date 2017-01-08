@@ -1,0 +1,114 @@
+extends ../layouts/default
+include ../partials/project
+
+block head
+   - var pageTitle = 'Проект «GREENPEACE»';
+   - var pageName = 'Страница проекта';
+block content
+
+    +b.HEADER.head-title
+        .container
+            +e.back-link(href=jv0) назад
+            +e.H2.title #{pageTitle}
+
+    +b.SECTION.project-sec
+
+        .container
+            +e.DIV.top
+                +e.img-wrap
+                    +e.IMG(src='http://loremflickr.com/400/250/business' srcset='http://loremflickr.com/800/500/business 2x')
+
+                +e.content
+                    +e.title Енот «Темка» нуждается в лечении лапки!
+                    +e.line
+                        +e.line-block
+                            +e.block-title Проект создан при фонде:
+                            +e.fund-wrap
+                                +e.IMG.fund-img(src='http://loremflickr.com/170/50/business' srcset='http://loremflickr.com/340/100/business 2x')
+
+                        +e.line-block
+                            +e.block-title Примите участие до:
+                            +e.date
+                                span 30 августа 2016
+
+                        +e.line-block
+                            +b.total-sum
+                                +e.P.text Собрано всего:
+                                +e.SPAN.amount 558 135 ₽
+
+                    +e.line
+                        +e.line-block
+                            +b.A.link-stat-dashed.js-modal(href=jv0 data-modal = 'all-acts') 17 поступов
+
+                        +e.line-block
+                            +b.A.link-stat-dashed.js-modal(href=jv0 data-modal = 'all-donations') 218 пожертвований
+
+                        +e.line-block
+                            +e.A.do-act(href=jv0)
+                                span.link-bottom-line-effect Создать поступок с
+                                <br>
+                                span.link-bottom-line-effect этим проектом
+
+            +e.DIV.text
+                 p
+                     | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована. Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами. Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована. Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами. Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована. Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами.
+
+            +e.bottom-links
+
+                +b.soc-wrapper
+
+                    +b.like-button_big._left-col(href=jv0)
+                        +e.SVG.icon_like
+                            use(xlink:href='i/icons.svg#icon-thumbs-up')
+
+                    +e.share-word Поделиться:
+
+                    +b.UL.socials_num
+
+                        +e.LI.item
+                            +e.link_fb(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-fb')
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_in(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-in')
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_gplus(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-gplus')
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_vk(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-vk')
+                                +e.num 36
+
+                +b.A.btn_light(href=jv0) Пожертвовать
+
+            +e.similar
+
+                +b.SECTION.projects-sec
+
+                    +e.title Похожие проекты
+
+                    .projects-in-cont
+
+                        - for(var i = 0; i < 4; i++)
+                            +e.item
+                                +project-preview({
+                                    'src': 'http://loremflickr.com/320/240/animals',
+                                    'srcset': 'http://loremflickr.com/640/420/animals',
+                                    'text': 'Помогите родителям помочь своим детям с аутизмом',
+                                    'projectname': 'Все любят ежиков'
+                                })
+
+                div.text-center
+                    +b.A.filled-btn_sea(href=jv0)
+                        +e.SPAN.text Показать еще
+

@@ -1,0 +1,64 @@
+extends ../layouts/default
+
+
+block head
+    - var pageTitle = 'Фотографии поступков';
+
+block content
+
+    +b.SECTION.cabinet_user
+
+        +b.HEADER.head-title
+
+            .container
+
+                +e.main
+                    +e.back-link.arrow-link(href=jv0) назад
+                    +e.H2.title Фотографии
+
+        +e.main
+
+            +b.FORM.add-photo.cabinet__add-photo-sec(name='add-photo' method='post' action='')
+
+                .container
+
+                    +b.LABEL.label Загрузите изображение
+
+                    +e.UL.list.cabinet__added-photo-list
+
+                        +e.LI.item-wrapper
+                            +b.user-photo.add-photo__item
+                                +e.img-wrapper
+                                    +e.IMG.img.add-photo__img(src='http://loremflickr.com/150/150/?random=5' + photo, srcset='http://loremflickr.com/300/300/?random=5' + photo + ' 2x')
+                                +e.BUTTON.remove(title='Удалить фотографию') Удалить фотографию
+
+                        +e.item-wrapper
+                            +e.LABEL.item.add-photo__upload
+                                +e.INPUT.upload-input.js-upload-photo(name='photos' type='file' multiple accept="image/jpeg,image/jpg,image/png")
+                                +e.SPAN.upload-text Загрузить
+
+                    +e.BUTTON.btn.btn_size_wide._light(type='submit') Опубликовать
+
+            +e.photos-wrapper
+
+                .container
+
+                    -
+                        var photos = [
+                            { width: 300, height: 150 },
+                            { width: 400, height: 250 },
+                            { width: 200, height: 100 },
+                            { width: 350, height: 250 },
+                        ]
+
+                    each photo, ind in photos
+
+                        +e.user-photo
+                            +b.user-photo
+                                +e.img-wrapper
+                                    +e.IMG.img(src='http://loremflickr.com/' + photo.width + '/' + photo.height + '?random=' + ind,
+                                        srcset='http://loremflickr.com/' + photo.width * 2 + '/' + photo.height * 2 + '?random=' + ind + ' 2x')
+                                +e.BUTTON.remove(title='Удалить фотографию') Удалить фотографию
+
+
+

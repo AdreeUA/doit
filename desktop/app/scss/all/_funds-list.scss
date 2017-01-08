@@ -1,0 +1,192 @@
+.funds-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    &__item {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+
+        font-size: rem(15);
+        font-weight: 300;
+        line-height: 1.2; //18/15
+    }
+
+    &__acts {
+        display: inline-block;
+        vertical-align: top;
+
+        line-height: rem(28);
+        color: #1f9b7f !important;
+
+        @extend .link-dashed;
+
+    }
+
+    &__col {
+        box-sizing: content-box;
+        display: table-cell;
+
+        vertical-align: middle;
+        // Для хрома и оперы
+        word-break: break-word;
+        // Для остальных браузеров
+        hyphens: auto;
+
+        &:not(:last-child) {
+            padding-right: rem(30);
+        }
+
+        &_img {
+            width: rem(125);
+        }
+
+        &_acts {
+            width: rem(100);
+        }
+
+        &_name {
+            width: 100%;
+        }
+
+        &_desc {
+            width: rem(150);
+        }
+
+        &_city {
+            width: rem(200);
+        }
+
+        &_medal {
+            width: rem(60);
+        }
+
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &__name {
+        font-family: $headingFont;
+        font-size: rem(24);
+        font-weight: 600;
+        line-height: 1.1666666667; //28/24
+    }
+
+    &__medal {
+        width: 100%;
+    }
+}
+
+.funds-slider {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: rem(40);
+
+    .slick-slide {
+        outline: none;
+    }
+    &__item {
+
+        &._active,
+        &:hover {
+
+            .funds-slider__image {
+                border: 3px solid #50e3c2;
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            .img-caption {
+                opacity: 1;
+            }
+        }
+    }
+    &__image {
+        position: relative;
+        border: 3px solid #fff;
+        width: rem(180);
+        overflow: hidden;
+        transition: border .3s;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            opacity: 0;
+            background-color: rgba(#000, .8);
+
+            transition: opacity .3s;
+
+            content: '';
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .img-caption {
+            color: white;
+            font-size: rem(12);
+            font-weight: 600;
+            letter-spacing: -0.1px;
+            line-height: rem(14);
+            position: absolute;
+            bottom: rem(10);
+            left: rem(10);
+            opacity: 0;
+            transition: opacity .3s;
+        }
+    }
+
+    &__caption {
+        width: rem(165);
+        color: black;
+        font-family: "Helvetica";
+        font-size: rem(12);
+        font-weight: 400;
+        line-height: rem(14);
+        margin-top: rem(10);
+    }
+
+    .slick-arrow {
+        font-size: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 48px;
+        box-shadow: none !important;
+        border-radius: 0;
+        overflow: visible;
+
+        &:after, &:before {
+            content: none;
+            display: none;
+        }
+
+        &.slick-prev {
+            left: -40px;
+            background: url('../i/acts-slider-prev.png');
+            background-size: cover;
+        }
+
+        &.slick-next {
+            right: -20px;
+            background: url('../i/acts-slider-next.png');
+            background-size: cover;
+        }
+    }
+}
+

@@ -1,0 +1,49 @@
++b.popup(data-remodal-id='reg-popup')
+    +e.inner
+
+        +e.HEADER.header
+            .container
+                .columns.columns_justify.columns_middle
+                    .columns__col
+                        +e.title Регистрация
+
+                    .columns__col
+                        +e.BUTTON.close(data-remodal-action='close')
+
+        +e.main
+
+            +e.section
+                .container
+                    +e.label_gap_md С помощью социальных сетей
+                    +b.UL.socials_big
+
+                        - var socials = ['fb', 'vk']
+
+                        each item in socials
+                            +e.item
+                                +e.link(class='_#{item}' href=jv0)
+                                    +e.SVG.icon
+                                        use(xlink:href='i/icons.svg#icon-#{item}')
+
+            +e.section
+                .container
+                    form.form(name='reg' method='post' action='')
+
+                        .form__row
+                            +e.LABEL.label(for='reg-name') Ваше имя:
+                            +b.INPUT.input(id='reg-name' name='name' required='')
+
+                        .form__row
+                            +e.LABEL.label(for='reg-email') E-mail:
+                            +b.INPUT.input(id='reg-email' name='email' type='email' required='')
+
+                        .form__row
+                            +e.LABEL.label(for='reg-password') Пароль:
+                            +b.INPUT.input(id='reg-password' name='password' type='password' required='')
+
+                        .form__row
+                            +e.LABEL.label(for='reg-password-confirm') Пароль еще раз:
+                            +b.INPUT.input(id='reg-password-confirm' name='password-confirm' type='password' required='')
+
+                        .form__row
+                            +b.BUTTON.btn_mini._light(type='submit') Зарегистрироваться

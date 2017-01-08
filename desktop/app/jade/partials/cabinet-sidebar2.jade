@@ -1,0 +1,37 @@
++b.ASIDE.sidebar.cabinet__sidebar
+
+    h2.hidden-text Сайдбар
+
+    .cabinet__avatar-wrapper
+
+        img.cabinet__avatar-photo(src='http://stevensegallery.com/120/120' srcset='http://stevensegallery.com/240/240 2x')
+
+    .cabinet__name
+        | Vladimir Dolgiy-Rapoport
+
+    +nav({
+        'Поступки': jv0,
+        'Проекты': jv0,
+        'Статистика': jv0,
+        'Фотографии': jv0,
+        'Настройки': jv0,
+        'Управление отчетами': jv0,
+        'Новости': jv0,
+        'Добавить новость': jv0,
+        'Описание документов': jv0
+    })(nav='_vertical sidebar__menu')
+
+    .report
+        p.report-title Сгенерировать отчет
+        form.report-form
+            .filter-col_date
+                +b.datepicker
+                    +e.SPAN.placeholder Выберете даты
+                    +e.INPUT.input._width100p._big-size(id='occasions-date' name='occasions-date' type='date')
+                    +e.LABEL.calendar._right-position(for='occasions-date')
+                        .hidden-text выберете даты 
+                        +e.SVG.calendar-icon
+                            use(xlink:href='i/icons.svg#icon-calendar')
+            button.report-form-btn.report-form-btn_padding-side22px Сгенерировать
+
+

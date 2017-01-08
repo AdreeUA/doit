@@ -1,0 +1,126 @@
+mixin funds-projects-item
+
+    +b.projects-item
+        +e.col1
+
+            +e.A.title(href=jv0) Все любят ежиков!
+
+            +b.A.link-edit(href=jv0)
+                +e.SVG.icon_edit
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#icon-edit-small"></use>
+
+            br
+            +e.P.text
+                | Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить…
+
+                +e.A.details.link-bottom-line-effect(href=jv0) Подробнее
+            +e.A.link-bottom.link-bottom-line-effect(href=jv0) Создать поступок с этим проектом
+
+        +e.col2
+
+            +b.total-sum
+                +e.P.text Собрано всего:
+                +e.SPAN.amount 558 135
+                    +e.SVG.ruble
+                        use(xlink:href='i/icons.svg#icon-ruble')
+
+            +e.P.col2-text Для проекта создано:
+            +b.A.link-stat-dashed.projects-item__link-stat.js-modal(href=jv0 data-modal = 'all-acts') 17 поступов
+            br
+            +b.A.link-stat-dashed.projects-item__link-stat.js-modal(href=jv0 data-modal = 'all-donations') 218 пожертвований
+
+
+mixin funds-finished-project
+
+    +b.projects-item_finished-project
+
+        +e.col1
+            +e.A.title_finished-project(href=jv0) Все любят ежиков!
+
+            +b.A.link-edit(href=jv0)
+                +e.SVG.icon_edit
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#icon-edit-small"></use>
+
+            br
+            +e.P.text
+                | Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить…
+                +e.A.details_finished-project.link-bottom-line-effect(href=jv0) Подробнее
+
+        +e.col2
+
+            +b.total-sum_finished-project
+                +e.P.text Собрано всего:
+                +e.SPAN.amount_finished-project 558 135 ₽
+
+            +e.P.col2-text Для проекта создано:
+            +b.A.link-stat-dashed_finished-project.projects-item__link-stat.js-modal(href=jv0 data-modal = 'all-acts') 17 поступов
+            br
+            +b.A.link-stat-dashed_finished-project.projects-item__link-stat.js-modal(href=jv0 data-modal = 'all-donations') 218 пожертвований
+
+
+mixin funds-img-project
+
+    +b.projects-item
+
+        +e.left-part
+            +e.img-wrap
+                +e.IMG.img(src="i/img-testing.png")
+
+        +e.right-part
+
+            +e.col1
+                +e.A.title(href=jv0) Все любят ежиков!
+                +b.A.link-edit(href=jv0)
+                    +e.SVG.icon_edit
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#icon-edit-small"></use>
+
+                br
+                +e.P.text
+                    | Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить…
+                    +e.A.details.link-bottom-line-effect(href=jv0) Подробнее
+                +e.A.link-bottom.link-bottom-line-effect(href=jv0) Создать поступок с этим проектом
+
+            +e.col2
+
+                +b.total-sum
+                    +e.P.text Собрано всего:
+                    +e.SPAN.amount 558 135 ₽
+
+                +e.P.col2-text Для проекта создано:
+                +b.A.link-stat-dashed.projects-item__link-stat.js-modal(href=jv0 data-modal = 'all-acts') 17 поступов
+                br
+                +b.A.link-stat-dashed.projects-item__link-stat.js-modal(href=jv0 data-modal = 'all-donations') 218 пожертвований
+
+
+mixin funds-finished-img-project
+
+    +b.projects-item_finished-project
+
+        +e.left-part
+            +e.img-wrap_finished-project
+                +e.IMG.img(src="i/img-testing.png")
+
+        +e.right-part
+
+            +e.col1
+                +e.A.title_finished-project(href=jv0) Все любят ежиков!
+                +b.A.link-edit(href=jv0)
+                    +e.SVG.icon_edit
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#icon-edit-small"></use>
+
+                br
+                +e.P.text
+                    | Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить…
+                    +e.A.details_finished-project.link-bottom-line-effect(href=jv0) Подробнее
+
+            +e.col2
+
+                +b.total-sum_finished-project
+                    +e.P.text Собрано всего:
+                    +e.SPAN.amount_finished-project 558 135 ₽
+
+                +e.P.col2-text Для проекта создано:
+                +b.A.link-stat-dashed_finished-project.projects-item__link-stat.js-modal(href=jv0 data-modal = 'all-acts') 17 поступов
+                br
+                +b.A.link-stat-dashed_finished-project.projects-item__link-stat.js-modal(href=jv0 data-modal = 'all-donations') 218 пожертвований
+

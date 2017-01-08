@@ -1,0 +1,164 @@
+extends ../layouts/default
+include ../partials/act
+
+
+block head
+    - var pageTitle = 'Активист Сергей Варяжный';
+    - var pageName = 'Активист Сергей Варяжный';
+
+block content
+
+    +b.HEADER.head-title
+
+        .container
+
+            +e.back-link(href=jv0) назад
+
+            +e.IMG.avatar(src='http://www.stevensegallery.com/65/65', srcset='http://www.stevensegallery.com/130/130 2x')
+
+            +e.H2.title #{pageTitle}
+
+    +b.SECTION.acts-sec_in
+
+        .container
+
+            +e.descr
+
+                p 
+                    | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована. Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами.
+
+
+            +e.wreath-wrapper
+
+                +e.wreath
+
+                    +b.wreath_green._activist
+
+                        +e.title Для вас собрали
+
+                        +e.money
+
+                            +e.SPAN.val.js-animate-num 558 135
+
+                            +e.SVG.icon_ruble
+                                use(xlink:href='i/icons.svg#icon-ruble')
+
+                        +e.name-title Вы совершили 
+                        +e.name 6 поступков
+
+                +e.wreath
+
+                    +b.wreath_gold._activist
+
+                        +e.title Вы пожертвовали
+
+                        +e.money
+
+                            +e.SPAN.val.js-animate-num 121 000
+
+                            +e.SVG.icon_ruble
+                                use(xlink:href='i/icons.svg#icon-ruble')
+
+                        +e.name-title Вы поддержали
+                        +e.name 3 поступкa
+
+
+        +e.content
+
+            .container.acts-in-cont
+
+                +e.item
+                    +act_in({
+                        'mod': 'act_power',
+                        'src': 'http://loremflickr.com/390/235/animals',
+                        'srcset': 'http://loremflickr.com/800/1100/animals',
+                        'text': 'Обливание холодной водой',
+                        'like': true
+                    })
+
+                +e.item
+                    +act_in({
+                        'src': 'http://loremflickr.com/390/235/city',
+                        'srcset': 'http://loremflickr.com/780/470/city',
+                        'text': 'Бежишь и приносишь пользу обществу',
+                        'occasion': true,
+                        'like': true
+                    })
+
+                +e.item
+                    +act_in({
+                        'src': 'http://loremflickr.com/390/235/nature',
+                        'srcset': 'http://loremflickr.com/780/470/nature',
+                        'text': 'Деньги для набережной',
+                        'occasion': true,
+                        'like': true
+                    })
+
+                +e.item
+                    +act_in({
+                        'mod': 'act_power',
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Ешь и толстей',
+                        'occasion': true,
+                        'like': true
+                    })
+
+                +e.item
+                    +act_in({
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Ешь и толстей',
+                        'occasion': true,
+                        'like': true
+                    })
+
+                +e.item
+                    +act_in({
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Ешь и толстей',
+                        'occasion': true,
+                        'like': true
+                    })
+
+
+            +b.HEADER.head-title._mini._top-dashed
+
+                .container
+        
+                    +e.H2.title Прошедшие поступки
+
+            .container
+
+                +e.item._past
+                    +act_in({
+                        'mod': 'act_past',
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Ешь и толстей', 
+                        'occasion': true
+                    })
+
+                +e.item._past
+                    +act_in({
+                        'mod': 'act_power act_past',
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Ешь и толстей',
+                        'occasion': true
+                    })
+
+                +e.item._past
+                    +act_in({
+                        'mod': 'act_past',
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Ешь и толстей',
+                        'occasion': true
+                    })
+
+
+
+
+                +delimiter('acts-sec_in')

@@ -1,0 +1,105 @@
+{
+  "name": "digitalwand",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "LehaKos <lehakos@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "jquery-form-styler": "jquery.form-styler#^1.7.4",
+    "jquery-cookie": "jquery.cookie#^1.4.1",
+    "pickadate": "^3.5.6",
+    "jquery.placeholder": "^0.2.4",
+    "picturefill": "^3.0.2",
+    "slick-carousel": "^1.5.9",
+    "qtip2": "^2.2.1",
+    "devbridge-autocomplete": "^1.2.24",
+    "jQuery.dotdotdot": "jquery.dotdotdot#^1.7.4",
+    "malihu-custom-scrollbar-plugin": "^3.1.3",
+    "shine": "^0.2.8",
+    "imagesloaded": "^4.1.0",
+    "jquery-animateNumber": "^0.0.13",
+    "highcharts": "^4.2.3",
+    "svg4everybody": "^2.0.3",
+    "arcticmodalbw": "^0.3.2",
+    "mojs": "https://github.com/legomushroom/mojs.git#master",
+    "masonry": "^4.0.0",
+    "select2": "^4.0.3",
+    "jquery.inputmask": "^3.3.1",
+    "easytabs": "^3.2.0"
+  },
+  "devDependencies": {},
+  "overrides": {
+    "jquery-form-styler": {
+      "main": [
+        "jquery.formstyler.js",
+        "jquery.formstyler.css"
+      ]
+    },
+    "jquery": {
+      "main": []
+    },
+    "pickadate": {
+      "main": [
+        "lib/picker.js",
+        "lib/picker.date.js",
+        "lib/themes/default.css",
+        "lib/themes/default.date.css"
+      ]
+    },
+    "slick-carousel": {
+      "main": [
+        "slick/slick.js",
+        "slick/slick.css"
+      ]
+    },
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    },
+    "qtip2": {
+      "main": [
+        "jquery.qtip.js",
+        "jquery.qtip.css"
+      ]
+    },
+    "masonry": {
+      "main": [
+        "dist/masonry.pkgd.js"
+      ]
+    },
+    "select2": {
+      "main": [
+        "dist/js/select2.js",
+        "dist/css/select2.css"
+      ]
+    },
+    "easytabs": {
+      "main": [
+        "lib/jquery.easytabs.js"
+      ]
+    },
+    "jquery.inputmask": {
+      "main": [
+        "dist/inputmask/inputmask.js",
+        "dist/inputmask/jquery.inputmask.js",
+        "dist/inputmask/inputmask.extensions.js",
+        "dist/inputmask/inputmask.date.extensions.js"
+      ]
+    }     
+  }
+}

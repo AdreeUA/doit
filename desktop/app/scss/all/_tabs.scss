@@ -1,0 +1,119 @@
+.tabs {
+
+    &_dotdotdot {
+        .tabs__panel {
+            width: 100%;
+        }
+    }
+
+    &__nav-item {
+        display: inline-block;
+
+        font-size: 1rem;
+        line-height: 1;
+        vertical-align: middle;
+
+        &:not(:last-child) {
+            margin-right: rem(45);
+        }
+
+        &.active {
+            padding: rem(8) rem(15);
+            border: 1px solid;
+
+            color: #1f9b7f;
+
+            border-radius: 6px;
+        }
+    }
+
+    &__nav-link {
+        @extend .link-dashed;
+
+        text-decoration: none;
+        color: inherit;
+        
+        &.active {
+            border: none;
+
+            cursor: default;
+        }
+    }
+    
+    &__header {
+        &_base {
+            padding-top: rem(29);
+            padding-bottom: rem(11);
+
+            .tabs__nav-item {
+                padding: rem(13) rem(15);
+
+                font-family: $headingFont;
+                font-size: rem(21);
+                font-weight: 300;
+                letter-spacing: rem(-0.17);
+                line-height: rem(21);
+            }
+        }
+
+        &_head {
+            background-color: rgb(244, 244, 244);
+            margin-bottom: rem(26);
+            @include clearfix();
+
+
+            .tabs__nav-item {
+                display: inline-block;
+                padding: 0;
+                height: rem(70);
+
+                font-family: $headingFont;
+                font-size: rem(21);
+                line-height: rem(70);
+                letter-spacing: rem(-0.3);
+
+                padding-right: rem(5);
+                border-bottom: rem(7) solid transparent;
+                transition: 0.4s;
+
+                &:hover:not(.header-tabs__item_cur) {
+                    opacity: 0.5;
+                }
+
+                &:not(:last-child) {
+                    margin-right: rem(40);
+                }
+
+                &.active {
+                    border: none;
+                    border-radius: 0;
+                    border-bottom: rem(7) solid #1f9b7f;
+                }
+
+                @media (max-width: 1200px) {
+                    margin-right: rem(20);
+                    font-size: rem(18);
+                }
+            }
+
+            .tabs__nav-link {
+                display: block;
+                color: #000;
+                border-bottom: none;
+                
+                &.active {
+                    color: #1f9b7f;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        padding: 0;
+        margin: 0;
+
+        font-size: 0;
+
+        list-style: none;
+    }
+}

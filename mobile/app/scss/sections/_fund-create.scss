@@ -1,0 +1,58 @@
+.fund-create {
+
+    &__main {
+        padding-bottom: rem(32);
+    }
+
+    &__inner {
+        display: flex;
+        //align-items: center;
+        //justify-content: space-between;
+    }
+
+    &__checkbox {
+        display: inline-block;
+        padding-left: rem(20);
+
+        vertical-align: top;
+    }
+
+    &__added-photo-list {
+        margin: rem(33) rem(-18) 0 !important;
+    }
+
+    &__textarea {
+        height: rem(200);
+    }
+    
+    .input,
+    .fund-create__datepicker {
+        border: 1px solid #cfcfcf;
+
+        background-color: #fff;
+        box-shadow: none;
+    }
+
+    .fund-create__datepicker {
+        display: inline-block;
+        vertical-align: top;
+        width: rem(135);
+
+        overflow: hidden;
+
+        border-radius: 5px;
+
+        &:after {
+            display: none;
+        }
+
+        .datepicker__input {
+            width: 100%;
+            padding: 0 rem(15);
+            border: none;
+
+            opacity: 1;
+        }
+    }
+
+}

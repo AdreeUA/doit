@@ -1,0 +1,56 @@
+div.box-donations-wrapper
+
+    +b.donations-modal#all-donations
+
+        +e.header
+
+            +e.H2.title Все пожертвования
+
+            +e.close.arcticmodal-close
+
+        +e.content.js-custom-scroll
+
+            - for(var i = 0; i < 15; i++)
+                +e.content-item
+
+                    +e.left-col
+                        +e.date
+                            span 15.10.2016
+
+                    +e.right-col
+                        +e.right-col-line
+                            +e.number + 600
+                                +e.SVG.ruble
+                                    use(xlink:href='i/icons.svg#icon-ruble')
+                            +e.activist Сергей Венедиктов
+                            +e.project-name Помощь домашним любимцам
+                            +e.text
+                                p
+                                    | Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+
+                        +e.right-col-line
+                            +e.number + 600
+                                +e.SVG.ruble
+                                    use(xlink:href='i/icons.svg#icon-ruble')
+                            +e.activist Сергей Венедиктов
+                            +e.project-name Помощь домашним любимцам
+                            +e.text
+                                p
+                                    | Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+
+                        +e.right-col-line
+                            +e.number + 600
+                                +e.SVG.ruble
+                                    use(xlink:href='i/icons.svg#icon-ruble')
+                            +e.activist Сергей Венедиктов
+                            +e.project-name Помощь домашним любимцам
+                            +e.text
+                                p
+                                    | Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+
+
+
+
+
+
+

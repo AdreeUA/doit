@@ -1,0 +1,9 @@
+@include font-face('vw_headline', '../fonts/vwheadlineot-black-webfont', 900, normal, woff2 woff ttf svg)
+@include font-face('vw_headline', '../fonts/vwheadlineot-semibold-webfont', 600, normal, woff2 woff ttf svg)
+@include font-face('vw_headline', '../fonts/vwheadlineot-book-webfont', 300, normal, woff2 woff ttf svg)
+
+@include font-face('vw_text', '../fonts/vwtext-bold-webfont', 700, normal, woff2 woff ttf svg)
+@include font-face('vw_text', '../fonts/vwtext-bolditalic-webfont', 700, italic, woff2 woff ttf svg)
+@include font-face('vw_text', '../fonts/vwtext-regular-webfont', normal, normal, woff2 woff ttf svg)
+@include font-face('vw_text', '../fonts/vwtext-regularitalic-webfont', normal, italic, woff2 woff ttf svg)
+@include font-face('vw_text', '../fonts/vwtext-light-webfont', 300, normal, woff2 woff ttf svg)

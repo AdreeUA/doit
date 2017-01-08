@@ -1,0 +1,15 @@
+mixin announcement(data)
+
+    +b.ARTICLE.announcement(class!=(data.mod ? '_page' : ''))
+
+        +e.img-wrapper
+            +e.IMG.img(src=data.src srcset=(data.srcset + ' 2x') alt='')
+
+        +e.content-wrapper
+
+            +e.TIME.date(datetime='2015-09-18') 18.09.2015
+
+            +e.content
+                +e.P= data.text
+
+            +e.more.simple-btn(href=jv0) подробнее

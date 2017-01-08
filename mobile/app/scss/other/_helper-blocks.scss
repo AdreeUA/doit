@@ -1,0 +1,114 @@
+.container {
+    width: 100%;
+    padding-left: $containerPadding;
+    padding-right: $containerPadding;
+}
+
+.hidden-text {
+    position: absolute;
+    clip: rect(0 0 0 0); /* for Internet Explorer */
+    clip: rect(0, 0, 0, 0);
+    z-index: -1;
+
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+
+    overflow: hidden;
+}
+
+.help-block {
+    margin-top: rem(5);
+    color: #ed7373;
+}
+
+.columns {
+    font-size: 0;
+    line-height: 0;
+
+    &_justify {
+        text-align: justify;
+        text-justify: newspaper;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+        }
+
+        .columns__col {
+            text-align: left;
+        }
+    }
+
+    &_middle {
+        .columns__col {
+            vertical-align: middle;
+        }
+    }
+
+    &_bottom {
+        .columns__col {
+            vertical-align: bottom;
+        }
+    }
+
+    &__col {
+        display: inline-block;
+
+        font-size: 1rem;
+        line-height: normal;
+        vertical-align: top;
+
+        @include columns(12);
+
+        &.columns__col_center {
+            text-align: center;
+        }
+
+        &_margin-bottom {
+            display: block;
+            margin-bottom: rem(27);
+        }
+    }
+
+    &_grid {
+        margin-left: rem(-10);
+        margin-right: rem(-10);
+
+        .columns__col {
+            padding-left: rem(10);
+            padding-right: rem(10);
+        }
+    }
+}
+
+.pages-list-wrapper {
+    background-color: rgba(0, 0, 0, .05)
+}
+
+.pages-list {
+    margin: 0;
+    padding: rem(25) 0;
+
+    list-style: none;
+
+    &__item {
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-family: $headingFont;
+        color: #ed7373;
+        text-decoration: none;
+
+        transition: color .4s ease;
+
+        &:hover {
+            color: adjust-color(#ed7373, $lightness: -15%);
+        }
+    }
+}

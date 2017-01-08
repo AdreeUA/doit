@@ -1,0 +1,409 @@
+extends ../layouts/default
+include ../partials/occasion
+include ../partials/announcement
+include ../partials/custom-input
+include ../partials/act
+
+block head
+    - var pageInd = 0;
+    - var pageTitle = 'Шаблон проекта';
+    - var pageName = 'главная';
+    - var pageClass = 'index-page';
+    - var headerMod = '_theme_air _transform';
+
+block content
+
+    +b.SECTION.promo-sec
+
+        .container
+
+            +e.wrapper
+
+                +e.H2.title.js-typing-anim(data-text='Все мероприятия со смыслом, потому что помогают')
+
+                +e.FORM.search(name='search' method='post' action='')
+
+                   +b.search(data-morphing='true' data-morphing-root='.promo-sec')
+
+                        +e.inner
+                            +e.LABEL.icon-wrapper(for='search-field')
+                                +e.SVG.icon_search
+                                    use(xlink:href='i/icons.svg#icon-search')
+                            +e.INPUT.input.js-autocomplete(id='search-field' name='search' type='search' placeholder='Поиск')
+
+                +b.scheme.promo-sec__scheme.js-anim-obj
+
+                    +e.img-wrapper
+                        +e.IMG.img(src='i/scheme.png' alt='Схема')
+
+                    +e.UL.list
+
+                        +e.item
+                            +b.link-dashed(href=jv0) Найти поступок<br> или людей
+
+                        +e.item 
+                            +b.link-dashed(href=jv0) Пожертвовать
+
+                        +e.item 
+                            +b.link-dashed(href=jv0) Сделать поступок
+
+                +e.buttons
+
+                    +e.button-col
+
+                        +b.btn_size_wide._hover_pos-aware._with-icon(href=jv0)
+                            +e.SVG.icon_bulb
+                                use(xlink:href='i/icons.svg#icon-bulb')
+                            +e.SPAN.text Создать поступок
+                            +e.SPAN.hover
+
+                    +e.button-col
+
+                        +b.btn_size_wide._hover_pos-aware._with-icon(href=jv0)
+                            +e.SVG.icon_donation
+                                use(xlink:href='i/icons.svg#icon-donation')
+                            +e.SPAN.text Пожертвовать
+                            +e.SPAN.hover
+
+                    +e.button-col
+
+                        +b.btn_size_wide._hover_pos-aware._with-icon(href=jv0)
+                            +e.SVG.icon_reg
+                                use(xlink:href='i/icons.svg#icon-reg')
+                            +e.SPAN.text Зарегистрировать фонд
+                            +e.SPAN.hover
+
+                +b.link-scroll.promo-sec__link-scroll.js-animate-scroll(href='#index-page__sections')
+                    +e.I.arrow-wrapper
+                        +e.I.arrow
+                    +e.SVG.icon
+                        use(xlink:href='i/icons.svg#icon-touch')
+                    +e.SPAN.text Листайте вниз
+
+    +delimiter('PROMO-SEC')
+
+
+    .index-page__sections-group(id='index-page__sections')
+
+        .index-page__sections-col
+
+            +b.SECTION.occasions-sec
+
+                +e.HEADER.header
+
+                    .container
+
+                        .columns.columns_align_justify.columns_va_middle
+
+                            .columns__col
+
+                                +b.H2.title.occasions-sec__title поводы
+
+                                +e.FORM.filter(name='occasions-filter' method='post' action='')
+
+                                    +e.filter-col_select
+
+                                        +b.SELECT.select(name='occasions-type')
+                                            option(value='default') выбрать тип повода
+                                            option(value=0) Один повод
+                                            option(value=1) Второй повод
+                                            option(value=2) Третий повод
+
+                                    +e.filter-col_date
+
+                                        +b.datepicker
+                                            +e.INPUT.input(id='occasions-date' name='occasions-date' type='date')
+                                            +e.LABEL.calendar(for='occasions-date')
+                                                .hidden-text выбрать дату
+                                                +e.SVG.calendar-icon
+                                                    use(xlink:href='i/icons.svg#icon-calendar')
+
+                            .columns__col
+
+                                +e.more(href=jv0)
+                                    +e.SVG.more-icon
+                                        use(xlink:href='i/icons.svg#icon-refresh')
+                                    +b.link-dashed еще 4 повода
+
+                +e.content
+
+                    .container
+
+                        +occasionsList([{
+                            src: 'http://loremflickr.com/680/260/sports',
+                            srcset: 'http://loremflickr.com/1360/520/sports',
+                            title: 'Марафон в олимпийском'
+                        }, {
+                            src: 'http://loremflickr.com/680/260/animals',
+                            srcset: 'http://loremflickr.com/1360/520/animals',
+                            title: 'Большое собрание'
+                        }, {
+                            src: 'http://loremflickr.com/680/260/city',
+                            srcset: 'http://loremflickr.com/1360/520/city',
+                            title: 'Просто бегаем'
+                        }, {
+                            src: 'http://loremflickr.com/680/260/food',
+                            srcset: 'http://loremflickr.com/1360/520/food',
+                            title: 'Благотворительный забег в специальных условиях'
+                        }])(list='occasions-sec__list', item='occasions-sec__item')
+
+            +delimiter('occasions-sec')
+
+
+            +b.SECTION.news-sec
+
+                +e.HEADER.header
+
+                    .container
+
+                        .columns.columns_align_justify.columns_va_middle
+
+                            .columns__col
+
+                                +b.H2.title новости
+
+                            .columns__col
+
+                                +e.FORM.filter(name='news-filter' method='post' action='')
+
+                                    +inputsGroup({
+                                        mod: 'btn',
+                                        type: 'radio',
+                                        id: 'news-filter',
+                                        name: 'news-filter-type'
+                                    }, ['все новости', 'фонды', 'мероприятия', 'события'])(item='news-sec__filter-item')
+
+                +e.content
+
+                    .container
+
+                        +b.UL.list_vertical.news-sec__list
+
+                            +e.LI.item.news-sec__item
+                                +announcement({
+                                    'src': 'http://loremflickr.com/250/250/sports',
+                                    'srcset': 'http://loremflickr.com/500/500/sports',
+                                    'text': 'Медийная реклама, на первый взгляд, детерминирует эмпирический бизнес-план, \
+                                            не считаясь с затратами.'
+                                })
+
+                            +e.LI.item.news-sec__item
+                                +announcement({
+                                    'src': 'http://loremflickr.com/250/250/animals',
+                                    'srcset': 'http://loremflickr.com/500/500/animals',
+                                    'text': 'Баннерная реклама слабо трансформирует презентационный материал.'
+                                })
+
+                        +b.big-link(href=jv0) все новости
+
+            +delimiter('news-sec')
+
+        +delimiter('index-page__sections-col')
+
+        .index-page__aside-col
+
+            +b.ASIDE.helper-sidebar
+                +b.H2.hidden-text Подсказки
+
+                +e.UL.list
+
+                    +e.LI.item.tooltip(data-position-my='center right' data-position-at='center left' data-container='.helper-sidebar__list')
+                        +b.icon-btn_size_l._square(href=jv0)
+                            +e.SVG.icon_bulb
+                                use(xlink:href='i/icons.svg#icon-bulb')
+                        .tooltip__content
+                            .tooltip__text Очки ннннадо?
+
+                    +e.LI.item.tooltip(data-position-my='center right' data-position-at='center left' data-container='.helper-sidebar__list')
+                        +b.icon-btn_size_l._square(href=jv0)
+                            +e.SVG.icon_donation
+                                use(xlink:href='i/icons.svg#icon-donation')
+                        .tooltip__content
+                            .tooltip__text Очки ннннадо? 
+
+                    +e.LI.item.tooltip(data-position-my='center right' data-position-at='center left' data-container='.helper-sidebar__list')
+                        +b.icon-btn_size_l._square(href=jv0)
+                            +e.SVG.icon_reg
+                                use(xlink:href='i/icons.svg#icon-reg')
+                        .tooltip__content
+                            .tooltip__text Очки ннннадо?
+
+            +delimiter('helper-sidebar')
+
+        +delimiter('index-page__aside-col')
+
+    +delimiter('index-page__sections-group')
+
+
+    +b.SECTION.acts-sec
+
+        +e.HEADER.header
+
+            .container
+
+                +b.H2.title.acts-sec__title поступки #{' '}
+
+                +e.question(href=jv0)
+                    +b.icon-btn
+                        +e.SPAN.icon_question ?
+                    | #{' '}
+                    +b.link-dashed
+                        | узнать чем поступки отличаются от поводов
+
+        +e.content
+
+            .container
+
+                +e.slider
+
+                    +e.item
+                        +act({
+                            'mod': '_power',
+                            'src': 'http://loremflickr.com/400/550/animals',
+                            'srcset': 'http://loremflickr.com/800/1100/animals',
+                            'text': 'Обливание холодной водой'
+                        })
+
+                    +e.item
+                        +act({
+                            'src': 'http://loremflickr.com/400/550/city',
+                            'srcset': 'http://loremflickr.com/800/1100/city',
+                            'text': 'Бежишь и приносишь пользу обществу',
+                            'occasion': true
+                        })
+
+                    +e.item
+                        +act({
+                            'src': 'http://loremflickr.com/400/550/nature',
+                            'srcset': 'http://loremflickr.com/800/1100/nature',
+                            'text': 'Деньги для набережной',
+                            'occasion': true
+                        })
+
+                    +e.item
+                        +act({
+                            'mod': 'act_power',
+                            'src': 'http://loremflickr.com/400/550/food',
+                            'srcset': 'http://loremflickr.com/800/1100/food',
+                            'text': 'Ешь и толстей',
+                            'occasion': true
+                        })
+
+                +b.big-link(href=jv0) все поступки
+
+    +delimiter('acts-sec')
+
+
+    +b.SECTION.fonds-sec
+
+        .container
+
+            +b.H2.title_size_l.fonds-sec__title Вместе с нами более 10 фондов
+
+            +e.content
+
+                p
+                    | Благотворительная деятельность в России в наши дни еще слабо развита. Мы подаём пример другим
+                    |  компаниям и организациям. Мы воспитываем в людях чувства ответственности, сострадания и
+                    |  отзывчивости. <br> Добросердечие и человеколюбие должны восторжествовать в современном мире!
+
+            +b.UL.list.fonds-sec__list
+
+                +linksList(7, 'i/fonds', 'png')(item='fonds-sec__item', link='fonds-sec__link', img='fonds-sec__img')
+
+                +e.LI.item.fonds-sec__item.fonds-sec__item_btn
+                    +b.btn(href=jv0) Зарегистрировать фонд
+
+    +delimiter('fonds-sec')
+
+
+    +b.SECTION.stats-sec
+
+        .container
+
+            +b.H2.title.stats-sec__title Благотворительность в цифрах
+
+            .columns.columns_grid
+
+                .columns__col.columns__col_size_6
+
+                    +e.row_top
+
+                        +e.item-main
+
+                            +e.num 28%
+                            +e.P.text
+                                | 28% британцев готовы бойкотировать покупку продукции социально неответственных компаний.
+
+                        +e.item-1
+
+                            +e.num 70%
+                            +e.P.text
+                                | По словам председателя совета директоров аудиторско-консалтинговой группы «Градиент Альфа»
+                                |  Павла Гагарина, в тех или иных формах на благотворительность жертвуют около 70% российских
+                                |  коммерческих организаций (в США и Европе, соответственно, 98% и 96%), а в каждой второй крупной
+                                |  фирме на эти цели предусмотрен бюджет, составляющий от 11% до 17% чистой прибыли. Но
+                                |  благотворительность российского бизнеса имеет свой специфический оттенок. В частности, в
+                                |  рейтинге «Лидеры корпоративной благотворительности» представлены лишь 12 из 100 крупнейших
+                                |  российских компаний;
+
+                    +e.row_bottom
+
+                        +e.item-2
+
+                            +e.num 90%
+                            +e.P.text
+                                | Благотворительностью занимаются около 90% американцев;
+
+                        +e.item-3
+
+                            +e.num 300+
+                            +e.P.text
+                                | По данным Института социологии РАН и исследовательской группы «Циркон», только 300-400
+                                |  организаций в России долгосрочно занимаются благотворительной деятельностью, имеют
+                                |  специальный бюджет и направляют средства по конкретным направлениям;
+
+                .columns__col.columns__col_size_2.stats-sec__col-right
+
+                    +e.item-4
+
+                        +e.num +7
+                        +e.P.text
+                            | Ежедневно в США создается около 7 новых благотворительных фондов;
+
+                    +e.item-5
+
+                        +e.num ~75%
+                        +e.P.text
+                            | Доля покупателей, готовых сменить торговую марку на ту, которая больше ассоциируется с
+                            |  благотворительными делами, составляет в Италии 75%, в Австралии - 73%, в Бельгии - 65%;
+
+                    +b.btn(href=jv0) Пожертвовать
+
+    +delimiter('stats-sec')
+
+
+    +b.SECTION.do-good-sec
+
+        .container
+
+            +e.wrapper
+
+                +e.content
+
+                    p
+                        | Еще Траут показал, что формат события специфицирует обществвенный SWOT-анализ. Процесс
+                        |  стратегического планирования притягивает культурный креатив, размещаясь во всех медиа. В
+                        |  рамках концепции Акоффа и Стэка, охват аудитории обоснован необходимостью.
+
+                +b.btn(href=jv0) Создать поступок
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+.add-report {
+    &__btn {
+        width: rem(120);
+        margin-top: rem(14);
+        padding: rem(10);
+
+        font-size: rem(17);
+        line-height: (20/17);
+    }
+
+    &__year {
+        margin-bottom: rem(7);
+
+        font-family: $headingFont;
+        font-size: rem(21);
+        font-weight: 300;
+        line-height: 1;
+    }
+}

@@ -1,0 +1,127 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+
+    width: 100%;
+    min-width: 980px;
+    padding-top: rem(19);
+    padding-bottom: rem(23);
+
+    color: #000;
+
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(187, 187, 187, .5);
+
+    &_theme_air {
+        color: #fff;
+
+        background: transparent;
+        box-shadow: none;
+
+        .header__buttons {
+            opacity: 0;
+            transform: translateY(-100%);
+
+            transition: opacity .4s ease, transform .4s ease;
+        }
+    }
+
+    &_transform {
+        transition: color .4s ease, background .4s ease, box-shadow .4s ease;
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-right: rem(42);
+
+        font-size: rem(32);
+        line-height: 1.1875; //38/32
+        vertical-align: middle;
+    }
+
+    &__nav {
+        display: inline-block;
+        margin-right: rem(23);
+
+        font-size: rem(16);
+        vertical-align: middle;
+    }
+
+    &__auth {
+        display: inline-block;
+        margin-right: rem(28);
+
+        font-weight: 300;
+        font-size: rem(15);
+        font-family: $headingFont;
+        color: inherit;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+
+    &__auth-icon {
+        width: rem(12);
+        height: rem(16);
+        margin-right: rem(9);
+
+        vertical-align: middle;
+
+        fill: currentColor;
+    }
+
+    &__user-name {
+        display: block;
+        max-width: rem(120);
+
+        white-space: nowrap;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include below(1200px) {
+            max-width: rem(80);
+        }
+    }
+
+    &__ava-wrapper {
+        position: relative;
+
+        display: inline-block;
+        width: rem(25);
+        height: rem(25);
+        margin-right: rem(12);
+
+        vertical-align: middle;
+
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__ava {
+        @include transformCenter();
+
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__buttons {
+        display: inline-block;
+        margin-bottom: rem(-2);
+
+        font-size: 0;
+        vertical-align: middle;
+
+        transition: opacity .4s .3s ease, transform .4s .3s ease;
+    }
+
+    &__btn {
+        font-size: rem(16);
+        font-family: $headingFont;
+
+        &:not(:last-child) {
+            margin-right: rem(19);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.list {
+    padding: 0;
+    font-size: 0;
+
+    list-style: none;
+
+    &_vertical {
+        .list__item {
+            display: block;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+
+        font-size: 1rem;
+        vertical-align: top;
+    }
+}

@@ -1,0 +1,302 @@
+extends ../layouts/default
+include ../blocks/occasion
+include ../blocks/announcement
+include ../blocks/custom-input
+include ../blocks/act
+
+block head
+    - var pageInd = 0;
+    - var pageTitle = 'Сделай!';
+    - var pageName = 'главная';
+    - var pageClass = 'index-page';
+
+block content
+
+    +b.SECTION.promo-sec
+
+        .container
+
+            +e.wrapper
+
+                +e.H2.title
+                    | Все мероприятия со смыслом, потому что помогают
+
+                +e.FORM.search(name='search' method='post' action='')
+
+                    +b.search_main
+
+                        +e.inner
+                            +e.LABEL.icon-wrapper(for='search-field')
+                                +e.SVG.icon_search
+                                    use(xlink:href='i/icons.svg#icon-search')
+                            +e.INPUT.input(id='search-field' name='search' type='search' placeholder='Поиск')
+
+                +e.buttons
+
+                    +b.btn_size_wide._with-icon.promo-sec__btn(href=jv0)
+                        +e.SVG.icon_bulb
+                            use(xlink:href='i/icons.svg#icon-bulb')
+                        +e.SPAN.text Создать поступок
+
+                    +b.btn_size_wide._with-icon.promo-sec__btn(href=jv0)
+                        +e.SVG.icon_donation
+                            use(xlink:href='i/icons.svg#icon-donation')
+                        +e.SPAN.text Пожертвовать
+
+                    +b.btn_size_wide._with-icon.promo-sec__btn(href=jv0)
+                        +e.SVG.icon_reg
+                            use(xlink:href='i/icons.svg#icon-reg')
+                        +e.SPAN.text Зарегистрировать фонд
+
+    +delimiter('PROMO-SEC')
+
+    +b.SECTION.occasions-sec
+
+        .container
+
+            +b.H2.title.occasions-sec__title поводы
+
+            +e.FORM.filter(name='occasions-filter' method='post' action='')
+
+                +e.filter-col_select
+
+                    +b.SELECT.select(name='occasions-type')
+                        option(value='default') выбрать тип повода
+                        option(value=0) Один повод
+                        option(value=1) Второй повод
+                        option(value=2) Третий повод
+
+                +e.filter-col_date
+
+                    +b.datepicker
+                        +e.INPUT.input(id='occasions-date' name='occasions-date')
+                        +e.LABEL.calendar(for='occasions-date')
+                            .hidden-text выбрать дату
+                            +e.SVG.calendar-icon
+                                use(xlink:href='i/icons.svg#icon-calendar')
+        -
+            var occasions = [
+                'Марафон в олимпийском',
+                'Большое собрание',
+                'Просто бегаем',
+                'Благотворительный забег в специальных условиях'
+            ];
+
+        +b.slider.occasions-sec__slider(data-arrows='false' data-dots='true' data-center='true' data-css-width='true')
+
+            each occasion, ind in occasions
+
+                +e.item.occasions-sec__item
+                    +occasion({
+                        src: 'http://loremflickr.com/450/300?random=' + ind,
+                        srcset: 'http://loremflickr.com/900/600?random=' + ind,
+                        title: occasion
+                    })
+
+    +delimiter('occasions-sec')
+
+    +b.SECTION.news-sec
+
+        +e.HEADER.header
+
+            .container
+
+                +e.H2.title.title новости
+
+                +e.FORM.filter(name='news-filter' method='post' action='')
+
+                    - var filters = ['все новости', 'фонды', 'мероприятия', 'события'];
+                    - var checked;
+
+                    +b.UL.list.news-sec__filter-list
+
+                        each filter, ind in filters
+
+                            - checked = (ind === 0 ? true : false)
+
+                            +e.LI.item.news-sec__filter-item
+
+                                +customInput('btn', 'radio', 'news-filter-' + ind, 'news-filter-type', ind, checked)
+                                    | #{filter}
+
+        +e.content
+
+            .container
+
+                +e.list
+
+                    -
+                        var news = [
+                            'Медийная реклама, на первый взгляд, детерминирует эмпирический бизнес-план, не считаясь с затратами.',
+                            'Баннерная реклама слабо трансформирует презентационный материал.'
+                        ];
+
+                    each announcement, ind in news
+
+                        +e.item
+                            +announcement({
+                                'src': 'http://loremflickr.com/80/80?random=' + ind,
+                                'srcset': 'http://loremflickr.com/160/160?random=' + ind,
+                                'text': announcement
+                            })
+
+                +e.all(href=jv0) все новости
+
+    +delimiter('news-sec')
+
+
+    +b.SECTION.acts-sec
+
+        .container
+
+            +e.HEADER.header
+
+                +b.H2.title.acts-sec__title поступки #{' '}
+
+                +e.question(href=jv0)
+                    +b.icon-btn
+                        +e.SPAN.icon_question ?
+                    | #{' '}
+                    +b.link-dashed
+                        | узнать чем поступки отличаются от поводов
+
+            +e.slider.slider(data-dots='true')
+
+                -
+                    var acts = [
+                        'Обливание холодной водой',
+                        'Бежишь и приносишь пользу обществу',
+                        'Бежишь и приносишь пользу обществу',
+                        'Деньги для набережной'
+                    ];
+
+                each act, ind in acts
+
+                    +e.item.slider__item
+                        +act({
+                            'mod': ind === 0 ? '_power' : '',
+                            'src': 'http://loremflickr.com/400/550?random=' + ind,
+                            'srcset': 'http://loremflickr.com/800/1100?random=' + ind,
+                            'text': act,
+                            'photo': true,
+                            'occasion': ind === 0 || ind === 3 ? false : true,
+                            'fund': true
+                        })
+
+    +delimiter('acts-sec')
+
+
+    +b.SECTION.funds-sec
+
+        .container
+
+            +b.H2.title.funds-sec__title Вместе с нами более 10 фондов
+
+            +b.UL.list.funds-sec__list
+
+                - var i = 1
+
+                while i <= 7
+
+                    +e.item.funds-sec__item
+                        a.funds-sec__link(href=jv0)
+                            img.funds-sec__img(src='i/funds-#{i}.jpg' srcset='i/retina/funds-#{i}.jpg 2x' alt='логотип')
+
+                    -i++
+
+            +e.content
+
+                p
+                    | Благотворительная деятельность в России в наши дни еще слабо развита. Мы подаём пример другим
+                    |  компаниям и организациям. Мы воспитываем в людях чувства ответственности, сострадания и
+                    |  отзывчивости. <br> Добросердечие и человеколюбие должны восторжествовать в современном мире!
+
+            +e.btn
+                +b.btn(href=jv0) Зарегистрировать фонд
+
+    +delimiter('funds-sec')
+
+
+    +b.SECTION.stats-sec
+
+        .container
+
+            +b.H2.title.stats-sec__title Благотворительность в цифрах
+
+            +e.row
+
+                +e.item
+                    +e.num 70%
+                    +e.P.text
+                        | По словам председателя совета директоров аудиторско-консалтинговой группы «Градиент Альфа»
+                        |  Павла Гагарина, в тех или иных формах на благотворительность жертвуют около 70% российских
+                        |  коммерческих организаций (в США и Европе, соответственно, 98% и 96%), а в каждой второй крупной
+                        |  фирме на эти цели предусмотрен бюджет, составляющий от 11% до 17% чистой прибыли. Но
+                        |  благотворительность российского бизнеса имеет свой специфический оттенок. В частности, в
+                        |  рейтинге «Лидеры корпоративной благотворительности» представлены лишь 12 из 100 крупнейших
+                        |  российских компаний;
+
+            +e.row
+
+                +e.item_size_half
+                    +e.num 90%
+                    +e.P.text
+                        | Благотворительностью занимаются около 90% американцев;
+
+                +e.item_size_half
+                        +e.num +7
+                        +e.P.text
+                            | Ежедневно в США создается около 7 новых благотворительных фондов;
+
+            +e.row
+
+                +e.item_size_half
+                    +e.num ~75%
+                    +e.P.text
+                        | Доля покупателей, готовых сменить торговую марку на ту, которая больше ассоциируется с
+                        |  благотворительными делами, составляет в Италии 75%, в Австралии - 73%, в Бельгии - 65%;
+
+                +e.item_size_half
+                    +e.num 300+
+                    +e.P.text
+                        | По данным Института социологии РАН и исследовательской группы «Циркон», только 300-400
+                        |  организаций в России долгосрочно занимаются благотворительной деятельностью, имеют
+                        |  специальный бюджет и направляют средства по конкретным направлениям;
+
+            +e.row
+                +e.item
+                    +e.num 28%
+                    +e.P.text
+                        | 28% британцев готовы бойкотировать покупку продукции социально неответственных компаний.
+
+            +b.btn_size_wide(href=jv0) Пожертвовать
+
+    +delimiter('stats-sec')
+
+
+    +b.SECTION.do-good-sec
+
+        .container
+
+            +e.wrapper
+
+                +e.content
+
+                    p
+                        | Еще Траут показал, что формат события специфицирует обществвенный SWOT-анализ. Процесс
+                        |  стратегического планирования притягивает культурный креатив, размещаясь во всех медиа. В
+                        |  рамках концепции Акоффа и Стэка, охват аудитории обоснован необходимостью.
+
+                +b.btn_size_wide(href=jv0) Создать поступок
+
+
+
+
+
+
+
+
+
+
+
+

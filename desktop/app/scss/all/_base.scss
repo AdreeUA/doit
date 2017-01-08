@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font: 1vw $mainFont;
+    font: 16px $mainFont;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 90%;
+    }
+}
+
+body {
+    height: 100%;
+
+    background-color: #fff;
+
+    & * {
+        max-height: 1000000px;
+    }
+}
+
+.page {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    min-width: 980px;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.text-center {
+    text-align: center;
+}
+
+

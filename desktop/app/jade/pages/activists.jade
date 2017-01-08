@@ -1,0 +1,127 @@
+extends ../layouts/default
+include ../partials/activist
+
+
+block head
+    - var pageTitle = 'Активисты';
+    - var pageName = 'Активисты';
+
+block content
+
+    +b.HEADER.head-title_nav
+
+        .container
+
+            +e.H1.title_big #{pageTitle}
+
+            +e.FORM.nav
+
+                +e.search
+
+                    +b.search_header
+
+                        +e.LABEL.label Поиск
+
+                            +e.SVG.icon
+                                use(xlink:href='i/icons.svg#icon-search')
+
+                            +e.INPUT.input_header-in
+
+                +e.select
+
+                    +b.SELECT.select(name='occasions-type')
+                        option(value='default') выбрать тип поступка
+                        option(value=0) Один поступок
+                        option(value=1) Второй поступок
+                        option(value=2) Третий поступок
+
+                +e.button
+
+                    +b.BUTTON.btn_light._mini._corner(type='submit') Стать активистом
+
+
+
+    +b.SECTION.activists
+
+        +e.content
+
+            .container
+
+                +e.item
+                    +activist({
+                        'mod': '_power',
+                        'src': 'http://stevensegallery.com/177/177',
+                        'srcset': 'http://stevensegallery.com/354/354',
+                        'acts': 85,
+                        'money': '14\u00A0581\u00A0385'
+                    })
+
+                +e.item
+                    +activist({
+                        'mod': '_power',
+                        'src': 'http://stevensegallery.com/177/177',
+                        'srcset': 'http://stevensegallery.com/354/354',
+                        'acts': 78,
+                        'money': '12\u00A0581\u00A0385'
+                    })
+
+                +e.item
+                    +activist({
+                        'mod': '_power',
+                        'src': 'http://stevensegallery.com/177/177',
+                        'srcset': 'http://stevensegallery.com/354/354',
+                        'acts': 64,
+                        'money': '7\u00A0581\u00A0385'
+                    })
+
+                +e.item
+                    +activist({
+                        'mod': '_power',
+                        'src': 'http://stevensegallery.com/177/177',
+                        'srcset': 'http://stevensegallery.com/354/354',
+                        'acts': 70,
+                        'money': '6\u00A0581\u00A0385'
+                    })
+
+                +e.item
+                    +activist({
+                        'mod': '_power',
+                        'src': 'http://stevensegallery.com/177/177',
+                        'srcset': 'http://stevensegallery.com/354/354',
+                        'acts': 65,
+                        'money': '7\u00A0581\u00A0385'
+                    })
+
+                +e.item
+                    +activist({
+                        'src': 'http://stevensegallery.com/177/177',
+                        'srcset': 'http://stevensegallery.com/354/354',
+                        'acts': 55,
+                        'money': '4\u00A0581\u00A0385'
+                    })
+
+                +e.item
+                    +activist({
+                        'src': 'http://stevensegallery.com/177/177',
+                        'srcset': 'http://stevensegallery.com/354/354',
+                        'acts': 45,
+                        'money': '3\u00A0581\u00A0385'
+                    })
+
+                +e.item
+                    +activist({
+                        'src': 'http://stevensegallery.com/177/177',
+                        'srcset': 'http://stevensegallery.com/354/354',
+                        'acts': 35,
+                        'money': '2\u00A0581\u00A0385'
+                    })
+
+
+        +e.loading
+
+            +b.loading
+
+                +e.SPAN.text Идет загрузка...
+
+
+    +delimiter('activists')

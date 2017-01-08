@@ -1,0 +1,42 @@
+div.box-acts-wrapper
+
+   +b.acts-modal#all-acts
+
+      +e.header
+
+         +e.H2.title Все поступки
+
+         +e.close.arcticmodal-close
+
+      +e.content.js-custom-scroll
+
+         - for(var i = 0; i < 15; i++)
+            +e.content-item
+
+               +e.block-left
+                  +b.activist-name_wide(href=jv0)
+                     +e.photo-wrapper_in
+                        +e.IMG.photo(src='http://stevensegallery.com/40/40' srcset='http://stevensegallery.com/80/80 2x')
+                     +e.name Сергей Варяжный
+
+               +e.block-center
+                  +e.project-name Мы нужны Тимуру
+
+               +e.block-right
+                  +e.block-sum
+                     +e.block-sum-text Собрано:
+                     +e.block-sum-number
+                        |63 000&nbsp;
+                        +e.SVG.ruble
+                           use(xlink:href='i/icons.svg#icon-ruble')
+
+                  +e.block-sum
+                     +e.block-sum-text Цель:
+                     +e.block-sum-number
+                        | 230 000&nbsp;
+                        +e.SVG.ruble
+                           use(xlink:href='i/icons.svg#icon-ruble')
+
+
+
+

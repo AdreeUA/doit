@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 7 Copy 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="30" height="30" rx="5"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="30" height="30" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-7-Copy-10">
+            <use stroke="#000000" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+            <g id="Page-1" transform="translate(7.000000, 6.000000)" fill="#23221F">
+                <path d="M1.38662937,9.30609308 L0,16.5209175 L7.40867133,15.1705691 L15.0548671,7.72420348 L9.03282517,1.85995903 L1.38662937,9.30609308 Z M1.34383217,14.511487 L1.98341259,11.1836608 L5.48065734,14.5892848 L2.06341958,15.2122465 L1.34383217,14.511487 Z" id="Fill-1"></path>
+                <polygon id="Fill-2" points="0 17.8696566 15.0548671 17.8696566 15.0548671 17.0877419 0 17.0877419"></polygon>
+                <polygon id="Fill-3" points="10.9908566 4.63082437e-05 9.60232517 1.35213125 15.5761014 7.16972014 16.9647517 5.8176352"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

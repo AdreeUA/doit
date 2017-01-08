@@ -1,0 +1,26 @@
+mixin reg-doc(data)
+
+    +e.item(class!=(data.mod ? data.mod : ''))
+
+        +e.SVG.icon
+            use(xlink:href='i/icons.svg#icon-check-small')
+
+        +e.body
+
+            +e.name= data.name
+
+            +e.doc-name
+
+                +e.SPAN.value= data.doc_name
+
+                +e.SPAN.ext .#{data.doc_ext}
+
+            +e.button
+
+                +b.upload-file.share-button
+
+                    +e.SPAN.change-word Изменить
+
+                    +e.SPAN.upload-word Загрузить
+
+                    +e.INPUT.input(type="file")

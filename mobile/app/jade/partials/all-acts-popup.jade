@@ -1,0 +1,44 @@
++b.popup(data-remodal-id='all-acts-popup')
+   +e.inner
+
+       +e.HEADER.header
+          .container
+             .columns.columns_justify.columns_middle
+                .columns__col
+                   +e.title Все поступки
+
+                .columns__col
+                   +e.BUTTON.close(data-remodal-action='close')
+
+       +e.main
+            +e.section
+                .container
+                    +e.acts-list
+                        - for(var i = 0; i < 5; i++)
+                            +e.acts-item
+                                +e.act-date
+                                    span 15.10.2016, 16:13
+
+                                +e.activist-name
+                                    span Сергей Венедиктов
+
+                                +e.project-name
+                                    span Помощь домашним любимцам
+
+                                +e.bottom-block
+                                    +e.block-sum
+                                        +e.block-sum-text Собрано:
+                                        +e.block-sum-number
+                                            | 63 000&nbsp;
+                                            +e.SVG.icon.icon_small
+                                                use(xlink:href='i/icons.svg#icon-ruble')
+
+                                    +e.block-sum
+                                        +e.block-sum-text  Цель:
+                                        +e.block-sum-number
+                                            | 230 000&nbsp;
+                                            +e.SVG.icon.icon_small
+                                                use(xlink:href='i/icons.svg#icon-ruble')
+
+
+

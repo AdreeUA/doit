@@ -1,0 +1,137 @@
+extends ../layouts/default
+include ../partials/nav
+
+
+block head
+    - var pageTitle = 'Добавить запись';
+    - var pageName = 'Новости';
+
+block content
+
+    +b.SECTION.cabinet_user._posts
+
+        +e.HEADER.header
+
+            .container
+
+                include ../partials/cabinet-sidebar
+
+                +e.content-wrapper
+
+                    +e.H2.title Добавить запись
+
+        +e.main
+
+            .container
+
+                +e.content-wrapper
+
+                    +b.tabs
+
+                        +e.UL.nav.cabinet__post-type-choose
+
+                            +e.LI.nav-item_active.cabinet__post-type(data-tab=0)
+                                +b.tabs__nav-link(href=jv0) Просто запись
+
+                            +e.LI.nav-item.cabinet__post-type(data-tab=1)
+                                +b.tabs__nav-link(href=jv0) Опрос
+
+                        +e.panels-wrapper.cabinet__add-post-sec
+
+                            +e.panel_active(data-tab=0)
+
+                                +b.FORM.form(name='add-post' method='post' action='')
+
+                                    +e.row_size_full
+
+                                        +e.col
+                                            +b.LABEL.label(for='post-message') Ваше сообщение
+
+                                        +e.col_size_full
+                                            +b.TEXTAREA.input_textarea.cabinet__post-textarea(id='post-message' name='meassage' required)
+
+                                    +e.row_size_full
+
+                                        +e.col
+                                            +b.LABEL.label Загрузите изображение
+
+                                        +e.col_size_full
+
+                                            +b.add-photo
+
+                                                +e.UL.list
+
+                                                    +e.LI.item-wrapper
+                                                        +b.user-photo.add-photo__item
+                                                            +e.img-wrapper
+                                                                +e.IMG.img.add-photo__img(src='http://loremflickr.com/150/150', srcset='http://loremflickr.com/300/300 2x')
+                                                            +e.BUTTON.remove(title='Удалить фотографию') Удалить фотографию
+
+                                                    +e.LI.item-wrapper.j-PreviewView-parent
+                                                        +e.LABEL.item.add-photo__upload
+                                                            +e.INPUT.upload-input.j-add-act-before-photo(name='post' type='file' multiple)
+                                                            +e.SPAN.upload-text Загрузить
+
+                                    +e.row
+
+                                        +e.col
+                                            +b.LABEL.label(for='post-video') Вставьте видео:<br>
+                                            +b.note Просто укажите ссылку на видео-ролик<br> с youtube или vimeo
+
+                                        +e.col_size_md
+                                            +b.INPUT.input(id='post-video' name='video' type='url')
+
+                                    +e.footer
+
+                                        +b.BUTTON.btn_high.cabinet__add-post-btn(type='submit') Опубликовать
+
+                            +e.panel(data-tab=1)
+
+                                +b.FORM.form(name='add-question' method='post' action='')
+
+                                    +e.row_size_full
+
+                                        +e.col
+                                            +b.LABEL.label(for='question-body') Вопрос опроса
+
+                                        +e.col_size_full
+                                            +b.TEXTAREA.input_textarea.cabinet__question-textarea(id='question-body' name='question' required)
+
+                                    +e.row
+
+                                        +e.col
+                                            +b.LABEL.label(for='add-answer-1') Ответ №1
+
+                                        +e.col_size_md
+                                            +b.INPUT.input(id='add-answer-1' name='answer-1')
+
+                                    +e.row
+
+                                        +e.col
+                                            +b.LABEL.label(for='add-answer-2') Ответ №2
+
+                                        +e.col_size_md
+                                            +b.INPUT.input(id='add-answer-2' name='answer-2')
+
+                                    +e.row
+
+                                        +e.col
+                                            +b.LABEL.label(for='add-answer-3') Ответ №3
+
+                                        +e.col_size_md
+                                            +b.INPUT.input(id='add-answer-3' name='answer-3')
+
+                                    +e.row
+
+                                        +e.col_offset
+
+                                            +b.btn-group.cabinet__add-answer(href=jv0)
+                                                +e.icon +
+                                                +e.text Добавить ответ
+
+                                    +e.footer
+
+                                        +b.BUTTON.btn_high(type='submit') Опубликовать
+
+
+

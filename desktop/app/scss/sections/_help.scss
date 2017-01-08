@@ -1,0 +1,50 @@
+//===========================================================================
+// HELP
+//===========================================================================
+
+.help {
+    padding-top: rem(22);
+    padding-bottom: rem(32);
+
+    &__ask {
+        width: rem(265);
+        float: right;
+
+        margin-top: rem(124);
+    }
+
+    &__quest-mark {
+        margin-right: rem(20);
+    }
+
+    &__ask-text {
+        font-size: rem(14);
+        line-height: rem(18);
+        font-weight: 300;
+
+        margin-bottom: rem(18);
+    }
+
+    &__ask-main {
+        margin-left: 87px;
+    }
+
+    &__ask-btn {
+        margin-right: 7px;
+    }
+
+    &__content {
+        margin-right: rem(330);
+        padding-left: rem(75);
+    }
+
+    &__item {
+        margin: rem(50) rem(20);
+    }
+
+    &__quest-mark {
+        float: left;
+        width: rem(67);
+        text-align: center;
+    }
+}

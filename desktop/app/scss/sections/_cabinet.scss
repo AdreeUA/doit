@@ -1,0 +1,250 @@
+.cabinet {
+    position: relative;
+
+    @include clearfix();
+    padding-bottom: rem(53);
+
+    &__header {
+        padding-top: rem(38);
+        padding-bottom: rem(35);
+        position: relative;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, .05);
+    }
+
+    &__header-inner {
+        padding-left: rem(37);
+        overflow: hidden;
+    }
+
+    &__title {
+        margin: 0;
+
+        font-weight: 300;
+        font-size: 36px;
+        font-family: $headingFont;
+        line-height: 1;
+        letter-spacing: -.19px;
+    }
+
+    &__sidebar {
+        position: relative;
+        z-index: 5;
+
+        float: left;
+        width: rem(268);
+        margin-top: 2.375rem;
+    }
+
+    &__ava-wrapper {
+        width: rem(117);
+        height: rem(117);
+        margin-bottom: rem(23);
+
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #f2f2f2;
+    }
+
+    &__ava {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__name {
+        margin-bottom: rem(44);
+
+        font-family: $headingFont;
+        font-weight: 300;
+        font-size: rem(15);
+        line-height: 1;
+    }
+    
+    &__report {
+        margin-bottom: rem(30); 
+    }
+
+    &__main {
+        width: calc(100% - 19.0625rem); // 305px
+        float: right;
+        padding-top: rem(40);
+    }
+
+    &__subtitle {
+        margin: 0;
+        margin-bottom: rem(24);
+
+        font-weight: 300;
+        font-size:rem(24);
+        line-height: 1;
+        font-family: $headingFont;
+    }
+
+    &__add-photo-sec {
+        padding-bottom: rem(38);
+        border-bottom: 1px solid #979797;
+    }
+
+    &__added-photo-list {
+        margin-bottom: rem(15);
+    }
+
+    &__photos-wrapper {
+        padding-top: rem(69);
+    }
+
+    &__user-photo {
+        width: 100%;
+        min-height: rem(50);
+        padding: 5px 6px;
+    }
+
+    &__post-type-wrapper {
+        margin-bottom: rem(40);
+    }
+
+    &__post-type-choose {
+        margin-bottom: rem(40);
+    }
+
+    &__post-type {
+        font-family: $headingFont;
+        font-size: rem(24);
+        font-weight: 300;
+    }
+
+    &__add-post-sec {
+        padding: rem(40) rem(50) rem(40) rem(60);
+
+        box-shadow: 0 1px 10px rgba(77, 77, 77, 0.22);
+    }
+
+    &__add-post-btn {
+        margin-left: rem(-5);
+    }
+
+    &__post-textarea {
+        height: rem(270);
+    }
+    &__textarea-height129px {
+        height: rem(129);
+    }
+    &__textarea-height184px {
+        height: rem(184);
+    }
+
+    &__question-textarea {
+        height: rem(80);
+    }
+
+    &__avatar-wrapper{
+        background: #fff;
+        box-shadow: 0 0 5px #ccc;
+        margin-bottom: 20px;
+        height: 120px;
+        position: relative;
+    }
+
+    &__avatar-photo{
+        display: block;
+        height: 100px;
+        position: absolute;
+        top:0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__stats-filter {
+        width: rem(255);
+    }
+
+    &__last-income {
+        width: rem(605);
+    }
+
+    &__last-income-title {
+        margin-top: 0;
+        margin-bottom: rem(45);
+
+        font-family: $headingFont;
+        font-size: rem(21);
+        font-weight: 300;
+        line-height: 1;
+    }
+
+    &__socials {
+        display: inline-block;
+        vertical-align: top;
+
+        &:not(:last-child) {
+            margin-right: rem(20);
+        }
+    }
+
+    &__socials-item {
+        color: #979797;
+        font-size: rem(12);
+        line-height: rem(20);
+    }
+
+    &_acts-one {
+        padding: 0;
+        margin-bottom: rem(-25);
+
+        .cabinet__photos-wrapper {
+            padding: 0;
+        }
+
+        .cabinet__user-photo {
+            padding: rem(5) rem(4);
+        }
+    }
+
+    &_funds-one {
+        padding-bottom: rem(61);
+
+        .container {
+            max-width: 1468px;
+            padding-left: 184px;
+            padding-right: 184px;
+        }
+    }
+
+    &_settings {
+        padding-bottom: rem(62);
+
+        .cabinet__content {
+            padding: rem(33) 0 rem(43);
+            box-shadow: 0 1px 10px rgba(77, 77, 77, 0.22);
+            margin-top: rem(24);
+
+            &_mini {
+                width: rem(574);
+            }
+        }
+    }
+
+    &_dash {
+        .cabinet__header {
+            padding: 0;
+        }
+
+        .cabinet__sidebar {
+            padding-top: rem(36);
+        }
+    }
+
+    &_user {
+        .cabinet__stats {
+            margin-bottom: rem(95);
+        }
+    }
+}
+.cabinet__add-post-sec_padding{
+    padding: 2.5rem 0 2.5rem 0;
+}

@@ -1,0 +1,45 @@
+.share {
+    white-space: nowrap;
+
+    &__text {
+        margin: 0;
+
+        font-size: rem(11);
+        font-weight: 700;
+        line-height: 15/11+em;
+        color: rgba(0, 0, 0, .6);
+
+        + .share__socials {
+            margin-top: rem(10);
+        }
+
+        &_gap_s {
+
+            + .share__socials {
+                margin-top: rem(5);
+            }
+        }
+    }
+
+    &__like-btn {
+        padding-right: rem(10);
+    }
+
+    &__socials-wrapper {
+        max-width: calc(100% - 4.375rem);
+
+        white-space: normal;
+    }
+
+    &__like {
+        width: rem(39);
+        height: rem(34);
+        margin-left: rem(15);
+    }
+
+    &__row {
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+}

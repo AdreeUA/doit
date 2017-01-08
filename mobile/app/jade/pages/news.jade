@@ -1,0 +1,38 @@
+extends ../layouts/default
+include ../blocks/announcement
+
+block head
+    - var pageTitle = 'Новости';
+
+block content
+
+    +b.SECTION.news-sec
+
+        +b.HEADER.head-title
+            .container
+                +e.H1.title Новости
+
+        +e.content
+            .container
+
+                +e.list
+
+                    -
+                        var news = [
+                            'Медийная реклама, на первый взгляд, детерминирует эмпирический бизнес-план, не считаясь с затратами.',
+                            'Баннерная реклама слабо трансформирует презентационный материал.',
+                            'Медийная реклама, на первый взгляд, детерминирует эмпирический бизнес-план, не считаясь с затратами.',
+                            'Баннерная реклама слабо трансформирует презентационный материал.'
+                        ];
+
+                    each announcement, ind in news
+
+                        +e.item
+                            +announcement({
+                                'src': 'http://loremflickr.com/80/80?random=' + ind,
+                                'srcset': 'http://loremflickr.com/160/160?random=' + ind,
+                                'text': announcement
+                            })
+
+                +b.preloader.news-sec__preloader
+                    +e.SPAN.text Идет загрузка...

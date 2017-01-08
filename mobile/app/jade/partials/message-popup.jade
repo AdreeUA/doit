@@ -1,0 +1,22 @@
++b.popup(data-remodal-id='message-popup')._message
+    +e.inner
+
+        +e.HEADER.header
+            .container
+                .columns.columns_justify.columns_middle
+                    .columns__col
+                        +e.title Уведомление
+
+                    .columns__col
+                        +e.BUTTON.close(data-remodal-action='close')
+
+        +e.main
+
+            +e.section
+                .container
+                    +e.label_gap_md Картинка добавлена
+
+        +e.FOOTER.footer
+            .container
+                +b.BUTTON.btn_trans._mini(data-remodal-action='close') ОК
+

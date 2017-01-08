@@ -1,0 +1,405 @@
+extends ../layouts/default
+include ../partials/supporter
+
+
+block head
+    - var pageTitle = 'Поступок';
+    - var pageName = 'Поступок';
+
+block content
+
+    +b.SECTION.acts-one-info
+
+        .container
+
+            +e.organize
+
+                +e.img-wrapper
+
+                    +e.img(src='http://loremflickr.com/297/165/city', srcset='http://www.loremflickr.com/594/330/city 2x')
+
+                +e.activist-button
+
+                    +b.activist-name_big._wide(href=jv0)
+
+                        +e.photo-wrapper_in
+
+                            +e.IMG.photo(src='http://stevensegallery.com/50/50' srcset='http://stevensegallery.com/100/100 2x')
+
+                        +e.name Сергей Варяжный
+
+                +e.sponsor-label При поддержке фонда:
+
+                +e.A.sponsor-link(href=jv0)
+
+                    +e.sponsor-img(src='http://loremflickr.com/169/76/business', srcset='http://www.loremflickr.com/338/152/business 2x')
+
+
+            +e.nums
+
+                +e.remain-title До начала поступка осталось:
+
+                +e.remain 5 дней
+
+                +b.money-info
+
+                    +e.col_collected
+
+                        +e.title Собрано:
+
+                        +e.value 64&nbsp;200
+                            +e.SVG.icon_ruble
+                                use(xlink:href='i/icons.svg#icon-ruble')
+
+                    +e.col_target
+
+                        +e.title Цель:
+
+                        +e.value 120&nbsp;000
+                            +e.SVG.icon_ruble
+                                use(xlink:href='i/icons.svg#icon-ruble')
+
+                +b.battery_big.__battery(data-val='100')
+                    +e.body
+                        +e.val 0%
+                        +e.progress
+                    +e.SVG.lightning
+                        use(xlink:href='i/icons.svg#icon-lightning')
+
+                +e.donations-num
+                    +b.link-dashed.js-animate-scroll(href='#event-support' data-event='click') 84 пожертвования
+
+                +e.donations-btn
+                    +b.BUTTON.btn_light._font-bigger Пожертвовать
+
+
+            +e.main 
+                
+                +b.title_info
+                    | Бежим марафон Весенний Гром ради помощи детям!
+                    +b.A.link-edit(href=jv0)
+                        +e.SVG.icon_edit
+                            use(xlink:href='i/icons.svg#icon-edit-small')
+
+                +e.occasion Повод: Просто бегаем 18 ноября 2015
+
+                +e.descr
+                    | Управление брендом подсознательно концентрирует повседневный <br>охват аудитории, признавая определенные рыночные тенденции. <a href="">В общем, традиционный канал</a> существенно продуцирует побочный PR-эффект. Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции.
+                    | В общем, традиционный канал существенно <br> продуцирует побочный PR-эффект. Управление брендом подсознательно концентрирует <a href="">повседневный<br> охват </a> аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект. Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект. Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект. Управление брендом подсознательно <br>концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект. Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект. Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект.
+
+                    +e.A.link-more.link-dashed.js-text-trigger Подробнее&nbsp;>>
+
+                +b.soc-wrapper
+
+                    +b.like-button_big._left-col(href=jv0)
+
+                        +e.SVG.icon_like
+                            use(xlink:href='i/icons.svg#icon-thumbs-up')
+
+                    +e.share-word Поделиться:
+                    
+                    +b.UL.socials_num
+
+                        +e.LI.item
+                            +e.link_fb(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-fb')
+
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_in(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-in')
+
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_gplus(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-gplus')
+
+                                +e.num 595
+
+                        +e.LI.item
+                            +e.link_vk(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-vk')
+
+                                +e.num 36
+
+
+    +delimiter('act-one-info')
+
+
+    +b.SECTION.act-columns
+
+        +e.content
+
+            +e.content-left
+
+                +b.tabs_acts-one
+
+                    +e.header_head
+
+                        .container.container_half.container_half-left
+
+                            +e.UL.nav
+
+                                +e.LI.__nav-item_active(data-tab=0)
+
+                                    +e.nav-link(href=jv0) Живая лента
+    
+                                +e.LI.__nav-item(data-tab=1)
+
+                                    +e.nav-link(href=jv0) Фотогалерея
+    
+                                +e.LI.__nav-item(data-tab=2 data-hide='act-columns__content-right')
+
+                                    +e.nav-link(href=jv0) Похожие поступки
+
+                    .container.container_half.container_half-left.tabs__panels-wrapper
+
+                        +e.panel_active(data-tab=0)
+
+                            +e.add-post
+
+                                +b.share-button_big(href=jv0) Написать пост в ленту
+
+                            +b.post
+
+                                +e.head
+
+                                    +e.author-info
+
+                                        +b.activist-name_wide(href=jv0)
+
+                                            +e.photo-wrapper_in
+
+                                                +e.IMG.photo(src='http://stevensegallery.com/40/40' srcset='http://stevensegallery.com/80/80 2x')
+
+                                            +e.name Сергей Варяжный
+
+                                    +e.date 22.01.2015, 18:35
+
+                                +e.lead
+                                    | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. 
+
+                            +b.post
+
+                                +e.head
+
+                                    +e.author-info
+
+                                        +b.activist-name_wide._simple(href=jv0)
+
+                                            +e.photo-wrapper_in
+
+                                                +e.IMG.photo(src='http://stevensegallery.com/40/40' srcset='http://stevensegallery.com/80/80 2x')
+
+                                            +e.name Елена Малахова
+
+                                    +e.date 22.01.2015, 18:35
+
+                                +e.IMG.photo(src='http://loremflickr.com/468/213/sports' srcset='http://loremflickr.com/936/426/sports 2x')
+
+                                +e.P.paragraph
+                                    | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована. 
+
+                            +b.post
+
+                                +e.head
+
+                                    +e.author-info
+
+                                        +b.activist-name_wide._simple(href=jv0)
+
+                                            +e.photo-wrapper_in
+
+                                                +e.IMG.photo(src='http://stevensegallery.com/40/40' srcset='http://stevensegallery.com/80/80 2x')
+
+                                            +e.name Катерина Земская-Владимирова
+
+                                    +e.date 22.01.2015, 18:35
+
+                                +e.vote
+
+                                    +b.vote_arrow-top
+
+                                        +e.H3.title 
+                                            | Что будет, если никто не придёт на мероприятие?
+
+                                        +e.FORM.body
+
+                                            +e.LABEL.item
+
+                                                +e.INPUT.radio.js-input-styler(type="radio" name="example")
+
+                                                +e.text
+                                                    | Мероприятие не состоится
+
+                                            +e.LABEL.item
+
+                                                +e.INPUT.radio.js-input-styler(type="radio" name="example")
+
+                                                +e.text
+                                                    | Мероприятие состоится
+
+                                            +e.LABEL.item
+
+                                                +e.INPUT.radio.js-input-styler(type="radio" name="example")
+
+                                                +e.text
+                                                    | Мероприятие состоится, но мы будем расстроены
+
+                                            +e.LABEL.item
+
+                                                +e.INPUT.radio.js-input-styler(type="radio" name="example")
+
+                                                +e.text
+                                                    | Мероприятие не состоится и мы не будем расстроены
+
+                                            +e.submit
+
+                                                +b.BUTTON.btn_vote(type="submit") Ответить
+
+                            +b.post
+
+                                +e.head
+
+                                    +e.author-info
+
+                                        +b.activist-name_wide(href=jv0)
+
+                                            +e.photo-wrapper_in
+
+                                                +e.IMG.photo(src='http://stevensegallery.com/40/40' srcset='http://stevensegallery.com/80/80 2x')
+
+                                            +e.name Сергей Варяжный
+
+                                    +e.date 22.01.2015, 18:35
+
+                                +e.IFRAME.video(width="640" height="360" src="https://www.youtube.com/embed/x1fe8-Qli9E" frameborder="0" allowfullscreen="true") 
+
+                                +e.P.paragraph
+                                    | Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами.
+
+
+                            +e.loading
+
+                                +b.loading_left
+
+                                    +e.SPAN.text Идет загрузка...
+
+
+                        +e.panel(data-tab=1)
+
+                            +b.gallery
+
+                                -
+                                    var photos = [
+                                        { width: 600, height: 300 },
+                                        { width: 500, height: 450 },
+                                        { width: 700, height: 600 },
+                                        { width: 550, height: 550 },
+                                        { width: 650, height: 550 },
+                                        { width: 600, height: 750 },
+                                        { width: 700, height: 650 },
+                                        { width: 800, height: 600 }
+                                    ]
+
+                                each photo in photos
+
+                                    +e.item
+                                        +e.IMG.img(src='http://loremflickr.com/' + photo.width + '/' + photo.height + '/',
+                                            srcset='http://loremflickr.com/' + photo.width * 2 + '/' + photo.height * 2 + '/ 2x')
+
+
+
+            +e.content-right
+
+                +b.tabs
+
+                    +e.header_head
+
+                        .container.container_half.container_half-right
+
+                            +e.UL.nav
+
+                                +e.LI.__nav-item(id='event-support' data-tab=0)
+
+                                    +e.nav-link(href=jv0) Поддержали
+
+                    .container.container_half.container_half-right.container_support-list
+
+                        +e.panel(data-tab=0)
+
+                            +b.UL.support-list
+
+                                +e.LI.item
+                                    +supporter({
+                                        'src': 'http://www.placecage.com/c/40/40',
+                                        'srcset': 'http://www.placecage.com/c/80/80',
+                                        'name': 'Елена Малахова',
+                                        'money': 30000,
+                                        'text': 'Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект.'
+                                    })
+
+                                +e.LI.item
+                                    +supporter({
+                                        'src': 'http://www.fillmurray.com/40/40',
+                                        'srcset': 'http://www.fillmurray.com/80/80',
+                                        'name': 'Катерина Земская-Владимирова',
+                                        'money': 300,
+                                        'text': 'В общем, традиционный канал существенно продуцирует побочный PR-эффект.'
+                                    })
+
+                                +e.LI.item
+                                    +supporter({
+                                        'src': 'http://www.placecage.com/c/40/40',
+                                        'srcset': 'http://www.placecage.com/c/80/80',
+                                        'name': 'Елена Малахова',
+                                        'money': 30000,
+                                        'text': 'Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект.'
+                                    })
+
+
+                                +e.LI.item
+                                    +supporter({
+                                        'src': 'http://www.fillmurray.com/40/40',
+                                        'srcset': 'http://www.fillmurray.com/80/80',
+                                        'name': 'Катерина Земская-Владимирова',
+                                        'money': 300,
+                                        'text': 'В общем, традиционный канал существенно продуцирует побочный PR-эффект.'
+                                    })
+
+                                +e.LI.item
+                                    +supporter({
+                                        'src': 'http://www.placecage.com/c/40/40',
+                                        'srcset': 'http://www.placecage.com/c/80/80',
+                                        'name': 'Елена Малахова',
+                                        'money': 30000,
+                                        'text': 'Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект.'
+                                    })
+                                +e.LI.item
+                                    +supporter({
+                                        'src': 'http://www.fillmurray.com/40/40',
+                                        'srcset': 'http://www.fillmurray.com/80/80',
+                                        'name': 'Катерина Земская-Владимирова',
+                                        'money': 300,
+                                        'text': 'В общем, традиционный канал существенно продуцирует побочный PR-эффект.'
+                                    })
+
+                                +e.LI.item
+                                    +supporter({
+                                        'src': 'http://www.placecage.com/c/40/40',
+                                        'srcset': 'http://www.placecage.com/c/80/80',
+                                        'name': 'Елена Малахова',
+                                        'money': 30000,
+                                        'text': 'Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект.'
+                                    })
+
+
+
+
+    +delimiter('acts-one-info')

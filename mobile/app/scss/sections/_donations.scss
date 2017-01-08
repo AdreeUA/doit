@@ -1,0 +1,33 @@
+.donation {
+   &--back {
+      padding-top: 0;
+      text-align: center;
+   }
+    &__thanks {
+      text-align: center;
+      font-family: $headingFont;
+      font-weight: 600;
+      line-height: 1.1568627451; //59/51
+      color: #f8c41c;
+
+    }
+    &__done {
+      font-size: rem(60);
+      font-weight: 600;
+      color: #1f9b7f;
+      margin-bottom: rem(10);
+      margin-top: rem(10);
+   }
+   &__payment-system {
+      display: block;
+   }
+   &__footer {
+        padding-top: rem(34);
+        padding-bottom: rem(38);
+        border-top: 1px solid rgba(151, 151, 151, .44);
+        text-align: center;
+   }
+   &__btn-submit {
+      width: 100%;
+   }
+}

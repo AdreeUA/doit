@@ -1,0 +1,474 @@
+.add-act {
+
+    &__header {
+        padding-top: rem(32);
+        padding-bottom: rem(28);
+    }
+    
+    &__steps {
+        overflow: hidden;
+    }
+
+    &__steps-item {
+        position: relative;
+
+        padding: rem(13) rem(10);
+        margin-right: rem(40);
+
+        font-size: 24px;
+        font-weight: 300;
+        font-family: $headingFont;
+        letter-spacing: -0.12px;
+        line-height: 1;
+        vertical-align: middle;
+
+        cursor: pointer;
+
+        &::before {
+            content: '—';
+            position: absolute;
+            top: 50%;
+            right: 100%;
+
+            margin-right: rem(8);
+
+            transform: translateY(-50%);
+        }
+
+        &_active {
+            background-color: #f8c41c;
+            cursor: default;
+
+            ~ .add-act__steps-item {
+                cursor: default;
+            }
+        }
+    }
+
+    &__body {
+        padding-top: rem(45);
+        padding-bottom: rem(50);
+    }
+
+    &__wrapper {
+        max-width: rem(1030);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__main {
+        box-shadow: 0 1px 10px rgba(77, 77, 77, 0.22);
+    }
+
+    &__screen {
+        display: none;
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__categories {
+        display: flex;
+        padding: rem(55) rem(10) rem(10);
+
+        text-align: center;
+    }
+
+    &__categories-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        padding: rem(20);
+
+        transition: box-shadow .4s;
+
+        &_selected {
+            box-shadow: inset 0 0 0 6px $firstColor;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &__categories-img-wrapper {
+        height: rem(100);
+        margin-bottom: rem(50);
+
+        font-size: 0;
+        line-height: 0;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            width: 0;
+
+            vertical-align: bottom;
+        }
+    }
+
+    &__categories-img {
+        max-height: 100%;
+        max-width: 100%;
+
+        vertical-align: bottom;
+    }
+
+    &__categories-name {
+        min-height: rem(45);
+        margin-top: 0;
+        margin-bottom: rem(5);
+        width: 100%;
+
+        font-family: $headingFont;
+        font-size: 21px;
+        font-weight: 300;
+        line-height: 1;
+    }
+
+    &__categories-text {
+        flex-grow: 1;
+        width: 100%;
+        min-height: rem(100);
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        font-size: rem(12);
+        line-height: 1.5833333333; //19/12
+    }
+
+    &__categories-btn {
+        width: rem(90);
+        padding-top: rem(9);
+        padding-bottom: rem(9);
+
+        font-size: rem(12);
+    }
+
+    &__footer {
+        padding-top: rem(35);
+        @include clearfix();
+    }
+
+    &__nav-btn {
+        position: relative;
+
+
+        transition: opacity .4s ease, box-shadow .4s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+
+            width: rem(17);
+            height: rem(17);
+            border-right: rem(3) solid #fff;
+            border-bottom: rem(3) solid #fff;
+        }
+
+        &_next {
+            float: right;
+            padding-right: rem(50);
+
+            text-align: right;
+
+            &::after {
+                right: rem(15);
+
+                transform: translateY(-50%) rotate(-52deg) skewX(-15deg);
+            }
+        }
+        
+        &_submit {
+            float: right;
+            padding-right: rem(50);
+
+            text-align: right;
+
+            &::after {
+                right: rem(15);
+
+                transform: translateY(-50%) rotate(-52deg) skewX(-15deg);
+            }
+        }
+
+        &_prev {
+            padding-left: rem(50);
+
+            text-align: left;
+
+            &::after {
+                left: rem(15);
+
+                transform: translateY(-50%) rotate(128deg) skewX(-15deg);
+            }
+        }
+
+        &_hidden {
+            opacity: 0;
+        }
+
+        &_disabled {
+            opacity: .5;
+        }
+    }
+
+    &__filter {
+        padding-left: rem(45);
+        padding-top: rem(20);
+        padding-bottom: rem(10);
+        padding-right: rem(20);
+        border-bottom: 1px solid #979797;
+    }
+
+    &__datepicker-col {
+        width: rem(255);
+        margin-right: rem(15);
+    }
+
+    &__select-col {
+        width: rem(280);
+    }
+
+    &__occasions-list {
+        max-height: rem(575);
+        padding: rem(42) rem(40);
+        margin: 0;
+
+        overflow: auto;
+        list-style: none;
+    }
+
+    &__occasions-item {
+        @include clearfix();
+        padding-top: rem(13);
+        padding-right: rem(50);
+        padding-bottom: rem(13);
+        padding-left: rem(15);
+
+        font-family: $headingFont;
+        font-size: rem(24);
+        line-height: 1;
+        font-weight: 300;
+
+        cursor: pointer;
+
+        transition: box-shadow .4s ease;
+
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+
+        &:hover {
+            box-shadow: inset 0 0 0 6px $firstColor;
+        }
+
+        &_selected {
+            box-shadow: inset 0 0 0 6px $firstColor;
+        }
+    }
+
+    &__occasions-name {
+        float: left;
+        max-width: 80%;
+    }
+
+    &__occasions-date {
+        float: right;
+        max-width: 20%;
+
+        color: rgba(0, 0, 0, .38);
+        text-align: right;
+    }
+
+    &__info {
+        padding: rem(40) rem(60);
+    }
+
+    &__info-row {
+        margin-bottom: rem(30);
+    }
+
+    &__desc-textarea {
+        height: rem(170);
+    }
+
+    &__title {
+        font-family: $headingFont;
+        font-size: rem(24);
+        font-weight: 300;
+        line-height: 1;
+    }
+
+    &__funds-header {
+        padding: rem(25) rem(20) rem(10) rem(60);
+    }
+
+    &__funds-list-wrapper {
+        padding: rem(10) rem(20) rem(60) rem(40);
+    }
+
+    &__funds-list {
+        max-height: rem(575);
+
+        overflow: auto;
+    }
+
+    &__funds-item {
+        position: relative;
+
+        padding: rem(35) rem(25);
+
+        cursor: pointer;
+
+        transition: box-shadow .3s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: rem(30);
+            right: rem(40);
+            z-index: -1;
+
+            height: 1px;
+            background: rgba(151, 151, 151, .3);
+        }
+
+        &:hover {
+            box-shadow: inset 0 0 0 6px $firstColor;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &_selected {
+            box-shadow: inset 0 0 0 6px $firstColor;
+        }
+    }
+
+    &__new-fund {
+        padding-left: rem(20);
+        padding-right: rem(40);
+    }
+
+    &__new-fund-icon {
+        width: rem(70);
+        height: rem(70);
+        margin-bottom: rem(32);
+
+        fill: rgba(50, 60, 69, .08);
+    }
+
+    &__new-fund-text {
+        margin-top: 0;
+        margin-bottom: rem(55);
+        width: rem(560);
+
+        color: #323c45;
+        font-size: rem(24);
+        line-height: 1.5; //36/24
+
+        &_full {
+            width: 100%;
+        }
+    }
+
+    &__new-fund-row {
+        margin-bottom: rem(35);
+
+        &:last-of-type {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__new-fund-contacts {
+        height: rem(90);
+    }
+
+    &__new-fund-note {
+        font-size: rem(13);
+        line-height: 1.5384615385; //color: #323c45;
+    }
+
+    &__new-fund-submit {
+        padding-left: rem(35);
+        padding-right: rem(35);
+
+        font-weight: 400;
+        line-height: 2;
+
+        &:hover {
+            box-shadow: 0 0 10px 1px #50e3c2;
+        }
+    }
+
+    &__fund-added {
+        padding: rem(100) rem(120) rem(70) rem(75);
+    }
+
+    &__fund-added-icon {
+        float: left;
+        width: rem(155);
+        height: rem(100);
+        margin-top: rem(30);
+
+        fill: transparent;
+        stroke: #979797;
+    }
+
+    &__fund-added-content {
+        padding-left: rem(235);
+    }
+}
+
+.add-fond-popup {
+    position: absolute;
+    top: rem(350) !important;
+    left: 0 !important;
+    right: 0;
+    z-index: 3;
+
+    width: auto !important;
+
+    .add-act__funds-list-wrapper {
+        position: relative;
+
+        max-width: rem(1030);
+        margin: 0 auto;
+
+        box-shadow: 0 0 10px rgba(77, 77, 77, 0.22);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 0;
+            right: 0;
+
+            height: 15px;
+
+            background-color: #fff;
+        }
+    }
+
+    .add-act__new-fund-text {
+        margin-bottom: 0;
+    }
+}
+
+.add-reason-popup {
+
+    .add-act__body {
+        padding-bottom: 0;
+    }
+
+    .add-act__funds-list-wrapper {
+        padding-bottom: rem(20);
+    }
+}

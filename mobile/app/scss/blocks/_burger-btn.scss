@@ -1,0 +1,50 @@
+.burger-btn {
+    position: relative;
+    width: rem(24);
+    height: rem(24);
+    border: none;
+
+    background-color: transparent;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        height: rem(4);
+
+        background-color: #000;
+        border-radius: 13px;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &__line {
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        width: 100%;
+        height: rem(4);
+        margin-top: rem(-2);
+
+        text-indent: 100%;
+        white-space: nowrap;
+
+        overflow: hidden;
+        background-color: #000;
+        border-radius: 13px;
+    }
+}

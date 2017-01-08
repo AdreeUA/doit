@@ -1,0 +1,13 @@
+.title {
+    margin: 0;
+
+    font-family: $headingFont;
+    font-size: rem(24);
+    font-weight: 300;
+    line-height: 28/24+em;
+
+    &_thin {
+        font-family: $mainFont;
+        font-weight: 100;
+    }
+}

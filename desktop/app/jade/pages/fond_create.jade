@@ -1,0 +1,94 @@
+extends ../layouts/default
+include ../partials/nav
+//include ../partials/custom-input
+
+
+block head
+    - var pageTitle = 'Создание проекта';
+    - var pageName = 'Создание проекта';
+
+block content
+
+    +b.SECTION.found-create.cabinet_user
+
+        .container
+            include ../partials/cabinet-sidebar3
+
+        +e.HEADER.header
+
+            .container
+                +e.content-wrapper
+
+                    +e.H2.title #{pageName}
+
+        .container
+
+            +e.main
+
+                +e.content-wrapper
+
+                    +e.content
+
+                        +b.FORM.form
+
+                            //+e.inner
+
+                            +e.row_size_full._settings
+
+                                +e.col_size_xs._feedback
+                                    +b.LABEL.label(for='found-name') Название проекта
+
+                                +e.col_size_md
+                                    +b.INPUT.input(id='found-name' name='found-name' placeholder='Название проекта ' required)
+
+                            +e.row_size_full._settings
+
+                                +e.col_size_xs._feedback
+                                    +b.LABEL.label(for='') Дата окончания проекта
+
+                                +e.col_size_md
+                                    +b.datepicker_no-arrow.found-create__datepicker
+                                        +e.SPAN.placeholder Выберете дату
+                                        +e.INPUT.input._width100p._big-size(id='new-act-date' name='new-act-date' type='date')
+
+                                    +b.custom-input_checkbox._green.found-create__custom-checkbox
+                                        +e.INPUT.hidden(id='fond-create-input' name='fond-create' type='checkbox')
+                                        +e.LABEL.label(for='fond-create-input')
+                                            SPAN.fond-create__checkbox-text Сделать проект бессрочным
+
+                            +e.row_size_full._settings
+
+                                +e.col_size_xs._feedback
+                                    +b.LABEL.label(for='') Загрузите изображение
+                                    +b.LABEL.label_xs._grey Загрузите крупное изображение <br/> размером не более 5 мегабайт
+
+                                +e.col_size_md
+
+                                    +b.add-photo_found.found-create__add-photo
+                                        +e.UL.list
+
+                                                +e.LI.item-wrapper
+                                                    +b.user-photo.add-photo__item
+                                                        +e.img-wrapper
+                                                            +e.IMG.img.add-photo__img(src='http://loremflickr.com/150/150/cats', srcset='http://loremflickr.com/300/300/cats2x')
+                                                        +e.BUTTON.remove(title='Удалить фотографию') Удалить фотографию
+
+                                            +e.item-wrapper
+                                                +e.LABEL.item.add-photo__upload
+                                                    +e.INPUT.upload-input.j-upload-photo-simple(name='photos' type='file' multiple accept="image/jpeg,image/jpg,image/png")
+                                                    +e.SPAN.upload-text Загрузить изображение
+
+
+
+                            +e.row_size_full._settings
+
+                                +e.col_size_xs._feedback
+                                    +b.LABEL.label(for='fond-disc') Описание проекта
+
+                                +e.col_size_md
+                                    +b.TEXTAREA.input_textarea-h166._textarea(id='fond-disc' name='act-repeat' required)
+
+                            +e.footer.found-create__footer
+
+                                +b.A.btn.found-create__btn.found-create__btn_back(href=jv0) Назад
+                                +b.BUTTON.btn_high.found-create__btn.found-create__btn_farward(type='submit') Опубликовать

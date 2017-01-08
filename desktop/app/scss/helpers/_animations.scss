@@ -1,0 +1,79 @@
+@keyframes pulse {
+
+    0% {
+        opacity: 0;
+        bottom: 100%;
+        transform: scale(0) rotate(-45deg);
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5) rotate(-45deg);
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        bottom: -20%;
+        transform: scale(0) rotate(-45deg);
+    }
+
+}
+
+@keyframes blink {
+
+    0% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+
+}
+
+@keyframes dasharray {
+    0% {
+        stroke: transparent;
+        stroke-width: 2;
+        stroke-dasharray: 0 50;
+
+    }
+
+    100% {
+        stroke: currentColor;
+        stroke-width: 2;
+        fill-opacity: 0;
+        stroke-dasharray: 50 0;
+    }
+}
+
+@keyframes back-pulse {
+    50% {
+        background-color: rgba(255, 255, 255, .25);
+    }
+}
+
+@keyframes border-bang {
+    10% {
+        border-radius: 50%;
+    }
+    
+    100% {
+        padding: 80px;
+            
+        opacity: 0;
+        border-radius: 50%;
+    }
+}

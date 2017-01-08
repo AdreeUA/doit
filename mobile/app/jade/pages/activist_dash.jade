@@ -1,0 +1,135 @@
+extends ../layouts/default
+include ../blocks/act
+include ../blocks/new
+include ../blocks/custom-input
+
+block head
+    - var pageTitle = 'Кабинет активиста: новости';
+    - var pageName = 'Новости';
+
+block content
+
+    +b.SECTION.cabinet_user._news
+
+        h1.hidden-text Личный кабинет: настройки
+
+        include ../partials/cabinet-nav
+
+        +e.main
+
+            +e.SECTION.section
+
+                .container
+
+                    +b.UL.list_vertical.cabinet__info-list
+
+                        +e.item.cabinet__info-item
+
+                            +b.wreath_green
+                                +e.title Вы собрали
+                                +e.money
+                                    +e.SPAN.val.js-animate-num 558&nbsp;135
+                                    +e.SVG.icon_ruble
+                                        use(xlink:href='i/icons.svg#icon-ruble')
+
+                                +e.title_second Вы совершили
+                                +e.acts
+                                    | 6 поступков
+
+                        +e.item.cabinet__info-item
+
+                            +b.wreath_gold
+
+                                +e.title Вы пожертвовали
+                                +e.money
+                                    +e.SPAN.val.js-animate-num 121&nbsp;000
+                                    +e.SVG.icon_ruble
+                                        use(xlink:href='i/icons.svg#icon-ruble')
+                                +e.title_second Вы поддержали
+                                +e.acts
+                                    | 3 поступка
+
+            +b.SECTION.acts-sec_in.cabinet__section
+
+                .container
+
+                    +e.HEADER.header
+
+                        .columns.columns_justify.columns_middle
+
+                            .columns__col
+                                +b.H2.title_thin.acts-sec__title Поступки: #{' '}
+
+                            .columns__col
+                                +e.all(href=jv0) 35 поступков
+
+                    +e.slider.slider(data-dots='true' data-arrows='false')
+
+                        -
+                            var acts = [
+                                'Обливание холодной водой',
+                                'Бежишь и приносишь пользу обществу',
+                                'Бежишь и приносишь пользу обществу',
+                                'Деньги для набережной'
+                            ];
+
+                        each act, ind in acts
+
+                            +e.item.slider__item
+
+                                +act({
+                                    'mod': '_horiz',
+                                    'src': 'http://loremflickr.com/330/200?random=' + ind,
+                                    'srcset': 'http://loremflickr.com/660/400?random=' + ind,
+                                    'photo': false,
+                                    'text': act,
+                                    'fund': true
+                                })
+                                    .act__buttons
+                                        .act__btn
+                                            +b.share-btn_wide(href=jv0) Пост в ленту
+                                        .act__btn
+                                            +b.share-btn_wide(href=jv0) Добавить фото
+
+            +b.SECTION.news-sec
+
+                .container
+
+                    +e.HEADER.header
+
+                        +e.H2.title.title_thin Новости:
+
+                        +e.FORM.filter(name='news-filter' method='post' action='')
+
+                            - var filters = ['все новости', 'новости фондов', 'новости друзей'];
+                            - var checked;
+
+                            +b.UL.list.news-sec__filter-list
+
+                                each filter, ind in filters
+
+                                    - checked = (ind === 0 ? true : false)
+
+                                    +e.LI.item.news-sec__filter-item
+
+                                        +customInput('btn', 'radio', 'news-filter-' + ind, 'news-filter-type', ind, checked)
+                                            | #{filter}
+
+                    +e.content
+
+                        +e.list_posts
+
+                            each i in [0, 1, 2]
+                                +new({
+                                    mod: i === 0 ? '_mark news-sec__item' : 'news-sec__item',
+                                    img: i === 1 ? true : false,
+                                    quiz: i === 2 ? true : false,
+                                    author: true
+                                })
+                                    p(class=(i === 0 ? 'content__big-text' : ''))
+                                        | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный
+                                        |  стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя
+                                        |  парадоксально продуцирует продвигаемый комплексный анализ ситуации.
+
+                        +b.preloader
+                            +e.SPAN.text Идет загрузка...

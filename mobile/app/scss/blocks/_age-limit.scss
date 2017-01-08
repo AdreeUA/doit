@@ -1,0 +1,13 @@
+.age-limit {
+    width: rem(48);
+    height: rem(48);
+
+    font-weight: 300;
+    font-size: rem(14);
+    line-height: rem(48);
+    font-family: $headingFont;
+    text-align: center;
+
+    background-color: #d8d8d8;
+    border-radius: 50%;
+}

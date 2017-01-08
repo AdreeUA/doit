@@ -1,0 +1,228 @@
+.popup {
+    max-width: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    text-align: left;
+
+    background-color: #fff;
+
+    &_message {
+        height: auto;
+        text-align: center;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        width: 100%;
+
+        background-color: #fff;
+    }
+
+    &__header {
+        position: relative;
+        z-index: 1;
+
+        padding-top: rem(10);
+        padding-bottom: rem(10);
+
+        box-shadow: 0 2px 4px rgba(187, 187, 187, .5);
+        background-color: #fff;
+    }
+
+    &__title {
+        color: $color-2;
+        font-family: $headingFont;
+        font-size: rem(25);
+        font-weight: 300;
+        line-height: 32/27+em;
+    }
+
+    &__close {
+        position: relative;
+
+        width: rem(30);
+        height: rem(30);
+        padding: 0;
+        border: none;
+
+        background-color: transparent;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            height: 100%;
+            width: 1px;
+
+            background-color: #000;
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+
+    &__main {
+        flex-grow: 1;
+
+        background-color: #fff;
+    }
+
+    &__section {
+        padding-top: rem(25);
+        padding-bottom: rem(25);
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(155, 154, 155, .47);
+        }
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: rem(5);
+
+        font-family: $headingFont;
+        font-size: rem(15);
+        font-weight: 300;
+        line-height: 18/15+em;
+        color: inherit;
+        text-decoration: none;
+
+        &_big {
+            font-size: rem(24);
+            line-height: 28/24+em;
+        }
+
+        &_gap_md {
+            margin-bottom: rem(15);
+        }
+
+        &_gap_l {
+            margin-bottom: rem(25);
+        }
+        
+        a {
+            @extend .link;
+        }
+    }
+
+    &__link {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__footer {
+        padding-top: rem(25);
+        padding-bottom: rem(25);
+
+        background-color: $color-4;
+    }
+
+    &__acts-item {
+        padding-top: rem(22);
+
+        font-family: "Helvetica Neue";
+
+        &:not(:last-child) {
+            border-bottom: 2px solid rgba(151, 151, 151, .2);
+        }
+    }
+
+    &__acts-item:first-child {
+        padding-top: 0;
+    }
+
+    &__act-date {
+        opacity: 0.5;
+        color: #000;
+        font-size: rem(10);
+        font-weight: 300;
+        line-height: rem(16);
+
+        &_left {
+            float: left;
+        }
+    }
+
+    &__activist-name {
+        margin-bottom: rem(5);
+
+        font-size: rem(13);
+        font-weight: 300;
+        line-height: rem(30);
+    }
+
+    &__project-name {
+        margin-bottom: rem(23);
+
+        opacity: 0.82;
+        color: #1f9b7f;
+        font-size: rem(13);
+        font-weight: 500;
+        line-height: rem(16);
+
+        &_donation {
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__block-sum {
+        display: inline-block;
+        margin-right: rem(13);
+        margin-bottom: rem(22);
+
+        font-size: rem(16);
+        line-height: rem(19);
+        font-family: "VW Headline OT";
+        font-weight: 600;
+    }
+
+    &__block-sum-text {
+        display: inline-block;
+    }
+
+    &__block-sum-number {
+        display: inline-block;
+
+        span {
+            font-weight: 400;
+        }
+    }
+
+    &__top-line::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    &__number {
+        float: right;
+        font-size: rem(13);
+        font-weight: 700;
+        line-height: rem(18);
+    }
+
+    &__text {
+        margin-bottom: rem(18);
+
+        opacity: 0.82;
+        font-size: rem(12);
+        font-weight: 400;
+        line-height: rem(16);
+    }
+}
+
+.remodal-wrapper {
+    padding: 0;
+}

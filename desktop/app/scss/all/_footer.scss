@@ -1,0 +1,123 @@
+.footer {
+    border-top: 2px solid black;
+
+    &_no-border {
+        border-top: none;
+    }
+
+    &__top {
+        padding-top: rem(15);
+        padding-bottom: rem(15);
+
+        border-bottom: 1px solid rgba(151, 151, 151, .27);
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-right: rem(57);
+
+        font-weight: 600;
+        font-size: rem(30);
+        line-height: 1.1666666667; //35/30
+        vertical-align: middle;
+        color: #000;
+    }
+
+    &__nav {
+        display: inline-block;
+
+        font-size: rem(18);
+        vertical-align: middle;
+
+        .nav__item {
+            &:not(:last-child) {
+                margin-right: rem(30);
+            }
+
+            @media screen and (max-width: 1200px) {
+                &:not(:last-child) {
+                    margin-right: rem(20);
+                }
+            }
+        }
+    }
+
+    &__bottom-inner {
+        display: table;
+        width: 100%;
+    }
+
+    &__bottom-col {
+        display: table-cell;
+        padding-top: rem(24);
+        padding-bottom: rem(44);
+
+        vertical-align: top;
+
+        &_socials {
+            width: rem(321);
+            border-right: 1px solid rgba(151, 151, 151, .27);
+        }
+
+        &_payment {
+            padding-left: rem(30);
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(18);
+
+        font-weight: 300;
+        font-size: rem(18);
+        line-height: 1;
+        font-family: $headingFont;
+        color: #9b9b9b;
+    }
+
+    &__payments-item {
+        vertical-align: middle;
+
+        &:not(:last-child) {
+            margin-right: rem(20);
+        }
+    }
+
+    &__made {
+        display: block;
+        width: rem(110);
+        margin-top: rem(16);
+
+        text-decoration: none;
+        color: #000;
+    }
+
+    &__made-logo {
+        display: block;
+        width: 100%;
+        margin-bottom: rem(6);
+    }
+
+    &__made-text {
+        display: block;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 12px;
+        margin-bottom: rem(6);
+    }
+
+    &__made-year {
+        display: block;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+    }
+        
+    &__requisites {
+        position: relative;
+        top: -.3em;
+    }
+    
+    .footer__requisites {
+        color: #1f9b7f;
+    }
+}

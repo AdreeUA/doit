@@ -1,0 +1,271 @@
+extends ../layouts/default
+include ../partials/nav
+include ../partials/act
+include ../partials/activist
+
+
+block head
+    - var pageTitle = 'Кабинет фонда';
+    - var pageName = 'Новости';
+    - var newsFilter = 'Все новости';
+
+block content
+
+    +b.SECTION.cabinet_user._dash
+
+        +e.HEADER.header
+
+            .container
+
+                include ../partials/cabinet-sidebar2
+
+        +e.main
+
+            .container
+
+                +e.content-wrapper
+
+                    +b.dash
+
+                        +e.wreath-wrapper
+
+                            +e.wreath
+
+                                +b.wreath_green
+
+                                    +e.title_funds Для вас собрали
+
+                                    +e.money
+
+                                        +e.SPAN.val.js-animate-num 558135
+
+                                        +e.SVG.icon_ruble
+                                            use(xlink:href='i/icons.svg#icon-ruble')
+
+                            +e.wreath
+
+                                +b.wreath_gold
+
+                                    +e.title_funds Для вас совершено
+
+                                    +e.money
+
+                                        +e.SPAN.val.js-animate-num 121
+
+                                    +e.name поступков
+
+                        +e.acts
+
+                            +b.dash-item
+
+                                +e.header
+
+                                    +e.title Поступки:
+
+                                    +e.nav
+
+                                        +b.link-underline_dash-item(href=jv0) 35 поступков
+
+                                +b.acts-sec_in._dash-item
+
+                                    +e.item
+                                        +act_in({
+                                        'mod': 'act_dash-item',
+                                        'src': 'http://loremflickr.com/390/197/animals',
+                                        'srcset': 'http://loremflickr.com/800/394/animals',
+                                        'text': 'Обливание холодной водой',
+                                        'occasion': true,
+                                        'like': true,
+                                        'dash': true,
+                                        'fund': true
+                                    })
+
+                                    +e.item
+                                        +act_in({
+                                        'mod': 'act_dash-item',
+                                        'src': 'http://loremflickr.com/390/197/animals',
+                                        'srcset': 'http://loremflickr.com/800/394/animals',
+                                        'text': 'Обливание холодной водой',
+                                        'occasion': true,
+                                        'like': true,
+                                        'dash': true,
+                                        'fund': true
+                                    })
+
+                                    +e.item
+                                        +act_in({
+                                        'mod': 'act_dash-item',
+                                        'src': 'http://loremflickr.com/390/197/animals',
+                                        'srcset': 'http://loremflickr.com/800/394/animals',
+                                        'text': 'Обливание холодной водой',
+                                        'occasion': true,
+                                        'like': true,
+                                        'dash': true,
+                                        'fund': true
+                                    })
+
+                            +b.dash-item
+
+                                +e.header
+
+                                    +e.title Активисты:
+
+                                    +e.nav
+
+                                        +b.link-underline_dash-item(href=jv0) 22 активиста
+
+                                +b.activists_dash-item
+
+                                    +e.item
+                                        +activist({
+                                            'mod': '_power _dash-item',
+                                            'src': 'http://stevensegallery.com/177/177',
+                                            'srcset': 'http://stevensegallery.com/354/354',
+                                            'acts': 65,
+                                            'money': '5\u00A0581\u00A0385'
+                                        })
+
+                                    +e.item
+                                        +activist({
+                                            'mod': '_dash-item',
+                                            'src': 'http://www.placecage.com/c/177/177',
+                                            'srcset': 'http://www.placecage.com/c/354/354',
+                                            'acts': 55,
+                                            'money': '4\u00A0581\u00A0385'
+                                        })
+
+                                    +e.item
+                                        +activist({
+                                            'mod': '_dash-item',
+                                            'src': 'http://www.placecage.com/c/177/177',
+                                            'srcset': 'http://www.placecage.com/c/354/354',
+                                            'acts': 45,
+                                            'money': '3\u00A0581\u00A0385'
+                                        })
+
+                                    +e.item
+                                        +activist({
+                                            'mod': '_dash-item',
+                                            'src': 'http://www.fillmurray.com/177/177',
+                                            'srcset': 'http://www.fillmurray.com/354/354',
+                                            'acts': 35,
+                                            'money': '200\u00A0581\u00A0385'
+                                        })
+
+                            +b.dash-item
+
+                                +e.header
+
+                                    +e.title Новости:
+
+                                    +e.nav
+
+                                        +nav({
+                                            'Все новости': jv0,
+                                            'Новости фондов': jv0,
+                                            'Новости друзей': jv0
+                                        })(nav='_dash-item')
+
+                                +e.news
+
+                                    +b.post_dash-item
+
+                                        +e.head
+
+                                            +e.author-info
+
+                                                +b.activist-name_wide(href=jv0)
+
+                                                    +e.photo-wrapper_in
+
+                                                        +e.IMG.photo(src='http://stevensegallery.com/40/40' srcset='http://stevensegallery.com/80/80 2x')
+
+                                                    +e.name Сергей Варяжный
+
+                                            +e.date 22.01.2015, 18:35
+
+                                        +e.lead_dash-item
+                                            | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. 
+
+                                    +b.post_dash-item
+
+                                        +e.head
+
+                                            +e.author-info
+
+                                                
+                                                +e.A.sponsor-link(href=jv0)
+
+                                                    +e.sponsor-img(src='http://loremflickr.com/92/57/business', srcset='http://www.loremflickr.com/184/114/business 2x')
+
+                                            +e.date_fund 22.01.2015, 18:35
+
+                                        +e.IMG.photo(src='http://loremflickr.com/468/213/sports' srcset='http://loremflickr.com/936/426/sports 2x')
+
+                                        +e.P.paragraph
+                                            | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована. 
+
+                                    +b.post_dash-item
+
+                                        +e.head
+
+                                            +e.author-info
+
+                                                +b.activist-name_wide._simple(href=jv0)
+
+                                                    +e.photo-wrapper_in
+
+                                                        +e.IMG.photo(src='http://stevensegallery.com/40/40' srcset='http://stevensegallery.com/80/80 2x')
+
+                                                    +e.name Катерина Земская-Владимирова
+
+                                            +e.date 22.01.2015, 18:35
+
+                                        +e.vote
+
+                                            +b.vote_transparent
+
+                                                +e.H3.title 
+                                                    | Что будет, если никто не придёт на мероприятие?
+
+                                                +e.FORM.body
+
+                                                    +e.LABEL.item
+
+                                                        +e.INPUT.radio.js-input-styler(type="radio" name="example")
+
+                                                        +e.text
+                                                            | Мероприятие не состоится
+
+                                                    +e.LABEL.item
+
+                                                        +e.INPUT.radio.js-input-styler(type="radio" name="example")
+
+                                                        +e.text
+                                                            | Мероприятие состоится
+
+                                                    +e.LABEL.item
+
+                                                        +e.INPUT.radio.js-input-styler(type="radio" name="example")
+
+                                                        +e.text
+                                                            | Мероприятие состоится, но мы будем расстроены
+
+                                                    +e.LABEL.item
+
+                                                        +e.INPUT.radio.js-input-styler(type="radio" name="example")
+
+                                                        +e.text
+                                                            | Мероприятие не состоится и мы не будем расстроены
+
+                                                    +e.submit
+
+                                                        +b.BUTTON.btn_vote(type="submit") Ответить
+
+                                    +e.loading
+
+                                        +b.loading_lefter
+
+                                            +e.SPAN.text Идет загрузка...
+
+    +delimiter('cabinet_user')

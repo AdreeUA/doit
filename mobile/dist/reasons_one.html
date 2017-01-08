@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Подробная информация о поводе</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="js/modernizr.min.js"></script>
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div id="main-menu" class="menu header__menu">
+          <!--+b.FORM.search.menu__search(method='get' action='')-->
+          <!--    +e.inner-->
+          <!--        +e.BUTTON.icon-wrapper(type='submit')-->
+          <!--            +e.SVG.icon_search-->
+          <!--                use(xlink:href='i/icons.svg#icon-search')-->
+          <!--        +e.INPUT.input(id='menu-search' name='search' type='search' placeholder='Поиск')-->
+          <nav class="menu__nav">
+            <h2 class="hidden-text">Навигация по сайту</h2>
+            <ul class="menu__nav-list">
+              <li class="menu__nav-item"><a href="javascript:void(0)" class="menu__nav-link">фонды</a>
+              </li>
+              <li class="menu__nav-item"><a href="javascript:void(0)" class="menu__nav-link">поступки</a>
+              </li>
+              <li class="menu__nav-item"><a href="javascript:void(0)" class="menu__nav-link">как это работает</a>
+              </li>
+            </ul>
+            <div class="menu__nav-btn"><a href="javascript:void(0)" class="border-btn">Пожертвовать</a>
+            </div>
+            <div class="menu__nav-btn"><a href="javascript:void(0)" class="border-btn">Сделать поступок</a>
+            </div>
+          </nav>
+          <div class="auth auth_authorized menu__auth"><a href="javascript:void(0)" class="auth__item"><span class="auth__avatar-wrapper"><img src="http://stevensegallery.com/30/30" srcset="http://stevensegallery.com/60/60 2x" class="auth__avatar" alt="" role="presentation"/></span><span class="auth__text">Джайна Праудмур</span></a><a href="javascript:void(0)" class="auth__item"><span class="auth__text">Выход</span></a>
+          </div>
+        </div>
+        <div class="container header__container">
+          <button class="burger-btn header__burger"><span class="burger-btn__line">Открыть меню</span>
+          </button>
+          <h2 class="logo header__logo"><a href="/" class="logo__text">Сделай!</a>
+          </h2>
+          <div class="search menu__search">
+            <div class="search__inner">
+              <button class="search__icon-wrapper js-search-btn">
+                <svg class="search__icon search__icon search__icon_search">
+                  <use xlink:href="i/icons.svg#icon-search"></use>
+                </svg><input id="menu-search" name="query" type="search" placeholder="Поиск" class="search__input"/>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+<!--~~~~~~~~~~~~~~~ HEADER end ~~~~~~~~~~~~~~~~~-->
+
+      <main class="main">
+        <div class="occasion-info"><a href="javascript:void(0)" class="occasion-info__back arrow-link arrow-link_light">назад</a>
+          <div data-dots="true" data-arrows="false" class="occasion-info__slider slider">
+            <div class="occasion-info__slider-item item">
+              <div class="occasion-info__photo-wrapper"><img src="http://loremflickr.com/400/325?random=0" srcset="http://loremflickr.com/800/650?random=0 2x" alt="" class="occasion-info__photo" role="presentation"/>
+              </div>
+              <div class="occasion-info__slider-main">
+                <div class="occasion-info__slider-title">Просто бегаем по набережной
+                </div>
+              </div>
+            </div>
+            <div class="occasion-info__slider-item item">
+              <div class="occasion-info__photo-wrapper"><img src="http://loremflickr.com/400/325?random=1" srcset="http://loremflickr.com/800/650?random=1 2x" alt="" class="occasion-info__photo" role="presentation"/>
+              </div>
+              <div class="occasion-info__slider-main">
+                <div class="occasion-info__slider-title">Не просто бегаем по набережной
+                </div>
+              </div>
+            </div>
+            <div class="occasion-info__slider-item item">
+              <div class="occasion-info__photo-wrapper"><img src="http://loremflickr.com/400/325?random=2" srcset="http://loremflickr.com/800/650?random=2 2x" alt="" class="occasion-info__photo" role="presentation"/>
+              </div>
+              <div class="occasion-info__slider-main">
+                <div class="occasion-info__slider-title">Сложно бегаем по набережной
+                </div>
+              </div>
+            </div>
+            <div class="occasion-info__slider-item item">
+              <div class="occasion-info__photo-wrapper"><img src="http://loremflickr.com/400/325?random=3" srcset="http://loremflickr.com/800/650?random=3 2x" alt="" class="occasion-info__photo" role="presentation"/>
+              </div>
+              <div class="occasion-info__slider-main">
+                <div class="occasion-info__slider-title">Прыгаем по набережной, а прохожие на нас смотрят
+                </div>
+              </div>
+            </div>
+            <div class="occasion-info__slider-item item">
+              <div class="occasion-info__photo-wrapper"><img src="http://loremflickr.com/400/325?random=4" srcset="http://loremflickr.com/800/650?random=4 2x" alt="" class="occasion-info__photo" role="presentation"/>
+              </div>
+              <div class="occasion-info__slider-main">
+                <div class="occasion-info__slider-title">Ходим на руках по набережной, прохожие недоумевают
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="occasion-info__section">
+            <div class="container">
+              <div class="occasion-info__content content">
+                <p class="content__big-text">
+                  Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта
+                   достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный
+                   анализ ситуации.
+                </p>
+                <p>
+                  Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование
+                   сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый
+                   комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика
+                   выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована.
+                   Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами.
+                </p>
+              </div>
+              <div class="share occasion-info__share">
+                <div class="share__row">
+                  <div class="share__text share__text_gap_s">Поделиться:
+                  </div>
+                  <ul class="socials socials_share share__socials">
+                    <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_fb">
+                      <svg class="socials__icon">
+                        <use xlink:href="i/icons.svg#icon-fb"></use>
+                      </svg><span class="socials__num">55</span></a>
+                    </li>
+                    <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_in">
+                      <svg class="socials__icon">
+                        <use xlink:href="i/icons.svg#icon-in"></use>
+                      </svg><span class="socials__num">55</span></a>
+                    </li>
+                    <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_gplus">
+                      <svg class="socials__icon">
+                        <use xlink:href="i/icons.svg#icon-gplus"></use>
+                      </svg><span class="socials__num">55</span></a>
+                    </li>
+                    <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_vk">
+                      <svg class="socials__icon">
+                        <use xlink:href="i/icons.svg#icon-vk"></use>
+                      </svg><span class="socials__num">55</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="share__row">
+                  <p class="share__text">Понравилось мероприятие? Нажми —<a href="javascript:void(0)" class="like like_dark share__like">
+                    <svg class="like__icon">
+                      <use xlink:href="i/icons.svg#icon-heart"></use>
+                    </svg></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="acts-sec acts-sec_in occasion-info__section">
+            <div class="container">
+              <header class="acts-sec__header">
+                <h2 class="title">Поступки
+                </h2>
+              </header>
+              <div class="acts-sec__list">
+                <div class="acts-sec__item">
+                  <article class="act act_horiz">
+                    <div class="act__wrapper">
+                      <div class="act__img-wrapper"><img src="http://loremflickr.com/330/200?random=0" srcset="http://loremflickr.com/660/400?random=0 2x" alt="" class="act__img" role="presentation"/>
+                      </div>
+                      <div class="act__main"><a href="javascript:void(0)" class="activist-name act__activist"><span class="activist-name__photo-wrapper"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__text">Сергей Бодяжный</span></a><a href="javascript:void(0)" class="act__inner"><span data-val="78" class="battery act__battery"><span class="battery__val">0%</span><span class="battery__body"><span class="battery__progress"></span></span>
+                        <svg class="battery__lightning">
+                          <use xlink:href="i/icons.svg#icon-lightning"></use>
+                        </svg></span><time datetime="2015-11-18" class="act__date">18 ноября</time></a><a href="javascript:void(0)" class="act__fund"><img src="http://loremflickr.com/70/40?random=0" srcыуе="http://loremflickr.com/70/40?random=0 2x" alt="логотип фонда" class="act__fund-img" title=""/></a>
+                      </div>
+                    </div>
+                    <h2 class="act__title"><a href="javascript:void(0)" class="act__title-link">Обливание холодной водой</a>
+                    </h2><a href="javascript:void(0)" class="act__occasion">Повод: Просто бегаем 18 ноября 2015</a>
+                  </article>
+                </div>
+                <div class="acts-sec__item">
+                  <article class="act act_horiz">
+                    <div class="act__wrapper">
+                      <div class="act__img-wrapper"><img src="http://loremflickr.com/330/200?random=1" srcset="http://loremflickr.com/660/400?random=1 2x" alt="" class="act__img" role="presentation"/>
+                      </div>
+                      <div class="act__main"><a href="javascript:void(0)" class="activist-name act__activist"><span class="activist-name__photo-wrapper"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__text">Сергей Бодяжный</span></a><a href="javascript:void(0)" class="act__inner"><span data-val="29" class="battery act__battery"><span class="battery__val">0%</span><span class="battery__body"><span class="battery__progress"></span></span>
+                        <svg class="battery__lightning">
+                          <use xlink:href="i/icons.svg#icon-lightning"></use>
+                        </svg></span><time datetime="2015-11-18" class="act__date">18 ноября</time></a><a href="javascript:void(0)" class="act__fund"><img src="http://loremflickr.com/70/40?random=0" srcыуе="http://loremflickr.com/70/40?random=0 2x" alt="логотип фонда" class="act__fund-img" title=""/></a>
+                      </div>
+                    </div>
+                    <h2 class="act__title"><a href="javascript:void(0)" class="act__title-link">Бежишь и приносишь пользу обществу</a>
+                    </h2>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container">
+            <div class="footer__top-columns">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col"><a href="/" class="logo footer__logo"><span class="logo__text">© Сделай!</span></a>
+                </div>
+                <div class="columns__col">
+                  <div class="age-limit">18+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="nav footer__nav">
+              <h2 class="hidden-text">Навигация по сайту
+              </h2>
+              <ul class="nav__menu">
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">поводы</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">поступки</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">фонды</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">активисты</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">оферта</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">партнеры</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">помощь</a>
+                </li>
+                <li class="nav__item footer__nav-item"><a href="javascript:void(0)" class="nav__link">новости</a> <span class="count nav__count">6</span>
+                </li>
+              </ul>
+            </nav><a href="javascript:void(0)" class="footer__desktop-link">полная версия</a>
+          </div>
+        </div>
+        <div class="footer__middle">
+          <div class="container">
+            <div class="footer__middle-columns columns">
+              <div class="footer__middle-col columns__col">
+                <div class="footer__title">Мы в соц. сетях:
+                </div>
+                <ul class="socials">
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_fb">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-fb"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_in">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-in"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_gplus">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-gplus"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_vk">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-vk"></use>
+                    </svg></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__middle-col columns__col">
+                <div class="footer__title">Мы принимаем:
+                </div>
+                <ul class="list footer__payments">
+                  <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-1.jpg" alt="" class="footer__payments-img"/></a></li>
+                  <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-2.jpg" alt="" class="footer__payments-img"/></a></li>
+                  <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-3.jpg" alt="" class="footer__payments-img"/></a></li>
+                  <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-4.jpg" alt="" class="footer__payments-img"/></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container"><a href="http://www.c-tm.ru/" class="footer__made"><span class="footer__made-text">Создание сайтов</span><img src="i/make-by-logo.png" alt="Creative Team" class="footer__made-logo" title=""/><span class="footer__made-year">2016</span></a>
+          </div>
+        </div>
+      </footer>
+
+<!--~~~~~~~~~~~~~~~ FOOTER end ~~~~~~~~~~~~~~~~~-->
+
+      <div data-remodal-id="auth-popup" class="popup">
+        <div class="popup__inner">
+          <header class="popup__header">
+            <div class="container">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col">
+                  <div class="popup__title">Вход на сайт
+                  </div>
+                </div>
+                <div class="columns__col">
+                  <button data-remodal-action="close" class="popup__close">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="popup__main">
+            <div class="popup__section">
+              <div class="container">
+                <div class="popup__label popup__label_gap_md">С помощью социальных сетей
+                </div>
+                <ul class="socials socials_big">
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_fb">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-fb"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_vk">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-vk"></use>
+                    </svg></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="popup__section">
+              <div class="container">
+                <form name="auth" method="post" action="" class="form">
+                  <div class="form__row">
+                    <label for="auth-email" class="popup__label">E-mail
+                    </label><input id="auth-email" name="email" type="email" required="" class="input"/>
+                  </div>
+                  <div class="form__row">
+                    <label for="auth-password" class="popup__label">Пароль:  <a href="javascript:void(0)" class="popup__link">(Забыли пароль?)</a>
+                    </label><input id="auth-password" name="password" type="password" required="" class="input"/>
+                  </div>
+                  <div class="form__row">
+                    <button type="submit" class="btn btn_mini btn_light">Войти
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <footer class="popup__footer">
+            <div class="container"><a href="#reg-popup" class="btn btn_trans btn_mini">Зарегистрироваться</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div data-remodal-id="reg-popup" class="popup">
+        <div class="popup__inner">
+          <header class="popup__header">
+            <div class="container">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col">
+                  <div class="popup__title">Регистрация
+                  </div>
+                </div>
+                <div class="columns__col">
+                  <button data-remodal-action="close" class="popup__close">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="popup__main">
+            <div class="popup__section">
+              <div class="container">
+                <div class="popup__label popup__label_gap_md">С помощью социальных сетей
+                </div>
+                <ul class="socials socials_big">
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_fb">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-fb"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_vk">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-vk"></use>
+                    </svg></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="popup__section">
+              <div class="container">
+                <form name="reg" method="post" action="" class="form">
+                  <div class="form__row">
+                    <label for="reg-name" class="popup__label">Ваше имя:
+                    </label><input id="reg-name" name="name" required="" class="input" type="text"/>
+                  </div>
+                  <div class="form__row">
+                    <label for="reg-email" class="popup__label">E-mail:
+                    </label><input id="reg-email" name="email" type="email" required="" class="input"/>
+                  </div>
+                  <div class="form__row">
+                    <label for="reg-password" class="popup__label">Пароль:
+                    </label><input id="reg-password" name="password" type="password" required="" class="input"/>
+                  </div>
+                  <div class="form__row">
+                    <label for="reg-password-confirm" class="popup__label">Пароль еще раз:
+                    </label><input id="reg-password-confirm" name="password-confirm" type="password" required="" class="input"/>
+                  </div>
+                  <div class="form__row">
+                    <button type="submit" class="btn btn_mini btn_light">Зарегистрироваться
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-remodal-id="message-popup" class="popup popup_message">
+        <div class="popup__inner">
+          <header class="popup__header">
+            <div class="container">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col">
+                  <div class="popup__title">Уведомление
+                  </div>
+                </div>
+                <div class="columns__col">
+                  <button data-remodal-action="close" class="popup__close">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="popup__main">
+            <div class="popup__section">
+              <div class="container">
+                <div class="popup__label popup__label_gap_md">Картинка добавлена
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="popup__footer">
+            <div class="container">
+              <button data-remodal-action="close" class="btn btn_trans btn_mini">ОК
+              </button>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div data-remodal-id="all-acts-popup" class="popup">
+        <div class="popup__inner">
+          <header class="popup__header">
+            <div class="container">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col">
+                  <div class="popup__title">Все поступки
+                  </div>
+                </div>
+                <div class="columns__col">
+                  <button data-remodal-action="close" class="popup__close">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="popup__main">
+            <div class="popup__section">
+              <div class="container">
+                <div class="popup__acts-list">
+                  <div class="popup__acts-item">
+                    <div class="popup__act-date"><span>15.10.2016, 16:13</span>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__bottom-block">
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text">Собрано:
+                        </div>
+                        <div class="popup__block-sum-number">63 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text"> Цель:
+                        </div>
+                        <div class="popup__block-sum-number">230 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__act-date"><span>15.10.2016, 16:13</span>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__bottom-block">
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text">Собрано:
+                        </div>
+                        <div class="popup__block-sum-number">63 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text"> Цель:
+                        </div>
+                        <div class="popup__block-sum-number">230 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__act-date"><span>15.10.2016, 16:13</span>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__bottom-block">
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text">Собрано:
+                        </div>
+                        <div class="popup__block-sum-number">63 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text"> Цель:
+                        </div>
+                        <div class="popup__block-sum-number">230 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__act-date"><span>15.10.2016, 16:13</span>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__bottom-block">
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text">Собрано:
+                        </div>
+                        <div class="popup__block-sum-number">63 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text"> Цель:
+                        </div>
+                        <div class="popup__block-sum-number">230 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__act-date"><span>15.10.2016, 16:13</span>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__bottom-block">
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text">Собрано:
+                        </div>
+                        <div class="popup__block-sum-number">63 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="popup__block-sum">
+                        <div class="popup__block-sum-text"> Цель:
+                        </div>
+                        <div class="popup__block-sum-number">230 000&nbsp;
+                          <svg class="popup__icon icon icon_small">
+                            <use xlink:href="i/icons.svg#icon-ruble"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-remodal-id="all-donations-popup" class="popup">
+        <div class="popup__inner">
+          <header class="popup__header">
+            <div class="container">
+              <div class="columns columns_justify columns_middle">
+                <div class="columns__col">
+                  <div class="popup__title">Все пожертвования
+                  </div>
+                </div>
+                <div class="columns__col">
+                  <button data-remodal-action="close" class="popup__close">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="popup__main">
+            <div class="popup__section">
+              <div class="container">
+                <div class="popup__acts-list">
+                  <div class="popup__acts-item">
+                    <div class="popup__top-line">
+                      <div class="popup__act-date popup__act-date_left"><span>15.10.2016, 16:13</span>
+                      </div>
+                      <div class="popup__number">+ 600
+                        <svg class="popup__icon icon icon_small">
+                          <use xlink:href="i/icons.svg#icon-ruble"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name popup__project-name_donation"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__text">Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__top-line">
+                      <div class="popup__act-date popup__act-date_left"><span>15.10.2016, 16:13</span>
+                      </div>
+                      <div class="popup__number">+ 600
+                        <svg class="popup__icon icon icon_small">
+                          <use xlink:href="i/icons.svg#icon-ruble"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name popup__project-name_donation"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__text">Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__top-line">
+                      <div class="popup__act-date popup__act-date_left"><span>15.10.2016, 16:13</span>
+                      </div>
+                      <div class="popup__number">+ 600
+                        <svg class="popup__icon icon icon_small">
+                          <use xlink:href="i/icons.svg#icon-ruble"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name popup__project-name_donation"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__text">Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__top-line">
+                      <div class="popup__act-date popup__act-date_left"><span>15.10.2016, 16:13</span>
+                      </div>
+                      <div class="popup__number">+ 600
+                        <svg class="popup__icon icon icon_small">
+                          <use xlink:href="i/icons.svg#icon-ruble"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name popup__project-name_donation"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__text">Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+                    </div>
+                  </div>
+                  <div class="popup__acts-item">
+                    <div class="popup__top-line">
+                      <div class="popup__act-date popup__act-date_left"><span>15.10.2016, 16:13</span>
+                      </div>
+                      <div class="popup__number">+ 600
+                        <svg class="popup__icon icon icon_small">
+                          <use xlink:href="i/icons.svg#icon-ruble"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="popup__activist-name"><span>Сергей Венедиктов</span>
+                    </div>
+                    <div class="popup__project-name popup__project-name_donation"><span>Помощь домашним любимцам</span>
+                    </div>
+                    <div class="popup__text">Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <script src="js/vendor.min.js"></script>
+      <script src="js/scripts.min.js"></script>
+    </div>
+  </body>
+</html>

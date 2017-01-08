@@ -1,0 +1,92 @@
+.reports-sec {
+    padding-top: rem(30);
+    padding-bottom: rem(25);
+
+    &__period {
+        padding-top: rem(60);
+    }
+
+    &__year {
+        margin-top: 0;
+        margin-bottom: rem(15);
+
+        font-family: $headingFont;
+        font-size: rem(53);
+        font-weight: 600;
+        line-height: 1;
+
+        + .reports-sec__list {
+            margin-top: rem(25);
+        }
+    }
+
+    &__info {
+        @extend %clearfix;
+
+        + .reports-sec__list {
+            margin-top: rem(35);
+        }
+    }
+
+    &__photo-col {
+        max-width: percentage(130/330);
+        padding-right: rem(15);
+    }
+
+    &__link-col {
+        max-width: percentage(200/330);
+    }
+
+    &__photo {
+        max-width: 100%;
+    }
+
+    &__download {
+        position: relative;
+
+        display: inline-block;
+        padding-left: rem(30);
+
+        font-family: $headingFont;
+        font-size: rem(19);
+        font-weight: 300;
+        line-height: 22/19+em;
+        text-decoration: none;
+        vertical-align: top;
+        color: #000;
+
+        &_no-icon {
+            padding-left: 0;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        vertical-align: middle;
+
+        transform: translateY(-50%);
+
+        &_doc {
+            width: rem(16);
+            height: rem(18);
+
+            fill: #444549;
+        }
+    }
+
+    &__small {
+        display: block;
+
+        font-size: rem(12);
+        line-height: 14/12+em;
+    }
+
+    &__month {
+        &:not(:last-child) {
+            margin-bottom: rem(25);
+        }
+    }
+}

@@ -1,0 +1,1880 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0;
+    bottom: 100%;
+    -webkit-transform: scale(0) rotate(-45deg);
+            transform: scale(0) rotate(-45deg); }
+  10% {
+    opacity: 0; }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.5) rotate(-45deg);
+            transform: scale(1.5) rotate(-45deg); }
+  90% {
+    opacity: 0; }
+  100% {
+    opacity: 0;
+    bottom: -20%;
+    -webkit-transform: scale(0) rotate(-45deg);
+            transform: scale(0) rotate(-45deg); } }
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    bottom: 100%;
+    -webkit-transform: scale(0) rotate(-45deg);
+            transform: scale(0) rotate(-45deg); }
+  10% {
+    opacity: 0; }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.5) rotate(-45deg);
+            transform: scale(1.5) rotate(-45deg); }
+  90% {
+    opacity: 0; }
+  100% {
+    opacity: 0;
+    bottom: -20%;
+    -webkit-transform: scale(0) rotate(-45deg);
+            transform: scale(0) rotate(-45deg); } }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: .5; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: .5; } }
+
+@keyframes blink {
+  0% {
+    opacity: .5; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: .5; } }
+
+@-webkit-keyframes dasharray {
+  0% {
+    stroke: transparent;
+    stroke-width: 2;
+    stroke-dasharray: 0 50; }
+  100% {
+    stroke: currentColor;
+    stroke-width: 2;
+    fill-opacity: 0;
+    stroke-dasharray: 50 0; } }
+
+@keyframes dasharray {
+  0% {
+    stroke: transparent;
+    stroke-width: 2;
+    stroke-dasharray: 0 50; }
+  100% {
+    stroke: currentColor;
+    stroke-width: 2;
+    fill-opacity: 0;
+    stroke-dasharray: 50 0; } }
+
+@font-face {
+  font-family: "vw_headline";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/vwheadlineot-black-webfont.woff2") format("woff2"), url("../fonts/vwheadlineot-black-webfont.woff") format("woff"), url("../fonts/vwheadlineot-black-webfont.ttf") format("truetype"), url("../fonts/vwheadlineot-black-webfont.svg#vw_headline") format("svg"); }
+
+@font-face {
+  font-family: "vw_headline";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/vwheadlineot-semibold-webfont.woff2") format("woff2"), url("../fonts/vwheadlineot-semibold-webfont.woff") format("woff"), url("../fonts/vwheadlineot-semibold-webfont.ttf") format("truetype"), url("../fonts/vwheadlineot-semibold-webfont.svg#vw_headline") format("svg"); }
+
+@font-face {
+  font-family: "vw_headline";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/vwheadlineot-book-webfont.woff2") format("woff2"), url("../fonts/vwheadlineot-book-webfont.woff") format("woff"), url("../fonts/vwheadlineot-book-webfont.ttf") format("truetype"), url("../fonts/vwheadlineot-book-webfont.svg#vw_headline") format("svg"); }
+
+@font-face {
+  font-family: "vw_text";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/vwtext-bold-webfont.woff2") format("woff2"), url("../fonts/vwtext-bold-webfont.woff") format("woff"), url("../fonts/vwtext-bold-webfont.ttf") format("truetype"), url("../fonts/vwtext-bold-webfont.svg#vw_text") format("svg"); }
+
+@font-face {
+  font-family: "vw_text";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/vwtext-bolditalic-webfont.woff2") format("woff2"), url("../fonts/vwtext-bolditalic-webfont.woff") format("woff"), url("../fonts/vwtext-bolditalic-webfont.ttf") format("truetype"), url("../fonts/vwtext-bolditalic-webfont.svg#vw_text") format("svg"); }
+
+@font-face {
+  font-family: "vw_text";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/vwtext-regular-webfont.woff2") format("woff2"), url("../fonts/vwtext-regular-webfont.woff") format("woff"), url("../fonts/vwtext-regular-webfont.ttf") format("truetype"), url("../fonts/vwtext-regular-webfont.svg#vw_text") format("svg"); }
+
+@font-face {
+  font-family: "vw_text";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/vwtext-regularitalic-webfont.woff2") format("woff2"), url("../fonts/vwtext-regularitalic-webfont.woff") format("woff"), url("../fonts/vwtext-regularitalic-webfont.ttf") format("truetype"), url("../fonts/vwtext-regularitalic-webfont.svg#vw_text") format("svg"); }
+
+@font-face {
+  font-family: "vw_text";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/vwtext-light-webfont.woff2") format("woff2"), url("../fonts/vwtext-light-webfont.woff") format("woff"), url("../fonts/vwtext-light-webfont.ttf") format("truetype"), url("../fonts/vwtext-light-webfont.svg#vw_text") format("svg"); }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+html {
+  height: 100%;
+  font: 100% "vw_text", Arial, sans-serif; }
+  @media screen and (max-width: 1201px) {
+    html {
+      font-size: 90%; } }
+
+body {
+  height: 100%;
+  background-color: #fff; }
+
+.page {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+  min-width: 980px; }
+
+.main {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 2.5rem;
+  font-family: "vw_headline", Arial, sans-serif;
+  line-height: 1; }
+  .title_size_l {
+    font-size: 4.8125rem; }
+
+.logo {
+  font-weight: 900;
+  font-family: "vw_headline", Arial, sans-serif;
+  color: inherit;
+  text-decoration: none; }
+  .logo__text {
+    margin: 0;
+    font-size: 1em; }
+
+.scheme {
+  position: relative;
+  width: 58.125rem;
+  height: 7.8125rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  .scheme__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .scheme__item {
+    position: absolute;
+    font-weight: 600;
+    font-size: 1.3125rem;
+    line-height: 1.1428571429;
+    font-family: "vw_headline", Arial, sans-serif;
+    color: inherit;
+    text-align: center; }
+    .scheme__item:first-child {
+      top: 1rem;
+      left: 0; }
+    .scheme__item:nth-child(2) {
+      top: 0;
+      left: 22.8125rem; }
+    .scheme__item:nth-child(3) {
+      bottom: 0;
+      right: 2.8125rem; }
+  .scheme__img {
+    width: 51.75rem; }
+
+.list {
+  padding: 0;
+  font-size: 0;
+  list-style: none; }
+  .list_vertical .list__item {
+    display: block; }
+  .list__item {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: top; }
+
+.like {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle; }
+  .like:not(.like_active):hover .like__icon {
+    fill: #fff; }
+  .like_active .like__icon {
+    fill: #ff6d6d;
+    stroke: #ff6d6d; }
+  .like__icon {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: #fff;
+    transition: fill .4s ease, stroke .4s ease; }
+
+.battery {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: middle; }
+  .battery__val {
+    display: inline-block;
+    margin-right: 2px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 1.3636363636;
+    color: #fff;
+    vertical-align: middle; }
+  .battery__charge {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 13px;
+    border: 1px solid #fff;
+    margin-right: 5px;
+    vertical-align: middle;
+    border-radius: 2px; }
+    .battery__charge::before {
+      content: '';
+      position: absolute;
+      top: 1px;
+      bottom: 1px;
+      left: 1px;
+      width: 78%;
+      max-width: 24px;
+      background-color: #50e3c2; }
+    .battery__charge::after {
+      content: '';
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      width: 2px;
+      height: 6px;
+      margin-left: 1px;
+      margin-top: -3px;
+      background-color: #50e3c2;
+      border-radius: 0 0 5px 5px; }
+  .battery__lightning {
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    vertical-align: middle;
+    fill: #fff; }
+
+.socials {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style: none; }
+  .socials__item {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: middle; }
+    .socials__item:not(:last-child) {
+      margin-right: 0.625rem; }
+    .socials__item:hover .socials__icon {
+      fill: transparent;
+      stroke: currentColor;
+      stroke-dasharray: 40 0;
+      transition: fill .4s ease, stroke .4s ease, stroke-dasharray .4s ease; }
+  .socials__link {
+    display: block;
+    width: 2.0625rem;
+    height: 2.0625rem; }
+    .socials__link_in {
+      color: #76553c; }
+    .socials__link_fb {
+      color: #0853a5; }
+    .socials__link_gplus {
+      width: 2.8125rem;
+      height: 1.8125rem;
+      color: #e71d1d; }
+    .socials__link_vk {
+      color: #40778d; }
+  .socials__icon {
+    height: 100%;
+    width: 100%;
+    fill: currentColor;
+    stroke: transparent;
+    stroke-width: 2;
+    stroke-dasharray: 0 40;
+    stroke: transparent;
+    transition: fill .4s .1s ease, stroke .4s ease, stroke-dasharray .4s ease; }
+
+.count {
+  display: inline-block;
+  min-width: 1.375rem;
+  height: 1.375rem;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  font-family: "vw_headline", Arial, sans-serif;
+  letter-spacing: -.07px;
+  color: #fff;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #1f9b7f;
+  border-radius: 5px; }
+
+.age-limit {
+  width: 3rem;
+  height: 3rem;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 3rem;
+  font-family: "vw_headline", Arial, sans-serif;
+  text-align: center;
+  background-color: #d8d8d8;
+  border-radius: 50%; }
+
+.icon-btn {
+  position: relative;
+  display: inline-block;
+  width: 2.125rem;
+  height: 2.125rem;
+  font-size: 1rem;
+  text-decoration: none;
+  vertical-align: middle;
+  color: inherit; }
+  .icon-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid;
+    opacity: .27;
+    border-radius: 50%; }
+  .icon-btn_square::before {
+    border-width: 2px;
+    border-radius: 5px;
+    opacity: 1; }
+  .icon-btn_size_l {
+    width: 3.625rem;
+    height: 3.625rem;
+    font-size: 1.75rem; }
+  .icon-btn__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    fill: currentColor; }
+    .icon-btn__icon_question {
+      font-weight: 300;
+      font-size: 1.4375em;
+      line-height: 1;
+      font-family: "vw_headline", Arial, sans-serif; }
+    .icon-btn__icon_search {
+      width: 1.125em;
+      height: 1.125em; }
+    .icon-btn__icon_bulb {
+      width: 1.10714em;
+      height: 1.25em; }
+    .icon-btn__icon_donation {
+      width: 1.46429em;
+      height: 0.96429em; }
+    .icon-btn__icon_reg {
+      width: 1.17857em;
+      height: 1.17857em; }
+
+.btn {
+  display: inline-block;
+  width: 17.375rem;
+  max-width: 100%;
+  border: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 3.625rem;
+  font-family: "vw_headline", Arial, sans-serif;
+  text-decoration: none;
+  vertical-align: top;
+  color: #fff;
+  text-align: center;
+  background-color: #1f9b7f;
+  border-radius: 5px;
+  transition: box-shadow .4s ease; }
+  .btn:hover {
+    box-shadow: inset 0 0 10px 50px #20c7a1; }
+  .btn:active {
+    box-shadow: inset 0 0 10px 50px #199b7e; }
+  .btn_size_wide {
+    display: block;
+    width: 100%; }
+  .btn_hover_pos-aware {
+    position: relative;
+    border: 2px solid #fff;
+    line-height: 3.5rem;
+    background-color: transparent;
+    overflow: hidden; }
+    .btn_hover_pos-aware:hover {
+      box-shadow: none; }
+      .btn_hover_pos-aware:hover .btn__hover {
+        width: 1000px;
+        height: 1000px; }
+    .btn_hover_pos-aware:active {
+      box-shadow: none; }
+      .btn_hover_pos-aware:active .btn__hover {
+        background: #20c7a1; }
+    .btn_hover_pos-aware .btn__hover {
+      position: absolute;
+      z-index: -1;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: #50e3c2;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      transition: width .6s, height .6s, background-color .4s; }
+  .btn_with-icon {
+    padding-left: 1.5rem;
+    font-size: 1.1875rem;
+    text-align: left; }
+  .btn__icon {
+    vertical-align: middle;
+    fill: currentColor; }
+    .btn__icon_bulb {
+      width: 1.63158em;
+      height: 1.84211em;
+      margin-right: 1em; }
+    .btn__icon_donation {
+      width: 2.15789em;
+      height: 1.42105em;
+      margin-right: 0.78947em; }
+    .btn__icon_reg {
+      width: 1.36842em;
+      height: 1.36842em;
+      margin-right: 0.63158em; }
+  .btn__text {
+    vertical-align: middle; }
+
+.simple-btn {
+  display: inline-block;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  border: 1px solid #979797;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5625;
+  font-family: "vw_headline", Arial, sans-serif;
+  vertical-align: middle;
+  color: #000;
+  text-decoration: none;
+  border-radius: 3px; }
+
+.filled-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.375rem 0.5rem;
+  border: 1px solid #f8c41c;
+  font-weight: 300;
+  line-height: 1;
+  vertical-align: middle;
+  text-decoration: none;
+  color: inherit;
+  transition: color .4s ease; }
+  .filled-btn::before, .filled-btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    background-color: #f8c41c;
+    transition: height .4s ease; }
+  .filled-btn::before {
+    top: 0; }
+  .filled-btn::after {
+    bottom: 0; }
+  .filled-btn:hover {
+    color: #fff; }
+    .filled-btn:hover::before, .filled-btn:hover::after {
+      height: 55%; }
+  .filled-btn__text {
+    position: relative;
+    z-index: 2; }
+
+.footer__top {
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.27); }
+
+.footer__logo {
+  display: inline-block;
+  margin-right: 3.5625rem;
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 1.1666666667;
+  vertical-align: middle;
+  color: #000; }
+
+.footer__nav {
+  display: inline-block;
+  font-size: 1.125rem;
+  vertical-align: middle; }
+
+.footer__bottom-inner {
+  display: table;
+  width: 100%; }
+
+.footer__bottom-col {
+  display: table-cell;
+  padding-top: 1.5rem;
+  padding-bottom: 2.75rem;
+  vertical-align: top; }
+  .footer__bottom-col_socials {
+    width: 20.0625rem;
+    border-right: 1px solid rgba(151, 151, 151, 0.27); }
+  .footer__bottom-col_payment {
+    padding-left: 1.875rem; }
+
+.footer__title {
+  margin-bottom: 1.125rem;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1;
+  font-family: "vw_headline", Arial, sans-serif;
+  color: #9b9b9b; }
+
+.footer__payments-item:not(:last-child) {
+  margin-right: 1.25rem; }
+
+.footer__made {
+  display: block;
+  text-decoration: none;
+  color: #000; }
+
+.footer__made-logo {
+  display: block;
+  margin-bottom: 0.125rem; }
+
+.footer__made-text {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px; }
+
+.search {
+  position: relative;
+  border: 1px solid;
+  border-radius: 5px; }
+  .search__input {
+    display: block;
+    width: 100%;
+    height: 3.75rem;
+    padding-left: 3.3125rem;
+    padding-right: 1.25rem;
+    border: none;
+    font-weight: 300;
+    font-size: 1.3125rem;
+    font-family: "vw_headline", Arial, sans-serif;
+    background-color: transparent; }
+    .search__input::-webkit-input-placeholder {
+      color: inherit;
+      opacity: 1; }
+    .search__input::-moz-placeholder {
+      color: inherit;
+      opacity: 1; }
+    .search__input:-ms-input-placeholder {
+      color: inherit;
+      opacity: 1; }
+    .search__input::placeholder {
+      color: inherit;
+      opacity: 1; }
+  .search__icon-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 1.25rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-top: -0.5625rem; }
+  .search__icon {
+    width: 100%;
+    height: 100%;
+    fill: currentColor; }
+
+.inputs-group__item {
+  display: inline-block;
+  vertical-align: middle; }
+
+.custom-input {
+  position: relative; }
+  .custom-input_btn .custom-input__hidden:checked ~ .custom-input__label {
+    box-shadow: inset 0 0 0 1px #979797;
+    color: #000;
+    border-radius: 3px; }
+  .custom-input_btn .custom-input__label {
+    padding: 0.25rem 0.5rem;
+    color: #707070; }
+  .custom-input__label {
+    position: relative;
+    display: block;
+    cursor: pointer; }
+
+.select {
+  display: block;
+  width: 100%; }
+  .select.focused .jq-selectbox__select {
+    border: none;
+    box-shadow: 0 0 5px 0 #7575f0; }
+  .select .jq-selectbox__select {
+    height: 2.5rem;
+    padding-left: 1.375rem;
+    padding-right: 3.125rem;
+    border: none;
+    border-radius: 0;
+    background: #ececec;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+  .select .jq-selectbox__select-text {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 2.5rem; }
+  .select .jq-selectbox__trigger {
+    width: 3.125rem;
+    border: none; }
+  .select .jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border-top: 0.4375rem solid #212121;
+    border-left-width: 0.5rem;
+    border-right-width: 0.5rem; }
+
+.datepicker {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  background: #ececec;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+  .datepicker::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    border-top: 0.4375rem solid #212121;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .datepicker__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100px;
+    max-width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer; }
+  .datepicker__calendar {
+    position: absolute;
+    top: 50%;
+    left: 0.6875rem;
+    width: 1.25rem;
+    height: 1.375rem;
+    margin-top: -0.6875rem; }
+  .datepicker__calendar-icon {
+    width: 100%;
+    height: 100%; }
+
+.header {
+  width: 100%;
+  padding-top: 1.1875rem;
+  padding-bottom: 1.4375rem;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(187, 187, 187, 0.5); }
+  .header_theme_air {
+    position: absolute;
+    top: 6px;
+    z-index: 1000;
+    color: #fff;
+    background: transparent;
+    box-shadow: none; }
+    .header_theme_air .header__buttons {
+      display: none; }
+  .header_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: -webkit-transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease, -webkit-transform .4s ease; }
+  .header__logo {
+    display: inline-block;
+    margin-right: 2.625rem;
+    font-size: 2rem;
+    line-height: 1.1875;
+    vertical-align: middle; }
+  .header__nav {
+    display: inline-block;
+    margin-right: 1.4375rem;
+    font-size: 1rem;
+    vertical-align: middle; }
+  .header__auth {
+    display: inline-block;
+    margin-right: 1.75rem;
+    font-weight: 300;
+    font-size: 0.9375rem;
+    font-family: "vw_headline", Arial, sans-serif;
+    color: inherit;
+    vertical-align: middle;
+    text-decoration: none; }
+  .header__auth-icon {
+    width: 0.75rem;
+    height: 1rem;
+    margin-right: 0.5625rem;
+    vertical-align: middle;
+    fill: currentColor; }
+  .header__buttons {
+    display: inline-block;
+    margin-bottom: -0.125rem;
+    font-size: 0;
+    vertical-align: middle; }
+  .header__btn {
+    font-size: 1rem; }
+    .header__btn:not(:last-child) {
+      margin-right: 1.1875rem; }
+
+.hidden-text, .custom-input__hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  /* for Internet Explorer */
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  overflow: hidden; }
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.columns {
+  font-size: 0; }
+  .columns_align_justify {
+    text-align: justify;
+    text-justify: newspaper; }
+    .columns_align_justify::after {
+      content: '';
+      display: inline-block;
+      width: 100%; }
+  .columns_va_middle .columns__col {
+    vertical-align: middle; }
+  .columns_va_bottom .columns__col {
+    vertical-align: bottom; }
+  .columns_grid {
+    margin-left: -5px;
+    margin-right: -5px; }
+    .columns_grid .columns__col {
+      padding-left: 5px;
+      padding-right: 5px; }
+  .columns__col {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: top; }
+    .columns__col_size_1 {
+      width: 12.5%; }
+    .columns__col_size_2 {
+      width: 25%; }
+    .columns__col_size_3 {
+      width: 37.5%; }
+    .columns__col_size_4 {
+      width: 50%; }
+    .columns__col_size_5 {
+      width: 62.5%; }
+    .columns__col_size_6 {
+      width: 75%; }
+    .columns__col_size_7 {
+      width: 87.5%; }
+    .columns__col_size_8 {
+      width: 100%; }
+
+.pages-list-wrapper {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.pages-list {
+  margin: 0;
+  padding: 100px 0;
+  list-style: none; }
+  .pages-list__item {
+    margin-bottom: 10px; }
+  .pages-list__link {
+    font-weight: 600;
+    font-family: "vw_headline", Arial, sans-serif;
+    color: #ed7373;
+    text-decoration: none;
+    transition: color .4s ease; }
+    .pages-list__link:hover {
+      color: #e42f2f; }
+
+.big-link {
+  font-weight: 300;
+  font-size: 1.375rem;
+  line-height: 1;
+  font-family: "vw_headline", Arial, sans-serif;
+  text-decoration: underline;
+  color: inherit; }
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none; }
+  .link-underline::before, .link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    height: 1px;
+    background-color: currentColor;
+    pointer-events: none; }
+  .link-underline::before {
+    width: 100%;
+    opacity: .37; }
+  .link-underline::after {
+    width: 0;
+    transition: width .5s ease; }
+  .link-underline:hover::after {
+    width: 100%; }
+
+.link-dashed {
+  border-bottom: 1px dashed;
+  color: inherit;
+  text-decoration: none; }
+
+.link-scroll {
+  position: relative;
+  display: inline-block;
+  font-weight: 300;
+  font-family: "vw_headline", Arial, sans-serif;
+  text-decoration: none;
+  vertical-align: middle;
+  opacity: .5;
+  overflow: hidden; }
+  .link-scroll:hover {
+    -webkit-animation: blink 3.6s infinite;
+            animation: blink 3.6s infinite; }
+    .link-scroll:hover .link-scroll__icon {
+      -webkit-transform: translateY(200%);
+              transform: translateY(200%); }
+    .link-scroll:hover .link-scroll__arrow {
+      -webkit-animation: pulse 1.8s infinite;
+              animation: pulse 1.8s infinite; }
+    .link-scroll:hover .link-scroll__arrow-wrapper::before {
+      -webkit-animation: pulse 1.8s .25s infinite;
+              animation: pulse 1.8s .25s infinite; }
+    .link-scroll:hover .link-scroll__arrow-wrapper::after {
+      -webkit-animation: pulse 1.8s .5s infinite;
+              animation: pulse 1.8s .5s infinite; }
+  .link-scroll__icon {
+    width: 1.28571em;
+    height: 2.14286em;
+    margin-right: 0.85714em;
+    vertical-align: middle;
+    fill: currentColor;
+    transition: -webkit-transform .8s ease-out;
+    transition: transform .8s ease-out;
+    transition: transform .8s ease-out, -webkit-transform .8s ease-out; }
+  .link-scroll__text {
+    display: inline-block;
+    vertical-align: middle; }
+  .link-scroll__arrow-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; }
+    .link-scroll__arrow-wrapper::before, .link-scroll__arrow-wrapper::after {
+      content: '';
+      position: absolute;
+      left: 0.5em;
+      bottom: 100%;
+      width: 0.71429em;
+      height: 0.71429em;
+      margin-bottom: 5px;
+      border-left: 0.14286em solid;
+      border-bottom: 0.14286em solid;
+      border-radius: 2px;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  .link-scroll__arrow {
+    position: absolute;
+    left: 0.5em;
+    bottom: 100%;
+    width: 0.71429em;
+    height: 0.71429em;
+    margin-bottom: 5px;
+    border-left: 0.14286em solid;
+    border-bottom: 0.14286em solid;
+    border-radius: 2px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+
+.nav {
+  font-weight: 300;
+  line-height: 1;
+  font-family: "vw_headline", Arial, sans-serif; }
+  .nav__menu {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  .nav__item {
+    display: inline-block;
+    vertical-align: middle; }
+    .nav__item:not(:last-child) {
+      margin-right: 15px; }
+  .nav__link {
+    color: inherit;
+    text-decoration: none; }
+  .nav__count {
+    margin-left: 0.25rem; }
+
+.helper-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #323c45; }
+  .helper-sidebar__list {
+    position: absolute;
+    top: 41px;
+    left: 50%;
+    padding: 0;
+    list-style: none;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    transition: top .4s linear; }
+  .helper-sidebar__item {
+    margin-bottom: 1.5625rem;
+    color: #fff; }
+
+.slick-arrow {
+  position: relative;
+  width: 1.875rem;
+  height: 1.875rem;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  transition: opacity .4s ease; }
+  .slick-arrow::before, .slick-arrow::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 0.5rem;
+    background: #000; }
+  .slick-arrow::before {
+    top: 50%; }
+  .slick-arrow::after {
+    bottom: 50%; }
+  .slick-arrow:hover {
+    opacity: .5; }
+  .slick-arrow:focus {
+    outline: none;
+    box-shadow: 0 0 5px 1px #4e4ee3; }
+
+.slick-prev::before {
+  -webkit-transform: translate(-50%, -1px) rotate(-30deg);
+          transform: translate(-50%, -1px) rotate(-30deg); }
+
+.slick-prev::after {
+  -webkit-transform: translate(-50%) rotate(30deg);
+          transform: translate(-50%) rotate(30deg); }
+
+.slick-next::before {
+  -webkit-transform: translate(-50%, -1px) rotate(30deg);
+          transform: translate(-50%, -1px) rotate(30deg); }
+
+.slick-next::after {
+  -webkit-transform: translate(-50%) rotate(-30deg);
+          transform: translate(-50%) rotate(-30deg); }
+
+.act {
+  position: relative;
+  height: 34.375rem; }
+  .act_power::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    background: #f8e71c;
+    background: linear-gradient(135deg, transparent 8px, #f8e71c 0) top left, linear-gradient(-135deg, transparent 8px, #f8e71c 0) top right, linear-gradient(-45deg, transparent 8px, #f8e71c 0) bottom right, linear-gradient(45deg, transparent 8px, #f8e71c 0) bottom left;
+    background-size: 55% 55%;
+    background-repeat: no-repeat; }
+  .act__img-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    overflow: hidden; }
+    .act__img-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.4); }
+  .act__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    width: auto;
+    min-height: 100%;
+    height: auto; }
+  .act__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3; }
+  .act__photo-wrapper {
+    position: absolute;
+    top: 1.5625rem;
+    left: 1.5625rem;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    overflow: hidden; }
+  .act__battery {
+    position: absolute;
+    top: 1.375rem;
+    right: 0.8125rem; }
+  .act__title {
+    position: absolute;
+    bottom: 6.75rem;
+    left: 1.5625rem;
+    right: 2rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.15;
+    font-family: "vw_headline", Arial, sans-serif;
+    color: #50e3c2;
+    text-decoration: none; }
+  .act__footer {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 1.5625rem;
+    right: 2rem; }
+  .act__occasion {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: #fff;
+    text-decoration: none; }
+  .act__subtitle {
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.1666666667;
+    color: rgba(255, 255, 255, 0.6); }
+  .act__date {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.0625rem;
+    line-height: 1.1764705882;
+    font-family: "vw_headline", Arial, sans-serif;
+    color: #50e3c2;
+    vertical-align: bottom; }
+
+.acts-sec {
+  color: #fff;
+  background-color: #818d9b; }
+  .acts-sec__header {
+    padding-top: 2.375rem;
+    padding-bottom: 1.9375rem; }
+  .acts-sec__title {
+    display: inline-block;
+    margin-right: 1.25rem;
+    vertical-align: middle; }
+  .acts-sec__question {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1;
+    font-family: "vw_headline", Arial, sans-serif;
+    color: inherit;
+    vertical-align: middle;
+    text-decoration: none; }
+  .acts-sec__content {
+    padding-bottom: 2rem; }
+  .acts-sec__slider {
+    position: relative;
+    margin-bottom: 2.1875rem;
+    font-size: 0; }
+    .acts-sec__slider .slick-list {
+      margin-left: -13px;
+      margin-right: -13px; }
+    .acts-sec__slider .slick-arrow {
+      position: absolute;
+      bottom: 100%;
+      margin-bottom: 2.375rem; }
+    .acts-sec__slider .slick-prev {
+      right: 2.375rem; }
+    .acts-sec__slider .slick-next {
+      right: 0; }
+  .acts-sec__item {
+    display: inline-block;
+    width: 33.33333%;
+    padding: 10px 13px;
+    font-size: 1rem;
+    vertical-align: top; }
+
+.do-good-sec {
+  background: #f1ebc2 url("../i/bg-do-good.jpg") no-repeat center center;
+  background-size: cover; }
+  .do-good-sec__wrapper {
+    min-height: 46.875rem;
+    padding-top: 7.625rem;
+    padding-bottom: 7.625rem;
+    padding-left: 4.6875rem; }
+  .do-good-sec__content {
+    width: 560px;
+    margin-bottom: 4.25rem; }
+    .do-good-sec__content p {
+      font-weight: 300;
+      font-size: 1.75rem;
+      line-height: 1.4642857143;
+      font-family: "vw_headline", Arial, sans-serif; }
+      .do-good-sec__content p + p {
+        margin-top: 1.25rem; }
+
+.fonds-sec {
+  padding-top: 4.875rem;
+  padding-bottom: 4.8125rem;
+  text-align: center; }
+  .fonds-sec__title {
+    margin-bottom: 2.75rem; }
+  .fonds-sec__content {
+    width: 89.83607%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3.1875rem; }
+    .fonds-sec__content p {
+      font-weight: 300;
+      font-size: 1.3125rem;
+      line-height: 1.7619047619;
+      color: #535353; }
+      .fonds-sec__content p + p {
+        margin-top: 1rem; }
+  .fonds-sec__item {
+    width: 25%;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    text-align: center;
+    vertical-align: middle; }
+  .fonds-sec__img {
+    max-width: 80%; }
+
+.announcement {
+  display: table;
+  width: 100%; }
+  .announcement__col {
+    display: table-cell;
+    vertical-align: middle; }
+    .announcement__col_img {
+      width: 17.0625rem;
+      padding-right: 4.25rem; }
+    .announcement__col_content {
+      padding-right: 10.3125rem; }
+  .announcement__img-wrapper {
+    position: relative;
+    width: 12.8125rem;
+    height: 12.8125rem;
+    border-radius: 50%;
+    overflow: hidden; }
+  .announcement__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .announcement__date {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 300;
+    font-size: 0.9375rem;
+    line-height: 1;
+    font-family: "vw_headline", Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.4); }
+  .announcement__content {
+    margin-bottom: 1.1875rem; }
+    .announcement__content p {
+      margin: 0;
+      font-weight: 300;
+      font-size: 1.375rem;
+      line-height: 1.2272727273; }
+      .announcement__content p + p {
+        margin-top: 1rem; }
+
+.news-sec {
+  color: #000; }
+  .news-sec__header {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem; }
+  .news-sec__filter-item {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1;
+    font-family: "vw_headline", Arial, sans-serif; }
+  .news-sec__content {
+    padding-top: 1rem;
+    padding-bottom: 3.1875rem; }
+  .news-sec__list {
+    padding-bottom: 0.75rem; }
+  .news-sec__item {
+    margin-bottom: 3.1875rem; }
+
+.occasion {
+  position: relative;
+  height: 260px; }
+  .occasion__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1; }
+  .occasion__img-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden; }
+    .occasion__img-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.2); }
+  .occasion__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%; }
+  .occasion__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 70%;
+    padding-left: 1.5rem;
+    padding-bottom: 0.6875rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: #fff; }
+  .occasion__date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 25%;
+    padding-right: 1.375rem;
+    padding-bottom: 0.6875rem;
+    font-weight: 600;
+    font-size: 1.0625rem;
+    line-height: 1.1764705882;
+    font-family: "vw_headline", Arial, sans-serif;
+    color: #50e3c2;
+    text-align: right; }
+  .occasion__like {
+    position: absolute;
+    top: 1.9375rem;
+    left: 1.5625rem;
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.1875rem; }
+
+.occasions-sec__header {
+  padding-top: 2.1875rem;
+  padding-bottom: 2.4375rem;
+  background-color: #f4f4f4; }
+
+.occasions-sec__title {
+  display: inline-block;
+  margin-right: 2.5rem;
+  vertical-align: middle; }
+
+.occasions-sec__filter {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: middle; }
+
+.occasions-sec__filter-col {
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: middle; }
+  .occasions-sec__filter-col:not(:last-of-type) {
+    margin-right: 1.25rem; }
+  .occasions-sec__filter-col_select {
+    width: 17.5rem; }
+  .occasions-sec__filter-col_date {
+    width: 4.1875rem; }
+
+.occasions-sec__more {
+  font-weight: 300;
+  font-size: 1.125rem;
+  font-family: "vw_headline", Arial, sans-serif;
+  line-height: 1;
+  color: #1f9b7f;
+  text-decoration: none; }
+
+.occasions-sec__more-icon {
+  width: 1.11111em;
+  height: 1.16667em;
+  margin-right: 0.55556em;
+  vertical-align: middle;
+  fill: currentColor; }
+
+.occasions-sec__content {
+  padding-top: 0.875rem;
+  padding-bottom: 1.0625rem; }
+
+.occasions-sec__list {
+  margin-left: -10px;
+  margin-right: -10px; }
+
+.occasions-sec__item {
+  width: 50%;
+  padding: 10px; }
+
+.promo-sec {
+  position: relative;
+  font-family: "vw_headline", Arial, sans-serif;
+  background: url("../i/bg-promo.jpg") no-repeat center center;
+  background-size: cover; }
+  .promo-sec::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4); }
+  .promo-sec__wrapper {
+    position: relative;
+    z-index: 2;
+    padding-top: 8.4375rem;
+    padding-bottom: 2.1875rem; }
+  .promo-sec__title {
+    width: 50rem;
+    max-width: 100%;
+    min-height: 7.5rem;
+    margin: 0 auto 3.25rem;
+    font-weight: 300;
+    font-size: 3.625rem;
+    line-height: 1;
+    color: #fff;
+    text-align: center; }
+  .promo-sec__search {
+    width: 22.0625rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7.4375rem;
+    color: #fff; }
+  .promo-sec__scheme {
+    margin-bottom: 2.3125rem;
+    color: #fff; }
+  .promo-sec__buttons {
+    width: 58.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0; }
+  .promo-sec__button-col {
+    display: inline-block;
+    width: 18.125rem;
+    font-size: 1rem;
+    vertical-align: top; }
+    .promo-sec__button-col:not(:last-child) {
+      margin-right: 1.25rem; }
+  .promo-sec__link-scroll {
+    display: inline-block;
+    font-size: 0.875rem;
+    line-height: 1;
+    color: #fff;
+    vertical-align: top; }
+
+.stats-sec {
+  padding-top: 3.8125rem;
+  padding-bottom: 2.75rem;
+  background-color: #e9e9e9; }
+  .stats-sec__title {
+    margin-bottom: 2.375rem;
+    text-align: center; }
+  .stats-sec__num {
+    font-weight: 300;
+    line-height: 1;
+    font-family: "vw_headline", Arial, sans-serif;
+    color: #1f9b7f;
+    letter-spacing: -7.1px; }
+  .stats-sec__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    color: #686868;
+    line-height: 1.5384615385; }
+  .stats-sec__col-right {
+    padding-left: 20px; }
+  .stats-sec__row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .stats-sec__row_top {
+    margin-bottom: 1.125rem; }
+  .stats-sec__item-1 .stats-sec__num {
+    font-size: 9rem; }
+  .stats-sec__item-main {
+    float: right;
+    width: 18.3125rem;
+    height: 18.3125rem;
+    padding-top: 3.0625rem;
+    padding-left: 3.3125rem;
+    margin-top: 3rem;
+    margin-left: 3.5625rem;
+    margin-right: 4.8125rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background-color: #1f9b7f; }
+    .stats-sec__item-main .stats-sec__num {
+      font-size: 7.9375rem;
+      color: #fff; }
+    .stats-sec__item-main .stats-sec__text {
+      color: #fff; }
+  .stats-sec__item-2 {
+    float: left;
+    width: 12.125rem;
+    margin-left: 4.0625rem; }
+    .stats-sec__item-2 .stats-sec__num {
+      font-size: 5.375rem; }
+  .stats-sec__item-3 {
+    float: right;
+    width: 29.5625rem; }
+    .stats-sec__item-3 .stats-sec__num {
+      font-size: 6.375rem; }
+  .stats-sec__item-4 {
+    width: 9.75rem;
+    margin-left: 0.625rem;
+    margin-bottom: 6.25rem; }
+    .stats-sec__item-4 .stats-sec__num {
+      margin-bottom: 0.6875rem;
+      font-size: 3.0625rem; }
+  .stats-sec__item-5 {
+    margin-bottom: 4.6875rem; }
+    .stats-sec__item-5 .stats-sec__num {
+      font-size: 3.5rem; }
+
+.index-page__sections-group {
+  position: relative; }
+
+.index-page__aside-col {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 120px; }
+
+.index-page__sections-col .container {
+  padding-right: 150px; }

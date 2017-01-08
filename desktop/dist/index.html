@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta name="viewport" content="width=980">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Picture element HTML5 shiv-->
+    <script>
+      document.createElement("picture");
+      var userAuth = true;
+      var userLang = 'ru';
+      
+    </script>
+    <script src="js/polyfill.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="container">
+          <div class="columns columns_align_justify columns_va_middle">
+            <div class="columns__col"><a href="/" class="logo header__logo">
+              <h2 class="logo__text">Сделай!
+              </h2></a>
+                    <nav class="nav header__nav">
+                      <h2 class="hidden-text">Навигация по сайту
+                      </h2>
+                      <ul class="nav__menu">
+                        <li class="nav__item"><a href="javascript:void(0)" class="nav__link link-underline">фонды</a>
+                        </li>
+                        <li class="nav__item"><a href="javascript:void(0)" class="nav__link link-underline">поступки</a>
+                        </li>
+                        <li class="nav__item"><a href="javascript:void(0)" class="nav__link link-underline">как это работает</a>
+                        </li>
+                      </ul>
+                    </nav>
+              <div class="header__buttons"><a href="javascript:void(0)" class="filled-btn filled-btn_sea header__btn"><span class="filled-btn__text">Пожертвовать</span></a><a href="javascript:void(0)" class="filled-btn filled-btn_sea header__btn"><span class="filled-btn__text">Сделать поступок</span></a>
+              </div>
+            </div>
+            <div class="columns__col"><a href="javascript:void(0)" data-modal="auth" class="header__auth js-modal"><span class="header__ava-wrapper"><img src="http://stevensegallery.com/25/25" srcset="http://stevensegallery.com/50/50 2x" class="header__ava" alt="" role="presentation"/></span><span class="link-underline"><span class="header__user-name">Ким Чен Ир</span></span></a><a href="javascript:void(0)" class="header__auth"><span class="link-underline">Выход</span></a> <a href="javascript:void(0)" title="Перейти на страницу поиска" class="icon-btn header__search">
+              <svg class="icon-btn__icon icon-btn__icon_search">
+                <use xlink:href="i/icons.svg#icon-search"></use>
+              </svg></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+<!--~~~~~~~~~~~~~~~ HEADER end ~~~~~~~~~~~~~~~~~-->
+
+      <main class="main">
+        <div class="pages-list-wrapper">
+          <div class="container">
+            <ul class="pages-list">
+              <li class="pages-list__item"><a href="main.html" class="pages-list__link">Главная</a>
+              </li>
+              <li class="pages-list__item"><a href="paid_thank_you.html" class="pages-list__link">Сделать пожертвование</a>
+              </li>
+              <li class="pages-list__item"><a href="paid_thank_you_success.html" class="pages-list__link">Сделать пожертвование: благодарность</a>
+              </li>
+              <li class="pages-list__item"><a href="activist_cab_acts_photos.html" class="pages-list__link">Кабинет активиста: фотографии поступков</a>
+              </li>
+              <li class="pages-list__item"><a href="activist_cab_acts_posts.html" class="pages-list__link">Кабинет активиста: добавить запись</a>
+              </li>
+              <li class="pages-list__item"><a href="activist_cab_add_act.html" class="pages-list__link">Кабинет активиста: добавить поступок</a>
+              </li>
+              <li class="pages-list__item"><a href="activist_cab_add_act_5.html" class="pages-list__link">Кабинет активиста: добавить новый фонд</a>
+              </li>
+              <li class="pages-list__item"><a href="activist_cab_add_act_6.html" class="pages-list__link">Кабинет активиста: фонд добавлен</a>
+              </li>
+              <li class="pages-list__item"><a href="activist_cab_settings.html" class="pages-list__link">Кабинет активиста: настройки</a>
+              </li>
+              <li class="pages-list__item"><a href="activist_cab_stats.html" class="pages-list__link">Кабинет активиста: статистика</a>
+              </li>
+              <li class="pages-list__item"><a href="activist_dash.html" class="pages-list__link">Кабинет активиста</a>
+              </li>
+              <li class="pages-list__item"><a href="funds_dash.html" class="pages-list__link">Кабинет фонда</a>
+              </li>
+              <li class="pages-list__item"><a href="acts.html" class="pages-list__link">Поступки</a>
+              </li>
+              <li class="pages-list__item"><a href="activists_acts.html" class="pages-list__link">Поступки активиста</a>
+              </li>
+              <li class="pages-list__item"><a href="acts_one.html" class="pages-list__link">Поступок</a>
+              </li>
+              <li class="pages-list__item"><a href="acts_similar.html" class="pages-list__link">Похожие поступки</a>
+              </li>
+              <li class="pages-list__item"><a href="activists.html" class="pages-list__link">Активисты</a>
+              </li>
+              <li class="pages-list__item"><a href="funds.html" class="pages-list__link">Фонды</a>
+              </li>
+              <li class="pages-list__item"><a href="funds_one.html" class="pages-list__link">Фонд</a>
+              </li>
+              <li class="pages-list__item"><a href="reg_fund.html" class="pages-list__link">Регистрация фонда</a>
+              </li>
+              <li class="pages-list__item"><a href="fund_cab.html" class="pages-list__link">Связанные поступки</a>
+              </li>
+              <li class="pages-list__item"><a href="faq.html" class="pages-list__link">Помощь</a>
+              </li>
+              <li class="pages-list__item"><a href="feedback.html" class="pages-list__link">Задать вопрос</a>
+              </li>
+              <li class="pages-list__item"><a href="news.html" class="pages-list__link">Новости</a>
+              </li>
+              <li class="pages-list__item"><a href="textpage.html" class="pages-list__link">Текстовая страница</a>
+              </li>
+              <li class="pages-list__item"><a href="fund_cab_settings.html" class="pages-list__link">Настройки</a>
+              </li>
+              <li class="pages-list__item"><a href="fund_cab_photos.html" class="pages-list__link">Фотографии</a>
+              </li>
+              <li class="pages-list__item"><a href="fund_cab_addnews.html" class="pages-list__link">Добавить новость</a>
+              </li>
+              <li class="pages-list__item"><a href="fund_cab_stats.html" class="pages-list__link">Статистика</a>
+              </li>
+              <li class="pages-list__item"><a href="reasons.html" class="pages-list__link">Поводы</a>
+              </li>
+              <li class="pages-list__item"><a href="reasons_one.html" class="pages-list__link">Поводы полная</a>
+              </li>
+              <li class="pages-list__item"><a href="partners.html" class="pages-list__link">Партнеры</a>
+              </li>
+              <li class="pages-list__item"><a href="search.html" class="pages-list__link">Поиск</a>
+              </li>
+              <li class="pages-list__item"><a href="fund_cab_reports.html" class="pages-list__link">Управление отчётами</a>
+              </li>
+              <li class="pages-list__item"><a href="fund_cab_projects.html" class="pages-list__link">Проекты фонда</a>
+              </li>
+              <li class="pages-list__item"><a href="projects.html" class="pages-list__link">Проекты</a>
+              </li>
+              <li class="pages-list__item"><a href="projects_one.html" class="pages-list__link">Страница проекта</a>
+              </li>
+              <li class="pages-list__item"><a href="fond_create.html" class="pages-list__link">Создание проекта</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <div class="box-modal-wrapper">
+        <div id="auth" class="box-modal">
+          <div class="box-modal__header box-modal__header_small-left">
+            <h2 class="box-modal__title">Вход на сайт
+            </h2>
+            <div class="box-modal__close arcticmodal-close">
+            </div>
+          </div>
+          <div class="box-modal__content">
+            <div class="box-modal__content-item">
+              <div class="auth-soc">
+                <div class="auth-soc__title">
+                  <h3 class="title-modal">С помощью социальных сетей
+                  </h3>
+                  <div class="auth-soc__socials">
+                    <ul class="socials socials_big">
+                      <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_fb">
+                        <svg class="socials__icon">
+                          <use xlink:href="i/icons.svg#icon-fb"></use>
+                        </svg></a>
+                      </li>
+                      <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_vk">
+                        <svg class="socials__icon">
+                          <use xlink:href="i/icons.svg#icon-vk"></use>
+                        </svg></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-modal__content-item">
+              <form class="form">
+                <div class="form__title">
+                  <label for="act-mail" class="title-modal">E-mail
+                  </label>
+                  <div class="form__row form__row_modal">
+                    <div class="form__col"><input id="act-mail" name="act-mail" required="true" class="input" type="text"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__title">
+                  <label for="act-pass" class="title-modal">Пароль:
+                  </label><a href="javascript:void(0)" class="form__forgot-pass form__forgot-pass_modal">(Забыли пароль?)</a>
+                  <div class="form__row form__row_modal">
+                    <div class="form__col"><input id="act-pass" name="act-pass" required="true" class="input" type="text"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__modal-submit">
+                  <button href="javascript:void(0)" type="submit" class="btn btn_light btn_medium">Войти
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="box-modal__footer"><a href="javascript:void(0)" data-modal="reg" class="btn btn_modal btn_trans js-modal">Зарегистрироваться</a>
+          </div>
+        </div>
+      </div>
+      <div class="box-modal-wrapper">
+        <div id="reg" data-single="true" class="box-modal">
+          <div class="box-modal__header">
+            <h2 class="box-modal__title">Регистрация
+            </h2>
+            <div class="box-modal__close arcticmodal-close">
+            </div>
+          </div>
+          <div class="box-modal__content">
+            <div class="box-modal__content-item">
+              <div class="box-modal__text">
+                <p class="box-modal__text-par">Это потребительская культура, безусловно, концентрирует рейтинг. Креатив, вопреки мнению П.Друкера, неверно переворачивает из ряда вон выходящий медиамикс. Практика однозначно показывает, что контент развивает медиамикс.
+                </p>
+              </div>
+            </div>
+            <div class="box-modal__content-item box-modal__content-item_big-padding-b">
+              <div class="auth-soc">
+                <div class="auth-soc__title">
+                  <h3 class="title-modal">С помощью социальных сетей
+                  </h3>
+                  <div class="auth-soc__socials">
+                    <ul class="socials socials_big">
+                      <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_fb">
+                        <svg class="socials__icon">
+                          <use xlink:href="i/icons.svg#icon-fb"></use>
+                        </svg></a>
+                      </li>
+                      <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_vk">
+                        <svg class="socials__icon">
+                          <use xlink:href="i/icons.svg#icon-vk"></use>
+                        </svg></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-modal__content-item">
+              <form class="form">
+                <div class="form__title">
+                  <label for="act-name" class="title-modal">Ваше имя
+                  </label>
+                  <div class="form__row form__row_modal">
+                    <div class="form__col"><input id="act-name" name="act-name" required="true" class="input" type="text"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__title">
+                  <label for="act-mail" class="title-modal">E-mail
+                  </label>
+                  <div class="form__row form__row_modal">
+                    <div class="form__col"><input id="act-mail" name="act-mail" required="true" class="input" type="text"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__title">
+                  <label for="act-pass" class="title-modal">Пароль:
+                  </label>
+                  <div class="form__row form__row_modal">
+                    <div class="form__col"><input id="act-pass" name="act-pass" required="true" class="input" type="text"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__title">
+                  <label for="act-repeat" class="title-modal">Пароль еще раз:
+                  </label>
+                  <div class="form__row form__row_modal">
+                    <div class="form__col"><input id="act-repeat" name="act-repeat" required="true" class="input" type="text"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__modal-submit form__modal-submit_big-margin">
+                  <button href="javascript:void(0)" type="submit" class="btn btn_light btn_medium">Зарегистрироваться
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box-modal-wrapper">
+        <div id="umodal" class="box-modal">
+          <div class="box-modal__header box-modal__header_small-left">
+            <h2 class="box-modal__title">Заголовок
+            </h2>
+            <div class="box-modal__close arcticmodal-close">
+            </div>
+          </div>
+          <div class="box-modal__content">
+            <div class="box-modal__content-item">
+              <div class="box-modal__text">
+                <p class="box-modal__text-par">Текст
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box-acts-wrapper">
+        <div id="all-acts" class="acts-modal">
+          <div class="acts-modal__header">
+            <h2 class="acts-modal__title">Все поступки
+            </h2>
+            <div class="acts-modal__close arcticmodal-close">
+            </div>
+          </div>
+          <div class="acts-modal__content js-custom-scroll">
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acts-modal__content-item">
+              <div class="acts-modal__block-left"><a href="javascript:void(0)" class="activist-name activist-name_wide"><span class="activist-name__photo-wrapper activist-name__photo-wrapper_in"><img src="http://stevensegallery.com/40/40" srcset="http://stevensegallery.com/80/80 2x" class="activist-name__photo" alt="" role="presentation"/></span><span class="activist-name__name">Сергей Варяжный</span></a>
+              </div>
+              <div class="acts-modal__block-center">
+                <div class="acts-modal__project-name">Мы нужны Тимуру
+                </div>
+              </div>
+              <div class="acts-modal__block-right">
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Собрано:
+                  </div>
+                  <div class="acts-modal__block-sum-number">63 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="acts-modal__block-sum">
+                  <div class="acts-modal__block-sum-text">Цель:
+                  </div>
+                  <div class="acts-modal__block-sum-number">230 000&nbsp;
+                    <svg class="acts-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box-donations-wrapper">
+        <div id="all-donations" class="donations-modal">
+          <div class="donations-modal__header">
+            <h2 class="donations-modal__title">Все пожертвования
+            </h2>
+            <div class="donations-modal__close arcticmodal-close">
+            </div>
+          </div>
+          <div class="donations-modal__content js-custom-scroll">
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donations-modal__content-item">
+              <div class="donations-modal__left-col">
+                <div class="donations-modal__date"><span>15.10.2016</span>
+                </div>
+              </div>
+              <div class="donations-modal__right-col">
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+                <div class="donations-modal__right-col-line">
+                  <div class="donations-modal__number">+ 600
+                    <svg class="donations-modal__ruble">
+                      <use xlink:href="i/icons.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="donations-modal__activist">Сергей Венедиктов
+                  </div>
+                  <div class="donations-modal__project-name">Помощь домашним любимцам
+                  </div>
+                  <div class="donations-modal__text">
+                    <p>Ребрендинг, не меняя концепции, изложенной выше, основан на опыте.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container">
+            <div class="columns columns_align_justify columns_va_middle">
+              <div class="columns__col"><a href="/" class="logo footer__logo"><span class="logo__text">© Сделай!</span></a>
+                      <nav class="nav footer__nav">
+                        <h2 class="hidden-text">Навигация по сайту
+                        </h2>
+                        <ul class="nav__menu">
+                          <li class="nav__item"><a href="javascript:void(0)" class="nav__link">поводы</a>
+                          </li>
+                          <li class="nav__item"><a href="javascript:void(0)" class="nav__link">поступки</a>
+                          </li>
+                          <li class="nav__item"><a href="javascript:void(0)" class="nav__link">фонды</a>
+                          </li>
+                          <li class="nav__item"><a href="javascript:void(0)" class="nav__link">активисты</a>
+                          </li>
+                          <li class="nav__item"><a href="javascript:void(0)" class="nav__link">оферта</a>
+                          </li>
+                          <li class="nav__item"><a href="javascript:void(0)" class="nav__link">партнеры</a>
+                          </li>
+                          <li class="nav__item"><a href="javascript:void(0)" class="nav__link">помощь</a>
+                          </li>
+                          <li class="nav__item"><a href="javascript:void(0)" class="nav__link">новости</a> <span class="count nav__count">6</span>
+                          </li>
+                        </ul>
+                      </nav>
+              </div>
+              <div class="columns__col">
+                <div class="age-limit">18+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container">
+            <div class="footer__bottom-inner">
+              <div class="footer__bottom-col footer__bottom-col_socials">
+                <div class="footer__title">Мы в соц. сетях:
+                </div>
+                <ul class="socials">
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_fb">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-fb"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_in">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-in"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_gplus">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-gplus"></use>
+                    </svg></a>
+                  </li>
+                  <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link_vk">
+                    <svg class="socials__icon">
+                      <use xlink:href="i/icons.svg#icon-vk"></use>
+                    </svg></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__bottom-col footer__bottom-col_payment">
+                <div class="columns columns_align_justify columns_va_middle">
+                  <div class="columns__col">
+                    <div class="footer__title">Мы принимаем:
+                    </div>
+                    <ul class="list footer__payments">
+                      <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-1.png" alt="" class="footer__payments-img"/></a></li>
+                      <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-2.png" alt="" class="footer__payments-img"/></a></li>
+                      <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-3.png" alt="" class="footer__payments-img"/></a></li>
+                      <li class="list__item footer__payments-item"><a href="javascript:void(0)" class="footer__payments-link"><img src="i/payments-4.png" alt="" class="footer__payments-img"/></a></li>
+                    </ul>
+                  </div>
+                  <div class="columns__col"><a href="http://www.c-tm.ru/" class="footer__made"><span class="footer__made-text">Создание сайтов</span><img src="i/make-by-logo.png" alt="Creative Team" class="footer__made-logo" title=""/></a>
+                    <div class="footer__made-year">2016
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+<!--~~~~~~~~~~~~~~~ FOOTER end ~~~~~~~~~~~~~~~~~-->
+
+      <script src="js/vendor.min.js"></script>
+      
+      <script src="js/scripts.min.js"></script>
+    </div>
+  </body>
+</html>

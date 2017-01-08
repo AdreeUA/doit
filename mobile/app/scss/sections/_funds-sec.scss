@@ -1,0 +1,48 @@
+.funds-sec {
+    padding-top: rem(35);
+    padding-bottom: rem(40);
+    
+    &__title {
+        margin-bottom: rem(25);
+    }
+    
+    &__list {
+        margin-left: rem(-10);
+        margin-right: rem(-10);
+    }
+    
+    &__item {
+        max-width: 33.33%;
+        padding-left: rem(10);
+        padding-right: rem(10);
+    }
+    
+    &__link {
+        display: block;
+    }
+    
+    &__img {
+        max-width: 100%;
+    }
+    
+    &__content {
+        margin-bottom: rem(30);
+        
+        text-align: center;
+
+        p {
+            font-weight: 300;
+            font-size: rem(15);
+            line-height: 21/15+em;
+            color: #535353;
+
+            + p {
+                margin-top: 1rem;
+            }
+        }
+    }
+    
+    &__btn {
+        text-align: center;
+    }
+}

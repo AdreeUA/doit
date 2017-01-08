@@ -1,0 +1,12 @@
+.quest-mark {
+    display: block;
+
+    font-family: $headingFont;
+    font-size: rem(124);
+    line-height: rem(91);
+    font-style: normal;
+    font-weight: 600;
+
+    color: #fff;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, .13);
+}

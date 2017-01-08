@@ -1,0 +1,135 @@
+.btn {
+    display: inline-block;
+    margin: 0 auto;
+    width: rem(278);
+    max-width: 100%;
+    padding-top: rem(19);
+    padding-bottom: rem(19);
+    border: none;
+
+    font-weight: 600;
+    font-size: rem(20);
+    line-height: rem(20);
+    font-family: $headingFont;
+    text-decoration: none;
+    vertical-align: top;
+    color: #fff;
+    text-align: center;
+
+    background-color: #1f9b7f;
+    border-radius: 5px;
+
+    transition: box-shadow .4s ease;
+
+    &_with-icon {
+        height: rem(60);
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: rem(40);
+
+        font-size: rem(18);
+        line-height: 22/18+em;
+
+        text-align: left;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            width: 0;
+
+            vertical-align: middle;
+        }
+    }
+
+    &_trans {
+        background-color: transparent;
+        border: 1px solid #fff;
+
+        line-height: rem(24);
+    }
+
+    &_light {
+        background-color: $color-1;
+    }
+
+    &_mini {
+        min-width: rem(130);
+        width: auto;
+        padding: rem(10) rem(15);
+
+        font-size: rem(16);
+    }
+
+    &_low {
+        width: auto;
+        padding: rem(7) rem(25) rem(8);
+
+        font-size: rem(17);
+    }
+
+    &_high {
+        padding-top: rem(25);
+        padding-bottom: rem(25);
+    }
+
+    &_square {
+        border-radius: 0;
+    }
+
+    &_theme_simple {
+        padding-top: rem(4);
+        padding-bottom: rem(4);
+        border: 1px solid rgba(0, 0, 0, .14);
+
+        color: $color-2;
+        font-weight: 400;
+        font-family: $mainFont;
+        font-size: rem(15);
+        line-height: 24/15+em;
+
+        background-color: transparent;
+    }
+
+    &_size_wide {
+        display: block;
+        width: 100%;
+    }
+
+    &_disabled {
+        opacity: .5;
+        cursor: default;
+    }
+
+    &_block {
+        display: block;
+    }
+
+    &__icon {
+        vertical-align: middle;
+
+        fill: currentColor;
+
+        &_bulb {
+            width: 31/19+em;
+            height: 35/19+em;
+            margin-right: 19/19+em;
+        }
+
+        &_donation {
+            width: 41/19+em;
+            height: 27/19+em;
+            margin-right: 15/19+em;
+        }
+
+        &_reg {
+            width: 26/19+em;
+            height: 26/19+em;
+            margin-right: 5/19+em;
+        }
+    }
+
+    &__text {
+        vertical-align: middle;
+    }
+}

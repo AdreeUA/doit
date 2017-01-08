@@ -1,0 +1,127 @@
+extends ../layouts/default
+include ../partials/nav
+include ../partials/act
+
+
+block head
+    - var pageTitle = 'Связанные поступки';
+    - var pageName = 'Настройки';
+
+block content
+
+    +b.SECTION.cabinet_user
+
+        +e.HEADER.header
+
+            .container
+            
+                include ../partials/cabinet-sidebar2
+                
+                +e.content-wrapper
+
+                    +e.H2.title Настройки
+
+        +e.main
+
+            .container
+
+                +e.content-wrapper
+                    
+                    .cabinet__add-post-sec
+                        
+                        +b.FORM.form(name='add-post' method='post' action='')
+
+                            +e.row_size_full
+
+                                +e.col
+                                    +b.LABEL.label(for='logo-file') Логотип
+                                +e.col_size_full
+                                    label.custom-file-input
+                                        span.j-PreviewRemoveRender Загрузить логотип
+                                        input.j-preview-logo.hidden-input(type="file" name='logo-file' id="logo-file")
+                                        
+                            +e.row_size_full._settings
+
+                                +e.col
+                                    +b.LABEL.label(for='name') Название
+                                   
+                                +e.col_size_full
+                                    +b.INPUT.input(id='name' name='name' type='text' required)
+                                    
+                            +e.row_size_full
+
+                                +e.col
+                                    +b.LABEL.label Юр. Адрес 
+                                   
+                                +e.col_size_full
+                                    .inputs-main-wrapper
+                                        .input-wraper.input-wraper_width45p
+                                            +b.INPUT.input(name='city' type='text' placeholder="Город" required)
+                                        .input-wraper.input-wraper_width55p
+                                            +b.INPUT.input(name='street' type='text' placeholder="Улица" required)
+                                        .input-wraper.input-wraper_width30p
+                                            +b.INPUT.input(name='office' type='number' placeholder="№ Офиса" required)
+                                        .input-wraper.input-wraper_width30p
+                                            +b.INPUT.input(name='home' type='number' placeholder="№ Дома" required)
+                                            
+                            +e.row_size_full._settings
+
+                                +e.col
+                                    +b.LABEL.label(for='registry-number') Реестровый номер 
+                                   
+                                +e.col_size_full
+                                    .inputs-main-wrapper
+                                        .input-wraper.input-wraper_width85p
+                                            +b.INPUT.input(id ="registry-number"  name='registry-number' type='text')
+                                            
+                            +e.row_size_full
+
+                                +e.col
+                                    +b.LABEL.label(for='web-site') Веб-сайт
+                                   
+                                +e.col_size_full
+                                    .inputs-main-wrapper
+                                        .input-wraper.input-wraper_width85p
+                                            +b.INPUT.input(id ="web-site"  name='web-site' type='url')
+                                            
+                             +e.row_size_full
+
+                                +e.col
+                                    +b.LABEL.label(for='post-description') Описание
+
+                                +e.col_size_full
+                                    +b.TEXTAREA.input_textarea.cabinet__post-textarea(id='post-description' name='post-description' required)
+                                       
+                            +e.row._settings
+
+                                +e.col
+                                    +b.LABEL.label(for='email') E-mail
+
+                                +e.col_size_md
+                                    +b.INPUT.input(id='email' type="email" name='email' required)
+                                    
+                            +e.row._settings
+
+                                +e.col
+                                    +b.LABEL.label(for='password') Пароль
+
+                                +e.col_size_md
+                                    +b.INPUT.input(id='password' type='password' name='password' required)
+                                    
+                            +e.row
+
+                                +e.col
+                                    +b.LABEL.label(for='repet-password') Пароль еще раз
+
+                                +e.col_size_md
+                                    +b.INPUT.input(id='repet-password' type='password'  name='repet-password' required)
+                                        
+                    
+                            .form__footer.form__footer_wide.form__footer_border-gray
+                                
+                                button.btn.btn_high.cabinet__add-post-btn Сохранить
+                                    
+                    
+            
+
+

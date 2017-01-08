@@ -1,0 +1,100 @@
+extends ../layouts/default
+include ../blocks/act
+
+block head
+    - var pageTitle = 'Поступки активиста';
+
+block content
+
+    +b.head-title
+
+        .container
+
+            +e.main
+                +e.back-link.arrow-link(href=jv0) назад
+
+                +e.ava-wrapper
+                    +e.IMG.ava(src='http://stevensegallery.com/65/65' srcset='http://stevensegallery.com/130/130 2x' alt='аватар активиста')
+
+                +e.H1.title Активист Сергей Варяжный
+
+    +b.SECTION.acts-sec_in
+
+        +e.main
+
+            .container
+
+                +e.content
+                    p
+                        | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование
+                        |  сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый
+                        |  комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика
+                        |  выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована. Промоакция, 
+                        |  следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами.
+
+                .tabs
+
+                    +e.UL.tabs.tabs__nav
+
+                        li.tabs__nav-item.tabs__nav-item_active(data-tab=0)
+                            a.tabs__nav-link(href=jv0) Актуальные
+
+                        li.tabs__nav-item(data-tab=1)
+                            a.tabs__nav-link(href=jv0) Прошедшие
+
+                    .tabs__panels-wrapper
+
+                        .tabs__panel.tabs__panel_active(data-tab=0)
+
+                            +e.list
+
+                                -
+                                    var acts = [
+                                        'Обливание холодной водой',
+                                        'Бежишь и приносишь пользу обществу',
+                                        'Бежишь и весело припрыгиваешь'
+                                    ];
+
+                                each act, ind in acts
+
+                                    +e.item
+
+                                        +act({
+                                            'mod': '_horiz',
+                                            'src': 'http://loremflickr.com/330/200?random=' + ind,
+                                            'srcset': 'http://loremflickr.com/660/400?random=' + ind,
+                                            'text': act,
+                                            'fund': true,
+                                            'name': true
+                                        })
+                                            if ind === 0
+                                                +e.occasion(href=jv0) Повод: Просто бегаем 18 ноября 2015
+
+                        .tabs__panel(data-tab=1)
+
+                            +e.list
+
+                                -
+                                    var acts = [
+                                        'Обливание холодной водой',
+                                        'Бежишь и приносишь пользу обществу',
+                                        'Бежишь и весело припрыгиваешь'
+                                    ];
+
+                                each act, ind in acts
+
+                                    +e.item
+
+                                        +act({
+                                            'mod': '_horiz _past',
+                                            'src': 'http://loremflickr.com/330/200?random=' + (ind + 3),
+                                            'srcset': 'http://loremflickr.com/660/400?random=' + (ind + 3),
+                                            'text': act,
+                                            'fund': true,
+                                            'name': true
+                                        })
+                                            if ind === 0
+                                                +e.occasion(href=jv0) Повод: Просто бегаем 18 ноября 2015
+
+
+    +delimiter('activists')

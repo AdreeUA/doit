@@ -1,0 +1,87 @@
+.act-info {
+    padding-bottom: rem(15);
+
+    &__section {
+        padding: rem(25) 0;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(151, 151, 151, .32);
+        }
+    }
+
+    &__occasion {
+        margin-top: rem(5);
+        margin-bottom: rem(15);
+
+        font-size: rem(14);
+        font-weight: 700;
+        line-height: 17/14+em;
+    }
+
+    &__content {
+        margin-bottom: rem(20);
+
+        p {
+            color: #252525;
+            font-size: rem(13);
+            font-weight: 300;
+            line-height: 19/13+em;
+
+            &:not(:last-child) {
+                margin-bottom: 1em;
+            }
+            
+        }
+        
+        a {
+            @extend .link;
+        }
+    }
+
+    &__base {
+        margin-bottom: rem(40);
+    }
+
+    &__title {
+        margin-bottom: rem(20);
+    }
+
+    &__subtitle {
+        margin-bottom: rem(10);
+
+        color: rgba(0, 0, 0, .6);
+        font-size: rem(13);
+        font-weight: 300;
+        line-height: 16/13+em;
+    }
+
+    &__text {
+        margin: 0;
+
+        font-family: $headingFont;
+        font-size: rem(15);
+        font-weight: 300;
+        line-height: 18/15+em;
+    }
+
+    &__fees {
+        margin-bottom: rem(25);
+
+        .link {
+            font-size: 83%;
+            white-space: nowrap;
+        }
+    }
+
+    &__donation {
+        margin-bottom: rem(20);
+    }
+
+    &__share {
+        margin-bottom: rem(25);
+    }
+
+    &__preloader {
+        margin-top: rem(30);
+    }
+}

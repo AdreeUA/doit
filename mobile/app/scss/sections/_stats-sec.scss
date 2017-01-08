@@ -1,0 +1,44 @@
+.stats-sec {
+    padding-top: rem(35);
+    padding-bottom: rem(35);
+    
+    background-color: #e9e9e9;
+    
+    &__title {
+        margin-bottom: rem(25);
+    }
+    
+    &__row {
+        @extend %clearfix;
+        margin-bottom: rem(50); 
+        margin-left: rem(-15);
+        margin-right: rem(-15);
+    }
+    
+    &__item {
+        padding-left: rem(15);
+        padding-right: rem(15);
+        
+        &_size_half {
+            float: left;
+            width: 50%;
+        }
+    }
+    
+    &__num {
+        color: $color-2;
+        font-family: $headingFont;
+        font-size: rem(50);
+        font-weight: 300;
+        line-height: 59/50+em;
+        letter-spacing: -2.47px;
+    }
+    
+    &__text {
+        margin: 0;
+        
+        color: #686868;
+        font-size: rem(10);
+        line-height: 15/10+em;
+    }
+}

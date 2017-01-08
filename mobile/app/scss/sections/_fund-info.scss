@@ -1,0 +1,67 @@
+.fund-info {
+
+    &__section {
+        padding-top: rem(25);
+        padding-bottom: rem(30);
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(151, 151, 151, .35);
+        }
+    }
+
+    &__header {
+        margin-bottom: rem(50);
+    }
+
+    &__logo {
+        max-width: 100%;
+    }
+
+    &__donation {
+        margin-bottom: rem(20);
+    }
+
+    &__link {
+        font-size: rem(12);
+        font-weight: 700;
+        line-height: 15/12+em;
+
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__content {
+        margin-bottom: rem(40);
+
+        p {
+            margin: 0;
+
+            color: #252525;
+            font-size: rem(13);
+            font-weight: 300;
+            line-height: 19/13+em;
+
+            &:not(:last-child) {
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    &__tabs-nav {
+        margin-bottom: rem(20);
+    }
+
+    &__tab {
+        padding: rem(12) rem(15);
+        margin-bottom: rem(10);
+
+        font-size: rem(21);
+        letter-spacing: -.01em;
+        line-height: 24/21+em;
+
+        &:not(:last-child) {
+            margin-right: 0;
+        }
+    }
+}

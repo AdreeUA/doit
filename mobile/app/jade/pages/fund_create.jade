@@ -1,0 +1,72 @@
+extends ../layouts/default
+include ../blocks/custom-input
+
+block head
+    - var pageTitle = 'Создание проекта';
+
+block content
+
+    +b.SECTION.fund-create
+
+        +b.HEADER.head-title
+
+            .container
+
+                +e.main
+                    +e.back-link.arrow-link(href=jv0) назад
+                    +e.H2.title #{pageTitle}
+
+        +e.main
+
+            .container
+
+                +e.add-post-sec
+
+                    +b.FORM.form(name='add-post' method='post' action='')
+
+                        +e.main
+
+                            +e.row
+                                +b.LABEL.label(for='name-project') Название проекта
+                                +b.INPUT.input(id='name-project' name='name' type='text' placeholder='Название проекта')
+
+                            +e.row
+                                +b.LABEL.label(for='date-end-project') Дата окончания проекта
+                                .fund-create__inner
+                                    +b.datepicker.fund-create__datepicker
+                                        +e.INPUT.input(id='date-end-project' name='date' placeholder='Дата' data-value="2016/08/14")
+                                        +e.calendar(for='date-end-project')
+                                            .hidden-text Дата окончания проекта
+
+                                    +customInput('checkbox label custom-input_green fund-create__checkbox', 'checkbox', 'unlimited-roject', 'unlimited-roject', 0, false)
+                                        | Сделать проект </br> бессрочным
+
+                            +e.row
+                                +b.add-photo.add-photo_create-fund(name='add-photo' method='post' action='')
+
+                                    +b.LABEL.label Загрузите изображение
+                                    +b.note Загрузите крупное изображение </br> размером не более 5 мегабайт
+
+                                    +e.UL.list.fund-create__added-photo-list
+
+                                        +e.LI.item-wrapper_change
+                                            +b.user-photo.add-photo__item
+                                                +e.img-wrapper
+                                                    +e.IMG.img.add-photo__img(src='http://loremflickr.com/150/150/?random=5' + photo, srcset='http://loremflickr.com/300/300/?random=5' + photo + ' 2x')
+                                                +e.BUTTON.remove(title='Удалить фотографию') Удалить фотографию
+
+                                        +e.item-wrapper
+                                            +e.LABEL.item.add-photo__upload
+                                                +e.INPUT.upload-input.js-upload-photo-simple(name='photos' type='file' multiple accept="image/jpeg,image/jpg,image/png")
+                                                +e.SPAN.upload-text Загрузить
+
+                            +e.row
+                                +b.LABEL.label(for='post-message') Описание проекта
+                                +b.TEXTAREA.input_textarea.fund-create__textarea(id='post-message' name='meassage' required)
+
+                        +e.footer
+
+                            +b.BUTTON.btn_size_wide._light(type='submit') Опубликовать
+
+
+

@@ -1,0 +1,54 @@
+extends ../layouts/default
+include ../blocks/supporter
+
+block head
+    - var pageTitle = 'Кабинет активиста: Статистика';
+    - var pageName = 'Статистика';
+
+block content
+
+    +b.SECTION.cabinet_user
+
+        h1.hidden-text Личный кабинет: статистика
+
+        include ../partials/cabinet-nav
+
+        +e.main
+
+            .container
+
+                +e.SECTION.stats.cabinet__stats
+
+                    +e.H2.title.title Статистика
+
+                    +b.UL.stats.list_vertical
+                        +e.item.list__item
+                            +e.val 14&nbsp;458&nbsp;135
+                                +b.SVG.rub
+                                    use(xlink:href='i/icons.svg#icon-ruble')
+                            +e.text Собрано денег
+
+                        +e.item.list__item
+                            +e.val 867
+                            +e.text Поступков
+
+                +e.SECTION.income
+
+                    +e.H2.title.title Последние поступления:
+
+                    +b.support-list
+
+                        - var i = 3;
+
+                        while i >= 0
+
+                            +e.item
+                                +supporter({
+                                    'src': 'http://www.placecage.com/c/40/40',
+                                    'srcset': 'http://www.placecage.com/c/80/80',
+                                    'name': 'Елена Малахова',
+                                    'money': 30000,
+                                    'text': 'Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект.'
+                                })
+
+                            -i--;

@@ -1,0 +1,227 @@
+.slick-arrow {
+    position: relative;
+
+    width: rem(30);
+    height: rem(30);
+    border: none;
+
+    border-radius: 50%;
+    background: #fff;
+
+    transition: opacity .4s ease;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+
+        width: 1px;
+        height: rem(8);
+
+        background: #000;
+    }
+
+    &::before {
+        top: 50%;
+    }
+
+    &::after {
+        bottom: 50%;
+    }
+
+    &:hover {
+        opacity: .5;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px 1px #4e4ee3;
+    }
+}
+
+.slick-prev {
+    &::before {
+        transform: translate(-50%, -1px) rotate(-30deg);
+    }
+
+    &::after {
+        transform: translate(-50%) rotate(30deg);
+    }
+}
+
+.slick-next {
+    &::before {
+        transform: translate(-50%, -1px) rotate(30deg);
+    }
+
+    &::after {
+        transform: translate(-50%) rotate(-30deg);
+    }
+}
+
+//===========================================================================
+// reasons-slider
+//===========================================================================
+
+.reasons-slider-wrapper{
+    position: relative;
+    
+    &__back {
+        position: absolute;
+        top: rem(17);
+        left: rem(34);
+        z-index: 2;
+    }
+}
+
+.reasons-slider {
+    padding: 0;
+    margin: 0;
+    
+    list-style: none;
+    overflow: hidden;
+    
+    &__item {
+        position: relative;
+        
+        &::after {
+            content: '';
+            @include absFull();
+            
+            background-color: rgba(0, 0, 0, .3);
+        }
+    }
+    
+    &__item-img {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+
+.reasons-slider-pager {
+    position: absolute;
+    height: rem(11);
+    bottom: rem(40);
+    right: rem(41.5);
+    
+    .slick-dots {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        
+        li {
+            box-sizing: border-box;
+            height: rem(11);
+            width: rem(11);
+            background: #fff;
+            border: 2px solid #fff;
+            background: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            margin-left: rem(18);
+        }
+        
+        li.slick-active {
+            background: #fff;
+        }
+    }
+}
+
+.reasons-slider-info {
+    position: absolute;
+    width: rem(596);
+    left: rem(29);
+    bottom:rem(36);
+    
+    &__title {
+        color: #fff;
+        font-size: rem(58);
+        font-weight: 400;
+    }
+    
+    &__date {
+        color: #50E3C2;
+        font-size: rem(17);
+    }
+}
+
+.reasons-slider-nav {
+    position: absolute;
+    height: rem(83.5);
+    bottom: rem(80);
+    right: rem(41.5);
+    z-index: 1;
+    
+    &__prev {
+        position: relative;
+        
+        display: inline-block;
+        height: 100%;
+        width: rem(21.5);
+        margin-right: 21px;
+        
+        background: transparent;
+        cursor: pointer;
+        border-radius: 0;
+        
+        &:before {
+            position: absolute;
+            top: 20px;
+            left: -14px;
+            
+            height: 7px;
+            width: 47px;
+            
+            background: #fff;
+            transform:rotate(-63deg);
+        }
+        
+        &:after {
+            position: absolute;
+            top: 59px;
+            left: -14px;
+            
+            height: 7px;
+            width: 47px;
+            
+            background: #fff;
+            transform:rotate(63deg);
+        }
+    }
+    
+    &__next {
+        display: inline-block;
+        height: 100%;
+        width: rem(21.5);
+        
+        background: transparent;
+        cursor: pointer;
+        border-radius: 0;
+        
+        &:before {
+            position: absolute;
+            top: 20px;
+            left: -14px;
+            
+            height: 7px;
+            width: 47px;
+            
+            background: #fff;
+            transform: rotate(63deg);
+        }
+        
+        &:after {
+            position: absolute;
+            top: 59px;
+            left: -14px;
+            
+            height: 7px;
+            width: 47px;
+            
+            background: #fff;
+            transform:rotate(-63deg);
+        }
+    }
+}

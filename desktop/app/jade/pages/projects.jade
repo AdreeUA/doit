@@ -1,0 +1,64 @@
+extends ../layouts/default
+include ../partials/project
+
+block head
+
+    - var pageTitle = 'Проекты';
+    - var pageName = 'Проеты';
+
+block content
+
+   +b.HEADER.head-title_nav
+
+      .container
+
+         +e.H1.title_big #{pageTitle}
+         +e.FORM.nav
+
+            +e.search
+
+               +b.search_header
+                  +e.LABEL.label Поиск
+                     +e.SVG.icon
+                        use(xlink:href='i/icons.svg#icon-search')
+                     +e.INPUT.input_header-in
+
+            +e.datepicker
+
+               +b.datepicker
+                  +e.SPAN.placeholder Даты проведения
+                  +e.INPUT.input._width100p._big-size(id='occasions-date' name='occasions-date' type='date')
+                  +e.LABEL.calendar._right-position(for='occasions-date')
+
+                     .hidden-text выбрать дату
+                     +e.SVG.calendar-icon
+                        use(xlink:href='i/icons.svg#icon-calendar')
+
+            +e.select
+
+               +b.SELECT.select(name='occasions-type')
+                  option(value='default') выбрать тип проета
+                  option(value=0) Один проект
+                  option(value=1) Второй проект
+                  option(value=2) Третий проект
+
+   +b.SECTION.projects-sec
+
+      +e.content
+
+         .container.projects-in-cont
+
+             - for(var i = 0; i < 10; i++)
+                +e.item
+                   +project-preview({
+                       'src': 'http://loremflickr.com/320/240/animals',
+                       'srcset': 'http://loremflickr.com/640/420/animals',
+                       'text': 'Помогите родителям помочь своим детям с аутизмом',
+                       'projectname': 'Все любят ежиков'
+                   })
+
+      +e.loading
+
+         +b.loading
+
+            +e.SPAN.text Идет загрузка...

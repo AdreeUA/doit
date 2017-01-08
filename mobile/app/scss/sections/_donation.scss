@@ -1,0 +1,209 @@
+.donation {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+
+    .steps {
+        float: none;
+        margin-bottom: rem(35);
+
+        ul {
+            li {
+                position: relative;
+
+                float: none;
+                width: 100%;
+                padding-left: rem(45);
+
+                &:not(:last-child) {
+                    margin-bottom: rem(20);
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: rem(6);
+
+                        width: rem(6);
+                        height: rem(6);
+                        border-left: 1px solid #000;
+                        border-bottom: 1px solid #000;
+                        margin-top: rem(15);
+
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+
+                    width: rem(18);
+                    height: rem(18);
+                    margin-top: rem(-9);
+
+                    border-radius: 50%;
+                    background-color: currentColor;
+                }
+
+                &.done {
+                    color: #9b9b9b;
+
+                    &::after {
+                        border-color: #9b9b9b;
+                    }
+                }
+            }
+        }
+
+        a {
+            padding: 0;
+            margin: 0;
+
+            font-family: $headingFont;
+            font-size: rem(18);
+            font-weight: 300;
+            line-height: 21/18+em;
+            color: inherit;
+            text-decoration: none;
+
+            background-color: transparent;
+        }
+
+        .number {
+            display: none;
+        }
+
+        .current {
+            color: $color-1;
+
+            a {
+                background: transparent;
+            }
+        }
+    }
+
+    .content {
+        padding: 0;
+        margin: 0;
+
+        background: transparent;
+
+    }
+
+    .actions {
+        position: relative;
+
+        //padding-top: rem(30);
+
+        //&::before {
+        //    content: '';
+        //    position: absolute;
+        //    top: 0;
+        //    left: -$containerPadding;
+        //    right: -$containerPadding;
+        //
+        //    height: 1px;
+        //
+        //    background-color: rgba(151, 151, 151, .44);
+        //}
+
+        .btn {
+            font-size: rem(18);
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: rem(40);
+
+        font-family: $headingFont;
+        font-weight: 600;
+        font-size: rem(24);
+        line-height: 28/24+em;
+    }
+
+    &__step-body {
+        width: 100%;
+        height: auto;
+
+        padding: 0;
+        border: none;
+        margin: 0;
+
+        &.current {
+            position: relative;
+        }
+    }
+
+    &__comment {
+        height: rem(100);
+    }
+
+    &__payment {
+        height: rem(100);
+    }
+
+    &__payment-img {
+        height: rem(55);
+    }
+
+    &__finish {
+        position: absolute;
+        clip: rect(0 0 0 0); /* for Internet Explorer */
+        clip: rect(0, 0, 0, 0);
+        z-index: -1;
+
+        height: 1px;
+        width: 1px;
+        padding: 0;
+        margin: -1px;
+        border: 0;
+
+        overflow: hidden;
+
+        text-align: center;
+
+        opacity: 0;
+
+        transition: opacity .4s;
+
+        &_visible {
+            position: relative;
+            z-index: 1;
+
+            height: auto;
+            width: 100%;
+
+            opacity: 1;
+        }
+    }
+
+    &__complete-wrapper {
+        margin-bottom: rem(50);
+
+        text-align: center;
+    }
+
+    &__complete {
+        max-width: 100%;
+    }
+
+    &__thanks {
+        margin-bottom: rem(25);
+
+        color: #f8c41c;
+        font-family: $headingFont;
+        font-size: rem(24);
+        font-weight: 600;
+        line-height: 36/24+em;
+    }
+
+    &__amount-ruble {
+        height: rem(19);
+        width: rem(17);
+
+        fill: currentColor;
+    }
+}

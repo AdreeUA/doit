@@ -1,0 +1,110 @@
+.projects-sec {
+  padding: rem(80) 0;
+
+  &__title {
+    display: block;
+    margin-bottom: rem(37);
+
+    color: #4a4a4a;
+    font-family: "VW Headline OT";
+    font-size: rem(36);
+    font-weight: 600;
+    letter-spacing: -0.22px;
+    line-height: rem(47);
+  }
+
+  &__item {
+    width: 25%;
+    padding: 0 rem(20);
+  }
+}
+
+.project {
+  margin-bottom: rem(52);
+
+  &:hover {
+    .project__descr {
+      opacity: 1;
+    }
+  }
+
+  &__inner {
+    height: rem(162);
+    position: relative;
+    background: rgba(0, 0, 0, .3);
+  }
+
+  &__img-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    width: auto;
+    min-height: 100%;
+    height: auto;
+  }
+
+  &__sponsor-wrapper {
+    position: absolute;
+    right: rem(15);
+    bottom: rem(15);
+    width: rem(66);
+    height: rem(36);
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: rem(3);
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  &__descr {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    border: rem(6) solid #50e3c2;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  &__descr-text-wrap {
+    position: absolute;
+    left: rem(20);
+    bottom: rem(13);
+    color: #fff;
+    font-family: "VW Headline OT";
+    font-size: rem(12);
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    line-height: rem(14);
+  }
+
+  &__descr-text {
+    display: block;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-top: rem(13);
+    padding-right: rem(80);
+    color: #000;
+    font-family: "Helvetica Neue";
+    font-size: rem(12);
+    font-weight: 400;
+    line-height: rem(16);
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,153 @@
+.add-photo {
+
+    &_found {
+
+        .add-photo__upload {
+            border: 1px dashed;
+
+            color: #9b9b9b;
+
+            background-color: transparent;
+            border-radius: 5px;
+            box-shadow: none;
+
+            &::before {
+                position: absolute;
+                top: rem(26);
+                left: 50%;
+
+                width: rem(40);
+                height: rem(50);
+                margin-left: rem(-20);
+
+                background-image: url(../i/upload-icon.svg);
+                background-size: contain;
+
+                content: '';
+            }
+        }
+
+        .add-photo__list {
+            margin: 0;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .add-photo__item-wrapper {
+            margin-left: rem(-18);
+        }
+
+        .add-photo__upload-text {
+            top: 70%;
+
+            text-align: center;
+        }
+    }
+
+    &__list {
+        margin: rem(-15) rem(-18);
+        padding: 0;
+
+        font-size: 0;
+
+        list-style: none;
+    }
+
+    &__item-wrapper {
+        display: inline-block;
+        padding: rem(15) rem(18);
+
+        font-size: 1rem;
+        vertical-align: top;
+    }
+
+    &__item {
+        display: block;
+
+        width: rem(150);
+        height: rem(150);
+        
+        line-height: 0;
+
+        &.PreviewImage-loaded .add-photo__upload-text {
+            display: none;
+        }
+    }
+
+    &__btn {
+        width: rem(150);
+        padding: rem(25) rem(5);
+
+        font-size: rem(17);
+        line-height: 1.1764705882; //20/17
+    }
+
+    &__upload {
+        position: relative;
+
+        background-color: #ececec;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .35);
+        cursor: pointer;
+        
+        &_ava {
+            height: rem(38);
+        }
+    }
+
+    &__upload-input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+
+        width: 100%;
+        height: 100%;
+        padding-left: 100%; // чтобы не появлялся мерцающий курсор в ИА-ИА (другое название ИЕ)
+
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    &__upload-text {
+        @include transformCenter();
+
+        font-weight: 300;
+        font-size: rem(17);
+        line-height: 1;
+        font-family: $headingFont;
+    }
+
+    &__avatar {
+        position: absolute;
+        left: 50%;
+        
+        background-color: #fff;
+        transform: translateX(-50%);
+    }
+
+    &_userpic {
+        .add-photo__upload {
+            width: rem(152);
+            height: rem(152);
+
+            border-radius: 50%;
+            background-color: #f2f2f2;
+            background-image: url('../i/user.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: none;
+
+            overflow: hidden;
+        }
+
+        .add-photo__avatar {
+            width: 100%;
+        }
+
+        &-none {
+            .add-photo__avatar {
+                display: none;
+            }
+        }
+    }
+}

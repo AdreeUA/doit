@@ -1,0 +1,36 @@
+div.box-modal-wrapper
+    +b.box-modal#complain
+
+        +e.header
+            +e.H2.title Пожаловаться
+            +e.close.arcticmodal-close
+
+        +e.content
+            +e.content-item
+                +b.vote_simple
+                    form
+                        +e.FIELDSET.group
+                            +e.LEGEND.title
+                                | Пожалуйста, сообщите нам причину, по которой этот поступок должен быть заблокирован:
+
+                            +e.body
+                                -
+                                    var answers = [
+                                        'Мероприятие не состоится',
+                                        'Мероприятие состоится',
+                                        'Мероприятие состоится, но мы будем расстроены',
+                                        'Мероприятие не состоится и мы не будем расстроены'
+                                    ];
+                                    
+                                each answer in answers
+
+                                    +e.LABEL.item
+                                        +e.INPUT.radio.js-input-styler(type="radio" name="example")
+                                        +e.text= answer
+                                        
+                        +e.FIELDSET.group
+                            +e.LABEL.title(for='complain-message') Ваш комментарий
+                            +b.INPUT.input_textarea.vote__message(id='complain-message')
+
+                        +e.submit_right
+                            +b.BUTTON.btn_vote(type="submit") Отправить

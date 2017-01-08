@@ -1,0 +1,134 @@
+extends ../layouts/default
+include ../partials/nav
+include ../partials/act
+
+
+block head
+    - var pageTitle = 'Управление отчетами';
+    - var pageName = 'Управление отчетами';
+
+block content
+
+    +b.SECTION.cabinet_user
+        .container
+            include ../partials/cabinet-sidebar2
+
+        +e.HEADER.header
+            .container
+                +e.header-inner
+                    +e.H2.title Управление отчетами
+
+        +e.main
+
+            .container
+
+                .cabinet__add-post-sec.cabinet__add-post-sec_padding
+
+                    +b.form
+
+                        +e.group
+                            form.add-report(name='message')
+
+                                +e.row_size_full
+                                    
+                                    +e.col
+                                        +b.LABEL.label(for='logo-file') Вводный текст
+                                    +e.col_size_full
+                                        +b.TEXTAREA.input_textarea.cabinet__post-textarea.add-report__input(id='post-description' name='post-description' required='')
+                                        +b.BUTTON.btn_light.btn_disabled.add-report__btn Сохранить
+
+                        +e.group
+                            form.add-report(name='years-reports' data-type='year')
+                                +e.row_size_full
+
+                                    +e.col
+                                        +b.LABEL.label(for='name') Годовые отчеты
+
+                                    +e.col_size_full
+
+                                        +b.add-photo
+                                            +e.UL.list.add-report__result
+
+                                +e.row_size_full
+
+                                    +e.col
+                                        +b.LABEL.label Годовой отчет
+
+                                    +e.col_size_full
+                                        .inputs-main-wrapper
+                                            .input-wraper-block.input-wraper-block_width196px
+                                                label.custom-file-input.custom-file-input_width196
+                                                    input.input-btn.add-report__input.add-report__input_year.js-input-mask(type="text" placeholder="Выберете год" required='' data-inputmask="'mask': 'y'")
+
+                                        .inputs-main-wrapper
+                                            .input-wraper-block.input-wraper-block_width196px
+                                                input#file-1.js-file-box.add-report__input(
+                                                    type="file" 
+                                                    data-multiple-caption="files selected" 
+                                                    accept='application/pdf, ' +
+                                                            'application/msword, ' +
+                                                            'application/vnd.openxmlformats-officedocument.wordprocessingml.document' 
+                                                    required='')
+                                                label(for="file-1").js-label-upload.custom-file-input.custom-file-input_width196
+                                                        span.js-file-text Выбрать файл
+
+                                        .inputs-main-wrapper
+                                            +b.input-wraper-block_width196px
+                                                input#file-3.js-file-box.add-report__input.add-report__input_poster(
+                                                    type="file" 
+                                                    data-multiple-caption="files selected" 
+                                                    accept='image/*'
+                                                    required='')
+                                                label(for="file-3").js-label-upload.custom-file-input.custom-file-input_width196
+                                                    span.js-file-text Выбрать обложку
+                                                .some_container_div
+
+                                        +b.BUTTON.btn_light.btn_disabled.add-report__btn Добавить
+
+                        +e.group 
+                            form.add-report(name='years-reports' data-type='month')
+                                +e.row_size_full
+
+                                    +e.col
+                                        +b.LABEL.label(for='registry-number') Месячные отчеты
+
+                                    +e.col_size_full
+                                        .inputs-main-wrapper
+                                            +b.report-block
+
+                                                +e.UL.months-list_margin.add-report__result
+
+                                +e.row_size_full
+
+                                    +e.col
+                                        +b.LABEL.label(for='web-site') Добавить отчёт
+
+                                    +e.col_size_full
+                                        .inputs-main-wrapper
+                                            .input-wraper-block.input-wraper-block_width196px
+                                                label.custom-file-input.custom-file-input_width196
+                                                    input.input-btn.add-report__input.add-report__input_month.js-input-mask(type="text" name="month-report-date" placeholder="Месяц и год" required='' data-inputmask="'mask': 'm.y'")
+
+                                        .inputs-main-wrapper
+                                            .input-wraper-block.input-wraper-block_width196px
+                                                input#file-2.js-file-box.add-report__input.add-report__input_month-file(
+                                                name="month-report-file"
+                                                type="file" 
+                                                data-multiple-caption="files selected" 
+                                                accept='application/pdf, ' +
+                                                        'application/msword, ' +
+                                                        'application/vnd.openxmlformats-officedocument.wordprocessingml.document' 
+                                                required='')
+                                                label(for="file-2")
+                                                    +b.custom-file-input_width196.js-label-upload
+                                                        span.js-file-text Выбрать файл
+
+                                        +b.BUTTON.btn_light.btn_disabled.add-report__btn Добавить
+
+
+
+
+
+
+
+

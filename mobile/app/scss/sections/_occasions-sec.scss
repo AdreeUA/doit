@@ -1,0 +1,51 @@
+.occasions-sec {
+    padding-top: rem(20);
+    padding-bottom: rem(30);
+    border-bottom: 1px solid rgba(151, 151, 151, .42);
+
+    &__title {
+        margin-bottom: rem(20);
+    }
+
+    &__filter {
+        display: block;
+        margin-bottom: rem(30);
+
+        font-size: 0;
+    }
+
+    &__filter-col {
+        display: inline-block;
+
+        font-size: 1rem;
+        vertical-align: top;
+
+        &:not(:last-of-type) {
+            padding-right: rem(15);
+        }
+
+        &_select {
+            width: percentage(260/330);
+        }
+
+        &_date {
+            width: percentage(70/330);
+        }
+    }
+
+    &__item {
+        width: rem(290);
+        padding: 0 10px;
+    }
+
+    &__list-item {
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__preloader {
+        margin-top: rem(45);
+        margin-bottom: rem(30);
+    }
+}

@@ -1,0 +1,72 @@
+//- сюда добавляем название файлов js, которые хотим подключить к проекту
+//- при конкатенации порядок будет сохранен
+-
+    var scripts = [
+        'libraries/modernizr-custom',
+        'libraries/jquery.pickmeup',
+        'core/expansion',
+        'core/events',
+        'core/PreviewImage',
+        'AnchorController',
+        'functions-module',
+        'animations-module',
+        'tabs-module',
+        'toggle-module',
+        'form-module',
+        'app-module',
+        'add-act-module',
+        'donation-module',
+        'cabinet-module',
+        'occassion-module',
+        'news-module',
+        'addPhotoModule',
+        'fund-module',
+        'act-one-module',
+        'scripts'
+    ];
+
+// build:js js/vendor.min.js
+// bower:js
+script(src='../bower_components/jquery-form-styler/jquery.formstyler.js')
+script(src='../bower_components/jquery-cookie/jquery.cookie.js')
+script(src='../bower_components/pickadate/lib/picker.js')
+script(src='../bower_components/pickadate/lib/picker.date.js')
+script(src='../bower_components/jquery.placeholder/jquery.placeholder.js')
+script(src='../bower_components/slick-carousel/slick/slick.js')
+script(src='../bower_components/ev-emitter/ev-emitter.js')
+script(src='../bower_components/imagesloaded/imagesloaded.js')
+script(src='../bower_components/qtip2/jquery.qtip.js')
+script(src='../bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js')
+script(src='../bower_components/jQuery.dotdotdot/src/jquery.dotdotdot.min.umd.js')
+script(src='../bower_components/jquery-mousewheel/jquery.mousewheel.js')
+script(src='../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js')
+script(src='../bower_components/shine/dist/shine.min.js')
+script(src='../bower_components/jquery-animateNumber/jquery.animateNumber.js')
+script(src='../bower_components/highcharts/highcharts.js')
+script(src='../bower_components/highcharts/highcharts-more.js')
+script(src='../bower_components/highcharts/modules/exporting.js')
+script(src='../bower_components/svg4everybody/dist/svg4everybody.js')
+script(src='../bower_components/svg4everybody/dist/svg4everybody.legacy.js')
+script(src='../bower_components/arcticmodalbw/arcticmodal/jquery.arcticmodal.min.js')
+script(src='../bower_components/mojs/build/mo.min.js')
+script(src='../bower_components/get-size/get-size.js')
+script(src='../bower_components/desandro-matches-selector/matches-selector.js')
+script(src='../bower_components/fizzy-ui-utils/utils.js')
+script(src='../bower_components/outlayer/item.js')
+script(src='../bower_components/outlayer/outlayer.js')
+script(src='../bower_components/masonry/dist/masonry.pkgd.js')
+script(src='../bower_components/select2/dist/js/select2.js')
+script(src='../bower_components/jquery.inputmask/dist/inputmask/inputmask.js')
+script(src='../bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.js')
+script(src='../bower_components/jquery.inputmask/dist/inputmask/inputmask.extensions.js')
+script(src='../bower_components/jquery.inputmask/dist/inputmask/inputmask.date.extensions.js')
+script(src='../bower_components/easytabs/lib/jquery.easytabs.js')
+// endbower
+// endbuild
+
+
+// build:js js/scripts.min.js
+each src in scripts
+    script(src='../app/js/' + src + '.js')
+// endbuild
+

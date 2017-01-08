@@ -1,0 +1,68 @@
++b.HEADER.header(class=headerMod)
+
+    +b.menu.header__menu(id='main-menu')
+
+        //+b.FORM.search.menu__search(method='get' action='')
+        //    +e.inner
+        //        +e.BUTTON.icon-wrapper(type='submit')
+        //            +e.SVG.icon_search
+        //                use(xlink:href='i/icons.svg#icon-search')
+        //        +e.INPUT.input(id='menu-search' name='search' type='search' placeholder='Поиск')
+
+        +e.NAV.nav
+            h2.hidden-text Навигация по сайту
+
+            +e.UL.nav-list
+
+                - var menuItems = ['фонды', 'поступки', 'как это работает']
+
+                each item in menuItems
+                    +e.nav-item
+                        +e.nav-link(href=jv0)= item
+
+            +e.nav-btn
+                +b.border-btn(href=jv0) Пожертвовать
+
+            +e.nav-btn
+                +b.border-btn(href=jv0) Сделать поступок
+
+        if pageInd === 0
+            +b.auth.menu__auth
+                +e.item(href='#auth-popup')
+                    +e.SVG.icon_locked
+                        use(xlink:href='i/icons.svg#icon-locked')
+                    | #{' '}
+                    +e.SPAN.text Авторизация/Регистрация
+
+        else
+            +b.auth_authorized.menu__auth
+                +e.item(href=jv0)
+                    +e.avatar-wrapper
+                        +e.IMG.avatar(src='http://stevensegallery.com/30/30' srcset='http://stevensegallery.com/60/60 2x')
+                    +e.SPAN.text Джайна Праудмур
+
+                +e.item(href=jv0)
+                    +e.SPAN.text Выход
+
+    .container.header__container
+
+        +b.BUTTON.burger-btn.header__burger
+            +e.SPAN.line Открыть меню
+
+        if pageInd === 0
+
+            +b.H1.logo.header__logo
+                +e.SPAN.text Сделай!
+
+        else
+
+            +b.H2.logo.header__logo
+                +e.text(href='/') Сделай!
+
+            +b.search.menu__search
+                +e.inner
+                    +e.BUTTON.icon-wrapper.js-search-btn
+                        +e.SVG.icon.search__icon_search
+                            use(xlink:href='i/icons.svg#icon-search')
+                        +e.INPUT.input(id="menu-search" name="query" type="search" placeholder="Поиск")
++delimiter('HEADER')

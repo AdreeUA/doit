@@ -1,0 +1,8 @@
+.link {
+    color: $color-2;
+    text-decoration: underline;
+
+    &_no-underline {
+        text-decoration: none;
+    }
+}

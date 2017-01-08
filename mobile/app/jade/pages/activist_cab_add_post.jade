@@ -1,0 +1,96 @@
+extends ../layouts/default
+
+block head
+    - var pageTitle = 'Добавить запись';
+
+block content
+
+    +b.SECTION.cabinet_user
+
+        +b.HEADER.head-title
+
+            .container
+
+                +e.main
+                    +e.back-link.arrow-link(href=jv0) назад
+                    +e.H2.title #{pageTitle}
+
+        +e.main
+
+            .container
+
+                .tabs
+
+                    +e.UL.post-type-choose.tabs__nav
+
+                        li.tabs__nav-item.tabs__nav-item_active(data-tab=0)
+                            a.tabs__nav-link(href=jv0) Просто запись
+
+                        li.tabs__nav-item(data-tab=1)
+                            a.tabs__nav-link(href=jv0) Опрос
+
+                    +e.add-post-sec.tabs__panels-wrapper
+
+                        .tabs__panel.tabs__panel_active(data-tab=0)
+
+                            +b.FORM.form(name='add-post' method='post' action='')
+
+                                +e.main
+
+                                    +e.row
+                                        +b.LABEL.label(for='post-message') Ваше сообщение
+                                        +b.TEXTAREA.input_textarea.cabinet__post-textarea(id='post-message' name='meassage' required)
+
+                                    +e.row
+                                        +b.LABEL.label Загрузите изображение
+                                        +b.add-photo
+
+                                            +e.UL.list
+
+                                                +e.item-wrapper
+                                                    +e.LABEL.item.add-photo__upload
+                                                        +e.INPUT.upload-input.js-upload-photo(name='post' type='file' multiple accept="image/jpeg,image/jpg,image/png")
+                                                        +e.SPAN.upload-text Загрузить
+
+                                    +e.row
+                                        +b.LABEL.label(for='post-video') Вставьте видео:<br>
+                                        +b.note Просто укажите ссылку на видео-ролик<br> с youtube или vimeo
+                                        +b.INPUT.input(id='post-video' name='video' type='url')
+
+                                +e.footer
+
+                                    +b.BUTTON.btn_size_wide._light(type='submit') Опубликовать
+
+                        .tabs__panel(data-tab=1)
+
+                            +b.FORM.form(name='add-question' method='post' action='')
+
+                                +e.main
+
+                                    +e.row
+                                        +b.LABEL.label_low-gap(for='question-body') Вопрос опроса
+                                        +b.TEXTAREA.input_textarea.cabinet__question-textarea(id='question-body' name='question' required)
+
+                                    +e.row
+                                        +b.LABEL.label_low-gap(for='add-answer-1') Ответ №1
+                                        +b.INPUT.input(id='add-answer-1' name='answer-1')
+
+                                    +e.row
+                                        +b.LABEL.label_low-gap(for='add-answer-2') Ответ №2
+                                        +b.INPUT.input(id='add-answer-2' name='answer-2')
+
+                                    +e.row
+                                        +b.LABEL.label_low-gap(for='add-answer-3') Ответ №3
+                                        +b.INPUT.input(id='add-answer-3' name='answer-3')
+
+                                    +e.row
+                                        +b.btn-group.cabinet__add-answer(href=jv0)
+                                            +e.icon +
+                                            +e.text Добавить ответ
+
+                                +e.footer
+
+                                    +b.BUTTON.btn_size_wide._light(type='submit') Опубликовать
+
+
+

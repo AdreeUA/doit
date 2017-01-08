@@ -1,0 +1,73 @@
+.fund-project {
+  padding-bottom: rem(38);
+
+  border-bottom: 1px solid rgba(59, 59, 59, .2);
+
+  &__title {
+    display: block;
+    bottom: rem(35);
+
+    color: #000;
+    font-family: "Helvetica Neue";
+    font-size: rem(15);
+    font-weight: 700;
+    line-height: rem(18);
+    text-decoration: none;
+  }
+
+  &__text {
+    font-size: rem(11);
+    line-height: 21px;
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+  }
+
+  &__details {
+    font-size: rem(11);
+    color: #1e8c6c;
+    font-family: Arial;
+    font-weight: 400;
+    text-decoration: underline;
+
+    &_finished-project {
+      color: #4a4a4a;
+    }
+  }
+
+  &__stat::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  &__block-left {
+    float: left;
+
+    padding-top: rem(13);
+
+    .link-stat-dashed {
+      margin-bottom: rem(14);
+    }
+  }
+
+  &__block-right {
+    float: right;
+  }
+
+  &__img-wrap {
+    width: 100%;
+    margin-top: rem(28);
+  }
+
+  &__photo {
+    max-width: 100%;
+
+    &_finished-project {
+      filter: grayscale(100%);
+    }
+  }
+}
+
+.acts-sec__item:last-of-type .fund-project {
+  border-bottom: none;
+}

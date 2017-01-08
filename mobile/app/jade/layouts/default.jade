@@ -1,0 +1,28 @@
+include ../../../node_modules/bemto.jade/bemto
+include ../helpers/mixins
+include ../helpers/variables
+
+doctype html
+html(lang='ru')
+    include ../partials/head
+
+    body
+        .page
+            include ../partials/header
+
+            main.main
+                block content
+
+            include ../partials/footer
+
+            include ../partials/auth-popup
+            include ../partials/reg-popup
+            include ../partials/message-popup
+            include ../partials/all-acts-popup
+            include ../partials/all-donations-popup
+
+            if popups.complain
+                include ../partials/complain-popup
+
+            script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+            include ../partials/scripts

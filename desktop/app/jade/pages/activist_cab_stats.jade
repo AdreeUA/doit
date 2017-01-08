@@ -1,0 +1,80 @@
+extends ../layouts/default
+include ../partials/nav
+include ../partials/supporter
+
+block head
+    - var pageTitle = 'Кабинет активиста: статистика';
+    - var pageName = 'Статистика';
+
+block content
+
+    +b.SECTION.cabinet_user
+
+        .container
+            include ../partials/cabinet-sidebar
+
+        +e.HEADER.header
+
+            +e.header-inner
+
+                .columns.columns_align_justify.columns_va_middle
+
+                    .columns__col
+                        +e.H2.title #{pageName}
+
+                    .columns__col
+                        +e.FORM.stats-filter(name='activist-stat-filter' method='get' action='')
+                            +b.datepicker
+                                +e.SPAN.placeholder Даты
+                                +e.INPUT.input._width100p._big-size(id='occasions-date' name='occasions-date' type='date')
+                                +e.LABEL.calendar._right-position(for='occasions-date')
+                                    +e.SVG.calendar-icon
+                                        use(xlink:href='i/icons.svg#icon-calendar')
+
+        +e.main
+
+            .container
+
+                +b.stats.cabinet__stats
+
+                    +e.chart(id='activist-stats')
+
+                    .columns
+
+                        .columns__col.stats__col
+                            +e.val
+                                |14&nbsp;458&nbsp;135&nbsp;
+                                +e.SVG.ruble
+                                    use(xlink:href='i/icons.svg#icon-ruble')
+                            +e.label Собрано денег
+
+                        .columns__col.stats__col
+                            +e.val
+                                |867
+                            +e.label Поступков
+
+                +e.last-income
+
+                    +e.H3.last-income-title Последние поступления:
+
+                    +b.UL.support-list
+
+                        - var i = 7;
+
+                        while i >= 0
+
+                            +e.LI.item
+                                +supporter({
+                                    'src': 'http://www.placecage.com/c/40/40',
+                                    'srcset': 'http://www.placecage.com/c/80/80',
+                                    'name': 'Елена Малахова',
+                                    'money': 30000,
+                                    'text': 'Управление брендом подсознательно концентрирует повседневный охват аудитории, признавая определенные рыночные тенденции. В общем, традиционный канал существенно продуцирует побочный PR-эффект.'
+                                })
+
+                            -i--;
+
+
+
+
+

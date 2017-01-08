@@ -1,0 +1,70 @@
+extends ../layouts/default
+include ../blocks/act
+
+block head
+    - var pageTitle = 'Поступки';
+
+block content
+
+    +b.SECTION.acts-sec_in
+
+        +b.head-title
+            .container
+
+                +e.H1.title Поступки
+
+                +e.FORM.controls(name='acts-filter')
+
+                    +e.controls-item
+                        +b.LABEL.datepicker_with-text
+                            +e.INPUT.input(id='acts-date' name='date' placeholder='Даты')
+                            +e.calendar(for='acts-date')
+                                .hidden-text выбрать дату
+                                +e.SVG.calendar-icon
+                                    use(xlink:href='i/icons.svg#icon-calendar')
+
+                    +e.controls-item
+
+                        +b.SELECT.select(name='type')
+                            option(value='default') Тип поступка
+                            option(value=0) Один поступок
+                            option(value=1) Второй поступок
+                            option(value=2) Третий поступок
+
+                    +e.controls-item_search
+
+                        +b.search_btn(href=jv0)
+                            +e.SVG.icon
+                                use(xlink:href='i/icons.svg#icon-search')
+
+        +e.main
+            .container
+
+                +e.list
+
+                    -
+                        var acts = [
+                            'Обливание холодной водой',
+                            'Бежишь и приносишь пользу обществу',
+                            'Бежишь и весело припрыгиваешь'
+                        ];
+
+                    each act, ind in acts
+
+                        +e.item
+
+                            +act({
+                                'mod': ind === 0 ? '_horiz act_power' : '_horiz',
+                                'src': 'http://loremflickr.com/330/200?random=' + ind,
+                                'srcset': 'http://loremflickr.com/660/400?random=' + ind,
+                                'text': act,
+                                'fund': true,
+                                'name': true
+                            })
+                                if ind === 0
+                                    +e.occasion(href=jv0) Повод: Просто бегаем 18 ноября 2015
+
+                +b.preloader.acts-sec__preloader
+                    +e.text Идет загрузка..
+
+    +delimiter('acts-sec')

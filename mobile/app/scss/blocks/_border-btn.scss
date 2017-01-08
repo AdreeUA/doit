@@ -1,0 +1,12 @@
+.border-btn {
+    display: inline-block;
+    padding-left: rem(5);
+    padding-right: rem(5);
+    border: 1px solid $color-1;
+
+    color: inherit;
+    line-height: rem(30);
+    vertical-align: top;
+
+    text-decoration: none;
+}

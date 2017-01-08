@@ -1,0 +1,40 @@
+.icon-btn {
+    position: relative;
+
+    display: inline-block;
+    width: rem(32);
+    height: rem(32);
+
+    font-size: 1rem;
+    text-decoration: none;
+    vertical-align: middle;
+    color: inherit;
+
+    &::before {
+        content: '';
+        @include absFull();
+
+        border: 1px solid;
+
+        opacity: .27;
+        border-radius: 50%;
+    }
+
+    &__icon {
+        @include center();
+
+        fill: currentColor;
+
+        &_question {
+            font-weight: 300;
+            font-size: 23/16+em;
+            line-height: 1;
+            font-family: $headingFont;
+        }
+
+        &_search {
+            width: 18/16+em;
+            height: 18/16+em;
+        }
+    }
+}

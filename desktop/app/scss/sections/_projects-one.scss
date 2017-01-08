@@ -1,0 +1,117 @@
+.project-sec {
+  margin-top: rem(90);
+  margin-bottom: rem(45);
+
+  font-family: $projectsFont;
+
+  &__title {
+    margin-bottom: rem(24);
+    
+    color: $secondColor;
+    font-family: "VW Headline OT";
+    font-size: rem(36);
+    font-weight: 600;
+    letter-spacing: -0.22px;
+    line-height: rem(47);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: rem(5);
+  }
+
+  &__img-wrap {
+    width: rem(382);
+    margin-right: rem(50);
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    margin-bottom: rem(45);
+
+    font-family: $headingFont;
+  }
+
+  &__line-block {
+    flex-basis: rem(190);
+  }
+
+  &__block-title{
+    margin-bottom: rem(20);
+  }
+
+  &__date {
+    span {
+      color: #f5a623;
+      font-family: "VW Headline OT";
+      font-size: rem(24);
+      font-weight: 300;
+      line-height: rem(36);
+    }
+  }
+
+  &__do-act {
+    display: inline-block;
+    position: relative;
+    max-width: rem(166);
+    margin-left: rem(15);
+
+    color: $secondColor;
+    font-family: "Helvetica Neue";
+    font-size: rem(15);
+    font-weight: 700;
+    line-height: rem(18);
+    text-decoration: none;
+
+    &:hover {
+      .link-bottom-line-effect::after {
+        transform: scaleX(0);
+      }
+    }
+    .link-bottom-line-effect {
+      position: relative;
+    }
+  }
+
+  &__text {
+    margin-bottom: rem(53);
+
+    line-height: (24/15);
+  }
+
+  &__bottom-links {
+    display: flex;
+    justify-content: space-between;
+
+    .soc-wrapper {
+      flex-grow: 1;
+    }
+  }
+
+  &__similar {
+    .projects-in-cont {
+      padding: 0 !important;
+    }
+    .projects-sec__item {
+      padding: 0;
+      padding-right: rem(20);
+    }
+    .projects-sec__item:nth-child(4n) {
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,90 @@
++b.FOOTER.footer(class=(pageInd === 0 ? 'footer_no-border' : ''))
+
+    +e.top
+
+        .container
+
+            +e.top-columns
+
+                .columns.columns_justify.columns_middle
+
+                    .columns__col
+
+                        if pageInd === 0
+
+                            +b.logo.footer__logo
+                                +e.text © Сделай!
+
+                        else
+
+                            +b.logo.footer__logo(href='/')
+                                +e.text © Сделай!
+
+                    .columns__col
+                        +b.age-limit 18+
+
+            - var navItems = ['поводы', 'поступки', 'фонды', 'активисты', 'оферта', 'партнеры', 'помощь']
+
+            +b.NAV.nav.footer__nav
+
+                +b.H2.hidden-text Навигация по сайту
+
+                +e.UL.menu
+
+                    each item in navItems
+
+                        +e.LI.item.footer__nav-item
+                            +e.link(href=jv0)= item
+
+                    +e.LI.item.footer__nav-item
+                        +e.link(href=jv0) новости
+                        | #{' '}
+                        +b.SPAN.count.nav__count 6
+
+            +e.A.desktop-link(href=jv0) полная версия
+
+    +e.middle
+
+        .container
+
+            +e.middle-columns.columns
+
+                +e.middle-col.columns__col
+
+                    +e.title Мы в соц. сетях:
+
+                    +b.UL.socials
+
+                        - var socials = ['fb', 'in', 'gplus', 'vk'];
+
+                        each social in socials
+
+                            +e.LI.item
+                                +e.link(class='_#{social}' href=jv0)
+                                    +e.SVG.icon
+                                        use(xlink:href='i/icons.svg#icon-#{social}')
+
+                +e.middle-col.columns__col
+
+                    +e.title Мы принимаем:
+
+                    +b.UL.list.footer__payments
+
+                        +linksList(4, 'i/payments', 'jpg')(
+                            item='footer__payments-item',
+                            link='footer__payments-link',
+                            img = 'footer__payments-img'
+                        )
+
+    +e.bottom
+
+        .container
+
+            +e.made(href='http://www.c-tm.ru/')
+                +e.made-text Создание сайтов
+                +e.IMG.made-logo(src='i/make-by-logo.png' alt='Creative Team')                
+                +e.made-year 2016
+
++delimiter('footer')
+
+

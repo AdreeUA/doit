@@ -1,0 +1,22 @@
+mixin customInput(mod, type, id, name, val, checked)
+
+    +b.custom-input(class='_#{mod}')
+        +e.INPUT.hidden(id=id name=name type=type value=val checked=checked)
+        +e.LABEL.label(for=id class!=attributes.label)
+            block
+
+mixin inputsGroup(input, data)
+
+    - var checked;
+
+    +b.inputs-group(class!=attributes.container)
+
+        each text, ind in data
+
+            - checked = (ind === 0 ? true : false)
+
+            +e.item(class!=attributes.item)
+
+                +customInput(input.mod, input.type, input.id + '-' +ind, input.name, ind, checked)
+                    | #{text}
+

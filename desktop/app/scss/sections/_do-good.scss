@@ -1,0 +1,27 @@
+.do-good-sec {
+    background: #f1ebc2 url('../i/bg-do-good.jpg') no-repeat center center;
+    background-size: cover;
+
+    &__wrapper {
+        min-height: rem(750);
+        padding-top: rem(122);
+        padding-bottom: rem(122);
+        padding-left: rem(75);
+    }
+
+    &__content {
+        width: 560px;
+        margin-bottom: rem(68);
+
+        p {
+            font-weight: 300;
+            font-size: rem(28);
+            line-height: 1.4642857143; //41/28
+            font-family: $headingFont;
+
+            + p {
+                margin-top: rem(20);
+            }
+        }
+    }
+}

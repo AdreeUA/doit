@@ -1,0 +1,45 @@
+.man-info {
+    &__photo-wrapper {
+        float: left;
+        width: rem(110);
+        height: rem(110);
+        margin-right: rem(25);
+
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__main {
+        overflow: hidden;
+    }
+
+    &__post {
+        margin-top: 0;
+        margin-bottom: rem(20);
+
+        font-family: $headingFont;
+        font-size: rem(14);
+        font-weight: 300;
+        line-height: 17/14+em;
+        color: rgba(0, 0, 0, .28);
+        text-transform: uppercase;
+    }
+
+    &__name {
+        margin-top: 0;
+        margin-bottom: rem(5);
+
+        font-family: $headingFont;
+        font-size: rem(12);
+        font-weight: 600;
+        line-height: 15/12+em;
+    }
+
+    &__desc {
+        margin: 0;
+
+        font-size: rem(12);
+        font-weight: 300;
+        line-height: 15/12+em;
+    }
+}

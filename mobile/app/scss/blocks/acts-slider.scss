@@ -1,0 +1,92 @@
+.acts-slider {
+    position: absolute;
+
+    transform: scaleY(0);
+
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+
+    transform-origin: top left;
+
+    transition: all .3s;
+
+    &__list {
+        padding-bottom: 0;
+    }
+
+    &__img-wrap {
+        position: relative;
+
+        height: rem(155);
+        margin-bottom: rem(14);
+
+        overflow: hidden;
+
+        &::before {
+            z-index: 3;
+
+            background-color: rgba(0, 0, 0, 0.3);
+
+            content: '';
+
+            @include absFull();
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        min-height: 100%;
+        min-width: 100%;
+
+        transform: translate(-50%, -50%);
+    }
+
+    &__project {
+        position: absolute;
+        z-index: 4;
+        bottom: rem(15);
+
+        padding: rem(5) rem(5) 0 rem(20);
+
+        color: #fff;
+        font-size: rem(15);
+        font-weight: 700;
+        letter-spacing: rem(-0.13);
+        line-height: rem(18);
+    }
+
+    &__project-title {
+        display: block;
+    }
+
+    &__disc {
+        font-size: rem(11);
+        font-weight: 300;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        top: rem(78);
+        z-index: 4;
+
+        background: transparent;
+        
+        &::before,
+        &::after {
+            opacity: 1;
+            background: #fff;
+        }
+
+    }
+
+    .slick-next {
+        right: 0;
+    }
+
+    .slick-prev {
+        left: 0;
+    }
+}

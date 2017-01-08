@@ -1,0 +1,53 @@
+.wreath {
+    width: rem(280);
+    height: rem(230);
+    padding-top: rem(35);
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: rem(15);
+    font-weight: 300;
+    line-height: rem(15);
+    color: #000;
+    text-align: center;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    &__title {
+        margin-bottom: rem(44);
+
+        &_second {
+            margin: 0;
+        }
+    }
+
+    &__money {
+        font-family: $headingFont;
+        font-size: rem(40);
+        letter-spacing: -2.46/40+em;
+        line-height: rem(36);
+        font-weight: 300;
+
+        margin-bottom: rem(15);
+        white-space: nowrap;
+    }
+
+    &__icon_ruble {
+        width: 25/40+em;
+        height: 30/40+em;
+    }
+
+    &__acts {
+        font-weight: 700;
+    }
+
+    &_green {
+        background-image: url("../i/wreath-green.svg");
+    }
+
+    &_gold {
+        background-image: url("../i/wreath-gold.svg");
+    }
+}

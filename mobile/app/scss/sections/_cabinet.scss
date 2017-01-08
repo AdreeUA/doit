@@ -1,0 +1,124 @@
+.cabinet {
+
+    &_news {
+
+        .cabinet__main {
+            padding-bottom: 0;
+        }
+
+
+        .news-sec__content {
+            padding-bottom: 0;
+        }
+    }
+
+    &__nav-menu {
+        padding: 0;
+        margin: 0;
+
+        font-size: 0;
+        @extend %align-justify;
+
+        list-style: none;
+    }
+
+    &__nav-item {
+        display: inline-block;
+
+        font-weight: 300;
+        font-size: rem(15);
+        letter-spacing: .29/15+em;
+        line-height: 29/15+em;
+        vertical-align: middle;
+        color: #000;
+
+        &_active {
+            box-shadow: 0 3px 0 $color-2;
+        }
+    }
+
+    &__nav-link {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__title {
+        margin-bottom: rem(30);
+    }
+
+    &__main {
+        padding-top: rem(30);
+        padding-bottom: rem(35);
+    }
+
+    &__add-photo-sec {
+        padding-bottom: rem(25);
+    }
+
+    &__photos-wrapper {
+        padding-top: rem(25);
+        border-top: 1px solid rgba(151, 151, 151, .44);
+    }
+
+    &__user-photo {
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__post-textarea {
+        height: rem(220);
+    }
+
+    &__stats {
+        padding-bottom: rem(35);
+
+    }
+
+    &__income {
+        position: relative;
+
+        padding-top: rem(35);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -$containerPadding;
+            right: -$containerPadding;
+
+            height: 1px;
+
+            background-color: rgba(151, 151, 151, .32);
+        }
+    }
+
+    &__info-item {
+        &:not(:last-child) {
+            margin-bottom: rem(60);
+        }
+    }
+
+    &__section {
+        padding-top: rem(25);
+        padding-bottom: rem(25);
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+
+        &_dash-divider {
+            padding-top: rem(38);
+            padding-bottom: rem(30);
+            border-bottom: 2px dashed #979797;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+}

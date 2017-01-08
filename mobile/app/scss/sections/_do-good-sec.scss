@@ -1,0 +1,27 @@
+.do-good-sec {
+    padding-top: rem(55);
+    padding-bottom: rem(30);
+
+    background: url('../i/bg-do-good.jpg') no-repeat center center;
+    background-size: cover;
+
+    @include retina() {
+        background-image: url('../i/bg-do-good.jpg');
+    }
+
+    &__content {
+        width: percentage(280/330);
+        margin-bottom: rem(95);
+
+        p {
+            font-weight: 300;
+            font-size: rem(17);
+            line-height: 21/17+em;
+            font-family: $headingFont;
+
+            + p {
+                margin-top: 1em;
+            }
+        }
+    }
+}

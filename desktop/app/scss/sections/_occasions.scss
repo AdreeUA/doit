@@ -1,0 +1,171 @@
+//===========================================================================
+// OCCASION
+//===========================================================================
+
+.occasion {
+    position: relative;
+
+    height: 260px;
+    
+    &:hover {
+        .occasion__img {
+            transform: scale(1.2);
+        }
+    }
+
+    &__inner {
+        @include absFull();
+        z-index: 1;
+    }
+
+    &__img-wrapper {
+        @include absFull();
+        z-index: -1;
+
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            @include absFull();
+            z-index: 2;
+
+            background-color: rgba(0, 0, 0, .2);
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: auto;
+        min-width: 100%;
+        height: auto;
+        min-height: 100%;
+        
+        transition: transform .6s ease;
+    }
+
+    &__title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        max-width: 70%;
+        padding-left: rem(24);
+        padding-bottom: rem(11);
+
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: 1.25; //25/20
+        color: #fff;
+    }
+
+    &__date {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        max-width: 25%;
+        padding-right: rem(22);
+        padding-bottom: rem(11);
+
+        font-weight: 600;
+        font-size: rem(17);
+        line-height: 1.1764705882; //20/17
+        font-family: $headingFont;
+        color: $firstColor;
+        text-align: right;
+    }
+
+    &__like {
+        position: absolute;
+        top: rem(31);
+        left: rem(25);
+        z-index: 2;
+
+        width: rem(40);
+        height: rem(35);
+    }
+}
+
+.occasions-sec {
+
+    &__header {
+        padding-top: rem(35);
+        padding-bottom: rem(39);
+
+        background-color: #f4f4f4;
+    }
+
+    &__title {
+        display: inline-block;
+        margin-right: rem(40);
+
+        vertical-align: middle;
+    }
+
+    &__filter {
+        display: inline-block;
+
+        font-size: 0;
+        vertical-align: middle;
+    }
+
+    &__filter-col {
+        display: inline-block;
+
+        font-size: 1rem;
+        vertical-align: middle;
+
+        &:not(:last-of-type) {
+            margin-right: rem(20);
+        }
+
+        &_select {
+            width: rem(280);
+        }
+
+        &_date {
+            width: rem(67);
+        }
+    }
+
+    &__more {
+        font-weight: 300;
+        font-size: rem(18);
+        font-family: $headingFont;
+        line-height: 1;
+        color: #1f9b7f;
+        text-decoration: none;
+    }
+
+    &__more-icon {
+        width: 20/18+em;
+        height: 21/18+em;
+        margin-right: 10/18+em;
+
+        vertical-align: middle;
+
+        fill: currentColor;
+    }
+
+    &__content {
+        padding-top: rem(14);
+        padding-bottom: rem(17);
+    }
+
+    &__list {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    &__item {
+        width: 50%;
+        padding: 10px;
+    }
+}
+
+.occasions-list-wrapper{
+    margin: 15px -10px 0;
+}

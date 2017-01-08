@@ -1,0 +1,22 @@
+.stats {
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__val {
+        font-family: $headingFont;
+        font-size: rem(62);
+        font-weight: 300;
+        letter-spacing: -3.81/62+em;
+        line-height: 64/62+em;
+    }
+
+    &__text {
+        font-size: rem(15);
+        font-weight: 300;
+        line-height: 18/15+em;
+    }
+}

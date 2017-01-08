@@ -1,0 +1,131 @@
+.datepicker {
+    position: relative;
+
+    display: block;
+    width: 100%;
+    height: rem(40);
+
+    background: #ececec;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .35);
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: rem(8);
+
+        border-top: rem(7) solid #212121;
+        border-left: rem(8) solid transparent;
+        border-right: rem(8) solid transparent;
+
+        transform: translateY(-50%);
+    }
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        width: 100px;
+        max-width: 100%;
+        height: 100%;
+        text-overflow: ellipsis;
+
+        opacity: 0;
+        cursor: pointer;
+        overflow: hidden;
+
+        &_width100p{
+            width: 100%;
+        }
+
+        &_hidden {
+            position: absolute !important;
+            left: -999px;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &__calendar {
+        position: absolute;
+        top: 50%;
+        left: rem(11);
+
+        width: rem(20);
+        height: rem(22);
+        margin-top: rem(-11);
+        &_right-position{
+            left: auto;
+            right: rem(39);
+        }
+    }
+
+    &__calendar-icon {
+        width: 100%;
+        height: 100%;
+    }
+
+    .picker {
+        display: none;
+    }
+
+    .picker__holder {
+        overflow-y: scroll;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .picker__frame {
+        //transition: opacity .5s ease;
+        //will-change: opacity;
+        transition: none;
+    }
+
+    .picker--opened {
+        display: block;
+
+        .picker__frame {
+            @include center();
+            bottom: auto;
+            right: auto;
+
+            max-height: none;
+        }
+    }
+
+    &_with-text {
+
+        .datepicker__calendar {
+            left: auto;
+            right: rem(34);
+        }
+
+        .datepicker__input {
+            position: static;
+
+            width: 100%;
+            padding-left: rem(10);
+            padding-right: rem(55);
+            border: none;
+
+            font-size: rem(13);
+            font-weight: 300;
+            line-height: 16/13+em;
+
+            background-color: transparent;
+            opacity: 1;
+
+            &::placeholder,
+            &.placeholder {
+                color: #000;
+            }
+        }
+    }
+}

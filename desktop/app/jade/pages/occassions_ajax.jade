@@ -1,0 +1,29 @@
+include ../../../node_modules/bemto.jade/bemto
+include ../helpers/variables
+include ../helpers/mixins
+include ../partials/occasion
+
+-
+    var occasionsList = [{
+        src: 'http://loremflickr.com/680/260/sports',
+        srcset: 'http://loremflickr.com/1360/520/sports',
+        title: 'Бегаем и прыгаем'
+    }, {
+        src: 'http://loremflickr.com/680/260/animals',
+        srcset: 'http://loremflickr.com/1360/520/animals',
+        title: 'Снимаем кошечек с деревьев'
+    }, {
+        src: 'http://loremflickr.com/680/260/city',
+        srcset: 'http://loremflickr.com/1360/520/city',
+        title: 'Прыгаем через скакалку'
+    }, {
+        src: 'http://loremflickr.com/680/260/food',
+        srcset: 'http://loremflickr.com/1360/520/food',
+        title: 'Играем в классики'
+    }]
+
+each occasion in occasionsList
+
+    li.list__item.occasions-sec__item
+        +occasion(occasion)
+

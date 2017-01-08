@@ -1,0 +1,97 @@
+mixin funds-projects-item
+
+   +b.fund-project
+
+      +e.A.title(href=jv0) Все любят ежиков!
+
+      +e.P.text
+         | Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить…
+         +e.A.details.link-bottom-line-effect(href=jv0) Подробнее
+
+      +e.stat
+
+         +e.block-left
+            +b.A.link-stat-dashed.projects-item__link-stat(href='#all-acts-popup') 17 поступов
+            br
+            +b.A.link-stat-dashed.projects-item__link-stat(href='#all-donations-popup') 218 пожертвований
+
+         +b.total-sum.fund-project__block-right
+            +e.P.text Собрано всего:
+            +e.SPAN.amount 558 135
+                +e.SVG.icon.donation__amount-ruble
+                    use(xlink:href='i/icons.svg#icon-ruble')
+
+mixin funds-finished-projects
+
+    +b.fund-project_finished-project
+
+        +e.A.title(href=jv0) Все любят ежиков!
+
+        +e.P.text
+            | Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить…
+            +e.A.details_finished-project.link-bottom-line-effect(href=jv0) Подробнее
+
+        +e.stat
+
+            +e.block-left
+                +b.A.link-stat-dashed_finished-project.projects-item__link-stat(href='#all-acts-popup') 17 поступов
+                br
+                +b.A.link-stat-dashed_finished-project.projects-item__link-stat(href='#all-donations-popup') 218 пожертвований
+
+            +b.total-sum_finished-project.fund-project__block-right
+                +e.P.text Собрано всего:
+                +e.SPAN.amount_finished-project 558 136
+                    +e.SVG.icon.donation__amount-ruble
+                        use(xlink:href='i/icons.svg#icon-ruble')
+
+mixin funds-img-projects
+
+    +b.fund-project
+
+        +e.A.title(href=jv0) Все любят ежиков!
+
+        +e.img-wrap
+            +e.IMG.photo(src='http://loremflickr.com/350/220?random=1' srcset='http://loremflickr.com/700/440?random=1 2x' alt='Фото')
+
+        +e.P.text
+            | Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить…
+            +e.A.details.link-bottom-line-effect(href=jv0) Подробнее
+
+        +e.stat
+
+            +e.block-left
+                +b.A.link-stat-dashed.projects-item__link-stat(href='#all-acts-popup') 17 поступов
+                br
+                +b.A.link-stat-dashed.projects-item__link-stat(href='#all-donations-popup') 218 пожертвований
+
+            +b.total-sum.fund-project__block-right
+                +e.P.text Собрано всего:
+                +e.SPAN.amount 558 135
+                    +e.SVG.icon.donation__amount-ruble
+                        use(xlink:href='i/icons.svg#icon-ruble')
+
+mixin funds-img-finished-project
+
+    +b.fund-project
+
+        +e.A.title(href=jv0) Все любят ежиков!
+
+        +e.img-wrap
+            +e.IMG.photo_finished-project(src='http://loremflickr.com/350/220?random=1' srcset='http://loremflickr.com/700/440?random=1 2x' alt='Фото')
+
+        +e.P.text
+            | Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить. Краткое описание данного проекта, зачем он нужен, кому он нужен и что с него возможно получить…
+            +e.A.details_finished-project.link-bottom-line-effect(href=jv0) Подробнее
+
+        +e.stat
+
+            +e.block-left
+                +b.A.link-stat-dashed_finished-project.projects-item__link-stat(href='#all-acts-popup') 17 поступов
+                br
+                +b.A.link-stat-dashed_finished-project.projects-item__link-stat(href='#all-donations-popup') 218 пожертвований
+
+            +b.total-sum_finished-project.fund-project__block-right
+                +e.P.text Собрано всего:
+                +e.SPAN.amount_finished-project 558 135
+                    +e.SVG.icon.donation__amount-ruble
+                        use(xlink:href='i/icons.svg#icon-ruble')

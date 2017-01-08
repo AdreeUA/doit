@@ -1,0 +1,44 @@
+.form {
+    &__main {
+        padding-top: rem(20);
+        padding-bottom: rem(5);
+    }
+
+    &__row {
+        margin-bottom: rem(30);
+
+        &_low-gap {
+            margin-bottom: rem(20);
+        }
+
+        &_md-gap {
+            margin-bottom: rem(25);
+        }
+
+        &_align_right {
+            text-align: right;
+        }
+
+        &_socials {
+            margin-top: -25px;
+        }
+    }
+
+    &__footer {
+        position: relative;
+        padding-top: rem(30);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -$containerPadding;
+            right: -$containerPadding;
+
+            height: 1px;
+
+            background-color: #979797;
+            opacity: .44;
+        }
+    }
+}

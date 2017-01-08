@@ -1,0 +1,76 @@
+extends ../layouts/default
+include ../blocks/act
+
+block head
+    - var pageTitle = 'Кабинет активиста: поступки';
+    - var pageName = 'Ваши поступки';
+
+block content
+
+    +b.SECTION.cabinet_user._settings
+
+        h1.hidden-text Личный кабинет: поступки
+
+        include ../partials/cabinet-nav
+
+        +e.main
+
+            .container
+
+                +b.SECTION.acts-sec_in.cabinet__section_dash-divider
+
+                    +e.HEADER.header
+                        +e.H2.title.title Ваши поступки:
+
+                    +e.list
+
+                        -
+                            var acts = [
+                                'Обливание холодной водой',
+                                'Бежишь и приносишь пользу обществу'
+                            ];
+
+                        each act, ind in acts
+
+                            +e.item
+
+                                +act({
+                                    'mod': '_horiz',
+                                    'src': 'http://loremflickr.com/330/200?random=' + ind,
+                                    'srcset': 'http://loremflickr.com/660/400?random=' + ind,
+                                    'photo': false,
+                                    'text': act,
+                                    'fund': true
+                                })
+                                    .act__buttons
+                                        .act__btn
+                                            +b.share-btn_wide(href=jv0) Пост в ленту
+                                        .act__btn
+                                            +b.share-btn_wide(href=jv0) Добавить фото
+
+                +b.SECTION.acts-sec_in.cabinet__section_dash-divider
+
+                    +e.HEADER.header
+                        +e.H2.title.title Ваши прошедшие поступки:
+
+                    +e.list
+
+                        -
+                            var acts = [
+                                'Обливание холодной водой',
+                                'Бежишь и приносишь пользу обществу'
+                            ];
+
+                        each act, ind in acts
+
+                            +e.item
+
+                                +act({
+                                    'mod': '_horiz _past',
+                                    'src': 'http://loremflickr.com/330/200?random=' + ind,
+                                    'srcset': 'http://loremflickr.com/660/400?random=' + ind,
+                                    'photo': false,
+                                    'text': act,
+                                    'fund': true,
+                                    'noBattery': true
+                                })

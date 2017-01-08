@@ -1,0 +1,27 @@
+html {
+    font: 100% $mainFont;
+}
+
+body {
+    width: 100%;
+
+    background-color: #fff;
+}
+
+body *,
+body *::after,
+body *::before {
+    box-sizing: border-box;
+}
+
+.page {
+    padding-top: rem(50);
+
+    overflow: hidden;
+}
+
+.hidden-fixed {
+    overflow-y: hidden;
+    position: fixed;
+}
+

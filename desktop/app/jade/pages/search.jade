@@ -1,0 +1,196 @@
+extends ../layouts/default
+include ../partials/act
+include ../partials/project
+include ../partials/fund
+include ../partials/activist
+include ../partials/announcement
+
+
+block head
+    - var pageTitle = 'Похожие поступки';
+    - var pageName = 'Похожие поступки';
+
+block content
+
+    .container
+    
+        .search-box
+            .search-form-wrapper
+                +e.FORM.nav
+
+                    +e.search
+
+                        +b.search_header
+
+                            +e.LABEL.label Поиск
+
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-search')
+
+                                +e.INPUT.input_header-in
+
+            .search-title Вы искали «Обливание», вот 5 результатов
+            .search-results-box
+                .search-results-item-group
+                    .search-results-item-group__title.search-results-item-group__title_margin-bottom7px Поступки
+                    .search-results-item-group__content
+                        .acts-in-search
+                            +b.SECTION.acts-sec_in._acts._similar
+
+                                +e.content
+
+                                    .container.acts-in-cont
+
+                                        +e.item
+                                            +act_in({                                               
+                                                'src': 'http://loremflickr.com/390/235/animals',
+                                                'srcset': 'http://loremflickr.com/800/1100/animals',
+                                                'text': 'Обливание холодной водой',
+                                                'occasion': true
+                                            })
+
+                                        +e.item
+                                            +act_in({
+                                                'mod': 'act_power',
+                                                'src': 'http://loremflickr.com/390/235/city',
+                                                'srcset': 'http://loremflickr.com/780/470/city',
+                                                'text': 'Бежишь и приносишь пользу обществу'
+                                            })
+
+                                        +e.item
+                                            +act_in({
+                                                'src': 'http://loremflickr.com/390/235/nature',
+                                                'srcset': 'http://loremflickr.com/780/470/nature',
+                                                'text': 'Деньги для набережной'
+                                            })
+
+                .search-results-item-group
+                    .search-results-item-group__title Проекты
+                    .search-results-item-group__content
+                        .projects-in-search
+                            +b.SECTION.projects-sec
+
+                                +e.content
+
+                                    .container.projects-in-cont
+
+                                        - for(var i = 0; i < 10; i++)
+                                            +e.item
+                                               +project-preview({
+                                                   'src': 'http://loremflickr.com/320/240/animals',
+                                                   'srcset': 'http://loremflickr.com/640/420/animals',
+                                                   'text': 'Помогите родителям помочь своим детям с аутизмом',
+                                                   'projectname': 'Все любят ежиков'
+                                               })
+
+                .search-results-item-group                    
+                    .search-results-item-group__title Фонды
+                    .search-results-item-group__content
+                        .funds-in-search
+                            +b.SECTION.funds-sec._padding-none
+
+                                +e.content
+
+                                    +e.item
+                                        +fund({
+                                            'medal': 'gold',
+                                            'title': 'Милосердие',
+                                            'descr': 'Помощи тяжело больным людям'
+                                        })
+
+                                    +e.item
+                                        +fund({
+                                            'medal': 'gold',
+                                            'title': 'Преданье.ру',
+                                            'descr': 'Помощь детям, детским домам'                                    
+                                        })
+
+                                    +e.item
+                                        +fund({
+                                            'medal': 'silver',
+                                            'title': 'Подари жизнь',
+                                            'descr': 'Помощь детям, детским домам'
+                                        })
+                                        
+                .search-results-item-group                        
+                    .search-results-item-group__title Активисты
+                    .search-results-item-group__content
+                        .activists-in-search
+                            +b.SECTION.activists
+
+                                +e.content
+
+                                    +e.item
+                                        +activist({
+                                            'mod': '_search',
+                                            'src': 'http://stevensegallery.com/177/177',
+                                            'srcset': 'http://stevensegallery.com/354/354',
+                                            'acts': 85,
+                                            'money': '14\u00A0581\u00A0385'
+                                        })
+
+                                    +e.item
+                                        +activist({
+                                            'mod': '_search',
+                                            'src': 'http://stevensegallery.com/177/177',
+                                            'srcset': 'http://stevensegallery.com/354/354',
+                                            'acts': 78,
+                                            'money': '12\u00A0581\u00A0385'
+                                        })
+
+                                    +e.item
+                                        +activist({
+                                            'mod': '_search',
+                                            'src': 'http://stevensegallery.com/177/177',
+                                            'srcset': 'http://stevensegallery.com/354/354',
+                                            'acts': 64,
+                                            'money': '7\u00A0581\u00A0385'
+                                        })
+
+                                    +e.item
+                                        +activist({
+                                            'mod': '_search',
+                                            'src': 'http://stevensegallery.com/177/177',
+                                            'srcset': 'http://stevensegallery.com/354/354',
+                                            'acts': 70,
+                                            'money': '6\u00A0581\u00A0385'
+                                        })
+                                        
+                .search-results-item-group                   
+                    .search-results-item-group__title Новости
+                    .search-results-item-group__content
+                        .news-in-search
+                        
+                            +b.SECTION.news-sec_page
+
+                                +e.content
+
+                                    +b.UL.list_vertical.news-sec__list
+
+                                        +e.LI.item.news-sec__item
+                                             +announcement({
+                                                'mod': '_page',
+                                                'src': 'http://loremflickr.com/250/250/sports',
+                                                'srcset': 'http://loremflickr.com/500/500/sports',
+                                                'text': 'Медийная реклама, на первый взгляд, детерминирует эмпирический бизнес-план, не считаясь с затратами.'
+                                                    })
+
+                                        +e.LI.item.news-sec__item
+                                            +announcement({
+                                                'mod': '_page',
+                                                'src': 'http://loremflickr.com/250/250/sports',
+                                                'srcset': 'http://loremflickr.com/500/500/animals',
+                                                'text': 'Баннерная реклама слабо трансформирует презентационный материал.'
+                                            })
+
+                                        +e.LI.item.news-sec__item
+                                            +announcement({
+                                                'mod': '_page',
+                                                'src': 'http://loremflickr.com/250/250/sports',
+                                                'srcset': 'http://loremflickr.com/500/500/sports',
+                                                'text': 'Медийная реклама, на первый взгляд, детерминирует эмпирический бизнес-план, не считаясь с затратами.'
+                                            })
+
+                      
+
+            

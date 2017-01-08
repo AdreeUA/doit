@@ -1,0 +1,145 @@
+.activist {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .23);
+
+    &__header {
+        position: relative;
+
+        height: rem(80);
+        padding-left: rem(130);
+        padding-right: rem(10);
+
+        white-space: nowrap;
+
+        background-color: #f2f2f2;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+
+            vertical-align: middle;
+        }
+    }
+
+    &__name {
+        display: inline-block;
+        margin: 0;
+        max-width: 100%;
+        max-height: 100%;
+
+        font-size: rem(21);
+        line-height: 24/21+em;
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+        vertical-align: middle;
+        white-space: normal;
+        hyphens: auto;
+
+        overflow: hidden;
+    }
+
+    &__photo-wrapper {
+        position: absolute;
+        top: rem(10);
+        left: rem(15);
+
+        display: block;
+        width: rem(90);
+        height: rem(90);
+
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+
+    &__content {
+        @extend %clearfix;
+        padding: rem(35) rem(40) rem(25);
+    }
+
+    &__info {
+        overflow: hidden;
+        margin-bottom: rem(20);
+    }
+
+    &__num {
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: rem(45);
+        }
+    }
+
+    &__num-value {
+        font-family: $headingFont;
+        font-size: rem(24);
+        line-height: rem(28);
+    }
+
+    &__num-word {
+        font-size: rem(12);
+    }
+
+    &__link {
+        margin-top: rem(19);
+
+        font-size: rem(15);
+        font-weight: 700;
+        line-height: 18/15+em;
+    }
+
+    &__icon_ruble {
+        width: 12/24+em;
+        height: 18/24+em;
+        fill: currentColor;
+    }
+
+    &_power {
+        .activist__header {
+            background-color: $color-3;
+        }
+    }
+
+    &_simple {
+        box-shadow: none;
+
+        .activist__header {
+            height: rem(50);
+            padding-left: rem(100);
+
+            background-color: transparent;
+        }
+
+        .activist__photo-wrapper {
+            left: 0;
+
+            width: rem(70);
+            height: rem(70);
+        }
+
+        .activist__content {
+            padding-top: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+            padding-left: rem(100);
+        }
+
+        .activist__info {
+            margin-bottom: 0;
+        }
+
+        .activist__num {
+            &:not(:last-child) {
+                margin-right: rem(12);
+                margin-bottom: rem(10);
+            }
+        }
+    }
+}

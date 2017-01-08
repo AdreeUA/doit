@@ -1,0 +1,25 @@
+include ../../../node_modules/bemto.jade/bemto
+include ../helpers/variables
+include ../helpers/mixins
+
+doctype html
+html(lang='ru')
+    include ../partials/head
+
+    body
+
+        .page(class!=pageClass)
+
+            include ../partials/header
+
+            main.main
+
+                block content
+
+            include ../partials/modals
+
+            include ../partials/footer
+
+            include ../partials/scripts
+
+

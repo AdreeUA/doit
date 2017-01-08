@@ -1,0 +1,43 @@
+//===========================================================================
+// FEEDBACK
+//===========================================================================
+
+.feedback {
+    font-size: 0;
+
+    &__content {
+        padding-top: rem(72);
+        padding-left: rem(151);
+        padding-right: rem(75);
+
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @media (max-width: 1201px) {
+            padding-left: rem(75);
+        }
+    }
+
+    &__form {
+        margin-right: rem(387);
+
+        @media (max-width: 1201px) {
+            margin-right: rem(250);
+        }
+    }
+
+    &__ask {
+        float: right;
+        width: rem(300);
+
+        @media (max-width: 1201px) {
+            width: rem(200);
+        }
+    }
+
+    &__quest-mark {
+        margin-top: rem(20);
+    }
+}

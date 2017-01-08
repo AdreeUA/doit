@@ -1,0 +1,85 @@
+div.box-modal-wrapper
+
+    +b.box-modal#reg(data-single='true')
+
+        +e.header
+
+            +e.H2.title Регистрация
+
+            +e.close.arcticmodal-close
+
+        +e.content
+
+            +e.content-item
+
+                +e.text
+
+                    +e.P.text-par
+                        | Это потребительская культура, безусловно, концентрирует рейтинг. Креатив, вопреки мнению П.Друкера, неверно переворачивает из ряда вон выходящий медиамикс. Практика однозначно показывает, что контент развивает медиамикс.
+
+            +e.content-item_big-padding-b
+
+                +b.auth-soc
+
+                    +e.title
+
+                        +b.H3.title-modal С помощью социальных сетей
+
+                        +e.socials
+
+                            +b.UL.socials_big
+
+                                +e.LI.item
+                                    +e.link_fb(href=jv0)
+                                        +e.SVG.icon
+                                            use(xlink:href='i/icons.svg#icon-fb')
+
+                                +e.LI.item
+                                    +e.link_vk(href=jv0)
+                                        +e.SVG.icon
+                                            use(xlink:href='i/icons.svg#icon-vk')
+
+            +e.content-item
+
+                +b.FORM.form
+
+                    +e.title
+
+                        +b.LABEL.title-modal(for='act-name') Ваше имя
+
+                        +e.row_modal
+
+                            +e.col
+                                +b.INPUT.input(id='act-name' name='act-name' required)
+
+                    +e.title
+
+                        +b.LABEL.title-modal(for='act-mail') E-mail
+
+                        +e.row_modal
+
+                            +e.col
+                                +b.INPUT.input(id='act-mail' name='act-mail' required)
+
+                    +e.title
+
+                        +b.LABEL.title-modal(for='act-pass') Пароль:
+
+                        +e.row_modal
+
+                            +e.col
+                                +b.INPUT.input(id='act-pass' name='act-pass' required)
+
+                    +e.title
+
+                        +b.LABEL.title-modal(for='act-repeat') Пароль еще раз:
+
+                        +e.row_modal
+
+                            +e.col
+                                +b.INPUT.input(id='act-repeat' name='act-repeat' required)
+
+
+                    +e.modal-submit_big-margin
+
+                        +b.btn_light._medium(href=jv0 type='submit') Зарегистрироваться

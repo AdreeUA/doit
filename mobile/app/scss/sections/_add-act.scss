@@ -1,0 +1,23 @@
+.add-act {
+
+    &__fund-added {
+        padding-top: rem(20);
+
+        text-align: center;
+    }
+
+    &__fund-added-icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: rem(156);
+        height: rem(102);
+
+        fill: transparent;
+        stroke: #979797;
+    }
+
+    &__return-btn {
+        width: 100%;
+    }
+}

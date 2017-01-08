@@ -1,0 +1,64 @@
+extends ../layouts/default
+include ../blocks/occasion
+
+block head
+    - var pageTitle = 'Поводы';
+
+block content
+
+    +b.head-title
+
+        .container
+
+            +e.H1.title Поводы22222
+
+            +e.FORM.controls(name='occasions-filter' method='post' action='')
+
+                +e.controls-item
+                    +b.LABEL.datepicker_with-text
+                        +e.INPUT.input(id='occasions-date' name='date' placeholder='Даты')
+                        +e.calendar(for='occasions-date')
+                            .hidden-text выбрать дату
+                            +e.SVG.calendar-icon
+                                use(xlink:href='i/icons.svg#icon-calendar')
+
+                +e.controls-item
+
+                    +b.SELECT.select(name='type')
+                        option(value='default') Тип поступка
+                        option(value=0) Один поступок
+                        option(value=1) Второй поступок
+                        option(value=2) Третий поступок
+                        option(value=3) А здесь печенька!
+
+                +e.controls-item_search
+
+                    +b.search_btn(href=jv0)
+                        +e.button(type="submit")
+                            +e.SVG.icon
+                                use(xlink:href='i/icons.svg#icon-search')
+
+    +b.occasions-sec
+        .container
+
+            +e.list
+                -
+                    var occasions = [
+                        'Марафон в олимпийском',
+                        'Большое собрание',
+                        'Просто бегаем',
+                        'Благотворительный забег в специальных условиях'
+                    ];
+
+                each occasion, ind in occasions
+
+                    +e.list-item
+                        +occasion({
+                            mod: '_in',
+                            src: 'http://loremflickr.com/400/150?random=' + ind,
+                            srcset: 'http://loremflickr.com/800/300?random=' + ind,
+                            title: occasion
+                        })
+
+            +b.preloader.occasions-sec__preloader
+                +e.SPAN.text Идет загрузка...

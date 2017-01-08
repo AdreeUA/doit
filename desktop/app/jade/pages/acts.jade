@@ -1,0 +1,133 @@
+extends ../layouts/default
+include ../partials/act
+
+
+block head
+    - var pageTitle = 'Поступки';
+    - var pageName = 'Поступки';
+
+block content
+
+
+    +b.HEADER.head-title_nav
+
+        .container
+
+            +e.H1.title_big #{pageTitle}
+
+            +e.FORM.nav
+
+                +e.search
+
+                    +b.search_header
+
+                        +e.LABEL.label Поиск
+
+                            +e.SVG.icon
+                                use(xlink:href='i/icons.svg#icon-search')
+
+                            +e.INPUT.input_header-in
+
+                +e.datepicker
+
+                    +b.datepicker
+                        +e.SPAN.placeholder Даты проведения
+                        +e.INPUT.input._width100p._big-size(id='occasions-date' name='occasions-date' type='date')
+                        +e.LABEL.calendar._right-position(for='occasions-date')
+                            .hidden-text выбрать дату
+                            +e.SVG.calendar-icon
+                                use(xlink:href='i/icons.svg#icon-calendar')
+
+                +e.select
+
+                    +b.SELECT.select(name='occasions-type')
+                        option(value='default') выбрать тип поступка
+                        option(value=0) Один поступок
+                        option(value=1) Второй поступок
+                        option(value=2) Третий поступок
+
+
+    +b.SECTION.acts-sec_in._acts
+
+        +e.content
+
+            .container.acts-in-cont
+
+                +e.item
+                    +act_in({
+                        'mod': 'act_power',
+                        'src': 'http://loremflickr.com/390/235/animals',
+                        'srcset': 'http://loremflickr.com/800/1100/animals',
+                        'text': 'Обливание холодной водой',
+                        'occasion': true
+                    })
+
+                +e.item
+                    +act_in({
+                        'src': 'http://loremflickr.com/390/235/city',
+                        'srcset': 'http://loremflickr.com/780/470/city',
+                        'text': 'Бежишь и приносишь пользу обществу'
+                    })
+
+                +e.item
+                    +act_in({
+                        'src': 'http://loremflickr.com/390/235/nature',
+                        'srcset': 'http://loremflickr.com/780/470/nature',
+                        'text': 'Деньги для набережной'
+                    })
+
+                +e.item
+                    +act_in({
+                        'mod': 'act_power',
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Ешь и толстей'
+                    })
+
+                +e.item
+                    +act_in({
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Официальный забег Мэрии Москвы',
+                        'occasion': true
+                    })
+
+                +e.item
+                    +act_in({
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Толпа разноцветных людей бежит в сторону Гольяново'
+                    })
+
+                +e.item
+                    +act_in({
+                        'mod': 'act_power',
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Ешь и толстей'
+                    })
+
+                +e.item
+                    +act_in({
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Ешь и толстей',
+                        'occasion': true
+                    })
+
+                +e.item
+                    +act_in({
+                        'src': 'http://loremflickr.com/390/235/food',
+                        'srcset': 'http://loremflickr.com/780/470/food',
+                        'text': 'Толпа разноцветных людей бежит в сторону Гольяново'
+                    })
+
+
+        +e.loading
+
+            +b.loading
+
+                +e.SPAN.text Идет загрузка...
+
+
+                +delimiter('acts')

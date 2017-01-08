@@ -1,0 +1,22 @@
+.creditcard-form {
+    
+    &__row {
+        margin-right: -5px;
+        margin-left: -5px;
+        margin-bottom: rem(35);
+    }
+    
+    &__col {
+        padding-left: 5px;
+        padding-right: 5px;
+        
+        &_size_1 {
+            width: percentage(1/4);
+        }
+        
+        &_size_2 {
+            width: percentage(2/4);
+        }
+    }
+    
+}

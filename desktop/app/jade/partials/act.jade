@@ -1,0 +1,136 @@
+mixin act(data)
+
+    +b.act(class!=(data.mod ? data.mod : ''))
+
+        +e.img-wrapper
+
+            +e.IMG.img(src=data.src srcset=(data.srcset + ' 2x') alt='')
+
+        +e.inner
+
+            +e.photo-wrapper(href=jv0)
+
+                +e.IMG.photo(src='http://stevensegallery.com/100/100' srcset='http://stevensegallery.com/200/200 2x')
+
+            +b.battery.act__battery(data-val='78')
+
+                +e.SPAN.val 0%
+
+                +e.SPAN.body
+                    +e.SPAN.progress
+
+                +e.SVG.lightning
+                    use(xlink:href='i/icons.svg#icon-lightning')
+
+            +e.main
+                +e.title= data.text
+                if data.occasion
+                    +e.subtitle Поступок относится к поводу:
+                    +e.occasion Просто бегаем
+
+            +e.FOOTER.footer
+
+                .columns.columns_align_justify.columns_va_bottom
+
+                    .columns__col
+                        +e.TIME.date(datetime='2015-11-18') 18 ноября
+
+                    .columns__col
+                        +e.sponsor-wrapper
+                            +e.IMG.sponsor(src='http://loremflickr.com/67/35/business' srcset='http://loremflickr.com/134/70/business 2x')
+
+            +e.descr(href=jv0)
+                +e.descr-text.js-text-overflow
+                    | Продвижение проекта допускает конвергентный имидж. По мнению ведущих маркетологов, построение бренда восстанавливает коллективный стиль менеджмента. Управление брендом программирует институциональный формат события. Продвижение проекта допускает конвергентный имидж. По мнению ведущих маркетологов, построение бренда восстанавливает коллективный стиль менеджмента. Управление брендом программирует институциональный формат события. Продвижение проекта допускает конвергентный имидж. По мнению ведущих маркетологов, построение бренда восстанавливает коллективный стиль менеджмента. Управление брендом программирует институциональный формат события.
+
+
+mixin act_in(data)
+
+    +b.act_in(class!=(data.mod ? data.mod : ''))
+
+        +e.img-wrapper
+
+            +e.IMG.img(src=data.src srcset=(data.srcset + ' 2x') alt='')
+
+        +e.inner
+
+            if !data.dash || data.fund
+
+                +e.name(class!=(data.dash ? "_dash-item" : ""))
+
+                    +b.activist-name(class!=(data.dash ? "_small" : "") href=jv0)
+
+                        +e.photo-wrapper_in
+
+                            +e.IMG.photo(src='http://stevensegallery.com/26/26' srcset='http://stevensegallery.com/52/52 2x')
+
+                        +e.name Сергей Варяжный
+
+            +b.battery.act__battery(class!=(data.dash ? "_dash-item" : "") data-val='45')
+
+                +e.SPAN.val 0%
+
+                +e.SPAN.body
+                    +e.SPAN.progress
+                +e.SVG.lightning
+                    use(xlink:href='i/icons.svg#icon-lightning')
+
+            if !data.fund
+
+                +e.sponsor-wrapper
+
+                    +e.IMG.sponsor(src='http://loremflickr.com/67/35/business' srcset='http://loremflickr.com/134/70/business 2x')
+
+
+            +e.FOOTER.footer(class!=(data.dash ? "_dash-item" : ""))
+
+                .columns.columns_align_justify.columns_va_bottom
+
+                    .columns__col
+
+                        +e.TIME.date(datetime='2015-11-18') 18 ноября
+
+            +e.descr(href=jv0)
+                +e.descr-text.js-text-overflow
+                    | Продвижение проекта допускает конвергентный имидж. По мнению ведущих маркетологов, построение бренда восстанавливает коллективный стиль менеджмента. Управление брендом программирует институциональный формат события.
+
+
+    +e.title_in(href=jv0)= data.text
+
+    if data.occasion
+
+        if !data.dash
+
+            +e.SPAN.subtitle_in Повод:
+
+            +e.occasion_in(href=jv0)  Просто бегаем 18 ноября 2015
+
+    if data.like
+
+        +e.like-wrapper(class!=(data.dash ? "_dash-item" : ""))
+
+            if data.edit
+
+                +b.share-button_small(class!=(data.fund ? "_fund-dash-item" : "") href=jv0) Пост в ленту
+
+            else
+
+                +b.share-button(class!=(data.fund ? "_fund-dash-item" : "") href=jv0) Пост в ленту
+
+            if data.dash && !data.fund
+
+                +b.share-button_small._dash-item(href=jv0) Добавить фото
+
+            else
+
+                +b.like-button(href=jv0)
+
+                    +e.SVG.icon_like
+                        use(xlink:href='i/icons.svg#icon-thumbs-up')
+
+            if data.edit
+
+                +b.A.link-edit(href=jv0)
+                    +e.SVG.icon_edit
+                        use(xlink:href='i/icons.svg#icon-edit-small')
+

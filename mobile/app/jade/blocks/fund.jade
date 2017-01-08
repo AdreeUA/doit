@@ -1,0 +1,40 @@
+include ../blocks/acts-slider
+
+mixin fund(data)
+
+    +b.ARTICLE.fund(class!=(data.mod ? data.mod : ''))
+
+        +e.HEADER.header
+
+            +e.header-columns.columns_justify._middle
+
+                .columns__col.columns__col_6
+                    +e.logo(href=jv0)
+                        +e.IMG.logo-img(src='http://loremflickr.com/120/50?random', srcset='http://www.loremflickr.com/240/80?random 2x')
+
+                if data.medal
+                    .columns__col
+                        +e.medal
+                            +e.IMG.medal(src='i/ruble-#{data.medal}.svg' alt='Изображение рубля')
+
+                if data.acts
+                    .columns__col
+                        +e.A.acts-link.link-dashed.link.link_no-underline.js-fund-acts(href=jv0)
+                            | 17 поступков
+
+        +e.body
+            if data.title
+                +e.H2.title= data.title
+                +e.P.descr Помощь детям, детским домам
+
+            if !data.noText
+                +e.content
+                    p
+                        | Тем не менее, пул лояльных изданий подсознательно программирует поведенческий таргетинг, повышая
+                        |  конкуренцию. Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации.
+
+            if data.acts
+                +acts-slider.fund__acts-slider
+
+            if data.link
+                +e.link.link(href=jv0)= data.link

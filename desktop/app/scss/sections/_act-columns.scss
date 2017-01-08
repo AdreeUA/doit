@@ -1,0 +1,36 @@
+//===========================================================================
+// ACT-COLUMNS
+//===========================================================================
+
+.act-columns {
+    padding-bottom: rem(65);
+
+    &__content {
+        @include clearfix();
+    }
+
+    &__content-left {
+        float: left;
+        width: 50%;
+
+        padding-right: 1px;
+
+        &_base {
+            float: none;
+            width: auto;
+
+            .container_half {
+                float: none;
+                max-width: 1440px;
+                margin: auto;
+            }
+        }
+    }
+
+    &__content-right {
+        float: right;
+        width: 50%;
+
+        padding-left: 1px;
+    }
+}

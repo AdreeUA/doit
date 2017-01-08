@@ -1,0 +1,241 @@
+//===========================================================================
+// ACTS-ONE-INFO
+//===========================================================================
+
+.acts-one-info {
+    padding: rem(43) 0 rem(37);
+    overflow: hidden;
+
+    .container {
+        display: flex;
+    }
+
+    &__organize {
+        display: flex;
+        flex-direction: column;
+        min-width: rem(256);
+        width: rem(256);
+
+        @include above(1100px){
+            min-width: rem(300);
+            width: rem(300);
+        }
+    }
+
+    &__activist-button {
+        margin-top: rem(19);
+    }
+    &__link {
+        color: #1f9b7f;
+        cursor: pointer;
+
+    }
+    &__img-wrapper {
+        overflow: hidden;
+    }
+
+    &__img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+    }
+    
+    &__sponsor {
+        margin-top: auto;
+    }
+
+    &__sponsor-label {
+        margin-top: rem(36);
+        margin-bottom: rem(17);
+
+        font-size: rem(13);
+        font-weight: 100;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__sponsor-link {
+        display: block;
+        overflow: hidden;
+    }
+
+    &__sponsor-img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+    }
+
+    &__main {
+        position: relative;
+        
+        flex-grow: 1;
+        padding-left: rem(35);
+        padding-right: rem(35);
+        padding-bottom: rem(60);
+    }
+
+    &__nums {
+        position: relative;
+
+        order: 3;
+
+        min-width: rem(200);
+        padding-top: rem(19);
+        padding-bottom: rem(58);
+    }
+
+    &__occasion {
+        font-size: rem(14);
+        font-weight: 800;
+
+        margin-bottom: rem(19);
+    }
+
+    &__descr {
+        position: relative;
+
+        margin-bottom: rem(33);
+
+        font-size: rem(15);
+        line-height: rem(24);
+
+        //height: rem(230);
+        max-width: rem(580);
+
+        overflow: hidden;
+
+        .acts-one-info__link-more {
+            display: none;
+        }
+
+        &_open {
+            height: auto;
+
+            .acts-one-info__link-more {
+                display: none;
+            }
+        }
+
+        a {
+            @extend .acts-one-info__link;
+            @extend .link-dashed;
+        }
+    }
+
+    //&__link-more {
+    //    position: absolute;
+    //    bottom: 2px;
+    //    right: 0;
+    //
+    //    display: block;
+    //
+    //    background-color: #fff;
+    //
+    //    &::before {
+    //        position: absolute;
+    //        left: rem(-60);
+    //
+    //        display: block;
+    //        width: rem(60);
+    //        height: 100%;
+    //
+    //        pointer-events: none;
+    //
+    //        background: linear-gradient(to right,
+    //                rgba(255,255,255,0) 0%,
+    //                rgba(255,255,255,.5) 50%,
+    //                rgba(255,255,255,.9) 70%,
+    //                rgba(255,255,255,1) 100%);
+    //
+    //        content: '';
+    //    }
+    //}
+    
+    &__soc {
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__socials {
+        display: inline-block;
+        margin-right: rem(25);
+
+        vertical-align: bottom;
+    }
+
+    &__complain {
+        display: inline-block;
+        padding-left: rem(18);
+        padding-right: rem(18);
+
+        color: $firstColor;
+        vertical-align: bottom;
+        line-height: rem(30);
+
+        border-radius: 4px;
+        border-color: #dcdcdc;
+    }
+
+    &__remain-title {
+        font-size: rem(13);
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: 100;
+    }
+
+    &__remain {
+        font-size: rem(15);
+        color: rgb(0, 0, 0);
+        font-family: $headingFont;
+
+        margin-top: rem(3);
+        margin-bottom: rem(31);
+    }
+
+    &__battery {
+        margin-top: rem(5);
+    }
+
+    &__donations-num {
+        margin-top: rem(14);
+        margin-bottom: rem(55);
+        
+        color: #1f9b7f;
+        font-size: rem(15);
+        line-height: rem(24);
+    }
+
+    &__donations-btn {
+        position: absolute;
+        bottom: 0;
+        
+        max-width: 100%;
+    }
+
+}
+
+.no-flexbox {
+    .acts-one-info {
+        .container {
+            display: table;
+            table-layout: fixed;
+        }
+
+        &__organize {
+            display: table-cell;
+            width: rem(300);
+
+            vertical-align: top;
+        }
+
+        &__main {
+            display: table-cell;
+
+            vertical-align: top;
+        }
+
+        &__nums {
+            display: table-cell;
+
+            vertical-align: top;
+        }
+    }
+}

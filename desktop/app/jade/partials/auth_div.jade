@@ -1,0 +1,66 @@
+div.box-modal-wrapper
+
+    +b.box-modal#auth
+
+        +e.header_small-left
+
+            +e.H2.title Вход на сайт
+
+            +e.close.arcticmodal-close
+
+        +e.content
+
+            +e.content-item
+
+                +b.auth-soc
+
+                    +e.title
+
+                        +b.H3.title-modal С помощью социальных сетей
+
+                        +e.socials
+
+                            +b.UL.socials_big
+
+                                +e.LI.item
+                                    +e.link_fb(href=jv0)
+                                        +e.SVG.icon
+                                            use(xlink:href='i/icons.svg#icon-fb')
+
+                                +e.LI.item
+                                    +e.link_vk(href=jv0)
+                                        +e.SVG.icon
+                                            use(xlink:href='i/icons.svg#icon-vk')
+
+            +e.content-item
+
+                +b.FORM.form
+
+                    +e.title
+
+                        +b.LABEL.title-modal(for='act-mail') E-mail
+
+                        +e.row_modal
+
+                            +e.col
+                                +b.INPUT.input(id='act-mail' name='act-mail' required)
+
+                    +e.title
+
+                        +b.LABEL.title-modal(for='act-pass') Пароль:
+
+                        +e.forgot-pass_modal(href=jv0) (Забыли пароль?)
+
+                        +e.row_modal
+
+                            +e.col
+                                +b.INPUT.input(id='act-pass' name='act-pass' required)
+
+
+                    +e.modal-submit
+
+                        +b.btn_light._medium(href=jv0 type='submit') Войти
+
+        +e.footer
+
+            +b.btn_modal._trans.js-modal(href=jv0 data-modal='reg') Зарегистрироваться

@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block content
+
+    .pages-list-wrapper
+
+        .container
+
+            +b.UL.pages-list
+
+                each value, key in pages
+
+                    +e.LI.item
+
+                        +e.link(href=value)= key

@@ -1,0 +1,50 @@
+extends ../layouts/default
+
+block head
+    - var pageTitle = 'Кабинет активиста: настройки';
+    - var pageName = 'Настройки';
+
+block content
+
+    +b.SECTION.cabinet_user._settings
+
+        h1.hidden-text Личный кабинет: настройки
+
+        include ../partials/cabinet-nav
+
+        +e.main
+
+            .container
+
+                +e.H2.title.title Настройки
+
+                +b.FORM.form(name='user-settings' method='post' action='')
+
+                    +e.main
+
+                        +e.row
+                            +b.LABEL.label_pos_left(for='user-ava') Аватар:
+
+                            +b.add-photo_avatar
+                                +e.LABEL.item.__upload(for='user-ava')
+                                    +e.INPUT.upload-input.js-upload-photo(id='user-ava' name='avatar' type='file' accept='image/jpeg,image/jpg,image/png')
+
+                        +e.row
+                            +b.LABEL.label_low-gap(for='user-name') Ваше имя:
+                            +b.INPUT.input(id='user-name' name='name' required)
+
+                        +e.row
+                            +b.LABEL.label_low-gap(for='user-mail') E-mail:
+                            +b.INPUT.input(id='user-mail' name='mail' required)
+
+                        +e.row
+                            +b.LABEL.label_low-gap(for='user-pass') Пароль:
+                            +b.INPUT.input(id='user-pass' name='pass' required)
+
+                        +e.row
+                            +b.LABEL.label_low-gap(for='user-repeat') Пароль еще раз:
+                            +b.INPUT.input(id='user-repeat' name='pass-repeat' required)
+
+                    +e.footer
+
+                        +b.BUTTON.btn_size_wide._light(type='submit') Сохранить

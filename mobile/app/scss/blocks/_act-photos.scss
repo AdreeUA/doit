@@ -1,0 +1,19 @@
+.act-photos {
+    padding-top: rem(15);
+    padding-bottom: rem(35);
+
+    line-height: 0;
+
+    &__empty {
+        line-height: 1;
+        padding-top: rem(8);
+    }
+
+    &__img {
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+}

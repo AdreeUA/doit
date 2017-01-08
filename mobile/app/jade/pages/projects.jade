@@ -1,0 +1,39 @@
+extends ../layouts/default
+include ../blocks/project-preview
+
+block head
+    - var pageTitle = 'Страница проектов';
+
+block content
+
+    +b.head-title
+
+        .container
+
+            h1.hidden-text Страница поиска
+            +b.FORM.search_with-label(method='get' action='')
+                +e.label(for='search') Поиск
+                +e.inner_square
+                    +e.BUTTON.icon-wrapper(type='submit')
+                        +e.SVG.icon_search
+                            use(xlink:href='i/icons.svg#icon-search')
+                    +e.INPUT.input(id='search' name='search' type='search')
+
+    +b.SECTION.projects-sec
+
+        .container
+
+            +e.list
+
+                - for(var i = 0; i < 10; i++)
+                    +e.item
+                        +project-preview({
+                            'src': 'http://loremflickr.com/320/240/animals',
+                            'srcset': 'http://loremflickr.com/640/420/animals',
+                            'text': 'Помогите родителям помочь своим детям с аутизмом',
+                            'projectname': 'Все любят ежиков'
+                        })
+
+
+            +b.preloader.occasions-sec__preloader
+                +e.SPAN.text Идет загрузка...

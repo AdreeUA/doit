@@ -1,0 +1,262 @@
+extends ../layouts/default
+
+block head
+    - var pageTitle = 'Добавить поступок';
+
+block content
+
+    +b.add-act
+
+        +e.HEADER.header.head-title_nav
+
+            .container
+
+                +e.UL.steps.list
+
+                    - var steps = ['Выбор категории', 'Выбора повода', 'Информация о поступке', 'Выбор фонда'];
+
+                    each step, ind in steps
+
+                        +e.LI.steps-item.list__item(class=(ind === 0 ? 'add-act__steps-item_active' : ''))= step
+
+        +e.FORM.body(name='add-act' method='post' action='')
+
+            .container
+
+                +e.wrapper
+
+                    +e.main
+
+                        +e.screen_active
+
+                            +e.UL.categories.list
+
+                                -
+                                    var categories = {
+                                        'Свой поступок': 'Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта достижимо в разумные сроки. ',
+                                        'Поступок из повода': 'Портрет потребителя парадоксально продуцирует продвигаемый комплексный анализ ситуации. ',
+                                        'В честь человека': 'Согласно предыдущему, сегмент рынка сбалансирован.',
+                                        'В честь события': 'Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами.'
+                                    };
+
+                                - var i = 1;
+
+                                each value, key in categories
+
+                                    +e.LI.categories-item.list__item
+
+                                        +e.categories-img-wrapper
+                                            +e.SVG.categories-img
+                                                use(xlink:href='i/svg-images.svg#img-act-category-#{i}')
+
+                                        +e.H3.categories-name= key
+
+                                        +e.P.categories-text= value
+
+                                        +e.categories-btn.j-choose-step.filled-btn_sea(href=jv0, data-step='1')
+                                            span.filled-btn__text Выбрать
+
+                                        - i++
+
+                        +e.screen
+
+                            +e.filter
+
+                                .columns.columns_va_middle.columns_align_justify
+
+                                    .columns__col
+
+                                        +b.search_header.add-act__search
+
+                                            +e.LABEL.label Поиск
+
+                                                +e.SVG.icon
+                                                    use(xlink:href='i/icons.svg#icon-search')
+
+                                                +e.INPUT.input_header-in(name='search-occasion' type='search')
+
+
+                                    .columns__col
+
+                                        .columns.columns_va_middle
+
+                                            .columns__col.add-act__datepicker-col
+                                                +b.datepicker
+                                                    +e.placeholder Даты проведения
+                                                    +e.INPUT.input._width100p._big-size(id='filter-occasion-date' name='filter-date' type='date')
+                                                    +e.LABEL.calendar._right-position(for='filter-occasions-date')
+                                                        +e.SVG.calendar-icon
+                                                            use(xlink:href='i/icons.svg#icon-calendar')
+
+                                            .columns__col.add-act__select-col
+                                                +b.SELECT.select(name='filter-type')
+                                                    option(value='default') Выбрать тип повода
+                                                    option(value='1') Выбери меня!
+                                                    option(value='2') Нет меня!
+
+                            +e.UL.occasions-list
+
+                                -
+                                    var occasions = [
+                                        'Марафон в Олимпийском', 'Большое собрание',
+                                        'Просто бегаем', 'Благотворительный забег в специальных условиях',
+                                        'Марафон в Олимпийском', 'Большое собрание',
+                                        'Просто бегаем', 'Благотворительный забег в специальных условиях'
+                                    ];
+
+                                each occasion in occasions
+
+                                    +e.LI.occasions-item
+                                        +e.occasions-name.j-choose-step(data-step='2')= occasion
+                                        +e.TIME.occasions-date(datetime='2015-11-20') 20 ноября
+
+                        +e.screen
+
+                            +b.form.add-act__info
+
+                                +e.row_size_full.add-act__info-row
+
+                                    +e.col
+                                        +b.LABEL.label(for='act-name') Название
+
+                                    +e.col_size_full
+                                        +b.INPUT.input(id='act-name' name='act-name' placeholder='Введите название' required)
+
+                                +e.row_size.add-act__info-row
+
+                                    +e.col
+                                        +b.LABEL.label(for='act-date') Дата
+
+                                    +e.col_size_s
+                                        +b.datepicker_no-arrow._input
+                                            +e.SPAN.placeholder_pale XX.XX.XXXX
+                                            +e.INPUT.input._width100p._big-size(id='act-date' name='act-date' type='date')
+
+                                +e.row.add-act__info-row
+
+                                    +e.col
+                                        +b.LABEL.label(for='act-sum') Требуемая сумма
+
+                                    +e.col_size_s
+                                        +b.INPUT.input_number(id='act-sum' name='act-sum' type='number' placeholder='' required)
+
+                                +e.row_size_full.add-act__info-row
+
+                                    +e.col
+                                        +b.LABEL.label(for='act-desc') Краткое описание
+
+                                    +e.col_size_full
+                                        +b.limited-message(data-max='120')
+                                            +b.TEXTAREA.input_textarea.limited-message__textarea.add-act__desc-textarea(id='act-desc' name='act-desc' placeholder='Напишите сюда описание поступка' required)
+                                            +e.progress-bar
+                                                +e.SPAN.progress-val
+                                            +e.progress-text.note
+                                                +e.SPAN.current-val 0
+                                                | /
+                                                +e.SPAN.max-val 0
+                                                |  символов
+
+                                +e.row_size_full
+
+                                    +e.col
+                                        +b.LABEL.label(for='act-img') Загрузите изображение
+                                        +b.note Загрузите крупное изображение, размер не<br> менее 1200px по широкой стороне
+
+                                    +e.col_size_full
+
+                                        +b.add-photo_single
+
+                                            +e.UL.list
+
+                                                +e.LI.item-wrapper
+                                                    +e.LABEL.item.add-photo__upload
+                                                        +e.INPUT.upload-input.j-addphoto(id='act-img' name='act-img' type='file')
+                                                        +e.SPAN.upload-text Загрузить
+
+                        +e.screen
+
+                            +e.HEADER.funds-header
+
+                                .columns.columns_align_justify.columns_va_middle
+
+                                    .columns__col
+                                        +e.title Выберите фонд
+
+                                    .columns__col
+                                        +b.search_header.add-act__search
+
+                                            +e.LABEL.label Поиск
+
+                                                +e.SVG.icon
+                                                    use(xlink:href='i/icons.svg#icon-search')
+
+                                                +e.INPUT.input_header-in(name='search-funds' type='search')
+
+                            +e.funds-list-wrapper
+
+                                +e.funds-list.js-custom-scroll
+
+                                    +b.UL.funds-list
+
+                                        -
+                                            var funds = [
+                                               {
+                                                   'imgWidth': 130, 'imgHeight': 45,
+                                                   'name': 'Милосердие', 'desc': 'Помощь детям, детским домам',
+                                                   'city': 'Санкт-Петербург', 'medal': 'gold'
+                                               }, {
+                                                   'imgWidth': 120, 'imgHeight': 60,
+                                                   'name': 'Преданье.ру', 'desc': 'Помощи тяжело больным людям',
+                                                   'city': 'Москва', 'medal': 'gold'
+                                               }, {
+                                                   'imgWidth': 115, 'imgHeight': 70,
+                                                   'name': 'Подари жизнь', 'desc': 'Помощь детям, детским домам',
+                                                   'city': 'Санкт-Петербург', 'medal': 'gold'
+                                               }, {
+                                                   'imgWidth': 125, 'imgHeight': 40,
+                                                   'name': 'Наше будущее', 'desc': 'Спасение утопающих',
+                                                   'city': 'Камызяк', 'medal': 'silver'
+                                               }, {
+                                                   'imgWidth': 77, 'imgHeight': 76,
+                                                   'name': 'Династия', 'desc': 'Бетман против Супермена',
+                                                   'city': 'Бобруйск', 'medal': 'silver'
+                                               }
+                                            ];
+
+                                        - var i = 0;
+
+                                        while i < 2
+
+                                            each fund in funds
+
+                                                +e.LI.item.add-act__funds-item
+
+                                                        +e.col_img
+                                                            +e.img-wrapper
+                                                                +e.IMG.img(src='http://loremflickr.com/#{fund.imgWidth}/#{fund.imgHeight}'
+                                                                    srcset='http://loremflickr.com/#{fund.imgWidth*2}/#{fund.imgHeight*2} 2x' alt='')
+
+                                                        +e.col_name
+                                                            +e.name= fund.name
+
+                                                        +e.col_desc
+                                                            +e.P.desc= fund.desc
+
+                                                        +e.col_city
+                                                            +e.city= fund.city
+
+                                                        +e.col_medal
+                                                            +e.IMG.medal(src='i/ruble-#{fund.medal}.svg' alt='')
+
+                                            - i++
+
+                    +e.footer
+
+                        +e.nav-btn_prev._hidden.btn_high.btn_grey(href=jv0)
+                            | Назад
+
+                        +e.nav-btn_next.btn_high(href=jv0)
+                            | Следующий шаг
+
+
+

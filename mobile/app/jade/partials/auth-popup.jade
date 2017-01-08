@@ -1,0 +1,46 @@
++b.popup(data-remodal-id='auth-popup')
+    +e.inner
+
+        +e.HEADER.header
+            .container
+                .columns.columns_justify.columns_middle
+                    .columns__col
+                        +e.title Вход на сайт
+
+                    .columns__col
+                        +e.BUTTON.close(data-remodal-action='close')
+
+        +e.main
+
+            +e.section
+                .container
+                    +e.label_gap_md С помощью социальных сетей
+                    +b.UL.socials_big
+
+                        - var socials = ['fb', 'vk']
+
+                        each item in socials
+                            +e.item
+                                +e.link(class='_#{item}' href=jv0)
+                                    +e.SVG.icon
+                                        use(xlink:href='i/icons.svg#icon-#{item}')
+
+            +e.section
+                .container
+                    form.form(name='auth' method='post' action='')
+
+                        .form__row
+                            +e.LABEL.label(for='auth-email') E-mail
+                            +b.INPUT.input(id='auth-email' name='email' type='email' required='')
+
+                        .form__row
+                            +e.LABEL.label(for='auth-password') Пароль: #{' '}
+                                +e.link(href=jv0) (Забыли пароль?)
+                            +b.INPUT.input(id='auth-password' name='password' type='password' required='')
+
+                        .form__row
+                            +b.BUTTON.btn_mini._light(type='submit') Войти
+
+        +e.FOOTER.footer
+            .container
+                +b.btn_trans._mini(href='#reg-popup') Зарегистрироваться

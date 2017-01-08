@@ -1,0 +1,33 @@
+extends ../layouts/default
+include ../blocks/fund
+
+block head
+    - var pageTitle = 'Выберите фонд';
+
+block content
+
+    +b.SECTION.funds
+
+        +b.HEADER.head-title
+            .container
+                +e.H1.title Выберите фонд
+
+
+        +e.main
+
+            .container
+
+                +e.list
+
+                    -
+                        var funds = ['Милосердие', 'Преданье.ру', 'Подари жизнь', 'Преданье.ру', 'Подари жизнь']
+
+                    each fund, ind in funds
+
+                        +e.item
+                            +fund({
+                                title: fund,
+                                acts: true
+                            })
+
+                //+b.btn_size_wide(href=jv0) Зарегистрировать фонд

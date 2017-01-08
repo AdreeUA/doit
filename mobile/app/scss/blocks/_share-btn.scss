@@ -1,0 +1,27 @@
+.share-btn {
+    display: inline-block;
+    padding-left: rem(10);
+    padding-right: rem(10);
+
+    vertical-align: top;
+
+    border-radius: 5px;
+    border: 1px solid #323c45;
+
+    font-family: $headingFont;
+    font-weight: 300;
+    font-size: rem(15);
+    text-align: center;
+    text-decoration: none;
+    line-height: rem(28);
+    color: #000;
+
+    &_wide {
+        width: 100%;
+    }
+
+    &_big {
+        font-size: rem(17);
+        line-height: rem(35);
+    }
+}

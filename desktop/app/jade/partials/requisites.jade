@@ -1,0 +1,28 @@
+div.box-modal-wrapper
+
+    +b.ARTICLE.box-modal#requisites
+
+        +e.header
+            +e.H2.title Реквизиты компании
+            +e.close.arcticmodal-close
+
+        +e.content
+            +e.content-item
+                +b.ADDRESS.requisites
+                    +e.SPAN.row
+                        | ООО «Доброе Дело» 
+                    +e.SPAN.row
+                        | Местонахождение и почтовый адрес: 117525 г. Москва ул.Днепропетровская, д.3, корп.5, пом.III 
+                    +e.SPAN.row
+                        | ОГРН 1157746776087 от 24.08.15 <br>
+                        | ИНН 7726350600 КПП 772601001 <br>
+                        | р/с 40702810902980000634 в АО "Альфа-Банк" г. Москва <br>
+                        | к/с 30101810200000000593 <br>
+                        | БИК 044525593 
+                    +e.SPAN.row
+                        | Телефон: 
+                        +e.link(href='tel:+79162700981') 8 (916) 270 0981 
+                    +e.SPAN.row
+                        | Email: 
+                        +e.link(href='mailto:info@sdelai.org') info@sdelai.org
+

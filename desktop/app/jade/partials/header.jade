@@ -1,0 +1,59 @@
+include nav
+
++b.HEADER.header(class=headerMod)
+
+    .container
+
+        .columns.columns_align_justify.columns_va_middle
+
+            .columns__col
+
+                if pageInd === 0
+
+                    +b.logo.header__logo
+                        +e.H1.text Сделай!
+
+                else
+
+                    +b.logo.header__logo(href='/')
+                        +e.H2.text Сделай!
+
+                +nav({
+                    'фонды': jv0,
+                    'поступки': jv0,
+                    'как это работает': jv0
+                })(nav='header__nav' link='link-underline')
+
+                +e.buttons
+
+                    +b.filled-btn_sea.header__btn(href=jv0)
+                        +e.SPAN.text Пожертвовать
+
+                    +b.filled-btn_sea.header__btn(href=jv0)
+                        +e.SPAN.text Сделать поступок
+
+            .columns__col
+
+                if pageInd === 0
+                    +e.auth.js-modal(href=jv0 data-modal='auth')
+                        +e.SVG.auth-icon
+                            use(xlink:href='i/icons.svg#icon-locked')
+                        +b.SPAN.link-underline Авторизация/Регистрация
+
+                else
+                    +e.auth.js-modal(href=jv0 data-modal='auth')
+                        +e.ava-wrapper
+                            +e.IMG.ava(src='http://stevensegallery.com/25/25' srcset='http://stevensegallery.com/50/50 2x')
+                        +b.SPAN.link-underline
+                            span.header__user-name Ким Чен Ир
+
+                    +e.auth(href=jv0)
+                        +b.SPAN.link-underline Выход
+
+                | #{' '}
+
+                +b.icon-btn.header__search(href=jv0 title='Перейти на страницу поиска')
+                    +e.SVG.icon_search
+                        use(xlink:href='i/icons.svg#icon-search')
+
++delimiter('HEADER')

@@ -1,0 +1,33 @@
+.funds {
+    &__main {
+        padding-top: rem(25);
+        padding-bottom: rem(25);
+    }
+
+    &__list {
+        margin-bottom: rem(20);
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(25);
+        }
+    }
+
+    &__content {
+        margin-bottom: rem(30);
+
+        p {
+            margin: 0;
+
+            color: #535353;
+            font-size: rem(18);
+            font-weight: 100;
+            line-height: 30/18+em;
+
+            &:not(:last-child) {
+                margin-bottom: 1em;
+            }
+        }
+    }
+}

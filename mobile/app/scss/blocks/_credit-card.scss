@@ -1,0 +1,17 @@
+.credit-card {
+    &__columns {
+        margin: 0 rem(-10);
+
+        .credit-card__col {
+            padding: 0 rem(10);
+        }
+
+        &_number {
+            margin: 0 rem(-5);
+
+            .credit-card__col {
+                padding: 0 rem(5);
+            }
+        }
+    }
+}

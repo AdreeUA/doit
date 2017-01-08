@@ -1,0 +1,10 @@
+.feedback {
+    &__main {
+        padding-top: rem(30);
+        padding-bottom: rem(30);
+    }
+
+    &__textarea {
+        height: rem(205);
+    }
+}

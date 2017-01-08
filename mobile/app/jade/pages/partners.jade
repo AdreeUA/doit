@@ -1,0 +1,34 @@
+extends ../layouts/default
+include ../blocks/fund
+
+block head
+    - var pageTitle = 'Партнёры';
+
+block content
+
+    +b.SECTION.funds
+
+        +b.HEADER.head-title
+            .container
+                +e.H1.title Партнёры
+
+        +e.main
+
+            .container
+
+                +e.content
+                    p
+                        | Благотворительная деятельность в России в наши дни еще слабо развита. Мы подаём пример другим
+                        |  компаниям и организациям. Мы воспитываем в людях чувства ответственности, сострадания и
+                        |  отзывчивости. Добросердечие и человеколюбие должны восторжествовать в современном мире!
+
+                +e.list
+
+                    - var i = 0;
+
+                    while i < 6
+
+                        +e.item
+                            +fund({mod: '_short', link: 'www.website.ru'})
+
+                        -i++

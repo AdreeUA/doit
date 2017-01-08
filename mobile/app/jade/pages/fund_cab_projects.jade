@@ -1,0 +1,44 @@
+extends ../layouts/default
+include ../blocks/funds-projects
+
+
+block head
+   - var pageTitle = 'Проекты фонда';
+   - var pageName = 'Ваши проекты';
+
+block content
+
+    +b.SECTION.cabinet_user._settings
+
+        h1.hidden-text Личный кабинет: проеты фонда
+
+        include ../partials/fund-cabinet-nav
+
+        +e.main
+
+            .container
+
+                +b.SECTION.acts-sec_in.cabinet__section_dash-divider
+
+                    +e.HEADER.header
+                        +e.H2.title.title Ваши проекты
+
+                    +e.list
+
+                        - for(var i = 0; i < 2; i++)
+                            +e.item
+
+                                +funds-projects-item
+
+                +b.SECTION.acts-sec_in.cabinet__section_dash-divider
+
+                    +e.HEADER.header
+                        +e.H2.title.title Ваши прошедшие поступки:
+
+                    +e.list
+
+                        - for(var i = 0; i < 2; i++)
+                        +e.item
+                            +funds-finished-projects
+
+

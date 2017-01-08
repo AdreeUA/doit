@@ -1,0 +1,133 @@
+.footer {
+    border-top: 1px solid rgba(151, 151, 151, 0.27);
+
+    &_no-border {
+        border-top: none;
+    }
+
+    &_border-light {
+        border: 1px solid rgba(#979797, .4);
+    }
+
+    &__top {
+        padding-top: rem(15);
+        padding-bottom: rem(25);
+        border-bottom: 1px solid rgba(151, 151, 151, .27);
+    }
+
+    &__top-columns {
+        margin-bottom: rem(15);
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-right: rem(57);
+
+        font-weight: 600;
+        font-size: rem(30);
+        line-height: 1.1666666667; //35/30
+        vertical-align: middle;
+        color: #000;
+    }
+
+    &__nav {
+        margin: rem(-5) rem(-10);
+
+        font-size: rem(18);
+        vertical-align: middle;
+    }
+
+    &__nav-item {
+        padding: rem(5) rem(10);
+
+        &:not(:last-child) {
+            margin-right: 0;
+        }
+    }
+
+    &__middle {
+        padding-top: rem(30);
+        padding-bottom: rem(25);
+        border-bottom: 1px solid rgba(151, 151, 151, .27);
+    }
+
+    &__middle-columns {
+        margin-left: rem(-15);
+        margin-right: rem(-15);
+    }
+
+    &__middle-col {
+        width: 50%;
+        padding-right: rem(15);
+        padding-left: rem(15);
+    }
+
+    &__title {
+        margin-bottom: rem(15);
+
+        font-weight: 300;
+        font-size: rem(18);
+        line-height: 21/18+em;
+        font-family: $headingFont;
+        color: #9b9b9b;
+    }
+
+    &__payments {
+        margin: rem(-8) rem(-5);
+    }
+
+    &__payments-item {
+        padding: rem(8) rem(5);
+
+        vertical-align: middle;
+    }
+
+    &__bottom {
+        padding-top: rem(20);
+        padding-bottom: rem(40);
+    }
+
+    &__made {
+        display: block;
+        width: rem(110);
+        margin-top: rem(16);
+
+        text-decoration: none;
+        color: #000;
+    }
+
+    &__made-logo {
+        display: inline-block;
+        margin-right: rem(15);   
+        margin-bottom: rem(6);     
+        width: 100%;
+
+        vertical-align: middle;
+    }
+
+    &__made-text {
+        display: inline-block;
+
+        font-weight: 300;
+        font-size: rem(10);
+        line-height: 12/10+em;
+        vertical-align: middle;
+        margin-bottom: rem(6);
+    }
+
+    &__made-year {
+        display: block;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    &__desktop-link {
+        //padding: rem(5) rem(10);
+        margin-top: rem(20);
+        display: block;
+
+        font-weight: 500;
+        color: #000;
+    }
+}

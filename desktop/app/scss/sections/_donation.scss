@@ -1,0 +1,288 @@
+.donation {
+    max-width: rem(690);
+    margin-left: auto;
+    margin-right: auto;
+    
+    &__loading {
+        margin-top: rem(20);
+        margin-bottom: rem(45);
+
+        &-button {
+            text-align: center;
+            color: black;
+        }
+    }
+    
+    &_thanks {
+        padding-top: rem(55);
+        padding-bottom: rem(65);
+        
+        text-align: center;
+    }
+
+    &_margin-medium {
+        margin-bottom: rem(15);
+    }
+    
+    &__header {
+        padding-top: rem(40);
+        margin-bottom: rem(60);
+
+        &_margin-none {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: rem(50);
+
+        font-family: $headingFont;
+        font-size: rem(27);
+        font-weight: 600;
+        line-height: 1.1481481481; //31/27
+    }
+    
+    &__screen {
+        display: none;
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__steps-list {
+        padding: 0;
+        margin: 0;
+
+        font-size: 0;
+
+        list-style: none;
+
+        &_curve {
+            text-align: justify;
+            padding-bottom: rem(81);
+
+            &::after {
+                display: inline-block;
+                content: "";
+                width: 100%;
+            }
+
+            .donation__step {
+                display: inline-block;
+                text-align: left;
+
+                font-family: $mainFont;
+                font-size: rem(14);
+                font-weight: 400;
+                line-height: rem(16);
+                color: #9b9b9b;
+
+                max-width: rem(220);
+
+                &::before {
+                    content: none;
+                }
+
+                &_active {
+                    color: #1f9b7f;
+                }
+
+                &_top {
+                    max-width: rem(155);
+                    margin-right: rem(50);
+
+                    &:not(:last-child) {
+                        &::after {
+                            height: rem(22);
+                            width: rem(134);
+                            background-image: url('../i/curve-top.png');
+                            left: rem(140);
+                            top: 5px;
+                        }
+                    }
+                }
+
+                &_bottom {
+                    max-width: rem(145);
+
+                    &:not(:last-child) {
+                        &::after {
+                            height: rem(32);
+                            width: rem(153);
+                            background-image: url('../i/curve-bottom.png');
+                            top: auto;
+                            bottom: -44px;
+                            left: rem(70);
+                        }
+                    }
+                }
+
+                &:last-child {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    &__step {
+        position: relative;
+
+        display: inline-block;
+        width: 33.3%;
+        padding-top: rem(40);
+
+        font-family: $headingFont;
+        font-size: rem(18);
+        font-weight: 300;
+        line-height: 1;
+        vertical-align: middle;
+        text-align: center;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+
+            width: 18px;
+            height: 18px;
+
+            border-radius: 50%;
+            background-color: currentColor;
+        }
+        
+        &:not(:last-child) {
+            &::after {
+                content: '';
+                position: absolute;
+                left: rem(145);
+                top: -2px;
+                
+                width: rem(277);
+                height: rem(24);
+
+                background: url('../i/icons/long-arrow-right.svg') no-repeat 0 0;
+                background-size: contain;
+            }
+        }
+        
+        &:first-child {
+            text-align: left;
+            
+            &::after {
+                left: rem(40);
+            }
+        }
+
+        &:nth-child(2) {
+            &::before {
+                left: 50%;
+
+                margin-left: -9px;
+            }
+        }
+
+        &:last-child {
+            text-align: right;
+            
+            &::before {
+                right: 0;
+            }
+        }
+
+        &_active {
+            color: #50e3c2;
+        }
+    }
+    
+    &__label {
+        display: block;
+        margin-bottom: rem(10);
+        
+        font-weight: 300;
+        font-size: rem(15);
+        line-height: 1.2; //18/15
+        
+        &_big {
+            font-size: rem(20);
+        }
+        
+        &_payment {
+            margin-bottom: rem(30);
+        }
+    }
+    
+    &__type {
+        width: 33.33%;
+        
+        font-size: rem(24);
+        font-weight: 300;
+    }
+    
+    &__amount {
+        width: 33.33%;
+        
+        font-size: rem(40);
+    }
+    
+    &__amount-ruble {
+        height: 27/40+em;
+        width: 21/40+em;
+        
+        fill: currentColor;
+    }
+    
+    &__comment {
+        height: rem(100);
+    }
+    
+    &__payment {
+        height: rem(144);
+        width: 50%;
+        
+        font-size: rem(18);
+        font-weight: 300;
+        line-height: 1.2222222222; //22/18
+    }
+    
+    &__payment-img {
+        height: rem(55);
+    }
+    
+    &__anonym {
+        font-size: rem(15);
+        font-weight: 300;
+        line-height: 1.2; //18/15
+    }
+    
+    &__creditcard {
+        width: rem(475);
+    }
+    
+    &__complete-wrapper {
+        margin-bottom: rem(55);
+    }
+    
+    &__thanks {
+        margin-bottom: rem(40);
+        
+        font-family: $headingFont;
+        font-size: rem(51);
+        font-weight: 600;
+        line-height: 1.1568627451; //59/51
+        color: #f8c41c;
+    }
+    
+    &__footer {
+        padding-top: rem(34);
+        padding-bottom: rem(38);
+        border-top: 1px solid rgba(151, 151, 151, .44);
+        
+        text-align: right;
+    }
+    
+    &__btn-prev {
+        float: left;
+    }
+}

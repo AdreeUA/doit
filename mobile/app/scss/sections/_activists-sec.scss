@@ -1,0 +1,21 @@
+.activists-sec {
+    &__content {
+        //padding-top: rem(20);
+        //padding-bottom: rem(45);
+    }
+    
+    &__btn {
+        margin-bottom: rem(20);
+        margin-top: rem(20);
+    }
+    
+    &__list {
+        margin-bottom: rem(45);
+    }
+    
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.preloader {
+    height: 84px;
+
+    text-align: center;
+
+    &__text {
+        display: inline-block;
+
+        font-size: 0.75rem;
+        line-height: 15/12+em;
+        color: rgba(0, 0, 0, .34);
+        vertical-align: middle;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 84px;
+            height: 84px;
+
+            vertical-align: middle;
+            margin-right: rem(15);
+
+            background: url("../i/preloader.png") no-repeat center center;
+            background-size: contain;
+
+            animation: preloader 1500ms infinite linear;
+
+            @include retina() {
+                background-image: url("../i/retina/preloader.png");
+            }
+        }
+    }
+}

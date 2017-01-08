@@ -1,0 +1,29 @@
+.toggle {
+    position: relative;
+    display: block;
+    width: rem(30);
+    height: rem(30);
+
+    &::before,
+    &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        background-color: #1f9b7f;
+        transition: 0.4s;
+    }
+
+    &::before {
+        top: 50%;
+        margin-top: rem(-2);
+        height: rem(4);
+        width: 100%;
+    }
+
+    &::after {
+        left: 50%;
+        margin-left: rem(-2);
+        height: 100%;
+        width: rem(4);
+    }
+}

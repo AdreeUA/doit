@@ -1,0 +1,61 @@
+{
+  "name": "digitalwand",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "LehaKos <lehakos@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "jquery-form-styler": "jquery.form-styler#^1.7.4",
+    "jquery-cookie": "jquery.cookie#^1.4.1",
+    "svg4everybody": "^2.0.3",
+    "slick-carousel": "^1.5.9",
+    "jquery.steps": "^1.1.0",
+    "jquery.maskedinput": "^1.4.1",
+    "remodal": "^1.0.7",
+    "picturefill": "^3.0.2",
+    "jquery-animateNumber": "^0.0.13",
+    "pickadate": "^3.5.6",
+    "viewport-units-buggyfill": "^0.6.0"
+  },
+  "overrides": {
+    "jquery.steps": {
+      "main": [
+        "build/jquery.steps.js"
+      ]
+    },
+    "jquery": {
+      "main": []
+    },
+    "pickadate": {
+      "main": [
+        "lib/picker.js",
+        "lib/picker.date.js",
+        "lib/themes/default.css",
+        "lib/themes/default.date.css"
+      ]
+    },
+    "slick-carousel": {
+      "main": [
+        "slick/slick.js",
+        "slick/slick.css",
+        "slick/slick-theme.css"
+      ]
+    }
+  },
+  "devDependencies": {
+    "jQuery.dotdotdot": "^1.8.3"
+  }
+}

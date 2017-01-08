@@ -1,0 +1,38 @@
+mixin activist(data)
+
+    +b.activist(class!=(data.mod ? data.mod : ''))
+
+        +e.inner
+
+            +e.name-wrapper
+
+                +e.name(href=jv0) Сергей Варяжный
+
+            +e.content
+
+                +e.photo-wrapper(href=jv0)
+
+                    +e.IMG.photo(src=data.src srcset=data.srcset + ' 2x')
+
+                +e.content-text
+
+                    +e.info
+
+                        +e.num
+
+                            +e.num-value= data.acts
+
+                            +e.num-word Поступков
+                        
+                        +e.num_money
+
+                            +e.num-value= data.money
+
+                                +e.SVG.icon_ruble
+                                    use(xlink:href='i/icons.svg#icon-ruble')
+
+                            +e.num-word Собрано денег
+
+                    +e.link
+
+                        +b.link-base_nav(href=jv0) Все поступки активиста

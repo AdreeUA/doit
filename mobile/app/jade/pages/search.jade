@@ -1,0 +1,123 @@
+extends ../layouts/default
+include ../blocks/act
+include ../blocks/project-preview
+include ../blocks/fund
+include ../blocks/activist
+include ../blocks/announcement
+
+block head
+    - var pageTitle = 'Поиск';
+
+block content
+
+    +b.SECTION.search-sec
+
+        +b.head-title
+
+            .container
+
+                h1.hidden-text Страница поиска
+                +b.FORM.search_with-label(method='get' action='')
+                    +e.label(for='search') Поиск
+                    +e.inner_square
+                        +e.BUTTON.icon-wrapper(type='submit')
+                            +e.SVG.icon_search
+                                use(xlink:href='i/icons.svg#icon-search')
+                        +e.INPUT.input(id='search' name='search' type='search')
+
+        +e.main
+            .container
+
+                +e.P.label
+                    | Вы искали «Обливание», вот 5 результатов
+
+                +b.SECTION.acts-sec_in.search-sec__category
+                    h2.search-sec__label Поступки
+
+                    +e.list
+
+                        -
+                            var acts = [
+                                'Обливание холодной водой',
+                                'Бежишь и приносишь пользу обществу'
+                            ];
+
+                        each act, ind in acts
+
+                            +e.item
+
+                                +act({
+                                    'mod': ind === 0 ? '_horiz act_power' : '_horiz',
+                                    'src': 'http://loremflickr.com/330/200?random=' + ind,
+                                    'srcset': 'http://loremflickr.com/660/400?random=' + ind,
+                                    'text': act,
+                                    'fund': true,
+                                    'name': true
+                                })
+                                    if ind === 1
+                                        +e.occasion(href=jv0) Повод: Просто бегаем 18 ноября 2015
+
+                +b.SECTION.projects.search-sec__category
+                    h2.search-sec__label Проекты
+                    +e.list
+                        - for(var i = 0; i < 2; i++)
+                            +e.item
+                                +project-preview({
+                                    'src': 'http://loremflickr.com/320/240/animals',
+                                    'srcset': 'http://loremflickr.com/640/420/animals',
+                                    'text': 'Помогите родителям помочь своим детям с аутизмом',
+                                    'projectname': 'Все любят ежиков'
+                                })
+
+                +b.SECTION.funds.search-sec__category
+                    h2.search-sec__label Фонды
+
+                    +e.list
+
+                        -
+                            var funds = ['Преданье.ру', 'Подари жизнь']
+
+                        each fund, ind in funds
+
+                            +e.item
+                                +fund({
+                                    medal: ind % 2 === 0 ? 'gold' : 'silver',
+                                    title: fund,
+                                    noText: true
+                                })
+
+                +b.SECTION.activists-sec.search-sec__category
+                    h2.search-sec__label Активисты
+
+                    +e.list
+                        each i in [0, 1]
+
+                            +e.item
+                                +activist({
+                                    'mod': '_simple',
+                                    'src': 'http://stevensegallery.com/70/70',
+                                    'srcset': 'http://stevensegallery.com/140/140',
+                                    'acts': Math.round(Math.random() * 100),
+                                    'money': Math.round(Math.random() * 100) +'\u00A0581\u00A0385',
+                                    'hideLink': true
+                                })
+
+                +b.SECTION.news-sec.search-sec__category
+                    h2.search-sec__label Новости
+
+                    +e.list
+
+                        -
+                            var news = [
+                                'Медийная реклама, на первый взгляд, детерминирует эмпирический бизнес-план, не считаясь с затратами.',
+                                'Баннерная реклама слабо трансформирует презентационный материал.'
+                            ];
+
+                        each announcement, ind in news
+
+                            +e.item
+                                +announcement({
+                                    'src': 'http://loremflickr.com/80/80?random=' + ind,
+                                    'srcset': 'http://loremflickr.com/160/160?random=' + ind,
+                                    'text': announcement
+                                })

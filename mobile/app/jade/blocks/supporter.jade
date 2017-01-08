@@ -1,0 +1,21 @@
+mixin supporter(data)
+
+    +b.ARTICLE.supporter
+
+        +e.main
+            +e.photo-wrapper(href=jv0)
+                +e.IMG.photo(src=data.src srcset=data.srcset + ' 2x')
+
+            +e.text
+                +e.info
+                    +e.SPAN.name(href=jv0)= data.name + ','
+                    +e.TIME.date(datetime='2015-02-12')  12.02.2015
+
+                +e.descr= data.text
+                    +e.switch(href=jv0) • • •
+
+        +e.money-wrapper
+            +e.money
+                +e.SPAN.money-val= data.money
+                +e.SVG.icon_ruble
+                    use(xlink:href='i/icons.svg#icon-ruble')

@@ -1,0 +1,56 @@
+.auth {
+    &__item {
+        position: relative;
+
+        display: block;
+
+        text-decoration: none;
+        color: inherit;
+
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+
+        vertical-align: middle;
+
+        &_locked {
+            width: rem(20);
+            height: rem(18);
+        }
+    }
+
+    &__text {
+        display: inline-block;
+
+        text-decoration: underline;
+        vertical-align: middle;
+    }
+
+    &__avatar-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        width: rem(36);
+        height: rem(36);
+        margin-top: rem(-18);
+
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__avatar {
+        width: 100%;
+        max-height: 100%;
+    }
+
+    &_authorized {
+        .auth__item {
+            padding-left: rem(50);
+        }
+    }
+}

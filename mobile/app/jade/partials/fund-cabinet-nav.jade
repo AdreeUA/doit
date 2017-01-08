@@ -1,0 +1,23 @@
++b.HEADER.head-title
+
+    .container
+
+        nav.cabinet__nav
+
+            h2.hidden-text Навигация по личному кабинету фонда
+
+            ul.cabinet__nav-menu
+
+                - var items = ['Новости', 'Ваши проекты', 'Статистика', 'Настройки'];
+
+                each item in items
+
+                    if pageName === item
+
+                        li.cabinet__nav-item.cabinet__nav-item_active
+                            span.cabinet__nav-link= item
+
+                    else
+
+                        li.cabinet__nav-item
+                            a.cabinet__nav-link(href=jv0)= item

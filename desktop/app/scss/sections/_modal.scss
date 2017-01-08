@@ -1,0 +1,450 @@
+//===========================================================================
+// BOX-MODAL
+//===========================================================================
+
+.arcticmodal-overlay,
+.arcticmodal-container {
+    z-index: 2000;
+}
+
+.box-modal-wrapper {
+    display: none;
+}
+
+.box-modal {
+    position: relative;
+    width: 530px;
+    background-color: #fff;
+
+    &_calendar {
+        width: auto;
+    }
+
+    &__header {
+        padding: 0 rem(77) 0 rem(56);
+        box-shadow: 0 2px 4px rgba(187, 187, 187, 0.5);
+
+        &_small-left {
+            padding-left: rem(21);
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-family: $headingFont;
+        font-size: rem(27);
+        line-height: rem(31);
+        color: #1f9b7f;
+        font-weight: 600;
+        padding: rem(14) 0 rem(15);
+    }
+
+    &__close {
+        position: absolute;
+        top: rem(15);
+        right: rem(23);
+        width: rem(32);
+        height: rem(32);
+        cursor: pointer;
+        opacity: 0.75;
+        transition: 0.4s;
+
+        &:hover,
+        &:focus {
+            transform: rotate(90deg);
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            display: block;
+            content: "";
+            width: 2px;
+            height: rem(40);
+            background-color: #000;
+
+            margin-left: -1px;
+            margin-top: rem(-20);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(135deg);
+        }
+    }
+
+    &__content {
+        
+    }
+
+    &__content-item {
+        padding: rem(27) rem(56) rem(21);
+
+        & + & {
+            border-top: 1px solid rgba(155, 154, 155, 0.47);
+        }
+
+        &_big-padding-b {
+            padding-bottom: rem(43);
+        }
+    }
+
+    &__footer {
+        background-color: #4d5a66;
+        padding: rem(22) rem(56) rem(24);
+    }
+
+    &__text {
+        font-size: rem(13);
+        line-height: rem(21);
+        color: #2e2e2e;
+        font-weight: 400;
+        
+        a {
+            @extend .link-base;
+        }
+    }
+
+    &__text-par {
+        margin-top: rem(10);
+        margin-bottom: rem(12);
+    }
+}
+
+.title-modal {
+    font-family: $headingFont;
+    font-size: rem(15);
+    font-weight: 300;
+    line-height: rem(15);
+    color: #000;
+
+    margin: 0;
+}
+
+
+//===========================================================================
+// ALL-ACTS-MODAL
+//===========================================================================
+
+.box-acts-wrapper {
+    display: none;
+}
+
+.acts-modal {
+    position: relative;
+    width: 900px;
+    background-color: #fff;
+
+    &__header {
+        position: relative;
+        z-index: 50;
+
+        box-shadow: 0 3px 10px -1px rgba(0, 0, 0, .2);
+    }
+
+    &__title {
+        display: inline-block;
+        margin-left: rem(22);
+
+        color: $secondColor;
+        font-family: "VW Headline OT";
+        font-size: rem(27);
+        font-weight: 600;
+        line-height: rem(31);
+    }
+
+    &__close {
+        position: absolute;
+        top: rem(15);
+        right: rem(23);
+        width: rem(32);
+        height: rem(32);
+        cursor: pointer;
+        opacity: 0.75;
+        transition: 0.4s;
+
+        &:hover,
+        &:focus {
+            transform: rotate(90deg);
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            display: block;
+            content: "";
+            width: 2px;
+            height: rem(40);
+            background-color: #000;
+
+            margin-left: -1px;
+            margin-top: rem(-20);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(135deg);
+        }
+    }
+    
+    &__content {
+        max-height: rem(400);
+        margin: 0 rem(15) 0 rem(22);
+    }
+
+    &__content-item {
+        padding: rem(25) 0;
+        font-size: 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    &__block-left {
+        width: rem(291);
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    &__block-center {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: rem(192);
+        height: rem(100);
+
+        margin: rem(-25) 0;
+
+        background-color: #f4f4f4;
+    }
+
+    &__project-name {
+        @include transformCenter();
+
+        width: rem(145);
+
+        //color: $secondColor;
+        font-family: "Helvetica Neue";
+        font-size: rem(13);
+        font-weight: 500;
+        line-height: rem(16);
+        text-align: center;
+    }
+
+    &__block-right {
+        display: inline-block;
+        vertical-align: middle;
+
+        padding-left: rem(52);
+    }
+
+    &__block-sum {
+        display: inline-block;
+        margin-right: rem(13);
+
+        color: #000;
+        font-size: rem(16);
+        line-height: rem(19);
+        font-family: "VW Headline OT";
+        font-weight: 600;
+    }
+
+    &__block-sum-text {
+        display: inline-block;
+    }
+
+    &__block-sum-number {
+        display: inline-block;
+
+        span {
+            font-weight: 400;
+        }
+    }
+
+    &__ruble {
+        height: rem(13);
+        width: rem(10);
+
+        fill:currentColor;
+    }
+}
+
+//===========================================================================
+// ALL-DONATIONS-MODAL
+//===========================================================================
+
+.box-donations-wrapper {
+    display: none;
+}
+
+.donations-modal {
+    position: relative;
+    width: 900px;
+    background-color: #fff;
+
+    &__header {
+        position: relative;
+        z-index: 50;
+
+        box-shadow: 0 3px 10px -1px rgba(0, 0, 0, .2);
+    }
+
+    &__title {
+        display: inline-block;
+        margin-left: rem(22);
+
+        color: $secondColor;
+        font-family: "VW Headline OT";
+        font-size: rem(27);
+        font-weight: 600;
+        line-height: rem(31);
+    }
+
+    &__close {
+        position: absolute;
+        top: rem(15);
+        right: rem(23);
+        width: rem(32);
+        height: rem(32);
+        cursor: pointer;
+        opacity: 0.75;
+        transition: 0.4s;
+
+        &:hover,
+        &:focus {
+            transform: rotate(90deg);
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            display: block;
+            content: "";
+            width: 2px;
+            height: rem(40);
+            background-color: #000;
+
+            margin-left: -1px;
+            margin-top: rem(-20);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(135deg);
+        }
+    }
+
+    &__content {
+        max-height: rem(400);
+        margin: 0 rem(15) 0 rem(22);
+        padding-top: rem(20);
+
+        background-image: linear-gradient(to right, transparent 52%, #F4F4F5 52%);
+
+        @include below(1200px) {
+            background-image: linear-gradient(to right, transparent 48%, #F4F4F5 48%);
+
+        }
+    }
+
+    &__content-item {
+        padding-top: rem(6);
+        font-size: 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    &__left-col {
+        display: inline-block;
+        vertical-align: top;
+        font-size: rem(13);
+    }
+
+    &__right-col {
+        display: inline-block;
+
+        font-size: rem(13);
+    }
+    
+    &__right-col-line {
+        margin-bottom: rem(10);
+    }
+
+    &__date {
+        display: inline-block;
+
+        opacity: 0.5;
+        font-family: "Helvetica Neue";
+        font-size: rem(10);
+        font-weight: 300;
+        line-height: rem(16);
+    }
+
+    &__number {
+        display: inline-block;
+        vertical-align: top;
+        width: rem(74);
+        font-family: "Helvetica Neue";
+        font-size: rem(13);
+        font-weight: 700;
+        text-align: right;
+    }
+
+    &__activist {
+        display: inline-block;
+        vertical-align: top;
+        width: rem(177);
+        padding-left: rem(7);
+        text-align: left;
+    }
+
+    &__project-name {
+        display: inline-block;
+        vertical-align: top;
+        width: rem(145);
+        opacity: 0.82;
+        color: #1f9b7f;
+        font-family: "Helvetica Neue";
+        font-size: rem(13);
+        font-weight: 400;
+        line-height: rem(16);
+    }
+
+    &__text {
+        display: inline-block;
+        margin: 0;
+        width: rem(350);
+        padding-left: rem(25);
+
+        font-size: rem(12);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__ruble {
+        height: rem(10);
+        width: rem(8);
+
+        fill:currentColor;
+    }
+}
+
+
+

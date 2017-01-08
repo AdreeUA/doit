@@ -1,0 +1,24 @@
+.label {
+    display: block;
+    margin-top: 0;
+    margin-bottom: rem(15);
+
+    font-family: $headingFont;
+    color: #252525;
+    font-size: rem(13);
+    font-weight: 300;
+    line-height: 19/13+em;
+
+    &_pos_left {
+        float: left;
+        margin-right: rem(60);
+    }
+
+    &_low-gap {
+        margin-bottom: rem(5);
+    }
+
+    &_no-gap {
+        margin-bottom: 0;
+    }
+}

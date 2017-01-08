@@ -1,0 +1,17 @@
+mixin occasion(data)
+
+    +b.ARTICLE.occasion(class=(data.mod ? data.mod : ''))
+
+        +b.like.occasion__like(href=jv0)
+            +e.SVG.icon
+                use(xlink:href='i/icons.svg#icon-heart')
+
+        +e.inner(href=jv0)
+
+            +e.DIV.img-wrapper
+
+                +e.IMG.img(src=data.src srcset=(data.srcset + ' 2x') alt='')
+
+            +e.H2.title= data.title
+
+            +e.TIME.date(datetime='2015-11-18') 18 ноября

@@ -1,0 +1,89 @@
+extends ../layouts/default
+include ../blocks/act
+
+block head
+    - var pageTitle = 'Подробная информация о поводе';
+
+block content
+    +b.occasion-info
+        +e.back.arrow-link_light(href=jv0) назад
+
+        +e.slider.slider(data-dots='true' data-arrows='false')
+            -
+                var items = [
+                    'Просто бегаем по набережной',
+                    'Не просто бегаем по набережной',
+                    'Сложно бегаем по набережной',
+                    'Прыгаем по набережной, а прохожие на нас смотрят',
+                    'Ходим на руках по набережной, прохожие недоумевают'
+                ]
+
+            each item, ind in items
+                +e.slider-item.item
+                    +e.photo-wrapper
+                        +e.IMG.photo(src='http://loremflickr.com/400/325?random=#{ind}' srcset='http://loremflickr.com/800/650?random=#{ind} 2x' alt='')
+                    +e.slider-main
+                        +e.slider-title= item
+
+        +e.section
+            .container
+                +e.content.content
+                    p.content__big-text
+                        | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование сбыта
+                        |  достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый комплексный
+                        |  анализ ситуации.
+                    p
+                        | Как отмечает Майкл Мескон, привлечение аудитории продуцирует фирменный стиль. Стимулирование
+                        |  сбыта достижимо в разумные сроки. Портрет потребителя парадоксально продуцирует продвигаемый
+                        |  комплексный анализ ситуации. Согласно предыдущему, сегмент рынка сбалансирован. Тактика
+                        |  выстраивания отношений с коммерсчекими агентами, на первый взгляд, интегрирована.
+                        |  Промоакция, следовательно, решительно стабилизирует повторный контакт, не считаясь с затратами.
+
+                +b.share.occasion-info__share
+                    +e.row
+                        +e.text_gap_s Поделиться:
+                        +b.UL.socials_share.share__socials
+
+                            - var socials = ['fb', 'in', 'gplus', 'vk']
+
+                            each item in socials
+                                +e.item
+                                    +e.link(class='_#{item}' href=jv0)
+                                        +e.SVG.icon
+                                            use(xlink:href='i/icons.svg#icon-#{item}')
+                                        +e.num 55
+
+                    +e.row
+                        +e.P.text
+                            | Понравилось мероприятие? Нажми —
+                            +b.like_dark.share__like(href=jv0)
+                                +e.SVG.icon
+                                    use(xlink:href='i/icons.svg#icon-heart')
+
+        +b.SECTION.acts-sec_in.occasion-info__section
+            .container
+                +e.HEADER.header
+                    +b.H2.title Поступки
+
+                +e.list
+
+                    -
+                        var acts = [
+                            'Обливание холодной водой',
+                            'Бежишь и приносишь пользу обществу'
+                        ];
+
+                    each act, ind in acts
+
+                        +e.item
+
+                            +act({
+                                'mod': '_horiz',
+                                'src': 'http://loremflickr.com/330/200?random=' + ind,
+                                'srcset': 'http://loremflickr.com/660/400?random=' + ind,
+                                'text': act,
+                                'fund': true,
+                                'name': true
+                            })
+                                if ind === 0
+                                    +e.occasion(href=jv0) Повод: Просто бегаем 18 ноября 2015

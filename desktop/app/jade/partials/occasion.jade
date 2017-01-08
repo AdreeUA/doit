@@ -1,0 +1,27 @@
+mixin occasion(data)
+
+    +b.occasion
+
+        +b.like.occasion__like(href=jv0)
+            +e.SVG.icon
+                use(xlink:href='i/icons.svg#icon-heart')
+
+        +e.inner(href=jv0)
+
+            +e.DIV.img-wrapper
+
+                +e.IMG.img(src=data.src srcset=(data.srcset + ' 2x') alt='')
+
+            +e.title= data.title
+
+            +e.TIME.date(datetime='2015-11-18') 18 ноября
+
+mixin occasionsList(data)
+
+    +b.UL.list(class!=attributes.list)
+
+        each item in data
+
+            +e.LI.item(class!=attributes.item)
+
+                +occasion(item)

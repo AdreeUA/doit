@@ -1,0 +1,19 @@
+extends ../layouts/default
+
+block head
+    - var pageTitle = 'Ответы на часто задаваемые вопросы';
+
+block content
+
+    +b.SECTION.error-act
+
+        +e.SVG.icon
+            use(xlink:href='i/icons.svg#icon-dummy')
+
+        +e.H2.title Друзья, пока создание поступков доступно только с компьютера!
+
+        +e.P.disc Пожалуйста перейдите на полную версию сайта
+
+        +e.A.btn(href=jv0) Перейти
+
+

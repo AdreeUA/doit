@@ -1,0 +1,53 @@
+mixin act(data)
+
+    +b.ARTICLE.act(class!=(data.mod ? data.mod : ''))
+
+        +e.wrapper
+
+            +e.img-wrapper
+
+                +e.IMG.img(src=data.src srcset=(data.srcset + ' 2x') alt='')
+
+            +e.main
+
+                if data.photo
+                    +e.photo-wrapper(href=jv0)
+                        +e.IMG.photo(src='http://stevensegallery.com/100/100' srcset='http://stevensegallery.com/200/200 2x')
+
+                if data.name
+                    +b.activist-name.act__activist(href=jv0)
+                        +e.photo-wrapper
+                            +e.IMG.photo(src='http://stevensegallery.com/40/40' srcset='http://stevensegallery.com/80/80 2x')
+                        +e.SPAN.text Сергей Бодяжный
+                        
+                +e.inner(href=jv0)
+
+                    if !data.noBattery
+                        +b.battery.act__battery(data-val=(Math.floor(Math.random() * 100)))
+                            +e.SPAN.val 0%
+                            +e.SPAN.body
+                                +e.SPAN.progress
+                            +e.SVG.lightning
+                                use(xlink:href='i/icons.svg#icon-lightning')
+                                
+                    +e.TIME.date(datetime='2015-11-18') 18 ноября
+                    
+                if data.mod.indexOf('_horiz') === -1
+                    +e.info
+                        +e.H2.title
+                            +e.title-link(href=jv0)= data.text
+                        if data.occasion
+                            +e.subtitle Поступок относится к поводу:
+                            +e.occasion(href=jv0) Просто бегаем
+                        
+                if data.fund
+                    +e.fund(href=jv0)
+                        +e.IMG.fund-img(src='http://loremflickr.com/70/40?random=0' srcыуе='http://loremflickr.com/70/40?random=0 2x' alt='логотип фонда')
+
+        if data.mod.indexOf('_horiz') !== -1
+
+            if data.text
+                +e.H2.title
+                    +e.title-link(href=jv0)= data.text
+
+            block

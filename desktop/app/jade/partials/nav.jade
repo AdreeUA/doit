@@ -1,0 +1,38 @@
+mixin nav(items)
+
+    +b('nav').nav(class!=attributes.nav)
+
+        +b('h2').hidden-text Навигация по сайту
+
+        +e('ul').menu
+
+            each value, key in items
+
+                if key === pageName || key === newsFilter
+                    +e('li').item_active
+                        +e('span').link= key
+
+                else
+                    +e('li').item
+                        +e('a').link(href=value class!=attributes.link)= key
+
+- var navItems = ['поводы', 'поступки', 'фонды', 'активисты', 'оферта', 'партнеры', 'помощь']
+
+mixin footerNav()
+
+    +b('nav').nav.footer__nav
+
+        +b('h2').hidden-text Навигация по сайту
+
+        +e('ul').menu
+
+            each item in navItems
+
+                +e.LI.item
+                    +e.link(href=jv0)= item
+
+            +e.LI.item
+                +e('a').link(href=jv0) новости
+                | #{' '}
+                +b.SPAN.count.nav__count 6
+

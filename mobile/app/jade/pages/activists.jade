@@ -1,0 +1,61 @@
+extends ../layouts/default
+include ../blocks/activist
+
+block head
+    - var pageTitle = 'Активисты';
+    - var pageName = 'Активисты';
+
+block content
+
+    +b.SECTION.activists-sec
+
+        +b.HEADER.head-title
+
+            .container
+
+                +e.H1.title #{pageTitle}
+
+                +e.FORM.controls
+
+                    +e.controls-item
+
+                        +b.SELECT.select(name='occasions-type')
+                            option(value='default') Тип поступка
+                            option(value=0) Один поступок
+                            option(value=1) Второй поступок
+                            option(value=2) Третий поступок
+
+                    +e.controls-item_search
+
+                        +b.search_btn(href=jv0)
+                            +e.SVG.icon
+                                use(xlink:href='i/icons.svg#icon-search')
+
+        +e.content
+
+            .container
+
+                +e.btn
+                    +b.BUTTON.btn_light._mini._size_wide._square(type='submit') Стать активистом
+
+                +e.list
+                    - var i = 0;
+
+                    while i < 4
+
+                        +e.item
+                            +activist({
+                                'mod': i % 2 === 0 ? '_power' : '',
+                                'src': 'http://stevensegallery.com/90/90',
+                                'srcset': 'http://stevensegallery.com/180/180',
+                                'acts': Math.round(Math.random() * 100),
+                                'money': Math.round(Math.random() * 100) +'\u00A0581\u00A0385'
+                            })
+
+                        -i++;
+
+                +b.preloader
+                    +e.SPAN.text Идет загрузка...
+
+
+    +delimiter('activists')

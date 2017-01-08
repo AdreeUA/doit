@@ -1,0 +1,82 @@
+extends ../layouts/default
+include ../partials/nav
+include ../partials/act
+
+
+block head
+    - var pageTitle = 'Связанные поступки';
+    - var pageName = 'Новости';
+
+block content
+
+    +b.SECTION.cabinet_user
+
+        +e.HEADER.header
+
+            .container
+            
+                include ../partials/cabinet-sidebar2
+                
+                +e.content-wrapper
+
+                    +e.H2.title Связанные поступки
+
+        +e.main
+
+            .container
+
+                +e.content-wrapper
+                    
+                    +b.SECTION.acts-sec_in._hide-sponsor-wrapper
+
+                        +e.content
+
+                            .container.acts-in-cont.container_padding-left0px
+
+                                +e.item_width50p._margin-bottom-small
+                                    +act_in({
+                                        
+                                        'src': 'http://loremflickr.com/390/235/animals',
+                                        'srcset': 'http://loremflickr.com/800/1100/animals',
+                                        'text': 'Обливание холодной водой',
+                                    })
+
+                                +e.item_width50p._margin-bottom-small
+                                    +act_in({
+                                            'mod': 'act_power',
+                                            'src': 'http://loremflickr.com/390/235/city',
+                                            'srcset': 'http://loremflickr.com/780/470/city',
+                                            'text': 'Бежишь и приносишь пользу обществу',
+                                            'occasion': true,
+                                        })
+                            
+                            +b.HEADER.head-title._mini._top-dashed._padding-left-none._border-grey
+
+                                .container.container_padding-left0px
+
+                                    +e.H2.title Прошедшие поступки:
+
+                            .container.container_padding-left0px.container_margin-left-m13px
+
+                                +e.item._past._width50p
+                                    +act_in({
+                                        'mod': 'act_past',
+                                        'src': 'http://loremflickr.com/390/235/food',
+                                        'srcset': 'http://loremflickr.com/780/470/food',
+                                        'text': 'Ешь и толстей', 
+                                        'occasion': true
+                                    })
+
+                                +e.item._past._width50p
+                                    +act_in({
+                                        'mod': 'act_power act_past',
+                                        'src': 'http://loremflickr.com/390/235/food',
+                                        'srcset': 'http://loremflickr.com/780/470/food',
+                                        'text': 'Ешь и толстей',
+                                        'occasion': true
+                                    })
+                                    
+                    
+            
+
+

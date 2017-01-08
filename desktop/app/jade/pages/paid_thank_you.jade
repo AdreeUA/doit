@@ -1,0 +1,201 @@
+extends ../layouts/default
+
+include ../partials/custom-input
+
+block head
+    - var pageTitle = 'Сделать пожертвование';
+
+block content
+
+    +b.SECTION.donation
+    
+        +e.HEADER.header
+
+            +e.H2.title Спасибо за желание пожертвовать!
+
+            +e.UL.steps-list
+
+                +e.LI.step_active Размер пожертвования
+                +e.LI.step Выбор способа оплаты
+                +e.LI.step Оплата
+                    
+        +e.FORM.form(name='donation' novalidate method='post' action='')
+
+            +e.body
+
+                +e.screen_active
+
+                    +b.form
+
+                        +e.row_size_full
+
+                            label.donation__label.donation__label_big Выберите тип пожертвования:
+
+                            +b.tiling-inputs
+
+                                - var types = ['Ежемесячное', 'Разовое']
+
+                                each type, ind in types
+
+                                    +customInput('tiling donation__type', 'radio', 'donation-type-' + ind, 'donation-type', ind, ind === 0 ? true : false)
+                                        .custom-input__content
+                                            |#{type}
+
+                        +e.row_size_full
+
+                            label.donation__label.donation__label_big Выберите сумму пожертвования 
+
+                            +b.tiling-inputs
+
+                                - var amounts = ['300', '500', '1 000', '2 500', '5 000']
+
+                                each sum, ind in amounts 
+
+                                    +customInput('tiling donation__amount', 'radio', 'donation-amount-' + ind, 'donation-amount', ind, ind === 0 ? true : false)
+                                        .custom-input__content
+                                            |#{sum}
+                                            svg.donation__amount-ruble
+                                                use(xlink:href='i/icons.svg#icon-ruble')
+                                                
+                                +b.custom-input_tiling._user-val.donation__amount
+                                    +e.INPUT.label(id='donation-amount-5' name='donation-amount' val='default' placeholder='другая сумма')
+
+                        +e.row_size_full
+
+                            label.donation__label Вы очень щедры! Загрузите ваш логотип
+                            +b.add-photo.donation__logo
+                                +e.UL.list
+                                    +e.LI.item-wrapper
+                                      +e.LABEL.item.add-photo__upload_ava
+                                          +e.INPUT.upload-input(name="post" type="file")
+                                          +e.SPAN.upload-text Загрузить
+
+                        +e.row
+
+                            +e.col_size_xl
+                                label.donation__label(for='donation-comment') Напишите ваш комментарий (если хотите):
+                                +b.TEXTAREA.input_textarea.donation__comment(id='donation-comment' name='donation-comment')
+
+                    +e.footer
+
+                        +b.btn_size_sm._light.donation__btn-next(href=jv0) Перейти к выбору типа оплаты
+
+                +e.screen
+
+                    +b.form
+
+                        +e.row_size_full
+
+                            label.donation__label.donation__label_big.donation__label_payment Выберите способ оплаты
+
+                            +b.tiling-inputs
+
+                                - var types = [{name : 'Наличные платежи', id : 'cash'}, {name : 'Мобильные платежи', id : 'mobile'}, {name : 'Интернет-банкинг', id : 'net'}, {name : 'Электронные деньги', id : 'emoney'}];
+
+                                each type, ind in types
+
+                                    +customInput('tiling donation__payment_type', 'radio', 'donation-payment-type-' + type.id, 'donation-payment-type', type.id, ind === 0 ? true : false)
+                                        .custom-input__content
+                                            | #{type.name}
+                                
+                    +e.footer
+
+                        +b.btn_size_sm._light.donation__btn-next(href=jv0) Перейти к выбору способа оплаты
+
+                +e.screen(data-step='current')
+
+                    +b.form
+
+                        +e.row_size_full
+
+                            label.donation__label.donation__label_big.donation__label_payment Выберите способ оплаты
+
+                            +b.tiling-inputs
+
+                                - var methods = [{name : 'Евросеть', img : 'es', type : 'cash'}, {name : 'Связной', img : 'sv', type : 'cash'}, {name : 'QIWI', img : 'qiwi', type : 'cash'}, {name : 'Элекснет', img : 'elex', type : 'cash'}, {name : 'МТС', img : 'mts', type : 'mobile'}, {name : 'Мегафон', img : 'mf', type : 'mobile'}, {name : 'Билайн', img : 'bee', type : 'mobile'}, {name : 'Теле2', img : 'tele2', type : 'mobile'}, {name : 'Альфа-Банк', img : 'alfa', type : 'net'}, {name : 'Промсвязь банк', img : 'psb', type : 'net'}, {name : 'Сбербанк', img : 'sb', type : 'net'}, {name : 'ВТБ24', img : 'vtb', type : 'net'}, {name : 'QIWI', img : 'qiwi_el', type : 'emoney'}, {name : 'Яндекс Деньги', img : 'yd', type : 'emoney'}, {name : 'WebMoney', img : 'wm', type : 'emoney'}, {name : 'PayPal', img : 'pp', type : 'emoney'}, {name : 'PayLate', img : 'paylate', type : 'emoney'}];
+
+                                each method, ind in methods
+
+                                    +customInput('tiling donation__payment_method type-' +method.type, 'radio', 'donation-payment-' + method.img, 'donation-payment', method.img, ind === 0 ? true : false)
+                                        .custom-input__content
+                                            .custom-input__img-wrapper.donation__payment-img
+                                                img.donation__img(src='i/payments/#{method.img}.png' alt='')
+                                            | #{method.name}
+
+                        +e.row_gap_s
+
+                            +e.col_size_md
+
+                                label.donation__label(for='donation-name') Введите ваше Имя
+                                +b.INPUT.input(id='donation-name' name='name' required)
+
+                        +e.row_gap_s
+
+                            +e.col_size_md
+
+                                label.donation__label(for='donation-surname') Введите вашу Фамилию
+                                +b.INPUT.input(id='donation-surname' name='surname' required)
+
+                        +e.row_gap_s
+
+                            +e.col_size_md
+
+                                label.donation__label(for='donation-email') Введите ваш e-mail
+                                +b.INPUT.input(id='donation-email' name='email' type='email' required)
+
+                        +e.row_gap_s
+
+                            +customInput('checkbox donation__anonym', 'checkbox', 'donation-anonym', 'donation-payment', 0, false)
+                                | Не показывать мои Имя и Фамилию на сайте
+                                
+                    +e.footer
+
+                        +b.btn_size_sm._light.donation__btn-next(href=jv0) Перейти к оплате
+
+                +e.screen
+
+                    +b.form
+
+                        +e.row
+                            .donation__label.donation__label_big Введите данные, пожалуйста:
+
+                        +b.creditcard-form.donation__creditcard
+
+                            +e.row.columns
+
+                                label.donation__label(for='donation-card-num-1') Номер карты:
+
+                                each num in [1, 2, 3, 4]
+
+                                    +e.col_size_1.columns__col
+                                        +b.INPUT.input_number(id='donation-card-num-#{num}' name='card-num-#{num}' type='number' required)
+
+                            +e.row.columns.columns_align_justify
+
+                                +e.col_size_2.columns__col
+                                    label.donation__label Номер карты:
+                                    +b.select-group_items_2
+                                        +e.SELECT.item.select(name='card-month' required)
+                                            - var i = 1;
+                                            while i <= 12
+                                                option(val='#{i}')= i
+                                                -i++
+
+                                        +e.SELECT.item.select(name='card-year' required)
+                                            each year in [2016, 2017, 2018, 2019, 2020]
+                                                option(val='#{year}')= year
+
+                                +e.col_size_1.columns__col
+                                    label.donation__label(for='donation-card-code') CVV2/CVC2:
+                                    +b.INPUT.input_number(id='donation-card-code' name='card-code' type='number' required)
+
+                            +e.row.columns
+                                +e.col_size_2.columns__col
+                                    label.donation__label(for='donation-card-name') Имя держателя карты:
+                                    +b.INPUT.input_number(id='donation-card-name' name='card-name' required)
+
+                    +e.footer
+
+                        +b.BUTTON.btn_size_sm._light.donation__btn-submit(type='submit') Оплатить
+
+

@@ -1,0 +1,33 @@
+extends ../layouts/default
+
+block head
+    - var pageTitle = 'Задать вопрос';
+
+block content
+
+    +b.SECTION.feedback
+
+        +b.HEADER.head-title
+
+            .container
+
+                +e.main
+                    +e.back-link.arrow-link(href=jv0) назад
+                    +e.H2.title #{pageTitle}
+
+        +e.main
+
+            .container
+
+                +b.FORM.form(name='feedback' method='post' action='')
+
+                    +e.row_low-gap
+                        +b.INPUT.input(name='name' placeholder='Имя' required='')
+
+                    +e.row_low-gap
+                        +b.INPUT.input(name='email' type='email' placeholder='E-mail' required='')
+
+                    +e.row
+                        +b.TEXTAREA.input_textarea.feedback__textarea(name='question' placeholder='Ваш вопрос' required='')
+
+                    +b.BUTTON.btn_light._high._size_wide(type='submit') Отправить вопрос

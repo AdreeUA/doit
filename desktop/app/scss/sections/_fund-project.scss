@@ -1,0 +1,247 @@
+.your-projects {
+  margin-bottom: rem(73);
+  position: relative;
+
+  font-family: $projectsFont;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: rem(-40);
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #979797;
+  }
+}
+
+.projects-item {
+  margin-bottom: rem(23);
+  padding: rem(56) rem(75) rem(43) rem(37);
+
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.23);
+
+  @include clearfix;
+
+  &_finished-project {
+    box-shadow: none;
+    background-color: #fbfbfb;
+  }
+
+  &__left-part {
+    float: left;
+    margin-right: rem(25);
+  }
+
+  &__right-part {
+    width: 60%;
+    float: left;
+
+    @include above(1220px) {
+      width: 68%;
+    }
+
+  }
+
+  &__img-wrap {
+    width: rem(310);
+    height: rem(220);
+
+    &_finished-project {
+      filter: grayscale(100%);
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__col1 {
+    float: left;
+    width: 54%;
+  }
+
+  &__col2 {
+    float: right;
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+
+    margin-bottom: rem(21);
+    margin-right: rem(11);
+
+    text-decoration: none;
+    color: $secondColor;
+    font-family: "VW Headline OT";
+    font-size: rem(24);
+    font-weight: 600;
+    letter-spacing: -0.12px;
+    line-height: rem(28);
+
+    &::after {
+      content: '';
+      left: 0;
+      top: rem(30);
+      position: absolute;
+      background: $secondColor;
+      bottom: .0909090909em;
+      width: 100%;
+      height: .0909090909em;
+      transition: -webkit-transform .5s ease-in-out;
+      transition: transform .5s ease-in-out;
+      transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+      transform: scaleX(0);
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
+    &_finished-project {
+      color: #4a4a4a;
+
+      &::after {
+        background: #4a4a4a;
+      }
+    }
+  }
+
+  &__text {
+    //display: inline;
+
+    font-size: rem(13);
+    line-height: rem(21);
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+  }
+
+  &__link-stat {
+    margin-bottom: rem(15);
+  }
+
+  &__details {
+    position: relative;
+    color: #1e8c6c;
+    font-size: rem(13);
+    font-family: Arial;
+    font-weight: 400;
+    text-decoration: none;
+
+    &_finished-project {
+      color: #4a4a4a;
+
+      &::after {
+        background: #4a4a4a;
+      }
+    }
+  }
+
+  &__link-bottom {
+    position: relative;
+    display: inline-block;
+    margin-top: rem(32);
+
+    color: $secondColor;
+    font-family: "Helvetica Neue";
+    font-size: rem(15);
+    font-weight: 700;
+    line-height: rem(18);
+    text-decoration: none;
+  }
+
+  &__col2-text {
+    margin-bottom: rem(5);
+
+    font-family: "VW Headline OT";
+    font-size: rem(15);
+    font-weight: 300;
+    line-height: rem(15);
+  }
+}
+
+.total-sum {
+  padding: rem(15) rem(14);
+
+  border: 2px solid #f5a623;
+
+  &_finished-project {
+    border: 2px solid #9b9b9b;
+  }
+
+  &__text {
+
+    margin-top: 0;
+
+    font-family: "VW Headline OT";
+    font-size: rem(15);
+    font-weight: 300;
+    line-height: rem(15);
+  }
+
+  &__ruble {
+    width: rem(19);
+    height: rem(26);
+
+    fill: currentColor;
+  }
+
+  &__amount {
+    color: #f5a623;
+    font-size: rem(36);
+    line-height: rem(36);
+    font-family: "VW Headline OT";
+    font-weight: 300;
+    letter-spacing: -2.21px;
+
+    &_finished-project {
+      color: #9b9b9b;
+    }
+  }
+}
+
+.finished-projects {
+  &__title {
+    margin: 0 0 rem(23) 1.125rem;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: "vw_headline", Arial, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    letter-spacing: -0.0125rem;
+  }
+}
+
+.link-stat-dashed {
+  display: inline-block;
+
+  color: $secondColor;
+  font-family: "Helvetica Neue";
+  font-size: rem(15);
+  font-weight: 400;
+  line-height: rem(25);
+
+  border-bottom: 1px dashed currentColor;
+  text-decoration: none;
+  transition: border .4s ease, padding .4s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+
+  &_finished-project {
+    color: #9b9b9b;
+    border-bottom: 1px dashed #9b9b9b;
+  }
+}
+
+.funds-projects-wrap {
+
+  &__loading-button {
+    margin: rem(53) 0 rem(73);
+
+    text-align: center;
+  }
+}

@@ -1,0 +1,31 @@
+{
+    "pages": {
+        "Активисты": "activists.html",
+        "Активист: поступки": "activists_acts.html",
+        "Главная": "main.html",
+        "Задать вопрос": "feedback.html",
+        "Кабинет активиста: добавить фото": "activist_cab_acts_photos.html",
+        "Кабинет активиста: добавить пост": "activist_cab_add_post.html",
+        "Кабинет активиста: настройки": "activist_cab_settings.html",
+        "Кабинет активиста: статистика": "activist_cab_stats.html",
+        "Кабинет активиста: новости": "activist_dash.html",
+        "Кабинет активиста: поступки": "activist_cab_acts.html",
+        "Новости": "news.html",
+        "Ответы на вопросы": "faq.html",
+        "Оплата": "paid.html",
+        "Партнёры": "partners.html",
+        "Повод: подробности": "reasons_one.html",
+        "Поводы": "reasons.html",
+        "Поступок: подробности": "acts_one.html",
+        "Поступки": "acts.html",
+        "Страница поиска": "search.html",
+        "Текстовая страница": "textpage.html",
+        "Фонды": "funds.html",
+        "Фонд: подробности": "fund_one.html",
+        "Проекты фонда": "fund_cab_projects.html",
+        "Страница проектов": "projects.html",
+        "Страница проекта": "projects-one.html",
+        "Страница создания проекта": "fund_create.html",
+        "Страница выбора фонда": "pick-fund.html"
+    }
+}
